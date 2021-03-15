@@ -1814,7 +1814,7 @@ void ClusterSequence::plugin_record_ij_recombination(
   _jets[newjet_k].set_cluster_hist_index(tmp_index);
   _set_structure_shared_ptr(_jets[newjet_k]);
 }
-vector<PseudoJet> ClusterSequence::inclusive_jets (const double ptmin) const{
+PseudoJetContainer ClusterSequence::inclusive_jets (const double ptmin) const{
   double dcut = ptmin*ptmin;
   int i = _history.size() - 1; // last jet
   vector<PseudoJet> jets_local;
@@ -1862,11 +1862,11 @@ int ClusterSequence::n_exclusive_jets (const double dcut) const {
   int njets = 2*_initial_n - stop_point;
   return njets;
 }
-vector<PseudoJet> ClusterSequence::exclusive_jets (const double dcut) const {
+PseudoJetContainer ClusterSequence::exclusive_jets (const double dcut) const {
   int njets = n_exclusive_jets(dcut);
   return exclusive_jets(njets);
 }
-vector<PseudoJet> ClusterSequence::exclusive_jets (const int njets) const {
+PseudoJetContainer ClusterSequence::exclusive_jets (const int njets) const {
   if (njets > _initial_n) {
     ostringstream err;
     err << "Requested " << njets << " exclusive jets, but there were only " 
@@ -1875,7 +1875,7 @@ vector<PseudoJet> ClusterSequence::exclusive_jets (const int njets) const {
   }
   return exclusive_jets_up_to(njets);
 }
-vector<PseudoJet> ClusterSequence::exclusive_jets_up_to (const int njets) const {
+PseudoJetContainer ClusterSequence::exclusive_jets_up_to (const int njets) const {
   if (( _jet_def.jet_algorithm() != kt_algorithm) &&
       ( _jet_def.jet_algorithm() != cambridge_algorithm) &&
       ( _jet_def.jet_algorithm() != ee_kt_algorithm) &&
@@ -1923,7 +1923,7 @@ double ClusterSequence::exclusive_dmerge_max (const int njets) const {
   if (njets >= _initial_n) {return 0.0;}
   return _history[2*_initial_n-njets-1].max_dij_so_far;
 }
-std::vector<PseudoJet> ClusterSequence::exclusive_subjets 
+PseudoJetContainer ClusterSequence::exclusive_subjets 
    (const PseudoJet & jet, const double dcut) const {
   set<const history_element*> subhist;
   get_subhist_set(subhist, jet, dcut, 0);
@@ -1941,7 +1941,7 @@ int ClusterSequence::n_exclusive_subjets(const PseudoJet & jet,
   get_subhist_set(subhist, jet, dcut, 0);
   return subhist.size();
 }
-std::vector<PseudoJet> ClusterSequence::exclusive_subjets
+PseudoJetContainer ClusterSequence::exclusive_subjets
    (const PseudoJet & jet, int nsub) const {
   vector<PseudoJet> subjets = exclusive_subjets_up_to(jet, nsub);
   if (int(subjets.size()) < nsub) {
@@ -1952,7 +1952,7 @@ std::vector<PseudoJet> ClusterSequence::exclusive_subjets
   }
   return subjets;
 }
-std::vector<PseudoJet> ClusterSequence::exclusive_subjets_up_to
+PseudoJetContainer ClusterSequence::exclusive_subjets_up_to
    (const PseudoJet & jet, int nsub) const {
   set<const history_element*> subhist;
   vector<PseudoJet> subjets;
@@ -2069,7 +2069,7 @@ bool ClusterSequence::has_partner(const PseudoJet & jet,
     return false;
   }
 }
-vector<PseudoJet> ClusterSequence::constituents (const PseudoJet & jet) const {
+PseudoJetContainer ClusterSequence::constituents (const PseudoJet & jet) const {
   vector<PseudoJet> subjets;
   add_constituents(jet, subjets);
   return subjets;
@@ -2195,7 +2195,7 @@ void ClusterSequence::_extract_tree_children(
   int child = _history[position].child;
   if (child  >= 0) _extract_tree_children(child,extracted,lowest_constituent,unique_tree);
 }
-vector<PseudoJet> ClusterSequence::unclustered_particles() const {
+PseudoJetContainer ClusterSequence::unclustered_particles() const {
   vector<PseudoJet> unclustered;
   for (unsigned i = 0; i < n_particles() ; i++) {
     if (_history[i].child == Invalid) 
@@ -2203,7 +2203,7 @@ vector<PseudoJet> ClusterSequence::unclustered_particles() const {
   }
   return unclustered;
 }
-vector<PseudoJet> ClusterSequence::childless_pseudojets() const {
+PseudoJetContainer ClusterSequence::childless_pseudojets() const {
   vector<PseudoJet> unclustered;
   for (unsigned i = 0; i < _history.size() ; i++) {
     if ((_history[i].child == Invalid) && (_history[i].parent2 != BeamJet))
@@ -2701,7 +2701,7 @@ bool ClusterSequenceStructure::has_constituents() const{
     throw Error("you requested information about the internal structure of a jet, but it is not associated with a ClusterSequence or its associated ClusterSequence has gone out of scope."); 
   return true;
 }
-vector<PseudoJet> ClusterSequenceStructure::constituents(const PseudoJet &reference) const{
+PseudoJetContainer ClusterSequenceStructure::constituents(const PseudoJet &reference) const{
   return validated_cs()->constituents(reference);
 }
 bool ClusterSequenceStructure::has_exclusive_subjets() const{
@@ -2709,13 +2709,13 @@ bool ClusterSequenceStructure::has_exclusive_subjets() const{
     throw Error("you requested information about the internal structure of a jet, but it is not associated with a ClusterSequence or its associated ClusterSequence has gone out of scope."); 
   return true;
 }
-std::vector<PseudoJet> ClusterSequenceStructure::exclusive_subjets (const PseudoJet &reference, const double & dcut) const {
+PseudoJetContainer ClusterSequenceStructure::exclusive_subjets (const PseudoJet &reference, const double & dcut) const {
   return validated_cs()->exclusive_subjets(reference, dcut);
 }
 int ClusterSequenceStructure::n_exclusive_subjets(const PseudoJet &reference, const double & dcut) const {
   return validated_cs()->n_exclusive_subjets(reference, dcut);
 }
-std::vector<PseudoJet> ClusterSequenceStructure::exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const {
+PseudoJetContainer ClusterSequenceStructure::exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const {
   return validated_cs()->exclusive_subjets_up_to(reference, nsub);
 }
 double ClusterSequenceStructure::exclusive_subdmerge(const PseudoJet &reference, int nsub) const {
@@ -2728,7 +2728,7 @@ bool ClusterSequenceStructure::has_pieces(const PseudoJet &reference) const{
   PseudoJet dummy1, dummy2;
   return has_parents(reference, dummy1, dummy2);
 }
-vector<PseudoJet> ClusterSequenceStructure::pieces(const PseudoJet &reference) const{
+PseudoJetContainer ClusterSequenceStructure::pieces(const PseudoJet &reference) const{
   PseudoJet j1, j2;
   vector<PseudoJet> res;
   if (has_parents(reference, j1, j2)){
@@ -3299,7 +3299,7 @@ std::string CompositeJetStructure::description() const{
 bool CompositeJetStructure::has_constituents() const{
   return _pieces.size()!=0;
 }
-std::vector<PseudoJet> CompositeJetStructure::constituents(const PseudoJet & /*jet*/) const{
+PseudoJetContainer CompositeJetStructure::constituents(const PseudoJet & /*jet*/) const{
   vector<PseudoJet> all_constituents;
   for (unsigned i = 0; i < _pieces.size(); i++) {
     if (_pieces[i].has_constituents()){
@@ -3311,7 +3311,7 @@ std::vector<PseudoJet> CompositeJetStructure::constituents(const PseudoJet & /*j
   }
   return all_constituents;
 }
-std::vector<PseudoJet> CompositeJetStructure::pieces(const PseudoJet & /*jet*/) const{
+PseudoJetContainer CompositeJetStructure::pieces(const PseudoJet & /*jet*/) const{
   return _pieces;
 }
 FJCORE_END_NAMESPACE      // defined in fastjet/internal/base.hh
@@ -4013,22 +4013,22 @@ bool PseudoJet::is_inside(const PseudoJet &jet) const{
 bool PseudoJet::has_constituents() const{
   return (_structure) && (_structure->has_constituents());
 }
-vector<PseudoJet> PseudoJet::constituents() const{
+PseudoJetContainer PseudoJet::constituents() const{
   return validated_structure_ptr()->constituents(*this);
 }
 bool PseudoJet::has_exclusive_subjets() const{
   return (_structure) && (_structure->has_exclusive_subjets());
 }
-std::vector<PseudoJet> PseudoJet::exclusive_subjets (const double dcut) const {
+PseudoJetContainer PseudoJet::exclusive_subjets (const double dcut) const {
   return validated_structure_ptr()->exclusive_subjets(*this, dcut);
 }
 int PseudoJet::n_exclusive_subjets(const double dcut) const {
   return validated_structure_ptr()->n_exclusive_subjets(*this, dcut);
 }
-std::vector<PseudoJet> PseudoJet::exclusive_subjets_up_to (int nsub) const {
+PseudoJetContainer PseudoJet::exclusive_subjets_up_to (int nsub) const {
   return validated_structure_ptr()->exclusive_subjets_up_to(*this, nsub);
 }
-std::vector<PseudoJet> PseudoJet::exclusive_subjets (int nsub) const {
+PseudoJetContainer PseudoJet::exclusive_subjets (int nsub) const {
   vector<PseudoJet> subjets = exclusive_subjets_up_to(nsub);
   if (int(subjets.size()) < nsub) {
     ostringstream err;
@@ -4047,7 +4047,7 @@ double PseudoJet::exclusive_subdmerge_max(int nsub) const {
 bool PseudoJet::has_pieces() const{
   return ((_structure) && (_structure->has_pieces(*this)));
 }
-std::vector<PseudoJet> PseudoJet::pieces() const{
+PseudoJetContainer PseudoJet::pieces() const{
   return validated_structure_ptr()->pieces(*this);
 }
 PseudoJet::InexistentUserInfo::InexistentUserInfo() : Error("you attempted to perform a dynamic cast of a PseudoJet's extra info, but the extra info pointer was null")
@@ -4057,22 +4057,22 @@ void sort_indices(vector<int> & indices,
   IndexedSortHelper index_sort_helper(&values);
   sort(indices.begin(), indices.end(), index_sort_helper);
 }
-vector<PseudoJet> sorted_by_pt(const vector<PseudoJet> & jets) {
+PseudoJetContainer sorted_by_pt(const vector<PseudoJet> & jets) {
   vector<double> minus_kt2(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {minus_kt2[i] = -jets[i].kt2();}
   return objects_sorted_by_values(jets, minus_kt2);
 }
-vector<PseudoJet> sorted_by_rapidity(const vector<PseudoJet> & jets) {
+PseudoJetContainer sorted_by_rapidity(const vector<PseudoJet> & jets) {
   vector<double> rapidities(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {rapidities[i] = jets[i].rap();}
   return objects_sorted_by_values(jets, rapidities);
 }
-vector<PseudoJet> sorted_by_E(const vector<PseudoJet> & jets) {
+PseudoJetContainer sorted_by_E(const vector<PseudoJet> & jets) {
   vector<double> energies(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {energies[i] = -jets[i].E();}
   return objects_sorted_by_values(jets, energies);
 }
-vector<PseudoJet> sorted_by_pz(const vector<PseudoJet> & jets) {
+PseudoJetContainer sorted_by_pz(const vector<PseudoJet> & jets) {
   vector<double> pz(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {pz[i] = jets[i].pz();}
   return objects_sorted_by_values(jets, pz);
@@ -4133,16 +4133,16 @@ bool PseudoJetStructureBase::has_parents(const PseudoJet & /*reference*/, Pseudo
 bool PseudoJetStructureBase::object_in_jet(const PseudoJet & /*reference*/, const PseudoJet & /*jet*/) const{
   throw Error("This PseudoJet structure has no implementation for is_inside");
 }
-vector<PseudoJet> PseudoJetStructureBase::constituents(const PseudoJet &/*reference*/) const{
+PseudoJetContainer PseudoJetStructureBase::constituents(const PseudoJet &/*reference*/) const{
   throw Error("This PseudoJet structure has no implementation for constituents");
 }
-vector<PseudoJet> PseudoJetStructureBase::exclusive_subjets (const PseudoJet & /*reference*/, const double & /*dcut*/) const{
+PseudoJetContainer PseudoJetStructureBase::exclusive_subjets (const PseudoJet & /*reference*/, const double & /*dcut*/) const{
   throw Error("This PseudoJet structure has no implementation for exclusive_subjets");
 }
 int PseudoJetStructureBase::n_exclusive_subjets(const PseudoJet & /*reference*/, const double & /*dcut*/) const{
   throw Error("This PseudoJet structure has no implementation for n_exclusive_subjets");
 }
-vector<PseudoJet> PseudoJetStructureBase::exclusive_subjets_up_to (const PseudoJet & /*reference*/, int /*nsub*/) const{
+PseudoJetContainer PseudoJetStructureBase::exclusive_subjets_up_to (const PseudoJet & /*reference*/, int /*nsub*/) const{
   throw Error("This PseudoJet structure has no implementation for exclusive_subjets");
 }
 double PseudoJetStructureBase::exclusive_subdmerge(const PseudoJet & /*reference*/, int /*nsub*/) const{
@@ -4151,7 +4151,7 @@ double PseudoJetStructureBase::exclusive_subdmerge(const PseudoJet & /*reference
 double PseudoJetStructureBase::exclusive_subdmerge_max(const PseudoJet & /*reference*/, int /*nsub*/) const{
   throw Error("This PseudoJet structure has no implementation for exclusive_submerge_max");
 }
-std::vector<PseudoJet> PseudoJetStructureBase::pieces(const PseudoJet & /*reference*/) const{
+PseudoJetContainer PseudoJetStructureBase::pieces(const PseudoJet & /*reference*/) const{
   throw Error("This PseudoJet structure has no implementation for pieces");  
 }
 FJCORE_END_NAMESPACE
@@ -4159,7 +4159,7 @@ FJCORE_END_NAMESPACE
 #include <algorithm>
 using namespace std;
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
-std::vector<PseudoJet> Selector::operator()(const std::vector<PseudoJet> & jets) const {
+PseudoJetContainer Selector::operator()(const std::vector<PseudoJet> & jets) const {
   std::vector<PseudoJet> result;
   const SelectorWorker * worker_local = validated_worker();
   if (worker_local->applies_jet_by_jet()) {

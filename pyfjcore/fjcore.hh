@@ -494,9 +494,34 @@ FJCORE_END_NAMESPACE
 #define __FJCORE_PSEUDOJET_STRUCTURE_BASE_HH__
 #include <vector>
 #include <string>
+#include <sstream>
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 class PseudoJet;
 class ClusterSequence;
+
+// PTK: this ensure swig will not automatically convert to python tuple
+struct PseudoJetContainer {
+
+  // constructors
+  PseudoJetContainer() {}
+  PseudoJetContainer(const std::vector<PseudoJet> & pjvector) : pjvector_(pjvector) {}
+  PseudoJetContainer(std::vector<PseudoJet> && pjvector) : pjvector_(pjvector) {}
+
+  // conversions
+#ifndef SWIG_PREPROCESSOR
+  operator const std::vector<PseudoJet> & () const { return pjvector_; }
+  operator std::vector<PseudoJet> & () { return pjvector_; }
+
+  std::vector<PseudoJet> * as_ptr() { return &pjvector_; }
+#endif
+
+  // for swig
+  std::vector<PseudoJet> & as_vector() { return *this; }
+
+private:
+  std::vector<PseudoJet> pjvector_;
+};
+
 class PseudoJetStructureBase{
 public:
   PseudoJetStructureBase(){};
@@ -511,16 +536,16 @@ public:
   virtual bool has_parents(const PseudoJet &reference, PseudoJet &parent1, PseudoJet &parent2) const;
   virtual bool object_in_jet(const PseudoJet &reference, const PseudoJet &jet) const;
   virtual bool has_constituents() const {return false;}
-  virtual std::vector<PseudoJet> constituents(const PseudoJet &reference) const;
+  virtual PseudoJetContainer constituents(const PseudoJet &reference) const;
   virtual bool has_exclusive_subjets() const {return false;}
-  virtual std::vector<PseudoJet> exclusive_subjets(const PseudoJet &reference, const double & dcut) const;
+  virtual PseudoJetContainer exclusive_subjets(const PseudoJet &reference, const double & dcut) const;
   virtual int n_exclusive_subjets(const PseudoJet &reference, const double & dcut) const;
-  virtual std::vector<PseudoJet> exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const;
+  virtual PseudoJetContainer exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const;
   virtual double exclusive_subdmerge(const PseudoJet &reference, int nsub) const;
   virtual double exclusive_subdmerge_max(const PseudoJet &reference, int nsub) const;
   virtual bool has_pieces(const PseudoJet & /* reference */) const {
     return false;}
-  virtual std::vector<PseudoJet> pieces(const PseudoJet & /* reference */
+  virtual PseudoJetContainer pieces(const PseudoJet & /* reference */
                                         ) const;
 };
 FJCORE_END_NAMESPACE
@@ -695,16 +720,16 @@ class PseudoJet {
   virtual bool contains(const PseudoJet &constituent) const;
   virtual bool is_inside(const PseudoJet &jet) const;
   virtual bool has_constituents() const;
-  virtual std::vector<PseudoJet> constituents() const;
+  virtual PseudoJetContainer constituents() const;
   virtual bool has_exclusive_subjets() const;
-  std::vector<PseudoJet> exclusive_subjets (const double dcut) const;
+  PseudoJetContainer exclusive_subjets (const double dcut) const;
   int n_exclusive_subjets(const double dcut) const;
-  std::vector<PseudoJet> exclusive_subjets (int nsub) const;
-  std::vector<PseudoJet> exclusive_subjets_up_to (int nsub) const;
+  PseudoJetContainer exclusive_subjets (int nsub) const;
+  PseudoJetContainer exclusive_subjets_up_to (int nsub) const;
   double exclusive_subdmerge(int nsub) const;
   double exclusive_subdmerge_max(int nsub) const;
   virtual bool has_pieces() const;
-  virtual std::vector<PseudoJet> pieces() const;
+  virtual PseudoJetContainer pieces() const;
   inline int cluster_hist_index() const {return _cluster_hist_index;}
   inline void set_cluster_hist_index(const int index) {_cluster_hist_index = index;}
   inline int cluster_sequence_history_index() const {
@@ -750,10 +775,10 @@ inline double theta(const PseudoJet & a, const PseudoJet & b) {
 }
 bool have_same_momentum(const PseudoJet &, const PseudoJet &);
 PseudoJet PtYPhiM(double pt, double y, double phi, double m = 0.0);
-std::vector<PseudoJet> sorted_by_pt(const std::vector<PseudoJet> & jets);
-std::vector<PseudoJet> sorted_by_rapidity(const std::vector<PseudoJet> & jets);
-std::vector<PseudoJet> sorted_by_E(const std::vector<PseudoJet> & jets);
-std::vector<PseudoJet> sorted_by_pz(const std::vector<PseudoJet> & jets);
+PseudoJetContainer sorted_by_pt(const std::vector<PseudoJet> & jets);
+PseudoJetContainer sorted_by_rapidity(const std::vector<PseudoJet> & jets);
+PseudoJetContainer sorted_by_E(const std::vector<PseudoJet> & jets);
+PseudoJetContainer sorted_by_pz(const std::vector<PseudoJet> & jets);
 void sort_indices(std::vector<int> & indices, 
 		  const std::vector<double> & values);
 template<class T> std::vector<T> objects_sorted_by_values(const std::vector<T> & objects, 
@@ -920,7 +945,7 @@ public:
   bool applies_jet_by_jet() const {
     return validated_worker()->applies_jet_by_jet();
   }
-  std::vector<PseudoJet> operator()(const std::vector<PseudoJet> & jets) const;
+  PseudoJetContainer operator()(const std::vector<PseudoJet> & jets) const;
   virtual void nullify_non_selected(std::vector<const PseudoJet *> & jets) const {
     validated_worker()->terminator(jets);
   }
@@ -1136,7 +1161,7 @@ public:
     (*this) = JetDefinition(jet_algorithm_in,R_in,recomb_scheme_in,strategy_in,nparameters_in);
   }
   template <class L> 
-  std::vector<PseudoJet> operator()(const std::vector<L> & particles) const;
+  PseudoJetContainer operator()(const std::vector<L> & particles) const;
   static const double max_allowable_R; //= 1000.0;
   void set_recombination_scheme(RecombinationScheme);
   void set_recombiner(const Recombiner * recomb) {
@@ -1239,9 +1264,9 @@ public:
   };
   virtual std::string description() const FJCORE_OVERRIDE;
   virtual bool has_constituents() const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> constituents(const PseudoJet &jet) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer constituents(const PseudoJet &jet) const FJCORE_OVERRIDE;
   virtual bool has_pieces(const PseudoJet & /*jet*/) const FJCORE_OVERRIDE {return true;}
-  virtual std::vector<PseudoJet> pieces(const PseudoJet &jet) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer pieces(const PseudoJet &jet) const FJCORE_OVERRIDE;
 protected:
   std::vector<PseudoJet> _pieces;  ///< the pieces building the jet
   PseudoJet * _area_4vector_ptr;   ///< pointer to the 4-vector jet area
@@ -1356,15 +1381,15 @@ public:
   virtual bool has_parents(const PseudoJet &reference, PseudoJet &parent1, PseudoJet &parent2) const FJCORE_OVERRIDE;
   virtual bool object_in_jet(const PseudoJet &reference, const PseudoJet &jet) const FJCORE_OVERRIDE;
   virtual bool has_constituents() const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> constituents(const PseudoJet &reference) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer constituents(const PseudoJet &reference) const FJCORE_OVERRIDE;
   virtual bool has_exclusive_subjets() const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> exclusive_subjets(const PseudoJet &reference, const double & dcut) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer exclusive_subjets(const PseudoJet &reference, const double & dcut) const FJCORE_OVERRIDE;
   virtual int n_exclusive_subjets(const PseudoJet &reference, const double & dcut) const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
   virtual double exclusive_subdmerge(const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
   virtual double exclusive_subdmerge_max(const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
   virtual bool has_pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
 protected:
   const ClusterSequence *_associated_cs;
 };
@@ -1395,27 +1420,27 @@ class ClusterSequence {
   }
   ClusterSequence & operator=(const ClusterSequence & cs);
   virtual ~ClusterSequence (); //{}
-  std::vector<PseudoJet> inclusive_jets (const double ptmin = 0.0) const;
+  PseudoJetContainer inclusive_jets (const double ptmin = 0.0) const;
   int n_exclusive_jets (const double dcut) const;
-  std::vector<PseudoJet> exclusive_jets (const double dcut) const;
-  std::vector<PseudoJet> exclusive_jets (const int njets) const;
-  std::vector<PseudoJet> exclusive_jets_up_to (const int njets) const;
+  PseudoJetContainer exclusive_jets (const double dcut) const;
+  PseudoJetContainer exclusive_jets (const int njets) const;
+  PseudoJetContainer exclusive_jets_up_to (const int njets) const;
   double exclusive_dmerge (const int njets) const;
   double exclusive_dmerge_max (const int njets) const;
   double exclusive_ymerge (int njets) const {return exclusive_dmerge(njets) / Q2();}
   double exclusive_ymerge_max (int njets) const {return exclusive_dmerge_max(njets)/Q2();}
   int n_exclusive_jets_ycut (double ycut) const {return n_exclusive_jets(ycut*Q2());}
-  std::vector<PseudoJet> exclusive_jets_ycut (double ycut) const {
+  PseudoJetContainer exclusive_jets_ycut (double ycut) const {
     int njets = n_exclusive_jets_ycut(ycut);
     return exclusive_jets(njets);
   }
-  std::vector<PseudoJet> exclusive_subjets (const PseudoJet & jet, 
+  PseudoJetContainer exclusive_subjets (const PseudoJet & jet, 
                                             const double dcut) const;
   int n_exclusive_subjets(const PseudoJet & jet, 
                           const double dcut) const;
-  std::vector<PseudoJet> exclusive_subjets (const PseudoJet & jet, 
+  PseudoJetContainer exclusive_subjets (const PseudoJet & jet, 
                                             int nsub) const;
-  std::vector<PseudoJet> exclusive_subjets_up_to (const PseudoJet & jet, 
+  PseudoJetContainer exclusive_subjets_up_to (const PseudoJet & jet, 
 						  int nsub) const;
   double exclusive_subdmerge(const PseudoJet & jet, int nsub) const;
   double exclusive_subdmerge_max(const PseudoJet & jet, int nsub) const;
@@ -1427,7 +1452,7 @@ class ClusterSequence {
   bool has_child(const PseudoJet & jet, PseudoJet & child) const;
   bool has_child(const PseudoJet & jet, const PseudoJet * & childp) const;
   bool has_partner(const PseudoJet & jet, PseudoJet & partner) const;
-  std::vector<PseudoJet> constituents (const PseudoJet & jet) const;
+  PseudoJetContainer constituents (const PseudoJet & jet) const;
   void print_jets_for_root(const std::vector<PseudoJet> & jets, 
                            std::ostream & ostr = std::cout) const;
   void print_jets_for_root(const std::vector<PseudoJet> & jets, 
@@ -1497,8 +1522,8 @@ public:
   unsigned int n_particles() const;
   std::vector<int> particle_jet_indices(const std::vector<PseudoJet> &) const;
   std::vector<int> unique_history_order() const;
-  std::vector<PseudoJet> unclustered_particles() const;
-  std::vector<PseudoJet> childless_pseudojets() const;
+  PseudoJetContainer unclustered_particles() const;
+  PseudoJetContainer childless_pseudojets() const;
   bool contains(const PseudoJet & object) const;
   void transfer_from_sequence(const ClusterSequence & from_seq,
 			      const FunctionOfPseudoJet<PseudoJet> * action_on_jets = 0);
@@ -1683,7 +1708,7 @@ inline const std::vector<ClusterSequence::history_element> & ClusterSequence::hi
 inline unsigned int ClusterSequence::n_particles() const {return _initial_n;}
 #ifndef __CINT__
 template<class L>
-std::vector<PseudoJet> JetDefinition::operator()(const std::vector<L> & particles) const {
+PseudoJetContainer JetDefinition::operator()(const std::vector<L> & particles) const {
   ClusterSequence * cs = new ClusterSequence(particles, *this);
   std::vector<PseudoJet> jets;
   if (is_spherical()) {

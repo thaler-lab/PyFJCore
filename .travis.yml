@@ -57,7 +57,7 @@ jobs:
 env:
   global:
     - TWINE_USERNAME=__token__
-    - export CIBW_BEFORE_BUILD="pip install -U numpy"
-    - export CIBW_BUILD_VERBOSITY=1
-    - export CIBW_SKIP="pp* *s390x"
+    - CIBW_BEFORE_BUILD="pip install -U numpy"
+    - CIBW_BUILD_VERBOSITY=1
+    - CIBW_SKIP="pp*"
     - PYPI_TEST=true

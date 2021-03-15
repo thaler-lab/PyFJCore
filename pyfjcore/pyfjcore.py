@@ -160,6 +160,62 @@ FJCORE_VERSION_NUMBER = _pyfjcore.FJCORE_VERSION_NUMBER
 
 FJCORE_VERSION_PATCHLEVEL = _pyfjcore.FJCORE_VERSION_PATCHLEVEL
 
+class PseudoJetContainer(object):
+    r"""Proxy of C++ fastjet::PseudoJetContainer class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        r"""
+        __init__(PseudoJetContainer self) -> PseudoJetContainer
+        __init__(PseudoJetContainer self, vectorPseudoJet pjvector) -> PseudoJetContainer
+        __init__(PseudoJetContainer self, vectorPseudoJet pjvector) -> PseudoJetContainer
+        """
+        _pyfjcore.PseudoJetContainer_swiginit(self, _pyfjcore.new_PseudoJetContainer(*args))
+    as_vector = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_as_vector)
+
+    def __len__(self):
+        return len(self.vector)
+
+    def __iter__(self):
+        return self.vector.__iter__();
+
+    def __repr__(self):
+        s = ['PseudoJetContainer[' + str(len(self)) + '](']
+        for pj in self:
+            s.append('  ' + repr(pj) + ',')
+        s.append(')')
+        return '\n'.join(s)
+
+    def __delitem__(self, key):
+        self.vector.__delitem__(key)
+
+    def __getitem__(self, key):
+        return self.vector.__getitem__(key)
+
+    def __setitem__(self, key, val):
+        self.vector.__setitem__(key, val)
+
+    @property
+    def vector(self):
+        if not hasattr(self, '_vector'):
+            self._vector = self.as_vector()
+        return self._vector
+
+    __swig_destroy__ = _pyfjcore.delete_PseudoJetContainer
+
+# Register PseudoJetContainer in _pyfjcore:
+_pyfjcore.PseudoJetContainer_swigregister(PseudoJetContainer)
+cvar = _pyfjcore.cvar
+pi = cvar.pi
+twopi = cvar.twopi
+pisq = cvar.pisq
+zeta2 = cvar.zeta2
+zeta3 = cvar.zeta3
+eulergamma = cvar.eulergamma
+ln2 = cvar.ln2
+
 class PseudoJetStructureBase(object):
     r"""Proxy of C++ fastjet::PseudoJetStructureBase class."""
 
@@ -192,14 +248,6 @@ class PseudoJetStructureBase(object):
 
 # Register PseudoJetStructureBase in _pyfjcore:
 _pyfjcore.PseudoJetStructureBase_swigregister(PseudoJetStructureBase)
-cvar = _pyfjcore.cvar
-pi = cvar.pi
-twopi = cvar.twopi
-pisq = cvar.pisq
-zeta2 = cvar.zeta2
-zeta3 = cvar.zeta3
-eulergamma = cvar.eulergamma
-ln2 = cvar.ln2
 
 class PseudoJet(object):
     r"""Proxy of C++ fastjet::PseudoJet class."""
@@ -686,32 +734,20 @@ class ClusterSequence(object):
 # Register ClusterSequence in _pyfjcore:
 _pyfjcore.ClusterSequence_swigregister(ClusterSequence)
 
-class PJVector(vectorPseudoJet):
-    r"""Proxy of C++ fastjet::PJVector class."""
-
-    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
-    __repr__ = _swig_repr
-
-    def __init__(self):
-        r"""__init__(PJVector self) -> PJVector"""
-        _pyfjcore.PJVector_swiginit(self, _pyfjcore.new_PJVector())
-    __swig_destroy__ = _pyfjcore.delete_PJVector
-
-# Register PJVector in _pyfjcore:
-_pyfjcore.PJVector_swigregister(PJVector)
-
 JetDefinition0Param = _pyfjcore.JetDefinition0Param
 JetDefinition1Param = _pyfjcore.JetDefinition1Param
 JetDefinition2Param = _pyfjcore.JetDefinition2Param
-ptyphim_array_to_pseudojets = _pyfjcore.ptyphim_array_to_pseudojets
-epxpypz_array_to_pseudojets = _pyfjcore.epxpypz_array_to_pseudojets
-PJRep_epxpypz = _pyfjcore.PJRep_epxpypz
+PseudoJetRepresentation_epxpypz = _pyfjcore.PseudoJetRepresentation_epxpypz
 
-PJRep_ptyphim = _pyfjcore.PJRep_ptyphim
+PseudoJetRepresentation_ptyphim = _pyfjcore.PseudoJetRepresentation_ptyphim
 
-PJRep_ptyphi = _pyfjcore.PJRep_ptyphi
+PseudoJetRepresentation_ptyphi = _pyfjcore.PseudoJetRepresentation_ptyphi
 
 set_pseudojet_format = _pyfjcore.set_pseudojet_format
+ptyphim_array_to_pseudojets = _pyfjcore.ptyphim_array_to_pseudojets
+epxpypz_array_to_pseudojets = _pyfjcore.epxpypz_array_to_pseudojets
+pseudojets_to_epxpypz_array = _pyfjcore.pseudojets_to_epxpypz_array
+pseudojets_to_ptyphim_array = _pyfjcore.pseudojets_to_ptyphim_array
 pseudojets_to_array = _pyfjcore.pseudojets_to_array
 
 

@@ -39,7 +39,7 @@ if sys.argv[1] == 'swig':
 else:
 
     # compiler flags, libraries, etc
-    cxxflags = ['-std=c++14', '-g0', '-DSWIG_TYPE_TABLE=fastjet']
+    cxxflags = ['-std=c++14', '-g0', '-DSWIG', '-DSWIG_TYPE_TABLE=fjcore']
     if platform.system() == 'Windows':
         cxxflags = ['/std:c++14']
 

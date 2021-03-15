@@ -11,6 +11,10 @@ public:
     Py_XINCREF(_pyobj);
   }
 
+  ~UserInfoPython() {
+    Py_XDECREF(_pyobj);
+  }
+
   PyObject * get_pyobj() const {
     // since there's going to be an extra reference to this object
     // one must increase the reference count; it seems that this
@@ -18,17 +22,9 @@ public:
     Py_XINCREF(_pyobj);
     return _pyobj;
   }
-  //const PyObject * get_pyobj() const {return _pyobj;}
   
-  ~UserInfoPython() {
-    Py_XDECREF(_pyobj);
-  }
 private:
   PyObject * _pyobj;
-};
-
-class PJVector : public std::vector<PseudoJet> {
-
 };
 
 //----------------------------------------------------------------------
@@ -64,42 +60,53 @@ JetDefinition JetDefinition2Param(JetAlgorithm jet_algorithm,
   return JetDefinition(jet_algorithm, R_in, xtra_param, recomb_scheme, strategy);
 }
 
+// to select between different representations of PseudoJets
+enum class PseudoJetRepresentation { epxpypz, ptyphim, ptyphi };
+
+static PseudoJetRepresentation PseudoJetRep_;
+void set_pseudojet_format(PseudoJetRepresentation rep) {
+  PseudoJetRep_ = rep;
+}
+
+#define BEGIN_CONVERT_TO_PJ(nf, kinematics) \
+for (int i = 0; i < mult; i++, k += nf) {   \
+  kinematics;                               \
+  pjs.back().set_user_index(i);
+#define END_CONVERT_TO_PJ }
+
+#define CONVERT_TO_PJS_WITH_INFO(kinematics)                            \
+npy_intp dims[1] = {nfeatures - 4};                                     \
+std::size_t nfbytes(dims[0] * sizeof(double));                          \
+BEGIN_CONVERT_TO_PJ(nfeatures, kinematics)                              \
+  PyObject* user_features(PyArray_SimpleNew(1, dims, NPY_DOUBLE));      \
+  if (!user_features)                                                   \
+    throw Error("cannot allocate array for user features");             \
+  memcpy(array_data(user_features), particles + k + 4, nfbytes);        \
+  pjs.back().set_user_info(new fastjet::UserInfoPython(user_features)); \
+  Py_DECREF(user_features);                                             \
+END_CONVERT_TO_PJ
+
 // convert numpy array to PseudoJets
-PJVector ptyphim_array_to_pseudojets(double* particles, int mult, int nfeatures) {
-  PJVector pjs;
+PseudoJetContainer ptyphim_array_to_pseudojets(double* particles, int mult, int nfeatures) {
+  std::vector<PseudoJet> pjs;
   pjs.reserve(mult);
 
-  // array is pt, y, phi
-  std::size_t k(0);
-  if (nfeatures == 3)
-    for (int i = 0; i < mult; i++, k += 3) {
-      pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2]));
-      pjs.back().set_user_index(i);
-    }
-
   // array is pt, y, phi, m
-  else if (nfeatures == 4)
-    for (int i = 0; i < mult; i++, k += 4) {
-      pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3]));
-      pjs.back().set_user_index(i);
-    }
+  std::size_t k(0);
+  if (nfeatures == 4) {
+    BEGIN_CONVERT_TO_PJ(4, pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3])))
+    END_CONVERT_TO_PJ
+  }
+
+  // array is pt, y, phi
+  else if (nfeatures == 3) {
+    BEGIN_CONVERT_TO_PJ(3, pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2])))
+    END_CONVERT_TO_PJ
+  }
 
   // array is pt, y, phi, m, [more features]
   else if (nfeatures > 4) {
-    npy_intp dims[1] = {nfeatures - 4};
-    std::size_t nfbytes(dims[0] * sizeof(double));
-    for (int i = 0; i < mult; i++, k += nfeatures) {
-      pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3]));
-      pjs.back().set_user_index(i);
-
-      PyObject* user_features(PyArray_SimpleNew(1, dims, NPY_DOUBLE));
-      if (!user_features)
-        throw Error("cannot allocate array for user features");
-
-      memcpy(array_data(user_features), particles + k + 4, nfbytes);
-      pjs.back().set_user_info(new fastjet::UserInfoPython(user_features));
-      Py_DECREF(user_features);
-    }
+    CONVERT_TO_PJS_WITH_INFO(pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3])))
   }
   else throw Error("array must have at least 3 columns");
 
@@ -107,78 +114,102 @@ PJVector ptyphim_array_to_pseudojets(double* particles, int mult, int nfeatures)
 }
 
 // convert numpy array to PseudoJets
-PJVector epxpypz_array_to_pseudojets(double* particles, int mult, int nfeatures) {
-  PJVector pjs;
+PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, int mult, int nfeatures) {
+  std::vector<PseudoJet> pjs;
   pjs.reserve(mult);
 
-  // array is pt, y, phi, m
+  // array is e, px, py, pz
   std::size_t k(0);
-  if (nfeatures == 4)
-    for (int i = 0; i < mult; i++, k += 3) {
-      pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]);
-      pjs.back().set_user_index(i);
-    }
+  if (nfeatures == 4) {
+    BEGIN_CONVERT_TO_PJ(4, pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]))
+    END_CONVERT_TO_PJ
+  }
 
   // array is pt, y, phi, m, [more features]
   else if (nfeatures > 4) {
-    npy_intp dims[1] = {nfeatures - 4};
-    std::size_t nfbytes(dims[0] * sizeof(double));
-    for (int i = 0; i < mult; i++, k += nfeatures) {
-      pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]);
-      pjs.back().set_user_index(i);
-
-      PyObject* user_features(PyArray_SimpleNew(1, dims, NPY_DOUBLE));
-      if (!user_features)
-        throw Error("cannot allocate array for user features");
-
-      memcpy(array_data(user_features), particles + k + 4, nfbytes);
-      pjs.back().set_user_info(new fastjet::UserInfoPython(user_features));
-      Py_DECREF(user_features);
-    }
+    CONVERT_TO_PJS_WITH_INFO(pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]))
   }
+
   else throw Error("array must have at least 4 columns");
 
   return pjs;
 }
 
-enum class PJRep { epxpypz, ptyphim, ptyphi };
+// function that selects representation based on enum
+PseudoJetContainer pseudojets_to_array(double* particles, int mult, int nfeatures,
+                                    PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
 
-static PJRep PseudoJetRep_;
-void set_pseudojet_format(PJRep rep) {
-  PseudoJetRep_ = rep;
+  if (pjrep == PseudoJetRepresentation::ptyphim || pjrep == PseudoJetRepresentation::ptyphi)
+    return ptyphim_array_to_pseudojets(particles, mult, nfeatures);
+
+  else if (pjrep == PseudoJetRepresentation::epxpypz)
+    return epxpypz_array_to_pseudojets(particles, mult, nfeatures);
+
+  else throw Error("unknown pseudojet representation");
+
+  return std::vector<PseudoJet>();
 }
 
-// convert pseudojets to numpy array
-void pseudojets_to_array(double** particles, int* mult, int* nfeatures,
-                         const std::vector<PseudoJet> & pjs, PJRep pjrep = PJRep::ptyphim) {
+// convert pseudojets to numpy array of e, px, py, pz values
+void pseudojets_to_epxpypz_array(double** particles, int* mult, int* nfeatures,
+                                 const std::vector<PseudoJet> & pjs) {
   *mult = pjs.size();
-  *nfeatures = (pjrep == PJRep::ptyphi ? 3 : 4);
-  std::size_t nbytes = (*nfeatures)*(*mult)*sizeof(double);
+  *nfeatures = 4;
+  std::size_t nbytes = 4 * pjs.size() * sizeof(double);
   *particles = (double *) malloc(nbytes);
   if (*particles == NULL)
     throw std::runtime_error("failed to allocate " + std::to_string(nbytes) + " bytes");
 
   std::size_t k(0);
-  if (pjrep == PJRep::ptyphim)
+  for (const auto & pj : pjs) {
+    (*particles)[k++] = pj.e();
+    (*particles)[k++] = pj.px();
+    (*particles)[k++] = pj.py();
+    (*particles)[k++] = pj.pz();
+  }
+}
+
+// convert pseudojets to numpy array of e, px, py, pz values
+void pseudojets_to_ptyphim_array(double** particles, int* mult, int* nfeatures,
+                                 const std::vector<PseudoJet> & pjs, bool mass = true) {
+  *mult = pjs.size();
+  *nfeatures = (mass ? 4 : 3);
+  std::size_t nbytes = (*nfeatures) * pjs.size() * sizeof(double);
+  *particles = (double *) malloc(nbytes);
+  if (*particles == NULL)
+    throw std::runtime_error("failed to allocate " + std::to_string(nbytes) + " bytes");
+
+  std::size_t k(0);
+  if (mass)
     for (const auto & pj : pjs) {
       (*particles)[k++] = pj.pt();
       (*particles)[k++] = pj.rap();
       (*particles)[k++] = pj.phi();
       (*particles)[k++] = pj.m();
     }
-  else if (pjrep == PJRep::epxpypz)
-    for (const auto & pj : pjs) {
-      (*particles)[k++] = pj.e();
-      (*particles)[k++] = pj.px();
-      (*particles)[k++] = pj.py();
-      (*particles)[k++] = pj.pz();
-    }
-  else if (pjrep == PJRep::ptyphi)
+  else
     for (const auto & pj : pjs) {
       (*particles)[k++] = pj.pt();
       (*particles)[k++] = pj.rap();
       (*particles)[k++] = pj.phi();
     }
+}
+
+// function that selects representation based on enum
+void pseudojets_to_array(double** particles, int* mult, int* nfeatures,
+                         const std::vector<PseudoJet> & pjs,
+                         PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
+
+  if (pjrep == PseudoJetRepresentation::ptyphim)
+    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, true);
+
+  else if (pjrep == PseudoJetRepresentation::ptyphi)
+    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, false);
+
+  else if (pjrep == PseudoJetRepresentation::epxpypz)
+    pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
+
+  else throw Error("unknown pseudojet representation");
 }
 
 FJCORE_END_NAMESPACE

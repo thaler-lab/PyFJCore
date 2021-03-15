@@ -43,7 +43,6 @@
 // C++ library headers
 #include <cstdlib>
 #include <cstring>
-#include <sstream>
 
 // PyFJCore headers
 #include "fjcore.hh"
@@ -76,7 +75,7 @@ static PyObject * FastJetError_;
   fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());
 
   // default pseudojet printing
-  fastjet::set_pseudojet_format(fastjet::PJRep::ptyphim);
+  fastjet::set_pseudojet_format(fastjet::PseudoJetRepresentation::ptyphim);
 %}
 
 // additional numpy typemaps
@@ -90,12 +89,34 @@ FastJetError = _pyfjcore.FastJetError;
 // vector templates
 %template(vectorPseudoJet) std::vector<fastjet::PseudoJet>;
 
+%typemap(in) const std::vector<fastjet::PseudoJet> & (int res = SWIG_OLDOBJ) {
+    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    void* argp = 0;
+    res = SWIG_ConvertPtr($input, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
+    if (SWIG_IsOK(res) && argp) {
+      $1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp)->as_ptr();
+      res = SWIG_OLDOBJ;
+    }
+    else {
+      std::vector<PseudoJet> *ptr = (std::vector<PseudoJet> *) 0;
+      res = swig::asptr($input, &ptr);
+      if (SWIG_IsOK(res) && ptr)
+        $1 = ptr;
+      else {
+        SWIG_exception_fail(SWIG_ArgError(res), "in method '$symname', argument $argnum of type '$type'");
+      }
+    }
+  }
+
 // basic exception handling for all functions
 %exception {
   try { $action }
   catch (fastjet::Error & e) {
     PyErr_SetString(FastJetError_, e.message().c_str());
     SWIG_fail;
+  }
+  catch (std::exception & e) {
+    SWIG_exception(SWIG_SystemError, e.what());
   }
 }
 
@@ -168,15 +189,48 @@ namespace fastjet {
 
 namespace fastjet {
 
+  %extend PseudoJetContainer {
+    %pythoncode {
+      def __len__(self):
+          return len(self.vector)
+
+      def __iter__(self):
+          return self.vector.__iter__();
+
+      def __repr__(self):
+          s = ['PseudoJetContainer[' + str(len(self)) + '](']
+          for pj in self:
+              s.append('  ' + repr(pj) + ',')
+          s.append(')')
+          return '\n'.join(s)
+
+      def __delitem__(self, key):
+          self.vector.__delitem__(key)
+
+      def __getitem__(self, key):
+          return self.vector.__getitem__(key)
+
+      def __setitem__(self, key, val):
+          self.vector.__setitem__(key, val)
+
+      @property
+      def vector(self):
+          if not hasattr(self, '_vector'):
+              self._vector = self.as_vector()
+          return self._vector
+    }
+  }
+
   %extend PseudoJet {
 
     std::string __repr__() {
       const unsigned len_max = 512;
       char temp[len_max];
-      if (PseudoJetRep_ == PJRep::ptyphim)
+      if (PseudoJetRep_ == PseudoJetRepresentation::ptyphim)
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g)",
-                 $self->pt(), $self->rap(), $self->phi(), $self->m());
-      else if (PseudoJetRep_ == PJRep::epxpypz)
+                 $self->pt(), $self->rap(), $self->phi(),
+                 [](double m){return std::fabs(m) < 1e-6 ? 0 : m;}($self->m()));
+      else if (PseudoJetRep_ == PseudoJetRepresentation::epxpypz)
         snprintf(temp, len_max, "PseudoJet(e=%.6g, px=%.6g, py=%.6g, pz=%.6g)",
                  $self->e(), $self->px(), $self->py(), $self->pz());
       else
@@ -210,7 +264,7 @@ namespace fastjet {
   // extend JetDefinition
   %extend JetDefinition {
     ADD_REPR_FROM_DESCRIPTION
-    std::vector<PseudoJet> __call__(const std::vector<PseudoJet> & particles) {
+    PseudoJetContainer __call__(const std::vector<PseudoJet> & particles) {
       return (*self)(particles);
     }
   }
