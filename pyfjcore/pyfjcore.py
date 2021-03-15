@@ -96,9 +96,6 @@ class SwigPyIterator(object):
 _pyfjcore.SwigPyIterator_swigregister(SwigPyIterator)
 
 
-import numpy as _np
-
-
 FastJetError = _pyfjcore.FastJetError;
 
 class vectorPseudoJet(object):

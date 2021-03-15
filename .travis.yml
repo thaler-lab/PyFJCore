@@ -25,8 +25,6 @@ jobs:
         - python3 -m cibuildwheel --output-dir wheelhouse
       after_success:
         - ./scripts/pypi-upload.sh sdist
-      env:
-        - CIBW_BUILD="cp27-manylinux_x86_64 cp35-manylinux_x86_64 cp36-manylinux_x86_64 cp37-manylinux_x86_64 cp38-manylinux_x86_64 cp39-manylinux_x86_64 cp27-manylinux_i686 cp35-manylinux_i686 cp36-manylinux_i686 cp37-manylinux_i686 cp38-manylinux_i686 cp39-manylinux_i686"
 
     # build on mac
     - name: Build wheels on Mac
@@ -39,8 +37,6 @@ jobs:
       after_success:
         - python3 -m pip install twine
         - ./scripts/pypi-upload.sh
-      env:
-        - CIBW_BUILD="cp27-macosx_x86_64 cp35-macosx_x86_64 cp36-macosx_x86_64 cp37-macosx_x86_64 cp38-macosx_x86_64 cp39-macosx_x86_64 cp39-macosx_arm64"
 
     # build on windows
     - name: Build wheels on Windows
@@ -56,11 +52,12 @@ jobs:
         - python3 -m pip install twine
         - ./scripts/pypi-upload.sh
       env:
-        - PATH=/c/Python39:/c/Python39/Scripts:$PATH CIBW_BUILD="cp27-win_amd64 cp35-win_amd64 cp36-win_amd64 cp37-win_amd64 cp38-win_amd64 cp39-win_amd64 cp27-win32 cp35-win32 cp36-win32 cp37-win32 cp38-win32 cp39-win32"
+        - PATH=/c/Python39:/c/Python39/Scripts:$PATH"
 
 env:
   global:
     - TWINE_USERNAME=__token__
-    - export CIBW_BEFORE_BUILD="pip install numpy"
+    - export CIBW_BEFORE_BUILD="pip install -U numpy"
     - export CIBW_BUILD_VERBOSITY=1
+    - export CIBW_SKIP=pp*
     - PYPI_TEST=true

@@ -27,7 +27,9 @@
 // this can be used to ensure that swig parses classes correctly
 #define SWIG_PREPROCESSOR
 
-%include numpy_helpers.i
+// include numpy typemaps
+%include numpy.i
+
 %fragment("NumPy_Macros");
 
 %{
@@ -36,12 +38,20 @@
 #define SWIG
 #endif
 
+// needed by numpy.i
+#define SWIG_FILE_WITH_INIT
+
 // C++ library headers
+#include <cstdlib>
+#include <cstring>
 #include <sstream>
 
 // PyFJCore headers
 #include "fjcore.hh"
 #include "PyFJCoreExtensions.hh"
+
+// needed by numpy.i, harmless otherwise
+#define SWIG_FILE_WITH_INIT
 
 // using namespaces
 using namespace fastjet;
@@ -53,6 +63,11 @@ static PyObject * FastJetError_;
 
 // this gets placed in the SWIG_init function
 %init %{
+
+  // for numpy
+  import_array();
+
+  // setup error class
   fastjet::Error::set_print_errors(false);
   FastJetError_ = PyErr_NewException("pyfjcore.FastJetError", NULL, NULL);
   Py_INCREF(FastJetError_);

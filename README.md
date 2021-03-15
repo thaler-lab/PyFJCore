@@ -1,6 +1,10 @@
 # PyFJCore
+
 Python wrapper of FastJet Core functionality with NumPy support.
 
+## fjcore README
+
+```text
 // fjcore -- extracted from FastJet v3.3.4 (http://fastjet.fr)
 //
 // fjcore constitutes a digest of the main FastJet functionality.
@@ -83,4 +87,4 @@ Python wrapper of FastJet Core functionality with NumPy support.
 //  along with FastJet. If not, see <http://www.gnu.org/licenses/>.
 //----------------------------------------------------------------------
 //FJENDHEADER
-
+```

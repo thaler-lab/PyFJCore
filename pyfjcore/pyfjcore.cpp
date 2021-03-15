@@ -3348,14 +3348,6 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include <vector>
 
 
-// needed by numpy.i, harmless otherwise
-#define SWIG_FILE_WITH_INIT
-
-// standard library headers we need
-#include <cstdlib>
-#include <cstring>
-
-
 #ifndef SWIG_FILE_WITH_INIT
 #define NO_IMPORT_ARRAY
 #endif
@@ -3407,12 +3399,20 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #define SWIG
 #endif
 
+// needed by numpy.i
+#define SWIG_FILE_WITH_INIT
+
 // C++ library headers
+#include <cstdlib>
+#include <cstring>
 #include <sstream>
 
 // PyFJCore headers
 #include "fjcore.hh"
 #include "PyFJCoreExtensions.hh"
+
+// needed by numpy.i, harmless otherwise
+#define SWIG_FILE_WITH_INIT
 
 // using namespaces
 using namespace fastjet;
@@ -25387,9 +25387,11 @@ SWIG_init(void) {
   SWIG_InstallConstants(d,swig_const_table);
   
   
+  
+  // for numpy
   import_array();
   
-  
+  // setup error class
   fastjet::Error::set_print_errors(false);
   FastJetError_ = PyErr_NewException("pyfjcore.FastJetError", NULL, NULL);
   Py_INCREF(FastJetError_);
