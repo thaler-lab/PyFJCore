@@ -1,0 +1,66 @@
+---
+stages:
+  - build
+
+jobs:
+  exclude:
+
+  include:
+
+  ##############################################################################
+  # BUILDS
+  ##############################################################################
+
+    # build on linux
+    - name: Build wheels on Linux
+      stage: build
+      dist: bionic
+      language: python
+      python: 3.8
+      services: docker
+      before_install:
+      install: python3 -m pip install cibuildwheel twine
+      script:
+        - python3 setup.py sdist --formats=gztar
+        - python3 -m cibuildwheel --output-dir wheelhouse
+      after_success:
+        - ./scripts/pypi-upload.sh sdist
+      env:
+        - CIBW_BUILD="cp27-manylinux_x86_64 cp35-manylinux_x86_64 cp36-manylinux_x86_64 cp37-manylinux_x86_64 cp38-manylinux_x86_64 cp39-manylinux_x86_64 cp27-manylinux_i686 cp35-manylinux_i686 cp36-manylinux_i686 cp37-manylinux_i686 cp38-manylinux_i686 cp39-manylinux_i686"
+
+    # build on mac
+    - name: Build wheels on Mac
+      stage: build
+      os: osx
+      osx_image: xcode11
+      language: shell
+      install: python3 -m pip install cibuildwheel
+      script: python3 -m cibuildwheel --output-dir wheelhouse
+      after_success:
+        - python3 -m pip install twine
+        - ./scripts/pypi-upload.sh
+      env:
+        - CIBW_BUILD="cp27-macosx_x86_64 cp35-macosx_x86_64 cp36-macosx_x86_64 cp37-macosx_x86_64 cp38-macosx_x86_64 cp39-macosx_x86_64 cp39-macosx_arm64"
+
+    # build on windows
+    - name: Build wheels on Windows
+      stage: build
+      os: windows
+      language: shell
+      before_install:
+        - choco install python --version 3.9.2
+        - ln -s /c/Python39/python.exe /c/Python39/python3.exe
+      install: python3 -m pip install cibuildwheel
+      script: python3 -m cibuildwheel --output-dir wheelhouse
+      after_success:
+        - python3 -m pip install twine
+        - ./scripts/pypi-upload.sh
+      env:
+        - PATH=/c/Python39:/c/Python39/Scripts:$PATH CIBW_BUILD="cp27-win_amd64 cp35-win_amd64 cp36-win_amd64 cp37-win_amd64 cp38-win_amd64 cp39-win_amd64 cp27-win32 cp35-win32 cp36-win32 cp37-win32 cp38-win32 cp39-win32"
+
+env:
+  global:
+    - TWINE_USERNAME=__token__
+    - export CIBW_BEFORE_BUILD="pip install numpy"
+    - export CIBW_BUILD_VERBOSITY=1
+    - PYPI_TEST=true
