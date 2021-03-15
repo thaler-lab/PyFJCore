@@ -34,3 +34,6 @@
 .eggs/
 *sublime-*
 **/__pycache__
+*.egg-info
+dist/
+build/
