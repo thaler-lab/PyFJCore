@@ -28,8 +28,10 @@
 #define SWIG_PREPROCESSOR
 
 // include numpy typemaps
+%{
+#define SWIG_FILE_WITH_INIT
+%}
 %include numpy.i
-
 %fragment("NumPy_Macros");
 
 %{
@@ -37,9 +39,6 @@
 #ifndef SWIG
 #define SWIG
 #endif
-
-// needed by numpy.i
-#define SWIG_FILE_WITH_INIT
 
 // C++ library headers
 #include <cstdlib>
@@ -49,9 +48,6 @@
 // PyFJCore headers
 #include "fjcore.hh"
 #include "PyFJCoreExtensions.hh"
-
-// needed by numpy.i, harmless otherwise
-#define SWIG_FILE_WITH_INIT
 
 // using namespaces
 using namespace fastjet;

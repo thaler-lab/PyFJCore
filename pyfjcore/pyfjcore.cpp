@@ -3348,6 +3348,9 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include <vector>
 
 
+#define SWIG_FILE_WITH_INIT
+
+
 #ifndef SWIG_FILE_WITH_INIT
 #define NO_IMPORT_ARRAY
 #endif
@@ -3399,9 +3402,6 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #define SWIG
 #endif
 
-// needed by numpy.i
-#define SWIG_FILE_WITH_INIT
-
 // C++ library headers
 #include <cstdlib>
 #include <cstring>
@@ -3410,9 +3410,6 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 // PyFJCore headers
 #include "fjcore.hh"
 #include "PyFJCoreExtensions.hh"
-
-// needed by numpy.i, harmless otherwise
-#define SWIG_FILE_WITH_INIT
 
 // using namespaces
 using namespace fastjet;
