@@ -36,8 +36,11 @@
 #define SWIG
 #endif
 
-// EEC library headers
+// C++ library headers
+#include <algorithm>
 #include <sstream>
+
+// PyFJCore headers
 #include "fjcore.hh"
 #include "PyFJCoreExtensions.hh"
 
