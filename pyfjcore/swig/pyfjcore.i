@@ -37,7 +37,6 @@
 #endif
 
 // C++ library headers
-#include <algorithm>
 #include <sstream>
 
 // PyFJCore headers

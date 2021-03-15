@@ -527,6 +527,7 @@ FJCORE_END_NAMESPACE
 #endif  //  __FJCORE_PSEUDOJET_STRUCTURE_BASE_HH__
 #ifndef __FJCORE_PSEUDOJET_HH__
 #define __FJCORE_PSEUDOJET_HH__
+#include<algorithm>
 #include<valarray>
 #include<vector>
 #include<cassert>
