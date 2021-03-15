@@ -52,12 +52,12 @@ jobs:
         - python3 -m pip install twine
         - ./scripts/pypi-upload.sh
       env:
-        - PATH=/c/Python39:/c/Python39/Scripts:$PATH"
+        - PATH=/c/Python39:/c/Python39/Scripts:$PATH
 
 env:
   global:
     - TWINE_USERNAME=__token__
     - export CIBW_BEFORE_BUILD="pip install -U numpy"
     - export CIBW_BUILD_VERBOSITY=1
-    - export CIBW_SKIP=pp*
+    - export CIBW_SKIP="pp* *s390x"
     - PYPI_TEST=true
