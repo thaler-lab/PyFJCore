@@ -158,7 +158,7 @@ namespace fastjet {
   %extend PseudoJet {
 
     std::string __repr__() {
-      unsigned len_max = 512;
+      const unsigned len_max = 512;
       char temp[len_max];
       if (PseudoJetRep_ == PJRep::ptyphim)
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g)",

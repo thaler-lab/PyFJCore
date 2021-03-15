@@ -4879,7 +4879,7 @@ SWIG_AsVal_bool (PyObject *obj, bool *val)
 }
 
 SWIGINTERN std::string fastjet_PseudoJet___repr__(fastjet::PseudoJet *self){
-      unsigned len_max = 512;
+      const unsigned len_max = 512;
       char temp[len_max];
       if (PseudoJetRep_ == PJRep::ptyphim)
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g)",
