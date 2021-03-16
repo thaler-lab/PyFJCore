@@ -24656,7 +24656,7 @@ SWIGINTERN PyObject *_wrap_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(self), P
   double *arg1 = (double *) 0 ;
   int arg2 ;
   int arg3 ;
-  fastjet::PseudoJetRepresentation arg4 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
+  fastjet::PseudoJetRepresentation arg4 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
   PyArrayObject *array1 = NULL ;
   int is_new_object1 = 0 ;
   int val4 ;
@@ -24902,7 +24902,7 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array(PyObject *SWIGUNUSEDPARM(self), P
   int *arg2 = (int *) 0 ;
   int *arg3 = (int *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
-  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
   double *data_temp1 = NULL ;
   int dim1_temp1 ;
   int dim2_temp1 ;
@@ -27085,9 +27085,9 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "ClusterSequence_Invalid",SWIG_From_int(static_cast< int >(fastjet::ClusterSequence::Invalid)));
   SWIG_Python_SetConstant(d, "ClusterSequence_InexistentParent",SWIG_From_int(static_cast< int >(fastjet::ClusterSequence::InexistentParent)));
   SWIG_Python_SetConstant(d, "ClusterSequence_BeamJet",SWIG_From_int(static_cast< int >(fastjet::ClusterSequence::BeamJet)));
-  SWIG_Python_SetConstant(d, "PseudoJetRepresentation_epxpypz",SWIG_From_int(static_cast< int >(fastjet::PseudoJetRepresentation::epxpypz)));
-  SWIG_Python_SetConstant(d, "PseudoJetRepresentation_ptyphim",SWIG_From_int(static_cast< int >(fastjet::PseudoJetRepresentation::ptyphim)));
-  SWIG_Python_SetConstant(d, "PseudoJetRepresentation_ptyphi",SWIG_From_int(static_cast< int >(fastjet::PseudoJetRepresentation::ptyphi)));
+  SWIG_Python_SetConstant(d, "epxpypz",SWIG_From_int(static_cast< int >(fastjet::epxpypz)));
+  SWIG_Python_SetConstant(d, "ptyphim",SWIG_From_int(static_cast< int >(fastjet::ptyphim)));
+  SWIG_Python_SetConstant(d, "ptyphi",SWIG_From_int(static_cast< int >(fastjet::ptyphi)));
   SWIG_addvarlink(globals, "PseudoJetRep_", Swig_var_PseudoJetRep__get, Swig_var_PseudoJetRep__set);
 #if PY_VERSION_HEX >= 0x03000000
   return m;

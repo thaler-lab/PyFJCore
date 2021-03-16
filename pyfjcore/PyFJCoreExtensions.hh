@@ -61,7 +61,7 @@ JetDefinition JetDefinition2Param(JetAlgorithm jet_algorithm,
 }
 
 // to select between different representations of PseudoJets
-enum class PseudoJetRepresentation { epxpypz, ptyphim, ptyphi };
+enum PseudoJetRepresentation { epxpypz, ptyphim, ptyphi };
 
 static PseudoJetRepresentation PseudoJetRep_;
 void set_pseudojet_format(PseudoJetRepresentation rep) {
@@ -137,12 +137,12 @@ PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, int mult, int 
 
 // function that selects representation based on enum
 PseudoJetContainer array_to_pseudojets(double* particles, int mult, int nfeatures,
-                                       PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
+                                       PseudoJetRepresentation pjrep = ptyphim) {
 
-  if (pjrep == PseudoJetRepresentation::ptyphim || pjrep == PseudoJetRepresentation::ptyphi)
+  if (pjrep == ptyphim || pjrep == ptyphi)
     return ptyphim_array_to_pseudojets(particles, mult, nfeatures);
 
-  else if (pjrep == PseudoJetRepresentation::epxpypz)
+  else if (pjrep == epxpypz)
     return epxpypz_array_to_pseudojets(particles, mult, nfeatures);
 
   else throw Error("unknown pseudojet representation");
@@ -198,15 +198,15 @@ void pseudojets_to_ptyphim_array(double** particles, int* mult, int* nfeatures,
 // function that selects representation based on enum
 void pseudojets_to_array(double** particles, int* mult, int* nfeatures,
                          const std::vector<PseudoJet> & pjs,
-                         PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
+                         PseudoJetRepresentation pjrep = ptyphim) {
 
-  if (pjrep == PseudoJetRepresentation::ptyphim)
+  if (pjrep == ptyphim)
     pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, true);
 
-  else if (pjrep == PseudoJetRepresentation::ptyphi)
+  else if (pjrep == ptyphi)
     pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, false);
 
-  else if (pjrep == PseudoJetRepresentation::epxpypz)
+  else if (pjrep == epxpypz)
     pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
 
   else throw Error("unknown pseudojet representation");

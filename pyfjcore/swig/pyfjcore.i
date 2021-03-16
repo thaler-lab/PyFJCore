@@ -262,6 +262,11 @@ namespace fastjet {
     PseudoJet __div__ (double x) { return *($self) / x; }
     bool      __eq__  (double x) { return *($self) == x; }
     bool      __ne__  (double x) { return *($self) != x; }
+
+    %pythoncode {
+      def __getitem__(self, key):
+          return self(key)
+    }
   }
 
   // extend JetDefinition

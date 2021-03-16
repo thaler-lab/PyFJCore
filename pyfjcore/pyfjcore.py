@@ -379,6 +379,10 @@ class PseudoJet(object):
     __eq__ = _swig_new_instance_method(_pyfjcore.PseudoJet___eq__)
     __ne__ = _swig_new_instance_method(_pyfjcore.PseudoJet___ne__)
 
+    def __getitem__(self, key):
+        return self(key)
+
+
 # Register PseudoJet in _pyfjcore:
 _pyfjcore.PseudoJet_swigregister(PseudoJet)
 MaxRap = cvar.MaxRap
@@ -734,11 +738,11 @@ _pyfjcore.ClusterSequence_swigregister(ClusterSequence)
 JetDefinition0Param = _pyfjcore.JetDefinition0Param
 JetDefinition1Param = _pyfjcore.JetDefinition1Param
 JetDefinition2Param = _pyfjcore.JetDefinition2Param
-PseudoJetRepresentation_epxpypz = _pyfjcore.PseudoJetRepresentation_epxpypz
+epxpypz = _pyfjcore.epxpypz
 
-PseudoJetRepresentation_ptyphim = _pyfjcore.PseudoJetRepresentation_ptyphim
+ptyphim = _pyfjcore.ptyphim
 
-PseudoJetRepresentation_ptyphi = _pyfjcore.PseudoJetRepresentation_ptyphi
+ptyphi = _pyfjcore.ptyphi
 
 set_pseudojet_format = _pyfjcore.set_pseudojet_format
 ptyphim_array_to_pseudojets = _pyfjcore.ptyphim_array_to_pseudojets
