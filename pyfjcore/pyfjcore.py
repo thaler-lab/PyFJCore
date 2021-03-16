@@ -174,6 +174,7 @@ class PseudoJetContainer(object):
         """
         _pyfjcore.PseudoJetContainer_swiginit(self, _pyfjcore.new_PseudoJetContainer(*args))
     as_vector = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_as_vector)
+    user_indices = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_user_indices)
 
     def __len__(self):
         return len(self.vector)
@@ -669,6 +670,10 @@ class ClusterSequence(object):
 
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
+
+    def __init__(self, pseudojets, jet_def, writeout_combinations=False):
+        r"""__init__(ClusterSequence self, vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence"""
+        _pyfjcore.ClusterSequence_swiginit(self, _pyfjcore.new_ClusterSequence(pseudojets, jet_def, writeout_combinations))
     __swig_destroy__ = _pyfjcore.delete_ClusterSequence
     inclusive_jets = _swig_new_instance_method(_pyfjcore.ClusterSequence_inclusive_jets)
     n_exclusive_jets = _swig_new_instance_method(_pyfjcore.ClusterSequence_n_exclusive_jets)
@@ -723,14 +728,6 @@ class ClusterSequence(object):
     transfer_from_sequence = _swig_new_instance_method(_pyfjcore.ClusterSequence_transfer_from_sequence)
     structure_shared_ptr = _swig_new_instance_method(_pyfjcore.ClusterSequence_structure_shared_ptr)
 
-    def __init__(self, *args):
-        r"""
-        __init__(ClusterSequence self) -> ClusterSequence
-        __init__(ClusterSequence self, ClusterSequence cs) -> ClusterSequence
-        __init__(ClusterSequence self, vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence
-        """
-        _pyfjcore.ClusterSequence_swiginit(self, _pyfjcore.new_ClusterSequence(*args))
-
 # Register ClusterSequence in _pyfjcore:
 _pyfjcore.ClusterSequence_swigregister(ClusterSequence)
 
@@ -746,8 +743,10 @@ PseudoJetRepresentation_ptyphi = _pyfjcore.PseudoJetRepresentation_ptyphi
 set_pseudojet_format = _pyfjcore.set_pseudojet_format
 ptyphim_array_to_pseudojets = _pyfjcore.ptyphim_array_to_pseudojets
 epxpypz_array_to_pseudojets = _pyfjcore.epxpypz_array_to_pseudojets
+array_to_pseudojets = _pyfjcore.array_to_pseudojets
 pseudojets_to_epxpypz_array = _pyfjcore.pseudojets_to_epxpypz_array
 pseudojets_to_ptyphim_array = _pyfjcore.pseudojets_to_ptyphim_array
 pseudojets_to_array = _pyfjcore.pseudojets_to_array
+user_indices = _pyfjcore.user_indices
 
 

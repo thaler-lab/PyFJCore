@@ -80,6 +80,7 @@ static PyObject * FastJetError_;
 
 // additional numpy typemaps
 %apply (double* IN_ARRAY2, int DIM1, int DIM2) {(double* particles, int mult, int nfeatures)}
+%apply (int** ARGOUTVIEWM_ARRAY1, int* DIM1) {(int** inds, int* mult)}
 %apply (double** ARGOUTVIEWM_ARRAY2, int* DIM1, int* DIM2) {(double** particles, int* mult, int* nfeatures)}
 
 %pythoncode %{
@@ -171,6 +172,8 @@ namespace fastjet {
 %ignore ClusterSequence::print_banner;
 %ignore ClusterSequence::fastjet_banner_stream;
 %ignore ClusterSequence::set_fastjet_banner_stream;
+%ignore ClusterSequence::ClusterSequence();
+%ignore ClusterSequence::ClusterSequence(const ClusterSequence &);
 %ignore UserInfoPython;
 
 } // namespace fastjet
@@ -267,11 +270,6 @@ namespace fastjet {
     PseudoJetContainer __call__(const std::vector<PseudoJet> & particles) {
       return (*self)(particles);
     }
-  }
-
-  // extend ClusterSequence
-  %extend ClusterSequence {
-    %template(ClusterSequence) ClusterSequence<PseudoJet>;
   }
 
   %extend Selector {

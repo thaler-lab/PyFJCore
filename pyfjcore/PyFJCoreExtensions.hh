@@ -136,8 +136,8 @@ PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, int mult, int 
 }
 
 // function that selects representation based on enum
-PseudoJetContainer pseudojets_to_array(double* particles, int mult, int nfeatures,
-                                    PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
+PseudoJetContainer array_to_pseudojets(double* particles, int mult, int nfeatures,
+                                       PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
 
   if (pjrep == PseudoJetRepresentation::ptyphim || pjrep == PseudoJetRepresentation::ptyphi)
     return ptyphim_array_to_pseudojets(particles, mult, nfeatures);
@@ -158,7 +158,7 @@ void pseudojets_to_epxpypz_array(double** particles, int* mult, int* nfeatures,
   std::size_t nbytes = 4 * pjs.size() * sizeof(double);
   *particles = (double *) malloc(nbytes);
   if (*particles == NULL)
-    throw std::runtime_error("failed to allocate " + std::to_string(nbytes) + " bytes");
+    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
 
   std::size_t k(0);
   for (const auto & pj : pjs) {
@@ -177,7 +177,7 @@ void pseudojets_to_ptyphim_array(double** particles, int* mult, int* nfeatures,
   std::size_t nbytes = (*nfeatures) * pjs.size() * sizeof(double);
   *particles = (double *) malloc(nbytes);
   if (*particles == NULL)
-    throw std::runtime_error("failed to allocate " + std::to_string(nbytes) + " bytes");
+    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
 
   std::size_t k(0);
   if (mass)
@@ -210,6 +210,11 @@ void pseudojets_to_array(double** particles, int* mult, int* nfeatures,
     pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
 
   else throw Error("unknown pseudojet representation");
+}
+
+// function that extracts user indices to a numpy array
+void user_indices(int** inds, int* mult, const std::vector<PseudoJet> & pjs) {
+  EXTRACT_USER_INDICES
 }
 
 FJCORE_END_NAMESPACE

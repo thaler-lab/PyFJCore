@@ -499,6 +499,17 @@ FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 class PseudoJet;
 class ClusterSequence;
 
+#define EXTRACT_USER_INDICES                        \
+  *mult = pjs.size();                               \
+  std::size_t nbytes = pjs.size() * sizeof(int);    \
+  *inds = (int *) malloc(nbytes);                   \
+  if (*inds == NULL)                                \
+    throw Error("failed to allocate " +             \
+                std::to_string(nbytes) + " bytes"); \
+  std::size_t k(0);                                 \
+  for (const auto & pj : pjs)                       \
+    (*inds)[k++] = pj.user_index();
+
 // PTK: this ensure swig will not automatically convert to python tuple
 struct PseudoJetContainer {
 
@@ -517,6 +528,7 @@ struct PseudoJetContainer {
 
   // for swig
   std::vector<PseudoJet> & as_vector() { return *this; }
+  void user_indices(int** inds, int* mult);
 
 private:
   std::vector<PseudoJet> pjvector_;
@@ -794,6 +806,10 @@ template<class T> std::vector<T> objects_sorted_by_values(const std::vector<T> &
     objects_sorted[i] = objects[indices[i]];
   }
   return objects_sorted;
+}
+inline void PseudoJetContainer::user_indices(int** inds, int* mult) {
+  const std::vector<PseudoJet> & pjs(*this);
+  EXTRACT_USER_INDICES
 }
 class IndexedSortHelper {
 public:
@@ -1411,10 +1427,9 @@ class DynamicNearestNeighbours;
 class ClusterSequence {
  public: 
   ClusterSequence () : _deletes_self_when_unused(false) {}
-  template<class L> ClusterSequence (
-			          const std::vector<L> & pseudojets,
-				  const JetDefinition & jet_def,
-				  const bool & writeout_combinations = false);
+  ClusterSequence (const std::vector<PseudoJet> & pseudojets,
+				           const JetDefinition & jet_def,
+				           const bool & writeout_combinations = false);
   ClusterSequence (const ClusterSequence & cs) : _deletes_self_when_unused(false) {
     transfer_from_sequence(cs);
   }
@@ -1688,8 +1703,8 @@ template<class L> void ClusterSequence::_transfer_input_jets(
   for (unsigned int i = 0; i < pseudojets.size(); i++) {
     _jets.push_back(pseudojets[i]);}
 }
-template<class L> ClusterSequence::ClusterSequence (
-			          const std::vector<L> & pseudojets,
+inline ClusterSequence::ClusterSequence (
+			    const std::vector<PseudoJet> & pseudojets,
 				  const JetDefinition & jet_def_in,
 				  const bool & writeout_combinations) :
   _jet_def(jet_def_in), _writeout_combinations(writeout_combinations),
