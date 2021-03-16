@@ -5,4 +5,4 @@ from .pyfjcore import *
 __author__ = 'Patrick T. Komiske III'
 __email__ = 'pkomiske@mit.edu'
 __license__ = 'GPLv3'
-__version__ = '0.2.0a3'
+__version__ = '0.2.0'
