@@ -58,4 +58,4 @@ env:
   global:
     - TWINE_USERNAME=__token__
     - CIBW_SKIP="pp*"
-    - PYPI=true
+    - PYPI_TEST=true
