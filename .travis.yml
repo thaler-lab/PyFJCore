@@ -57,7 +57,6 @@ jobs:
 env:
   global:
     - TWINE_USERNAME=__token__
-    - CIBW_BEFORE_BUILD="pip install oldest-supported-numpy"
     - CIBW_BUILD_VERBOSITY=1
-    - CIBW_SKIP="pp* cp27*"
+    - CIBW_SKIP="pp*"
     - PYPI_TEST=true

@@ -1,0 +1,2 @@
+[build-system]
+requires = ["setuptools", "wheel", "oldest-supported-numpy", "numpy>=1.12;python_version=='2.7'"]
