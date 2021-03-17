@@ -8223,7 +8223,7 @@ SWIGINTERN PyObject *_wrap_new_PseudoJetContainer__SWIG_1(PyObject *SWIGUNUSEDPA
   
   if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(swig_obj[0], &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -8318,8 +8318,14 @@ SWIGINTERN PyObject *_wrap_new_PseudoJetContainer(PyObject *self, PyObject *args
   }
   if (argc == 1) {
     int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
+    {
+      // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+      int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      if (!(_v = SWIG_CheckState(res))) {
+        int res = swig::asptr(argv[0], (std::vector<fastjet::PseudoJet>**)(0));
+        _v = SWIG_CheckState(res);
+      }
+    }
     if (_v) {
       return _wrap_new_PseudoJetContainer__SWIG_1(self, argc, argv);
     }
@@ -14471,7 +14477,7 @@ SWIGINTERN PyObject *_wrap_sorted_by_pt(PyObject *SWIGUNUSEDPARM(self), PyObject
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_pt", kwnames, &obj0)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -14521,7 +14527,7 @@ SWIGINTERN PyObject *_wrap_sorted_by_rapidity(PyObject *SWIGUNUSEDPARM(self), Py
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_rapidity", kwnames, &obj0)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -14571,7 +14577,7 @@ SWIGINTERN PyObject *_wrap_sorted_by_E(PyObject *SWIGUNUSEDPARM(self), PyObject 
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_E", kwnames, &obj0)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -14621,7 +14627,7 @@ SWIGINTERN PyObject *_wrap_sorted_by_pz(PyObject *SWIGUNUSEDPARM(self), PyObject
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_pz", kwnames, &obj0)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -14717,7 +14723,7 @@ SWIGINTERN PyObject *_wrap_join__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize
   
   if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(swig_obj[0], &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -15192,7 +15198,7 @@ SWIGINTERN PyObject *_wrap_Selector_count(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -15251,7 +15257,7 @@ SWIGINTERN PyObject *_wrap_Selector_sum(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -15310,7 +15316,7 @@ SWIGINTERN PyObject *_wrap_Selector_scalar_pt_sum(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -15376,7 +15382,7 @@ SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *SWIGUNUSEDPARM(self), PyObjec
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -15480,7 +15486,7 @@ SWIGINTERN PyObject *_wrap_Selector___call____SWIG_1(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(swig_obj[1], &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -15545,8 +15551,14 @@ SWIGINTERN PyObject *_wrap_Selector___call__(PyObject *self, PyObject *args) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-      _v = SWIG_CheckState(res);
+      {
+        // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+        int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+        if (!(_v = SWIG_CheckState(res))) {
+          int res = swig::asptr(argv[1], (std::vector<fastjet::PseudoJet>**)(0));
+          _v = SWIG_CheckState(res);
+        }
+      }
       if (_v) {
         return _wrap_Selector___call____SWIG_1(self, argc, argv);
       }
@@ -19332,7 +19344,7 @@ SWIGINTERN PyObject *_wrap_JetDefinition___call__(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = reinterpret_cast< fastjet::JetDefinition * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -19425,7 +19437,7 @@ SWIGINTERN PyObject *_wrap_join__SWIG_5(PyObject *SWIGUNUSEDPARM(self), Py_ssize
   
   if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(swig_obj[0], &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -19739,8 +19751,14 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
   }
   if (argc == 1) {
     int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
+    {
+      // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+      int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      if (!(_v = SWIG_CheckState(res))) {
+        int res = swig::asptr(argv[0], (std::vector<fastjet::PseudoJet>**)(0));
+        _v = SWIG_CheckState(res);
+      }
+    }
     if (_v) {
       return _wrap_join__SWIG_0(self, argc, argv);
     }
@@ -19771,8 +19789,14 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
   }
   if (argc == 2) {
     int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
+    {
+      // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+      int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      if (!(_v = SWIG_CheckState(res))) {
+        int res = swig::asptr(argv[0], (std::vector<fastjet::PseudoJet>**)(0));
+        _v = SWIG_CheckState(res);
+      }
+    }
     if (_v) {
       int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__JetDefinition__Recombiner, SWIG_POINTER_NO_NULL | 0);
       _v = SWIG_CheckState(res);
@@ -19930,7 +19954,7 @@ SWIGINTERN PyObject *_wrap_new_CompositeJetStructure__SWIG_1(PyObject *SWIGUNUSE
   
   if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(swig_obj[0], &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -19988,8 +20012,14 @@ SWIGINTERN PyObject *_wrap_new_CompositeJetStructure(PyObject *self, PyObject *a
   }
   if ((argc >= 1) && (argc <= 2)) {
     int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
+    {
+      // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+      int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      if (!(_v = SWIG_CheckState(res))) {
+        int res = swig::asptr(argv[0], (std::vector<fastjet::PseudoJet>**)(0));
+        _v = SWIG_CheckState(res);
+      }
+    }
     if (_v) {
       if (argc <= 1) {
         return _wrap_new_CompositeJetStructure__SWIG_1(self, argc, argv);
@@ -21387,7 +21417,7 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *SWIGUNUSEDPARM(self), P
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO|O:new_ClusterSequence", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res1 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res1) && argp) {
@@ -22884,7 +22914,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root__SWIG_0(PyObject 
   }
   arg1 = reinterpret_cast< fastjet::ClusterSequence * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(swig_obj[1], &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -22952,7 +22982,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root__SWIG_1(PyObject 
   }
   arg1 = reinterpret_cast< fastjet::ClusterSequence * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(swig_obj[1], &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -23032,8 +23062,14 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root(PyObject *self, P
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__ClusterSequence, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-      _v = SWIG_CheckState(res);
+      {
+        // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+        int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+        if (!(_v = SWIG_CheckState(res))) {
+          int res = swig::asptr(argv[1], (std::vector<fastjet::PseudoJet>**)(0));
+          _v = SWIG_CheckState(res);
+        }
+      }
       if (_v) {
         if (argc <= 2) {
           return _wrap_ClusterSequence_print_jets_for_root__SWIG_0(self, argc, argv);
@@ -23053,8 +23089,14 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root(PyObject *self, P
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__ClusterSequence, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-      _v = SWIG_CheckState(res);
+      {
+        // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+        int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+        if (!(_v = SWIG_CheckState(res))) {
+          int res = swig::asptr(argv[1], (std::vector<fastjet::PseudoJet>**)(0));
+          _v = SWIG_CheckState(res);
+        }
+      }
       if (_v) {
         int res = SWIG_AsPtr_std_string(argv[2], (std::string**)(0));
         _v = SWIG_CheckState(res);
@@ -23987,7 +24029,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_particle_jet_indices(PyObject *SWIGUN
   }
   arg1 = reinterpret_cast< fastjet::ClusterSequence * >(argp1);
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res2 = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res2) && argp) {
@@ -24741,7 +24783,7 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array(PyObject *SWIGUNUSEDPARM(
   }
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:pseudojets_to_epxpypz_array", kwnames, &obj0)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res4 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res4) && argp) {
@@ -24828,7 +24870,7 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array(PyObject *SWIGUNUSEDPARM(
   }
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pseudojets_to_ptyphim_array", kwnames, &obj0, &obj1)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res4 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res4) && argp) {
@@ -24922,7 +24964,7 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array(PyObject *SWIGUNUSEDPARM(self), P
   }
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pseudojets_to_array", kwnames, &obj0, &obj1)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res4 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res4) && argp) {
@@ -25009,7 +25051,7 @@ SWIGINTERN PyObject *_wrap_user_indices(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:user_indices", kwnames, &obj0)) SWIG_fail;
   {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
+    // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
     void* argp = 0;
     res3 = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
     if (SWIG_IsOK(res3) && argp) {

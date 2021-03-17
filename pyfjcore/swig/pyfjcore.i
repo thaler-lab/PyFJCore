@@ -90,24 +90,33 @@ FastJetError = _pyfjcore.FastJetError;
 // vector templates
 %template(vectorPseudoJet) std::vector<fastjet::PseudoJet>;
 
+%typemap(typecheck, precedence=159) const std::vector<fastjet::PseudoJet> & {
+  // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
+  int res = SWIG_ConvertPtr($input, 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+  if (!($1 = SWIG_CheckState(res))) {
+    int res = swig::asptr($input, (std::vector<fastjet::PseudoJet>**)(0));
+    $1 = SWIG_CheckState(res);
+  }
+}
+
 %typemap(in) const std::vector<fastjet::PseudoJet> & (int res = SWIG_OLDOBJ) {
-    // ptk: convert PseudoJetContainer to const std::vector<PseudoJet> &
-    void* argp = 0;
-    res = SWIG_ConvertPtr($input, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
-    if (SWIG_IsOK(res) && argp) {
-      $1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp)->as_ptr();
-      res = SWIG_OLDOBJ;
-    }
+  // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
+  void* argp = 0;
+  res = SWIG_ConvertPtr($input, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
+  if (SWIG_IsOK(res) && argp) {
+    $1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp)->as_ptr();
+    res = SWIG_OLDOBJ;
+  }
+  else {
+    std::vector<PseudoJet> *ptr = (std::vector<PseudoJet> *) 0;
+    res = swig::asptr($input, &ptr);
+    if (SWIG_IsOK(res) && ptr)
+      $1 = ptr;
     else {
-      std::vector<PseudoJet> *ptr = (std::vector<PseudoJet> *) 0;
-      res = swig::asptr($input, &ptr);
-      if (SWIG_IsOK(res) && ptr)
-        $1 = ptr;
-      else {
-        SWIG_exception_fail(SWIG_ArgError(res), "in method '$symname', argument $argnum of type '$type'");
-      }
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '$symname', argument $argnum of type '$type'");
     }
   }
+}
 
 // basic exception handling for all functions
 %exception {
