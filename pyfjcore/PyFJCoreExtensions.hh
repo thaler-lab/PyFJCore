@@ -8,18 +8,18 @@ FJCORE_BEGIN_NAMESPACE
 class UserInfoPython : public PseudoJet::UserInfoBase {
 public:
   UserInfoPython(PyObject * pyobj) : _pyobj(pyobj) {
-    Py_XINCREF(_pyobj);
+    Py_INCREF(_pyobj);
   }
 
   ~UserInfoPython() {
-    Py_XDECREF(_pyobj);
+    Py_DECREF(_pyobj);
   }
 
   PyObject * get_pyobj() const {
     // since there's going to be an extra reference to this object
     // one must increase the reference count; it seems that this
     // is _our_ responsibility
-    Py_XINCREF(_pyobj);
+    Py_INCREF(_pyobj);
     return _pyobj;
   }
   
@@ -78,16 +78,20 @@ for (int i = 0; i < mult; i++, k += nf) {   \
 npy_intp dims[1] = {nfeatures - 4};                                     \
 std::size_t nfbytes(dims[0] * sizeof(double));                          \
 BEGIN_CONVERT_TO_PJ(nfeatures, kinematics)                              \
+  std::cout << "before getting array" << std::endl; \
   PyObject* user_features(PyArray_SimpleNew(1, dims, NPY_DOUBLE));      \
+  std::cout << "after getting array ref count " << Py_REFCNT(user_features) << std::endl; \
   if (!user_features)                                                   \
     throw Error("cannot allocate array for user features");             \
   memcpy(array_data(user_features), particles + k + 4, nfbytes);        \
+  std::cout << "after memcpy" << std::endl; \
   pjs.back().set_user_info(new fastjet::UserInfoPython(user_features)); \
-  Py_DECREF(user_features);                                             \
+  std::cout << "after setting user info ref count " << Py_REFCNT(user_features) << std::endl; \
+  Py_DECREF(user_features); \
 END_CONVERT_TO_PJ
 
 // convert numpy array to PseudoJets
-PseudoJetContainer ptyphim_array_to_pseudojets(double* particles, int mult, int nfeatures) {
+std::vector<PseudoJet> ptyphim_array_to_pseudojets(double* particles, int mult, int nfeatures) {
   std::vector<PseudoJet> pjs;
   pjs.reserve(mult);
 
@@ -114,7 +118,7 @@ PseudoJetContainer ptyphim_array_to_pseudojets(double* particles, int mult, int 
 }
 
 // convert numpy array to PseudoJets
-PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, int mult, int nfeatures) {
+std::vector<PseudoJet> epxpypz_array_to_pseudojets(double* particles, int mult, int nfeatures) {
   std::vector<PseudoJet> pjs;
   pjs.reserve(mult);
 
@@ -128,6 +132,7 @@ PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, int mult, int 
   // array is pt, y, phi, m, [more features]
   else if (nfeatures > 4) {
     CONVERT_TO_PJS_WITH_INFO(pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]))
+    std::cout << "done converting to pjs" << std::endl;
   }
 
   else throw Error("array must have at least 4 columns");
@@ -136,7 +141,7 @@ PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, int mult, int 
 }
 
 // function that selects representation based on enum
-PseudoJetContainer array_to_pseudojets(double* particles, int mult, int nfeatures,
+std::vector<PseudoJet> array_to_pseudojets(double* particles, int mult, int nfeatures,
                                        PseudoJetRepresentation pjrep = ptyphim) {
 
   if (pjrep == ptyphim || pjrep == ptyphi)
@@ -214,7 +219,15 @@ void pseudojets_to_array(double** particles, int* mult, int* nfeatures,
 
 // function that extracts user indices to a numpy array
 void user_indices(int** inds, int* mult, const std::vector<PseudoJet> & pjs) {
-  EXTRACT_USER_INDICES
+  *mult = pjs.size();
+  std::size_t nbytes = pjs.size() * sizeof(int);
+  *inds = (int *) malloc(nbytes);
+  if (*inds == NULL)
+    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
+
+  std::size_t k(0);
+  for (const auto & pj : pjs)
+    (*inds)[k++] = pj.user_index();
 }
 
 FJCORE_END_NAMESPACE

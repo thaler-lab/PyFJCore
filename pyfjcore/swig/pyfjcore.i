@@ -90,7 +90,7 @@ FastJetError = _pyfjcore.FastJetError;
 // vector templates
 %template(vectorPseudoJet) std::vector<fastjet::PseudoJet>;
 
-%typemap(typecheck, precedence=159) const std::vector<fastjet::PseudoJet> & {
+/*%typemap(typecheck, precedence=159) const std::vector<fastjet::PseudoJet> & {
   // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
   int res = SWIG_ConvertPtr($input, 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
   if (!($1 = SWIG_CheckState(res))) {
@@ -116,7 +116,7 @@ FastJetError = _pyfjcore.FastJetError;
       SWIG_exception_fail(SWIG_ArgError(res), "in method '$symname', argument $argnum of type '$type'");
     }
   }
-}
+}*/
 
 // basic exception handling for all functions
 %exception {
@@ -201,7 +201,7 @@ namespace fastjet {
 
 namespace fastjet {
 
-  %extend PseudoJetContainer {
+  /*%extend PseudoJetContainer {
     %pythoncode {
       def __len__(self):
           return len(self.vector)
@@ -231,7 +231,7 @@ namespace fastjet {
               self._vector = self.as_vector()
           return self._vector
     }
-  }
+  }*/
 
   %extend PseudoJet {
 
@@ -248,6 +248,7 @@ namespace fastjet {
       else
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g)",
                  $self->pt(), $self->rap(), $self->phi());
+      std::cout << "In PseudoJet repr " << std::endl;
       return std::string(temp);
     }
 
@@ -257,7 +258,9 @@ namespace fastjet {
     }
 
     PyObject * python_info() const {
-      return $self->user_info<fastjet::UserInfoPython>().get_pyobj();
+      if ($self->has_user_info())
+        return $self->user_info<fastjet::UserInfoPython>().get_pyobj();
+      Py_RETURN_NONE;
     }
     
     // these C++ operators are not automatically handled by SWIG (would only
@@ -281,7 +284,7 @@ namespace fastjet {
   // extend JetDefinition
   %extend JetDefinition {
     ADD_REPR_FROM_DESCRIPTION
-    PseudoJetContainer __call__(const std::vector<PseudoJet> & particles) {
+    std::vector<PseudoJet> __call__(const std::vector<PseudoJet> & particles) {
       return (*self)(particles);
     }
   }
