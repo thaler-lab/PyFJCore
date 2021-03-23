@@ -175,6 +175,7 @@ class PseudoJetStructureBase(object):
     associated_cluster_sequence = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_associated_cluster_sequence)
     has_valid_cluster_sequence = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_has_valid_cluster_sequence)
     validated_cs = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_validated_cs)
+    validated_csab = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_validated_csab)
     has_partner = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_has_partner)
     has_child = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_has_child)
     has_parents = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_has_parents)
@@ -189,6 +190,11 @@ class PseudoJetStructureBase(object):
     exclusive_subdmerge_max = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_exclusive_subdmerge_max)
     has_pieces = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_has_pieces)
     pieces = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_pieces)
+    has_area = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_has_area)
+    area = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_area)
+    area_error = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_area_error)
+    area_4vector = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_area_4vector)
+    is_pure_ghost = _swig_new_instance_method(_pyfjcore.PseudoJetStructureBase_is_pure_ghost)
 
 # Register PseudoJetStructureBase in _pyfjcore:
 _pyfjcore.PseudoJetStructureBase_swigregister(PseudoJetStructureBase)
@@ -294,6 +300,8 @@ class PseudoJet(object):
     associated_cs = _swig_new_instance_method(_pyfjcore.PseudoJet_associated_cs)
     validated_cluster_sequence = _swig_new_instance_method(_pyfjcore.PseudoJet_validated_cluster_sequence)
     validated_cs = _swig_new_instance_method(_pyfjcore.PseudoJet_validated_cs)
+    validated_cluster_sequence_area_base = _swig_new_instance_method(_pyfjcore.PseudoJet_validated_cluster_sequence_area_base)
+    validated_csab = _swig_new_instance_method(_pyfjcore.PseudoJet_validated_csab)
     set_structure_shared_ptr = _swig_new_instance_method(_pyfjcore.PseudoJet_set_structure_shared_ptr)
     has_structure = _swig_new_instance_method(_pyfjcore.PseudoJet_has_structure)
     structure_ptr = _swig_new_instance_method(_pyfjcore.PseudoJet_structure_ptr)
@@ -315,6 +323,11 @@ class PseudoJet(object):
     exclusive_subdmerge_max = _swig_new_instance_method(_pyfjcore.PseudoJet_exclusive_subdmerge_max)
     has_pieces = _swig_new_instance_method(_pyfjcore.PseudoJet_has_pieces)
     pieces = _swig_new_instance_method(_pyfjcore.PseudoJet_pieces)
+    has_area = _swig_new_instance_method(_pyfjcore.PseudoJet_has_area)
+    area = _swig_new_instance_method(_pyfjcore.PseudoJet_area)
+    area_error = _swig_new_instance_method(_pyfjcore.PseudoJet_area_error)
+    area_4vector = _swig_new_instance_method(_pyfjcore.PseudoJet_area_4vector)
+    is_pure_ghost = _swig_new_instance_method(_pyfjcore.PseudoJet_is_pure_ghost)
     cluster_hist_index = _swig_new_instance_method(_pyfjcore.PseudoJet_cluster_hist_index)
     set_cluster_hist_index = _swig_new_instance_method(_pyfjcore.PseudoJet_set_cluster_hist_index)
     cluster_sequence_history_index = _swig_new_instance_method(_pyfjcore.PseudoJet_cluster_sequence_history_index)
@@ -379,6 +392,7 @@ class Selector(object):
     validated_worker = _swig_new_instance_method(_pyfjcore.Selector_validated_worker)
     takes_reference = _swig_new_instance_method(_pyfjcore.Selector_takes_reference)
     set_reference = _swig_new_instance_method(_pyfjcore.Selector_set_reference)
+    area = _swig_new_instance_method(_pyfjcore.Selector_area)
     __iand__ = _swig_new_instance_method(_pyfjcore.Selector___iand__)
     __ior__ = _swig_new_instance_method(_pyfjcore.Selector___ior__)
 
@@ -427,6 +441,7 @@ SelectorStrip = _pyfjcore.SelectorStrip
 SelectorRectangle = _pyfjcore.SelectorRectangle
 SelectorPtFractionMin = _pyfjcore.SelectorPtFractionMin
 SelectorIsZero = _pyfjcore.SelectorIsZero
+SelectorIsPureGhost = _pyfjcore.SelectorIsPureGhost
 fastjet_version_string = _pyfjcore.fastjet_version_string
 N2MHTLazy9AntiKtSeparateGhosts = _pyfjcore.N2MHTLazy9AntiKtSeparateGhosts
 
@@ -579,6 +594,11 @@ class CompositeJetStructure(PseudoJetStructureBase):
     constituents = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_constituents)
     has_pieces = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_has_pieces)
     pieces = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_pieces)
+    has_area = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_has_area)
+    area = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_area)
+    area_error = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_area_error)
+    area_4vector = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_area_4vector)
+    is_pure_ghost = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_is_pure_ghost)
 
 # Register CompositeJetStructure in _pyfjcore:
 _pyfjcore.CompositeJetStructure_swigregister(CompositeJetStructure)
@@ -601,6 +621,7 @@ class ClusterSequenceStructure(PseudoJetStructureBase):
     associated_cluster_sequence = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_associated_cluster_sequence)
     has_valid_cluster_sequence = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_valid_cluster_sequence)
     validated_cs = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_validated_cs)
+    validated_csab = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_validated_csab)
     set_associated_cs = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_set_associated_cs)
     has_partner = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_partner)
     has_child = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_child)
@@ -616,6 +637,11 @@ class ClusterSequenceStructure(PseudoJetStructureBase):
     exclusive_subdmerge_max = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_exclusive_subdmerge_max)
     has_pieces = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_pieces)
     pieces = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_pieces)
+    has_area = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_area)
+    area = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_area)
+    area_error = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_area_error)
+    area_4vector = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_area_4vector)
+    is_pure_ghost = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_is_pure_ghost)
 
 # Register ClusterSequenceStructure in _pyfjcore:
 _pyfjcore.ClusterSequenceStructure_swigregister(ClusterSequenceStructure)

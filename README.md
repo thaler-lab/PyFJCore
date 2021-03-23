@@ -58,6 +58,12 @@ Extracts the user indices from a vector of PseudoJets and returns them as a NumP
 
 ## Version History
 
+### 0.4.x
+
+**0.4.0**
+
+- Incompatibility with FastJet Python extension fixed by adding virtual methods to `PseudoJet`, `PseudoJetStructureBase`, `CompositeJetStructure`, and `ClusterSequenceStructure` that were removed in fjcore due to lack of area support.
+
 ### 0.3.x
 
 **0.3.0**
@@ -97,6 +103,7 @@ PyFJCore relies critically on the fjcore [header](https://github.com/pkomiske/Py
 
 - **fjcore.hh** 
     - Changed namespace from `fjcore` to `fastjet` to facilitate interoperability with the FastJet Python extension.
+    - Added back virtual methods to `PseudoJet`, `PseudoJetStructureBase`, `CompositeJetStructure`, and `ClusterSequenceStructure` that were removed in fjcore due to lack of area support. This is critical for ensuring compatibility with the FastJet Python extension.
     - Wrapped some code in `IsBaseAndDerived` that SWIG cannot parse with `#ifndef SWIG_PREPROCESSOR` and `#endif`. Since SWIG doesn't need this code for anything, it parses the file correctly without affecting the actual compilation.
     - Changed templated `ClusterSequence` constructor to an untemplated version using `PseudoJet` as the former template type.
 

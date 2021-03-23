@@ -2698,45 +2698,46 @@ SWIGINTERN PyObject *SWIG_PyStaticMethod_New(PyObject *SWIGUNUSEDPARM(self), PyO
 #define SWIGTYPE_p_difference_type swig_types[3]
 #define SWIGTYPE_p_double swig_types[4]
 #define SWIGTYPE_p_fastjet__ClusterSequence swig_types[5]
-#define SWIGTYPE_p_fastjet__ClusterSequenceStructure swig_types[6]
-#define SWIGTYPE_p_fastjet__ClusterSequence__Extras swig_types[7]
-#define SWIGTYPE_p_fastjet__CompositeJetStructure swig_types[8]
-#define SWIGTYPE_p_fastjet__Error swig_types[9]
-#define SWIGTYPE_p_fastjet__FunctionOfPseudoJetT_fastjet__PseudoJet_t swig_types[10]
-#define SWIGTYPE_p_fastjet__InternalError swig_types[11]
-#define SWIGTYPE_p_fastjet__JetAlgorithm swig_types[12]
-#define SWIGTYPE_p_fastjet__JetDefinition swig_types[13]
-#define SWIGTYPE_p_fastjet__JetDefinition__Plugin swig_types[14]
-#define SWIGTYPE_p_fastjet__JetDefinition__Recombiner swig_types[15]
-#define SWIGTYPE_p_fastjet__PseudoJet swig_types[16]
-#define SWIGTYPE_p_fastjet__PseudoJetStructureBase swig_types[17]
-#define SWIGTYPE_p_fastjet__PseudoJet__UserInfoBase swig_types[18]
-#define SWIGTYPE_p_fastjet__Selector swig_types[19]
-#define SWIGTYPE_p_fastjet__SelectorWorker swig_types[20]
-#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t swig_types[21]
-#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJet__UserInfoBase_t swig_types[22]
-#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__SelectorWorker_t swig_types[23]
-#define SWIGTYPE_p_fastjet__integral_typeT_bool_false_t swig_types[24]
-#define SWIGTYPE_p_fastjet__integral_typeT_bool_true_t swig_types[25]
-#define SWIGTYPE_p_int swig_types[26]
-#define SWIGTYPE_p_p_PyObject swig_types[27]
-#define SWIGTYPE_p_p_double swig_types[28]
-#define SWIGTYPE_p_p_fastjet__PseudoJet swig_types[29]
-#define SWIGTYPE_p_p_int swig_types[30]
-#define SWIGTYPE_p_size_type swig_types[31]
-#define SWIGTYPE_p_std__allocatorT_fastjet__PseudoJet_t swig_types[32]
-#define SWIGTYPE_p_std__invalid_argument swig_types[33]
-#define SWIGTYPE_p_std__ostream swig_types[34]
-#define SWIGTYPE_p_std__valarrayT_double_t swig_types[35]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[36]
-#define SWIGTYPE_p_std__vectorT_fastjet__ClusterSequence__history_element_std__allocatorT_fastjet__ClusterSequence__history_element_t_t swig_types[37]
-#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_const_p_std__allocatorT_fastjet__PseudoJet_const_p_t_t swig_types[38]
-#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t swig_types[39]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[40]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[41]
-#define SWIGTYPE_p_value_type swig_types[42]
-static swig_type_info *swig_types[44];
-static swig_module_info swig_module = {swig_types, 43, 0, 0, 0, 0};
+#define SWIGTYPE_p_fastjet__ClusterSequenceAreaBase swig_types[6]
+#define SWIGTYPE_p_fastjet__ClusterSequenceStructure swig_types[7]
+#define SWIGTYPE_p_fastjet__ClusterSequence__Extras swig_types[8]
+#define SWIGTYPE_p_fastjet__CompositeJetStructure swig_types[9]
+#define SWIGTYPE_p_fastjet__Error swig_types[10]
+#define SWIGTYPE_p_fastjet__FunctionOfPseudoJetT_fastjet__PseudoJet_t swig_types[11]
+#define SWIGTYPE_p_fastjet__InternalError swig_types[12]
+#define SWIGTYPE_p_fastjet__JetAlgorithm swig_types[13]
+#define SWIGTYPE_p_fastjet__JetDefinition swig_types[14]
+#define SWIGTYPE_p_fastjet__JetDefinition__Plugin swig_types[15]
+#define SWIGTYPE_p_fastjet__JetDefinition__Recombiner swig_types[16]
+#define SWIGTYPE_p_fastjet__PseudoJet swig_types[17]
+#define SWIGTYPE_p_fastjet__PseudoJetStructureBase swig_types[18]
+#define SWIGTYPE_p_fastjet__PseudoJet__UserInfoBase swig_types[19]
+#define SWIGTYPE_p_fastjet__Selector swig_types[20]
+#define SWIGTYPE_p_fastjet__SelectorWorker swig_types[21]
+#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t swig_types[22]
+#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJet__UserInfoBase_t swig_types[23]
+#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__SelectorWorker_t swig_types[24]
+#define SWIGTYPE_p_fastjet__integral_typeT_bool_false_t swig_types[25]
+#define SWIGTYPE_p_fastjet__integral_typeT_bool_true_t swig_types[26]
+#define SWIGTYPE_p_int swig_types[27]
+#define SWIGTYPE_p_p_PyObject swig_types[28]
+#define SWIGTYPE_p_p_double swig_types[29]
+#define SWIGTYPE_p_p_fastjet__PseudoJet swig_types[30]
+#define SWIGTYPE_p_p_int swig_types[31]
+#define SWIGTYPE_p_size_type swig_types[32]
+#define SWIGTYPE_p_std__allocatorT_fastjet__PseudoJet_t swig_types[33]
+#define SWIGTYPE_p_std__invalid_argument swig_types[34]
+#define SWIGTYPE_p_std__ostream swig_types[35]
+#define SWIGTYPE_p_std__valarrayT_double_t swig_types[36]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[37]
+#define SWIGTYPE_p_std__vectorT_fastjet__ClusterSequence__history_element_std__allocatorT_fastjet__ClusterSequence__history_element_t_t swig_types[38]
+#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_const_p_std__allocatorT_fastjet__PseudoJet_const_p_t_t swig_types[39]
+#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t swig_types[40]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[41]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[42]
+#define SWIGTYPE_p_value_type swig_types[43]
+static swig_type_info *swig_types[45];
+static swig_module_info swig_module = {swig_types, 44, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -4889,16 +4890,15 @@ SWIGINTERN std::string fastjet_PseudoJet___repr__(fastjet::PseudoJet *self){
       else
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g)",
                  self->pt(), self->rap(), self->phi());
-      std::cout << "In PseudoJet repr " << std::endl;
       return std::string(temp);
     }
 SWIGINTERN void fastjet_PseudoJet_set_python_info(fastjet::PseudoJet *self,PyObject *pyobj){
-      fastjet::UserInfoPython * new_python_info = new fastjet::UserInfoPython(pyobj);
+      UserInfoPython * new_python_info = new UserInfoPython(pyobj);
       self->set_user_info(new_python_info);
     }
 SWIGINTERN PyObject *fastjet_PseudoJet_python_info(fastjet::PseudoJet const *self){
       if (self->has_user_info())
-        return self->user_info<fastjet::UserInfoPython>().get_pyobj();
+        return self->user_info<UserInfoPython>().get_pyobj();
       Py_RETURN_NONE;
     }
 SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___add__(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return *(self) + p; }
@@ -8420,6 +8420,40 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_validated_csab(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetStructureBase *arg1 = (fastjet::PseudoJetStructureBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::ClusterSequenceAreaBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetStructureBase_validated_csab" "', argument " "1"" of type '" "fastjet::PseudoJetStructureBase const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetStructureBase * >(argp1);
+  {
+    try {
+      result = (fastjet::ClusterSequenceAreaBase *)((fastjet::PseudoJetStructureBase const *)arg1)->validated_csab(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_partner(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::PseudoJetStructureBase *arg1 = (fastjet::PseudoJetStructureBase *) 0 ;
@@ -9167,6 +9201,176 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_pieces(PyObject *SWIGUNUSEDPAR
     }
   }
   resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetStructureBase *arg1 = (fastjet::PseudoJetStructureBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetStructureBase_has_area" "', argument " "1"" of type '" "fastjet::PseudoJetStructureBase const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetStructureBase * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::PseudoJetStructureBase const *)arg1)->has_area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetStructureBase *arg1 = (fastjet::PseudoJetStructureBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetStructureBase_area" "', argument " "1"" of type '" "fastjet::PseudoJetStructureBase const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetStructureBase * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::PseudoJetStructureBase const *)arg1)->area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_area_error(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetStructureBase *arg1 = (fastjet::PseudoJetStructureBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetStructureBase_area_error" "', argument " "1"" of type '" "fastjet::PseudoJetStructureBase const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetStructureBase * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::PseudoJetStructureBase const *)arg1)->area_error(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_area_4vector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetStructureBase *arg1 = (fastjet::PseudoJetStructureBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJet result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetStructureBase_area_4vector" "', argument " "1"" of type '" "fastjet::PseudoJetStructureBase const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetStructureBase * >(argp1);
+  {
+    try {
+      result = ((fastjet::PseudoJetStructureBase const *)arg1)->area_4vector(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_is_pure_ghost(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetStructureBase *arg1 = (fastjet::PseudoJetStructureBase *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetStructureBase_is_pure_ghost" "', argument " "1"" of type '" "fastjet::PseudoJetStructureBase const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetStructureBase * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::PseudoJetStructureBase const *)arg1)->is_pure_ghost(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -12185,6 +12389,74 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_PseudoJet_validated_cluster_sequence_area_base(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::ClusterSequenceAreaBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet_validated_cluster_sequence_area_base" "', argument " "1"" of type '" "fastjet::PseudoJet const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
+  {
+    try {
+      result = (fastjet::ClusterSequenceAreaBase *)((fastjet::PseudoJet const *)arg1)->validated_cluster_sequence_area_base(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJet_validated_csab(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::ClusterSequenceAreaBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet_validated_csab" "', argument " "1"" of type '" "fastjet::PseudoJet const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
+  {
+    try {
+      result = (fastjet::ClusterSequenceAreaBase *)((fastjet::PseudoJet const *)arg1)->validated_csab(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_PseudoJet_set_structure_shared_ptr(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
@@ -13126,6 +13398,176 @@ SWIGINTERN PyObject *_wrap_PseudoJet_pieces(PyObject *SWIGUNUSEDPARM(self), PyOb
     }
   }
   resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJet_has_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet_has_area" "', argument " "1"" of type '" "fastjet::PseudoJet const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::PseudoJet const *)arg1)->has_area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJet_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet_area" "', argument " "1"" of type '" "fastjet::PseudoJet const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::PseudoJet const *)arg1)->area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJet_area_error(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet_area_error" "', argument " "1"" of type '" "fastjet::PseudoJet const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::PseudoJet const *)arg1)->area_error(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJet_area_4vector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJet result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet_area_4vector" "', argument " "1"" of type '" "fastjet::PseudoJet const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
+  {
+    try {
+      result = ((fastjet::PseudoJet const *)arg1)->area_4vector(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJet_is_pure_ghost(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet_is_pure_ghost" "', argument " "1"" of type '" "fastjet::PseudoJet const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::PseudoJet const *)arg1)->is_pure_ghost(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -15566,6 +16008,120 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Selector_area__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_area" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::Selector const *)arg1)->area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_area__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_area" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Selector_area" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  {
+    try {
+      result = (double)((fastjet::Selector const *)arg1)->area(arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_area(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "Selector_area", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_Selector_area__SWIG_0(self, argc, argv);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_double(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_Selector_area__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'Selector_area'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::Selector::area() const\n"
+    "    fastjet::Selector::area(double) const\n");
+  return 0;
+}
+
+
 SWIGINTERN PyObject *_wrap_Selector___iand__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
@@ -17167,6 +17723,30 @@ SWIGINTERN PyObject *_wrap_SelectorIsZero(PyObject *SWIGUNUSEDPARM(self), PyObje
   {
     try {
       result = fastjet::SelectorIsZero(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SelectorIsPureGhost(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::Selector result;
+  
+  if (!SWIG_Python_UnpackTuple(args, "SelectorIsPureGhost", 0, 0, 0)) SWIG_fail;
+  {
+    try {
+      result = fastjet::SelectorIsPureGhost(); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -19882,6 +20462,176 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_CompositeJetStructure_has_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::CompositeJetStructure *arg1 = (fastjet::CompositeJetStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__CompositeJetStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CompositeJetStructure_has_area" "', argument " "1"" of type '" "fastjet::CompositeJetStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::CompositeJetStructure * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::CompositeJetStructure const *)arg1)->has_area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CompositeJetStructure_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::CompositeJetStructure *arg1 = (fastjet::CompositeJetStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__CompositeJetStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CompositeJetStructure_area" "', argument " "1"" of type '" "fastjet::CompositeJetStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::CompositeJetStructure * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::CompositeJetStructure const *)arg1)->area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CompositeJetStructure_area_error(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::CompositeJetStructure *arg1 = (fastjet::CompositeJetStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__CompositeJetStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CompositeJetStructure_area_error" "', argument " "1"" of type '" "fastjet::CompositeJetStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::CompositeJetStructure * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::CompositeJetStructure const *)arg1)->area_error(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CompositeJetStructure_area_4vector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::CompositeJetStructure *arg1 = (fastjet::CompositeJetStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJet result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__CompositeJetStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CompositeJetStructure_area_4vector" "', argument " "1"" of type '" "fastjet::CompositeJetStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::CompositeJetStructure * >(argp1);
+  {
+    try {
+      result = ((fastjet::CompositeJetStructure const *)arg1)->area_4vector(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_CompositeJetStructure_is_pure_ghost(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::CompositeJetStructure *arg1 = (fastjet::CompositeJetStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__CompositeJetStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "CompositeJetStructure_is_pure_ghost" "', argument " "1"" of type '" "fastjet::CompositeJetStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::CompositeJetStructure * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::CompositeJetStructure const *)arg1)->is_pure_ghost(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *CompositeJetStructure_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
@@ -20176,6 +20926,40 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_validated_cs(PyObject *SWIGU
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_validated_csab(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequenceStructure *arg1 = (fastjet::ClusterSequenceStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::ClusterSequenceAreaBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequenceStructure_validated_csab" "', argument " "1"" of type '" "fastjet::ClusterSequenceStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequenceStructure * >(argp1);
+  {
+    try {
+      result = (fastjet::ClusterSequenceAreaBase *)((fastjet::ClusterSequenceStructure const *)arg1)->validated_csab(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -20973,6 +21757,176 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_pieces(PyObject *SWIGUNUSEDP
     }
   }
   resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequenceStructure *arg1 = (fastjet::ClusterSequenceStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequenceStructure_has_area" "', argument " "1"" of type '" "fastjet::ClusterSequenceStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequenceStructure * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::ClusterSequenceStructure const *)arg1)->has_area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequenceStructure *arg1 = (fastjet::ClusterSequenceStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequenceStructure_area" "', argument " "1"" of type '" "fastjet::ClusterSequenceStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequenceStructure * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::ClusterSequenceStructure const *)arg1)->area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_area_error(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequenceStructure *arg1 = (fastjet::ClusterSequenceStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequenceStructure_area_error" "', argument " "1"" of type '" "fastjet::ClusterSequenceStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequenceStructure * >(argp1);
+  {
+    try {
+      result = (double)((fastjet::ClusterSequenceStructure const *)arg1)->area_error(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_area_4vector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequenceStructure *arg1 = (fastjet::ClusterSequenceStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJet result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequenceStructure_area_4vector" "', argument " "1"" of type '" "fastjet::ClusterSequenceStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequenceStructure * >(argp1);
+  {
+    try {
+      result = ((fastjet::ClusterSequenceStructure const *)arg1)->area_4vector(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_is_pure_ghost(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequenceStructure *arg1 = (fastjet::ClusterSequenceStructure *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequenceStructure_is_pure_ghost" "', argument " "1"" of type '" "fastjet::ClusterSequenceStructure const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequenceStructure * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::ClusterSequenceStructure const *)arg1)->is_pure_ghost(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -24732,6 +25686,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJetStructureBase_associated_cluster_sequence", _wrap_PseudoJetStructureBase_associated_cluster_sequence, METH_O, "PseudoJetStructureBase_associated_cluster_sequence(PseudoJetStructureBase self) -> ClusterSequence"},
 	 { "PseudoJetStructureBase_has_valid_cluster_sequence", _wrap_PseudoJetStructureBase_has_valid_cluster_sequence, METH_O, "PseudoJetStructureBase_has_valid_cluster_sequence(PseudoJetStructureBase self) -> bool"},
 	 { "PseudoJetStructureBase_validated_cs", _wrap_PseudoJetStructureBase_validated_cs, METH_O, "PseudoJetStructureBase_validated_cs(PseudoJetStructureBase self) -> ClusterSequence"},
+	 { "PseudoJetStructureBase_validated_csab", _wrap_PseudoJetStructureBase_validated_csab, METH_O, "PseudoJetStructureBase_validated_csab(PseudoJetStructureBase self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "PseudoJetStructureBase_has_partner", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_partner, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_has_partner(PseudoJetStructureBase self, PseudoJet reference, PseudoJet partner) -> bool"},
 	 { "PseudoJetStructureBase_has_child", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_child, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_has_child(PseudoJetStructureBase self, PseudoJet reference, PseudoJet child) -> bool"},
 	 { "PseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_has_parents(PseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
@@ -24746,6 +25701,11 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_exclusive_subdmerge_max(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "PseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_has_pieces(PseudoJetStructureBase self, PseudoJet arg2) -> bool"},
 	 { "PseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_pieces(PseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_has_area", _wrap_PseudoJetStructureBase_has_area, METH_O, "PseudoJetStructureBase_has_area(PseudoJetStructureBase self) -> bool"},
+	 { "PseudoJetStructureBase_area", _wrap_PseudoJetStructureBase_area, METH_O, "PseudoJetStructureBase_area(PseudoJetStructureBase self) -> double"},
+	 { "PseudoJetStructureBase_area_error", _wrap_PseudoJetStructureBase_area_error, METH_O, "PseudoJetStructureBase_area_error(PseudoJetStructureBase self) -> double"},
+	 { "PseudoJetStructureBase_area_4vector", _wrap_PseudoJetStructureBase_area_4vector, METH_O, "PseudoJetStructureBase_area_4vector(PseudoJetStructureBase self) -> PseudoJet"},
+	 { "PseudoJetStructureBase_is_pure_ghost", _wrap_PseudoJetStructureBase_is_pure_ghost, METH_O, "PseudoJetStructureBase_is_pure_ghost(PseudoJetStructureBase self) -> bool"},
 	 { "PseudoJetStructureBase_swigregister", PseudoJetStructureBase_swigregister, METH_O, NULL},
 	 { "PseudoJetStructureBase_swiginit", PseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
 	 { "new_PseudoJet", _wrap_new_PseudoJet, METH_VARARGS, "\n"
@@ -24826,6 +25786,8 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJet_associated_cs", _wrap_PseudoJet_associated_cs, METH_O, "PseudoJet_associated_cs(PseudoJet self) -> ClusterSequence"},
 	 { "PseudoJet_validated_cluster_sequence", _wrap_PseudoJet_validated_cluster_sequence, METH_O, "PseudoJet_validated_cluster_sequence(PseudoJet self) -> ClusterSequence"},
 	 { "PseudoJet_validated_cs", _wrap_PseudoJet_validated_cs, METH_O, "PseudoJet_validated_cs(PseudoJet self) -> ClusterSequence"},
+	 { "PseudoJet_validated_cluster_sequence_area_base", _wrap_PseudoJet_validated_cluster_sequence_area_base, METH_O, "PseudoJet_validated_cluster_sequence_area_base(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
+	 { "PseudoJet_validated_csab", _wrap_PseudoJet_validated_csab, METH_O, "PseudoJet_validated_csab(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "PseudoJet_set_structure_shared_ptr", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_structure_shared_ptr, METH_VARARGS|METH_KEYWORDS, "PseudoJet_set_structure_shared_ptr(PseudoJet self, fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const & structure)"},
 	 { "PseudoJet_has_structure", _wrap_PseudoJet_has_structure, METH_O, "PseudoJet_has_structure(PseudoJet self) -> bool"},
 	 { "PseudoJet_structure_ptr", _wrap_PseudoJet_structure_ptr, METH_O, "PseudoJet_structure_ptr(PseudoJet self) -> PseudoJetStructureBase"},
@@ -24850,6 +25812,11 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJet_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "PseudoJet_exclusive_subdmerge_max(PseudoJet self, int nsub) -> double"},
 	 { "PseudoJet_has_pieces", _wrap_PseudoJet_has_pieces, METH_O, "PseudoJet_has_pieces(PseudoJet self) -> bool"},
 	 { "PseudoJet_pieces", _wrap_PseudoJet_pieces, METH_O, "PseudoJet_pieces(PseudoJet self) -> vectorPseudoJet"},
+	 { "PseudoJet_has_area", _wrap_PseudoJet_has_area, METH_O, "PseudoJet_has_area(PseudoJet self) -> bool"},
+	 { "PseudoJet_area", _wrap_PseudoJet_area, METH_O, "PseudoJet_area(PseudoJet self) -> double"},
+	 { "PseudoJet_area_error", _wrap_PseudoJet_area_error, METH_O, "PseudoJet_area_error(PseudoJet self) -> double"},
+	 { "PseudoJet_area_4vector", _wrap_PseudoJet_area_4vector, METH_O, "PseudoJet_area_4vector(PseudoJet self) -> PseudoJet"},
+	 { "PseudoJet_is_pure_ghost", _wrap_PseudoJet_is_pure_ghost, METH_O, "PseudoJet_is_pure_ghost(PseudoJet self) -> bool"},
 	 { "PseudoJet_cluster_hist_index", _wrap_PseudoJet_cluster_hist_index, METH_O, "PseudoJet_cluster_hist_index(PseudoJet self) -> int"},
 	 { "PseudoJet_set_cluster_hist_index", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_cluster_hist_index, METH_VARARGS|METH_KEYWORDS, "PseudoJet_set_cluster_hist_index(PseudoJet self, int const index)"},
 	 { "PseudoJet_cluster_sequence_history_index", _wrap_PseudoJet_cluster_sequence_history_index, METH_O, "PseudoJet_cluster_sequence_history_index(PseudoJet self) -> int"},
@@ -24906,6 +25873,10 @@ static PyMethodDef SwigMethods[] = {
 	 { "Selector_validated_worker", _wrap_Selector_validated_worker, METH_O, "Selector_validated_worker(Selector self) -> fastjet::SelectorWorker const *"},
 	 { "Selector_takes_reference", _wrap_Selector_takes_reference, METH_O, "Selector_takes_reference(Selector self) -> bool"},
 	 { "Selector_set_reference", (PyCFunction)(void(*)(void))_wrap_Selector_set_reference, METH_VARARGS|METH_KEYWORDS, "Selector_set_reference(Selector self, PseudoJet reference) -> Selector"},
+	 { "Selector_area", _wrap_Selector_area, METH_VARARGS, "\n"
+		"Selector_area(Selector self) -> double\n"
+		"Selector_area(Selector self, double arg2) -> double\n"
+		""},
 	 { "Selector___iand__", (PyCFunction)(void(*)(void))_wrap_Selector___iand__, METH_VARARGS|METH_KEYWORDS, "Selector___iand__(Selector self, Selector b) -> Selector"},
 	 { "Selector___ior__", (PyCFunction)(void(*)(void))_wrap_Selector___ior__, METH_VARARGS|METH_KEYWORDS, "Selector___ior__(Selector self, Selector b) -> Selector"},
 	 { "Selector___mul__", (PyCFunction)(void(*)(void))_wrap_Selector___mul__, METH_VARARGS|METH_KEYWORDS, "Selector___mul__(Selector self, Selector other) -> Selector"},
@@ -24948,6 +25919,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "SelectorRectangle", (PyCFunction)(void(*)(void))_wrap_SelectorRectangle, METH_VARARGS|METH_KEYWORDS, "SelectorRectangle(double const half_rap_width, double const half_phi_width) -> Selector"},
 	 { "SelectorPtFractionMin", (PyCFunction)(void(*)(void))_wrap_SelectorPtFractionMin, METH_VARARGS|METH_KEYWORDS, "SelectorPtFractionMin(double fraction) -> Selector"},
 	 { "SelectorIsZero", _wrap_SelectorIsZero, METH_NOARGS, "SelectorIsZero() -> Selector"},
+	 { "SelectorIsPureGhost", _wrap_SelectorIsPureGhost, METH_NOARGS, "SelectorIsPureGhost() -> Selector"},
 	 { "fastjet_version_string", _wrap_fastjet_version_string, METH_NOARGS, "fastjet_version_string() -> std::string"},
 	 { "new_JetDefinition", _wrap_new_JetDefinition, METH_VARARGS, "\n"
 		"JetDefinition(fastjet::JetAlgorithm jet_algorithm_in, double R_in, fastjet::RecombinationScheme recomb_scheme_in=E_scheme, fastjet::Strategy strategy_in=Best)\n"
@@ -25011,6 +25983,11 @@ static PyMethodDef SwigMethods[] = {
 	 { "CompositeJetStructure_constituents", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_constituents, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_constituents(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
 	 { "CompositeJetStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_has_pieces(CompositeJetStructure self, PseudoJet arg2) -> bool"},
 	 { "CompositeJetStructure_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_pieces, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_pieces(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "CompositeJetStructure_has_area", _wrap_CompositeJetStructure_has_area, METH_O, "CompositeJetStructure_has_area(CompositeJetStructure self) -> bool"},
+	 { "CompositeJetStructure_area", _wrap_CompositeJetStructure_area, METH_O, "CompositeJetStructure_area(CompositeJetStructure self) -> double"},
+	 { "CompositeJetStructure_area_error", _wrap_CompositeJetStructure_area_error, METH_O, "CompositeJetStructure_area_error(CompositeJetStructure self) -> double"},
+	 { "CompositeJetStructure_area_4vector", _wrap_CompositeJetStructure_area_4vector, METH_O, "CompositeJetStructure_area_4vector(CompositeJetStructure self) -> PseudoJet"},
+	 { "CompositeJetStructure_is_pure_ghost", _wrap_CompositeJetStructure_is_pure_ghost, METH_O, "CompositeJetStructure_is_pure_ghost(CompositeJetStructure self) -> bool"},
 	 { "CompositeJetStructure_swigregister", CompositeJetStructure_swigregister, METH_O, NULL},
 	 { "CompositeJetStructure_swiginit", CompositeJetStructure_swiginit, METH_VARARGS, NULL},
 	 { "new_ClusterSequenceStructure", _wrap_new_ClusterSequenceStructure, METH_VARARGS, "\n"
@@ -25023,6 +26000,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "ClusterSequenceStructure_associated_cluster_sequence", _wrap_ClusterSequenceStructure_associated_cluster_sequence, METH_O, "ClusterSequenceStructure_associated_cluster_sequence(ClusterSequenceStructure self) -> ClusterSequence"},
 	 { "ClusterSequenceStructure_has_valid_cluster_sequence", _wrap_ClusterSequenceStructure_has_valid_cluster_sequence, METH_O, "ClusterSequenceStructure_has_valid_cluster_sequence(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_validated_cs", _wrap_ClusterSequenceStructure_validated_cs, METH_O, "ClusterSequenceStructure_validated_cs(ClusterSequenceStructure self) -> ClusterSequence"},
+	 { "ClusterSequenceStructure_validated_csab", _wrap_ClusterSequenceStructure_validated_csab, METH_O, "ClusterSequenceStructure_validated_csab(ClusterSequenceStructure self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "ClusterSequenceStructure_set_associated_cs", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_set_associated_cs, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_set_associated_cs(ClusterSequenceStructure self, ClusterSequence new_cs)"},
 	 { "ClusterSequenceStructure_has_partner", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_partner, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_has_partner(ClusterSequenceStructure self, PseudoJet reference, PseudoJet partner) -> bool"},
 	 { "ClusterSequenceStructure_has_child", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_child, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_has_child(ClusterSequenceStructure self, PseudoJet reference, PseudoJet child) -> bool"},
@@ -25038,6 +26016,11 @@ static PyMethodDef SwigMethods[] = {
 	 { "ClusterSequenceStructure_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_exclusive_subdmerge_max(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> double"},
 	 { "ClusterSequenceStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_has_pieces(ClusterSequenceStructure self, PseudoJet reference) -> bool"},
 	 { "ClusterSequenceStructure_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_pieces, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_pieces(ClusterSequenceStructure self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_has_area", _wrap_ClusterSequenceStructure_has_area, METH_O, "ClusterSequenceStructure_has_area(ClusterSequenceStructure self) -> bool"},
+	 { "ClusterSequenceStructure_area", _wrap_ClusterSequenceStructure_area, METH_O, "ClusterSequenceStructure_area(ClusterSequenceStructure self) -> double"},
+	 { "ClusterSequenceStructure_area_error", _wrap_ClusterSequenceStructure_area_error, METH_O, "ClusterSequenceStructure_area_error(ClusterSequenceStructure self) -> double"},
+	 { "ClusterSequenceStructure_area_4vector", _wrap_ClusterSequenceStructure_area_4vector, METH_O, "ClusterSequenceStructure_area_4vector(ClusterSequenceStructure self) -> PseudoJet"},
+	 { "ClusterSequenceStructure_is_pure_ghost", _wrap_ClusterSequenceStructure_is_pure_ghost, METH_O, "ClusterSequenceStructure_is_pure_ghost(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_swigregister", ClusterSequenceStructure_swigregister, METH_O, NULL},
 	 { "ClusterSequenceStructure_swiginit", ClusterSequenceStructure_swiginit, METH_VARARGS, NULL},
 	 { "new_ClusterSequence", (PyCFunction)(void(*)(void))_wrap_new_ClusterSequence, METH_VARARGS|METH_KEYWORDS, "new_ClusterSequence(vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence"},
@@ -25215,6 +26198,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJetStructureBase_associated_cluster_sequence", _wrap_PseudoJetStructureBase_associated_cluster_sequence, METH_O, "associated_cluster_sequence(PseudoJetStructureBase self) -> ClusterSequence"},
 	 { "PseudoJetStructureBase_has_valid_cluster_sequence", _wrap_PseudoJetStructureBase_has_valid_cluster_sequence, METH_O, "has_valid_cluster_sequence(PseudoJetStructureBase self) -> bool"},
 	 { "PseudoJetStructureBase_validated_cs", _wrap_PseudoJetStructureBase_validated_cs, METH_O, "validated_cs(PseudoJetStructureBase self) -> ClusterSequence"},
+	 { "PseudoJetStructureBase_validated_csab", _wrap_PseudoJetStructureBase_validated_csab, METH_O, "validated_csab(PseudoJetStructureBase self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "PseudoJetStructureBase_has_partner", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_partner, METH_VARARGS|METH_KEYWORDS, "has_partner(PseudoJetStructureBase self, PseudoJet reference, PseudoJet partner) -> bool"},
 	 { "PseudoJetStructureBase_has_child", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_child, METH_VARARGS|METH_KEYWORDS, "has_child(PseudoJetStructureBase self, PseudoJet reference, PseudoJet child) -> bool"},
 	 { "PseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "has_parents(PseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
@@ -25229,6 +26213,11 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "PseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(PseudoJetStructureBase self, PseudoJet arg2) -> bool"},
 	 { "PseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(PseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_has_area", _wrap_PseudoJetStructureBase_has_area, METH_O, "has_area(PseudoJetStructureBase self) -> bool"},
+	 { "PseudoJetStructureBase_area", _wrap_PseudoJetStructureBase_area, METH_O, "area(PseudoJetStructureBase self) -> double"},
+	 { "PseudoJetStructureBase_area_error", _wrap_PseudoJetStructureBase_area_error, METH_O, "area_error(PseudoJetStructureBase self) -> double"},
+	 { "PseudoJetStructureBase_area_4vector", _wrap_PseudoJetStructureBase_area_4vector, METH_O, "area_4vector(PseudoJetStructureBase self) -> PseudoJet"},
+	 { "PseudoJetStructureBase_is_pure_ghost", _wrap_PseudoJetStructureBase_is_pure_ghost, METH_O, "is_pure_ghost(PseudoJetStructureBase self) -> bool"},
 	 { "PseudoJetStructureBase_swigregister", PseudoJetStructureBase_swigregister, METH_O, NULL},
 	 { "PseudoJetStructureBase_swiginit", PseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
 	 { "new_PseudoJet", _wrap_new_PseudoJet, METH_VARARGS, "\n"
@@ -25309,6 +26298,8 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJet_associated_cs", _wrap_PseudoJet_associated_cs, METH_O, "associated_cs(PseudoJet self) -> ClusterSequence"},
 	 { "PseudoJet_validated_cluster_sequence", _wrap_PseudoJet_validated_cluster_sequence, METH_O, "validated_cluster_sequence(PseudoJet self) -> ClusterSequence"},
 	 { "PseudoJet_validated_cs", _wrap_PseudoJet_validated_cs, METH_O, "validated_cs(PseudoJet self) -> ClusterSequence"},
+	 { "PseudoJet_validated_cluster_sequence_area_base", _wrap_PseudoJet_validated_cluster_sequence_area_base, METH_O, "validated_cluster_sequence_area_base(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
+	 { "PseudoJet_validated_csab", _wrap_PseudoJet_validated_csab, METH_O, "validated_csab(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "PseudoJet_set_structure_shared_ptr", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_structure_shared_ptr, METH_VARARGS|METH_KEYWORDS, "set_structure_shared_ptr(PseudoJet self, fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const & structure)"},
 	 { "PseudoJet_has_structure", _wrap_PseudoJet_has_structure, METH_O, "has_structure(PseudoJet self) -> bool"},
 	 { "PseudoJet_structure_ptr", _wrap_PseudoJet_structure_ptr, METH_O, "structure_ptr(PseudoJet self) -> PseudoJetStructureBase"},
@@ -25333,6 +26324,11 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJet_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(PseudoJet self, int nsub) -> double"},
 	 { "PseudoJet_has_pieces", _wrap_PseudoJet_has_pieces, METH_O, "has_pieces(PseudoJet self) -> bool"},
 	 { "PseudoJet_pieces", _wrap_PseudoJet_pieces, METH_O, "pieces(PseudoJet self) -> vectorPseudoJet"},
+	 { "PseudoJet_has_area", _wrap_PseudoJet_has_area, METH_O, "has_area(PseudoJet self) -> bool"},
+	 { "PseudoJet_area", _wrap_PseudoJet_area, METH_O, "area(PseudoJet self) -> double"},
+	 { "PseudoJet_area_error", _wrap_PseudoJet_area_error, METH_O, "area_error(PseudoJet self) -> double"},
+	 { "PseudoJet_area_4vector", _wrap_PseudoJet_area_4vector, METH_O, "area_4vector(PseudoJet self) -> PseudoJet"},
+	 { "PseudoJet_is_pure_ghost", _wrap_PseudoJet_is_pure_ghost, METH_O, "is_pure_ghost(PseudoJet self) -> bool"},
 	 { "PseudoJet_cluster_hist_index", _wrap_PseudoJet_cluster_hist_index, METH_O, "cluster_hist_index(PseudoJet self) -> int"},
 	 { "PseudoJet_set_cluster_hist_index", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_cluster_hist_index, METH_VARARGS|METH_KEYWORDS, "set_cluster_hist_index(PseudoJet self, int const index)"},
 	 { "PseudoJet_cluster_sequence_history_index", _wrap_PseudoJet_cluster_sequence_history_index, METH_O, "cluster_sequence_history_index(PseudoJet self) -> int"},
@@ -25389,6 +26385,10 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "Selector_validated_worker", _wrap_Selector_validated_worker, METH_O, "validated_worker(Selector self) -> fastjet::SelectorWorker const *"},
 	 { "Selector_takes_reference", _wrap_Selector_takes_reference, METH_O, "takes_reference(Selector self) -> bool"},
 	 { "Selector_set_reference", (PyCFunction)(void(*)(void))_wrap_Selector_set_reference, METH_VARARGS|METH_KEYWORDS, "set_reference(Selector self, PseudoJet reference) -> Selector"},
+	 { "Selector_area", _wrap_Selector_area, METH_VARARGS, "\n"
+		"area(Selector self) -> double\n"
+		"area(Selector self, double arg2) -> double\n"
+		""},
 	 { "Selector___iand__", (PyCFunction)(void(*)(void))_wrap_Selector___iand__, METH_VARARGS|METH_KEYWORDS, "__iand__(Selector self, Selector b) -> Selector"},
 	 { "Selector___ior__", (PyCFunction)(void(*)(void))_wrap_Selector___ior__, METH_VARARGS|METH_KEYWORDS, "__ior__(Selector self, Selector b) -> Selector"},
 	 { "Selector___mul__", (PyCFunction)(void(*)(void))_wrap_Selector___mul__, METH_VARARGS|METH_KEYWORDS, "__mul__(Selector self, Selector other) -> Selector"},
@@ -25431,6 +26431,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "SelectorRectangle", (PyCFunction)(void(*)(void))_wrap_SelectorRectangle, METH_VARARGS|METH_KEYWORDS, "SelectorRectangle(double const half_rap_width, double const half_phi_width) -> Selector"},
 	 { "SelectorPtFractionMin", (PyCFunction)(void(*)(void))_wrap_SelectorPtFractionMin, METH_VARARGS|METH_KEYWORDS, "SelectorPtFractionMin(double fraction) -> Selector"},
 	 { "SelectorIsZero", _wrap_SelectorIsZero, METH_NOARGS, "SelectorIsZero() -> Selector"},
+	 { "SelectorIsPureGhost", _wrap_SelectorIsPureGhost, METH_NOARGS, "SelectorIsPureGhost() -> Selector"},
 	 { "fastjet_version_string", _wrap_fastjet_version_string, METH_NOARGS, "fastjet_version_string() -> std::string"},
 	 { "new_JetDefinition", _wrap_new_JetDefinition, METH_VARARGS, "\n"
 		"JetDefinition(fastjet::JetAlgorithm jet_algorithm_in, double R_in, fastjet::RecombinationScheme recomb_scheme_in=E_scheme, fastjet::Strategy strategy_in=Best)\n"
@@ -25494,6 +26495,11 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "CompositeJetStructure_constituents", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
 	 { "CompositeJetStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(CompositeJetStructure self, PseudoJet arg2) -> bool"},
 	 { "CompositeJetStructure_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "CompositeJetStructure_has_area", _wrap_CompositeJetStructure_has_area, METH_O, "has_area(CompositeJetStructure self) -> bool"},
+	 { "CompositeJetStructure_area", _wrap_CompositeJetStructure_area, METH_O, "area(CompositeJetStructure self) -> double"},
+	 { "CompositeJetStructure_area_error", _wrap_CompositeJetStructure_area_error, METH_O, "area_error(CompositeJetStructure self) -> double"},
+	 { "CompositeJetStructure_area_4vector", _wrap_CompositeJetStructure_area_4vector, METH_O, "area_4vector(CompositeJetStructure self) -> PseudoJet"},
+	 { "CompositeJetStructure_is_pure_ghost", _wrap_CompositeJetStructure_is_pure_ghost, METH_O, "is_pure_ghost(CompositeJetStructure self) -> bool"},
 	 { "CompositeJetStructure_swigregister", CompositeJetStructure_swigregister, METH_O, NULL},
 	 { "CompositeJetStructure_swiginit", CompositeJetStructure_swiginit, METH_VARARGS, NULL},
 	 { "new_ClusterSequenceStructure", _wrap_new_ClusterSequenceStructure, METH_VARARGS, "\n"
@@ -25506,6 +26512,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "ClusterSequenceStructure_associated_cluster_sequence", _wrap_ClusterSequenceStructure_associated_cluster_sequence, METH_O, "associated_cluster_sequence(ClusterSequenceStructure self) -> ClusterSequence"},
 	 { "ClusterSequenceStructure_has_valid_cluster_sequence", _wrap_ClusterSequenceStructure_has_valid_cluster_sequence, METH_O, "has_valid_cluster_sequence(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_validated_cs", _wrap_ClusterSequenceStructure_validated_cs, METH_O, "validated_cs(ClusterSequenceStructure self) -> ClusterSequence"},
+	 { "ClusterSequenceStructure_validated_csab", _wrap_ClusterSequenceStructure_validated_csab, METH_O, "validated_csab(ClusterSequenceStructure self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "ClusterSequenceStructure_set_associated_cs", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_set_associated_cs, METH_VARARGS|METH_KEYWORDS, "set_associated_cs(ClusterSequenceStructure self, ClusterSequence new_cs)"},
 	 { "ClusterSequenceStructure_has_partner", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_partner, METH_VARARGS|METH_KEYWORDS, "has_partner(ClusterSequenceStructure self, PseudoJet reference, PseudoJet partner) -> bool"},
 	 { "ClusterSequenceStructure_has_child", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_child, METH_VARARGS|METH_KEYWORDS, "has_child(ClusterSequenceStructure self, PseudoJet reference, PseudoJet child) -> bool"},
@@ -25521,6 +26528,11 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "ClusterSequenceStructure_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> double"},
 	 { "ClusterSequenceStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(ClusterSequenceStructure self, PseudoJet reference) -> bool"},
 	 { "ClusterSequenceStructure_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(ClusterSequenceStructure self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_has_area", _wrap_ClusterSequenceStructure_has_area, METH_O, "has_area(ClusterSequenceStructure self) -> bool"},
+	 { "ClusterSequenceStructure_area", _wrap_ClusterSequenceStructure_area, METH_O, "area(ClusterSequenceStructure self) -> double"},
+	 { "ClusterSequenceStructure_area_error", _wrap_ClusterSequenceStructure_area_error, METH_O, "area_error(ClusterSequenceStructure self) -> double"},
+	 { "ClusterSequenceStructure_area_4vector", _wrap_ClusterSequenceStructure_area_4vector, METH_O, "area_4vector(ClusterSequenceStructure self) -> PseudoJet"},
+	 { "ClusterSequenceStructure_is_pure_ghost", _wrap_ClusterSequenceStructure_is_pure_ghost, METH_O, "is_pure_ghost(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_swigregister", ClusterSequenceStructure_swigregister, METH_O, NULL},
 	 { "ClusterSequenceStructure_swiginit", ClusterSequenceStructure_swiginit, METH_VARARGS, NULL},
 	 { "new_ClusterSequence", (PyCFunction)(void(*)(void))_wrap_new_ClusterSequence, METH_VARARGS|METH_KEYWORDS, "new_ClusterSequence(vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence"},
@@ -25623,6 +26635,7 @@ static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__ClusterSequence = {"_p_fastjet__ClusterSequence", "fastjet::ClusterSequence *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_fastjet__ClusterSequenceAreaBase = {"_p_fastjet__ClusterSequenceAreaBase", "fastjet::ClusterSequenceAreaBase *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__ClusterSequenceStructure = {"_p_fastjet__ClusterSequenceStructure", "fastjet::ClusterSequenceStructure *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__ClusterSequence__Extras = {"_p_fastjet__ClusterSequence__Extras", "fastjet::ClusterSequence::Extras *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__CompositeJetStructure = {"_p_fastjet__CompositeJetStructure", "fastjet::CompositeJetStructure *", 0, 0, (void*)0, 0};
@@ -25668,6 +26681,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_difference_type,
   &_swigt__p_double,
   &_swigt__p_fastjet__ClusterSequence,
+  &_swigt__p_fastjet__ClusterSequenceAreaBase,
   &_swigt__p_fastjet__ClusterSequenceStructure,
   &_swigt__p_fastjet__ClusterSequence__Extras,
   &_swigt__p_fastjet__CompositeJetStructure,
@@ -25713,6 +26727,7 @@ static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0,
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__ClusterSequence[] = {  {&_swigt__p_fastjet__ClusterSequence, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_fastjet__ClusterSequenceAreaBase[] = {  {&_swigt__p_fastjet__ClusterSequenceAreaBase, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__ClusterSequenceStructure[] = {  {&_swigt__p_fastjet__ClusterSequenceStructure, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__ClusterSequence__Extras[] = {  {&_swigt__p_fastjet__ClusterSequence__Extras, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__CompositeJetStructure[] = {  {&_swigt__p_fastjet__CompositeJetStructure, 0, 0, 0},{0, 0, 0, 0}};
@@ -25758,6 +26773,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_difference_type,
   _swigc__p_double,
   _swigc__p_fastjet__ClusterSequence,
+  _swigc__p_fastjet__ClusterSequenceAreaBase,
   _swigc__p_fastjet__ClusterSequenceStructure,
   _swigc__p_fastjet__ClusterSequence__Extras,
   _swigc__p_fastjet__CompositeJetStructure,

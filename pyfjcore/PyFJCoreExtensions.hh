@@ -61,83 +61,104 @@ JetDefinition JetDefinition2Param(JetAlgorithm jet_algorithm,
 }
 
 // to select between different representations of PseudoJets
-enum PseudoJetRepresentation { epxpypz, ptyphim, ptyphi };
+enum PseudoJetRepresentation { epxpypz = 0, ptyphim = 1, ptyphi = 2 };
 
 static PseudoJetRepresentation PseudoJetRep_;
 void set_pseudojet_format(PseudoJetRepresentation rep) {
+  if (rep > 2 || rep < 0)
+    throw Error("invalid PseudoJetRepresentation");
+
   PseudoJetRep_ = rep;
 }
 
-#define BEGIN_CONVERT_TO_PJ(nf, kinematics) \
-for (int i = 0; i < mult; i++, k += nf) {   \
-  kinematics;                               \
-  pjs.back().set_user_index(i);
-#define END_CONVERT_TO_PJ }
+struct ArrayToPseudoJets {
 
-#define CONVERT_TO_PJS_WITH_INFO(kinematics)                            \
-npy_intp dims[1] = {nfeatures - 4};                                     \
-std::size_t nfbytes(dims[0] * sizeof(double));                          \
-BEGIN_CONVERT_TO_PJ(nfeatures, kinematics)                              \
-  std::cout << "before getting array" << std::endl; \
-  PyObject* user_features(PyArray_SimpleNew(1, dims, NPY_DOUBLE));      \
-  std::cout << "after getting array ref count " << Py_REFCNT(user_features) << std::endl; \
-  if (!user_features)                                                   \
-    throw Error("cannot allocate array for user features");             \
-  memcpy(array_data(user_features), particles + k + 4, nfbytes);        \
-  std::cout << "after memcpy" << std::endl; \
-  pjs.back().set_user_info(new fastjet::UserInfoPython(user_features)); \
-  std::cout << "after setting user info ref count " << Py_REFCNT(user_features) << std::endl; \
-  Py_DECREF(user_features); \
-END_CONVERT_TO_PJ
+  template<typename A> static
+  std::vector<PseudoJet> convert(double* particles, int mult, int nfeatures) {
+    std::vector<PseudoJet> pjs;
+    pjs.reserve(mult);
+
+    std::size_t k(0);
+    for (int i = 0; i < mult; i++, k+=nfeatures) {
+      A::construct(pjs, particles, k);
+      pjs.back().set_user_index(i);
+    }
+
+    return pjs;
+  }
+
+  template<typename A> static
+  std::vector<PseudoJet> convert_with_info(double* particles, int mult, int nfeatures) {
+    std::vector<PseudoJet> pjs;
+    pjs.reserve(mult);
+
+    npy_intp dims[1] = {nfeatures - 4};
+    std::size_t nfbytes(dims[0] * sizeof(double)), k(0);
+    for (int i = 0; i < mult; i++, k+=nfeatures) {
+      A::construct(pjs, particles, k);
+      pjs.back().set_user_index(i);
+
+      PyObject* user_features(PyArray_SimpleNew(1, dims, NPY_DOUBLE));
+      if (!user_features)
+        throw Error("cannot allocate array for user features");
+
+      memcpy(array_data(user_features), particles + k + 4, nfbytes);
+      pjs.back().set_user_info(new UserInfoPython(user_features));
+      Py_DECREF(user_features);
+    }
+
+    return pjs;
+  }
+};
+
+struct ConstructPtYPhiM {
+  static void construct(std::vector<PseudoJet> & pjs, double* particles, std::size_t k) {
+    pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3]));
+  }
+};
+
+struct ConstructPtYPhi {
+  static void construct(std::vector<PseudoJet> & pjs, double* particles, std::size_t k) {
+    pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2]));
+  }
+};
+
+struct ConstructEPxPyPz {
+  static void construct(std::vector<PseudoJet> & pjs, double* particles, std::size_t k) {
+    pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]);
+  }
+};
 
 // convert numpy array to PseudoJets
 std::vector<PseudoJet> ptyphim_array_to_pseudojets(double* particles, int mult, int nfeatures) {
-  std::vector<PseudoJet> pjs;
-  pjs.reserve(mult);
 
   // array is pt, y, phi, m
-  std::size_t k(0);
-  if (nfeatures == 4) {
-    BEGIN_CONVERT_TO_PJ(4, pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3])))
-    END_CONVERT_TO_PJ
-  }
+  if (nfeatures == 4)
+    return ArrayToPseudoJets::convert<ConstructPtYPhiM>(particles, mult, 4);
 
   // array is pt, y, phi
-  else if (nfeatures == 3) {
-    BEGIN_CONVERT_TO_PJ(3, pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2])))
-    END_CONVERT_TO_PJ
-  }
+  else if (nfeatures == 3)
+    return ArrayToPseudoJets::convert<ConstructPtYPhi>(particles, mult, 3);
 
   // array is pt, y, phi, m, [more features]
-  else if (nfeatures > 4) {
-    CONVERT_TO_PJS_WITH_INFO(pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3])))
-  }
-  else throw Error("array must have at least 3 columns");
-
-  return pjs;
+  else if (nfeatures > 4)
+    return ArrayToPseudoJets::convert_with_info<ConstructPtYPhiM>(particles, mult, nfeatures);
+  
+  throw Error("array must have at least 3 columns");
 }
 
 // convert numpy array to PseudoJets
 std::vector<PseudoJet> epxpypz_array_to_pseudojets(double* particles, int mult, int nfeatures) {
-  std::vector<PseudoJet> pjs;
-  pjs.reserve(mult);
 
   // array is e, px, py, pz
-  std::size_t k(0);
-  if (nfeatures == 4) {
-    BEGIN_CONVERT_TO_PJ(4, pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]))
-    END_CONVERT_TO_PJ
-  }
+  if (nfeatures == 4)
+    return ArrayToPseudoJets::convert<ConstructEPxPyPz>(particles, mult, 4);
 
   // array is pt, y, phi, m, [more features]
-  else if (nfeatures > 4) {
-    CONVERT_TO_PJS_WITH_INFO(pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]))
-    std::cout << "done converting to pjs" << std::endl;
-  }
+  else if (nfeatures > 4)
+    return ArrayToPseudoJets::convert_with_info<ConstructEPxPyPz>(particles, mult, nfeatures);
 
-  else throw Error("array must have at least 4 columns");
-
-  return pjs;
+  throw Error("array must have at least 4 columns");
 }
 
 // function that selects representation based on enum
@@ -150,9 +171,7 @@ std::vector<PseudoJet> array_to_pseudojets(double* particles, int mult, int nfea
   else if (pjrep == epxpypz)
     return epxpypz_array_to_pseudojets(particles, mult, nfeatures);
 
-  else throw Error("unknown pseudojet representation");
-
-  return std::vector<PseudoJet>();
+  throw Error("unknown pseudojet representation");
 }
 
 // convert pseudojets to numpy array of e, px, py, pz values

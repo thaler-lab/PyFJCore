@@ -180,7 +180,7 @@
 #ifndef __FJCORE_FASTJET_BASE_HH__
 #define __FJCORE_FASTJET_BASE_HH__
 #define FJCORE_BEGIN_NAMESPACE namespace fastjet {
-#define FJCORE_END_NAMESPACE   }
+#define FJCORE_END_NAMESPACE }
 #ifdef FJCORE_HAVE_OVERRIDE
 # define FJCORE_OVERRIDE  override
 #else
@@ -534,6 +534,7 @@ private:
   std::vector<PseudoJet> pjvector_;
 };*/
 
+class ClusterSequenceAreaBase; // PTK forward declaring here so classes can match FastJet
 class PseudoJetStructureBase{
 public:
   PseudoJetStructureBase(){};
@@ -543,6 +544,9 @@ public:
   virtual const ClusterSequence* associated_cluster_sequence() const;
   virtual bool has_valid_cluster_sequence() const {return false;}
   virtual const ClusterSequence * validated_cs() const;
+  virtual const ClusterSequenceAreaBase * validated_csab() const {
+    throw Error("fjcore::PseudoJetStructureBase::validated_csab - no area support");
+  }
   virtual bool has_partner(const PseudoJet &reference, PseudoJet &partner) const;
   virtual bool has_child(const PseudoJet &reference, PseudoJet &child) const;
   virtual bool has_parents(const PseudoJet &reference, PseudoJet &parent1, PseudoJet &parent2) const;
@@ -559,6 +563,14 @@ public:
     return false;}
   virtual std::vector<PseudoJet> /*ptk*/ pieces(const PseudoJet & /* reference */
                                         ) const;
+
+  // PTK additions to match PseudoJetStructureBase class in FastJet
+  virtual bool has_area() const { return false; }
+  virtual double area() const { throw Error("fjcore::PseudoJetStructureBase::area - no area support"); }
+  virtual double area_error() const { throw Error("fjcore::PseudoJetStructureBase::area_error - no area support"); }
+  virtual PseudoJet area_4vector() const;
+  virtual bool is_pure_ghost() const { return false; }
+
 };
 FJCORE_END_NAMESPACE
 #endif  //  __FJCORE_PSEUDOJET_STRUCTURE_BASE_HH__
@@ -647,7 +659,7 @@ class PseudoJet {
   }
 #ifndef SWIG
   template <class L> inline void reset(const L & some_four_vector) {
-    const PseudoJet * pj = fastjet::cast_if_derived<const PseudoJet>(&some_four_vector);
+    const PseudoJet * pj = cast_if_derived<const PseudoJet>(&some_four_vector);
     if (pj){
       (*this) = *pj;
     } else {
@@ -714,6 +726,10 @@ class PseudoJet {
     return validated_cs();
   }
   const ClusterSequence * validated_cs() const;
+  const ClusterSequenceAreaBase * validated_cluster_sequence_area_base() const { return validated_csab(); }
+  const ClusterSequenceAreaBase * validated_csab() const {
+    throw Error("fjcore::PseudoJet::validated_csab - no area support");
+  }
   void set_structure_shared_ptr(const SharedPtr<PseudoJetStructureBase> &structure);
   bool has_structure() const;
   const PseudoJetStructureBase* structure_ptr() const;
@@ -742,12 +758,21 @@ class PseudoJet {
   double exclusive_subdmerge_max(int nsub) const;
   virtual bool has_pieces() const;
   virtual std::vector<PseudoJet> /*ptk*/ pieces() const;
+
+  // PTK additions to match PseudoJet class in FastJet
+  virtual bool has_area() const { return false; }
+  virtual double area() const { throw Error("fjcore::PseudoJet::area - no area support"); }
+  virtual double area_error() const { throw Error("fjcore::PseudoJet::area_error - no area support"); }
+  virtual PseudoJet area_4vector() const { throw Error("fjcore::PseudoJet::area_4vector - no area support"); }
+  virtual bool is_pure_ghost() const { return false; }
+
   inline int cluster_hist_index() const {return _cluster_hist_index;}
   inline void set_cluster_hist_index(const int index) {_cluster_hist_index = index;}
   inline int cluster_sequence_history_index() const {
     return cluster_hist_index();}
   inline void set_cluster_sequence_history_index(const int index) {
     set_cluster_hist_index(index);}
+
  protected:  
   SharedPtr<PseudoJetStructureBase> _structure;
   SharedPtr<UserInfoBase> _user_info;
@@ -764,6 +789,8 @@ class PseudoJet {
   void _set_rap_phi() const;
   friend PseudoJet operator*(double, const PseudoJet &);
 };
+inline PseudoJet PseudoJetStructureBase::area_4vector() const {
+  throw Error("fjcore::PseudoJetStructureBase::area_4vector - no area support");}
 PseudoJet operator+(const PseudoJet &, const PseudoJet &);
 PseudoJet operator-(const PseudoJet &, const PseudoJet &);
 PseudoJet operator*(double, const PseudoJet &);
@@ -994,6 +1021,11 @@ public:
     _worker->set_reference(reference);
     return *this;
   }
+
+  // PTK additions to match Selector class in FastJet
+  double area() const { throw Error("fjcore has no area support"); return -1; }
+  double area(double) const { throw Error("fjcore has no area support"); return -1; }
+
   class InvalidWorker : public Error {
   public:
     InvalidWorker() : Error("Attempt to use Selector with no valid underlying worker") {}
@@ -1050,6 +1082,14 @@ Selector SelectorStrip(const double half_width);
 Selector SelectorRectangle(const double half_rap_width, const double half_phi_width);
 Selector SelectorPtFractionMin(double fraction);
 Selector SelectorIsZero();
+
+// PTK additions to match SelectorIsPureGhost in FastJet
+// select objects that are (or are only made of) ghosts
+// hint: nothing is a ghost in fjcore
+inline Selector SelectorIsPureGhost() {
+  return !SelectorIdentity();
+}
+
 FJCORE_END_NAMESPACE      // defined in fastjet/internal/base.hh
 #endif // __FJCORE_SELECTOR_HH__
 #ifndef __FJCORE_JETDEFINITION_HH__
@@ -1283,6 +1323,20 @@ public:
   virtual std::vector<PseudoJet> /*ptk*/ constituents(const PseudoJet &jet) const FJCORE_OVERRIDE;
   virtual bool has_pieces(const PseudoJet & /*jet*/) const FJCORE_OVERRIDE {return true;}
   virtual std::vector<PseudoJet> /*ptk*/ pieces(const PseudoJet &jet) const FJCORE_OVERRIDE;
+
+  // PTK additions to match PseudoJetStructureBase class in FastJet
+  virtual bool has_area() const FJCORE_OVERRIDE { return false; }
+  virtual double area() const FJCORE_OVERRIDE {
+    throw Error("fjcore::CompositeJetStructure::area - no area support");
+  }
+  virtual double area_error() const FJCORE_OVERRIDE {
+    throw Error("fjcore::CompositeJetStructure::area_error - no area support");
+  }
+  virtual PseudoJet area_4vector() const FJCORE_OVERRIDE {
+    throw Error("fjcore::CompositeJetStructure::area_4vector - no area support");
+  }
+  virtual bool is_pure_ghost() const FJCORE_OVERRIDE { return false; }
+
 protected:
   std::vector<PseudoJet> _pieces;  ///< the pieces building the jet
   PseudoJet * _area_4vector_ptr;   ///< pointer to the 4-vector jet area
@@ -1389,6 +1443,9 @@ public:
   virtual const ClusterSequence* associated_cluster_sequence() const FJCORE_OVERRIDE;
   virtual bool has_valid_cluster_sequence() const FJCORE_OVERRIDE;
   virtual const ClusterSequence * validated_cs() const FJCORE_OVERRIDE;
+  virtual const ClusterSequenceAreaBase * validated_csab() const {
+    throw Error("fjcore::ClusterSequenceStructureBase::validated_csab - no area support");
+  }
   virtual void set_associated_cs(const ClusterSequence * new_cs){
     _associated_cs = new_cs;
   }
@@ -1406,6 +1463,20 @@ public:
   virtual double exclusive_subdmerge_max(const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
   virtual bool has_pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
   virtual std::vector<PseudoJet> /*ptk*/ pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
+
+  // PTK additions to match PseudoJetStructureBase class in FastJet
+  virtual bool has_area() const FJCORE_OVERRIDE { return false; }
+  virtual double area() const FJCORE_OVERRIDE {
+    throw Error("fjcore::ClusterSequenceStructure::area - no area support");
+  }
+  virtual double area_error() const FJCORE_OVERRIDE {
+    throw Error("fjcore::ClusterSequenceStructure::area_error - no area support");
+  }
+  virtual PseudoJet area_4vector() const FJCORE_OVERRIDE {
+    throw Error("fjcore::ClusterSequenceStructure::area_4vector - no area suppoer");
+  }
+  virtual bool is_pure_ghost() const FJCORE_OVERRIDE { return false; }
+
 protected:
   const ClusterSequence *_associated_cs;
 };

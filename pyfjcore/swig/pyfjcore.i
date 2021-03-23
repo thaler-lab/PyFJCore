@@ -24,6 +24,8 @@
 %include <std_string.i>
 %include <std_vector.i>
 
+#define PYFJNAMESPACE fastjet
+
 // this can be used to ensure that swig parses classes correctly
 #define SWIG_PREPROCESSOR
 
@@ -90,21 +92,21 @@ FastJetError = _pyfjcore.FastJetError;
 // vector templates
 %template(vectorPseudoJet) std::vector<fastjet::PseudoJet>;
 
-/*%typemap(typecheck, precedence=159) const std::vector<fastjet::PseudoJet> & {
+/*%typemap(typecheck, precedence=159) const std::vector<fjcore::PseudoJet> & {
   // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
   int res = SWIG_ConvertPtr($input, 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
   if (!($1 = SWIG_CheckState(res))) {
-    int res = swig::asptr($input, (std::vector<fastjet::PseudoJet>**)(0));
+    int res = swig::asptr($input, (std::vector<fjcore::PseudoJet>**)(0));
     $1 = SWIG_CheckState(res);
   }
 }
 
-%typemap(in) const std::vector<fastjet::PseudoJet> & (int res = SWIG_OLDOBJ) {
+%typemap(in) const std::vector<fjcore::PseudoJet> & (int res = SWIG_OLDOBJ) {
   // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
   void* argp = 0;
   res = SWIG_ConvertPtr($input, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
   if (SWIG_IsOK(res) && argp) {
-    $1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp)->as_ptr();
+    $1 = reinterpret_cast< fjcore::PseudoJetContainer * >(argp)->as_ptr();
     res = SWIG_OLDOBJ;
   }
   else {
@@ -160,7 +162,7 @@ FastJetError = _pyfjcore.FastJetError;
 %ignore FJCORE_PACKAGE_VERSION;
 %ignore FJCORE_STDC_HEADERS;
 
-namespace fastjet {
+namespace PYFJNAMESPACE {
 
 // ignore functions that otherwise get wrapped
 %ignore LimitedWarning;
@@ -184,8 +186,12 @@ namespace fastjet {
 %ignore ClusterSequence::ClusterSequence();
 %ignore ClusterSequence::ClusterSequence(const ClusterSequence &);
 %ignore UserInfoPython;
+%ignore ArrayToPseudoJets;
+%ignore ConstructPtYPhiM;
+%ignore ConstructPtYPhi;
+%ignore ConstructEPxPyPz;
 
-} // namespace fastjet
+} // namespace PYFJNAMESPACE
 
 // include EECHist and declare templates
 %include "fjcore.hh"
@@ -199,7 +205,7 @@ namespace fastjet {
 %}
 %enddef
 
-namespace fastjet {
+namespace PYFJNAMESPACE {
 
   /*%extend PseudoJetContainer {
     %pythoncode {
@@ -248,18 +254,17 @@ namespace fastjet {
       else
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g)",
                  $self->pt(), $self->rap(), $self->phi());
-      std::cout << "In PseudoJet repr " << std::endl;
       return std::string(temp);
     }
 
     void set_python_info(PyObject * pyobj) {
-      fastjet::UserInfoPython * new_python_info = new fastjet::UserInfoPython(pyobj);
+      UserInfoPython * new_python_info = new UserInfoPython(pyobj);
       $self->set_user_info(new_python_info);
     }
 
     PyObject * python_info() const {
       if ($self->has_user_info())
-        return $self->user_info<fastjet::UserInfoPython>().get_pyobj();
+        return $self->user_info<UserInfoPython>().get_pyobj();
       Py_RETURN_NONE;
     }
     
@@ -299,4 +304,4 @@ namespace fastjet {
     Selector __invert__()                       { return !(*($self)); }
   }
 
-} // namespace fastjet
+} // namespace PYFJNAMESPACE
