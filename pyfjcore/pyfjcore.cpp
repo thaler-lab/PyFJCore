@@ -3414,9 +3414,9 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 // using namespaces
 using namespace fastjet;
 
+
 // Python class for representing errors from FastJet
 static PyObject * FastJetError_;
-
 
 
 namespace swig {
@@ -27547,18 +27547,23 @@ SWIG_init(void) {
   SWIG_InstallConstants(d,swig_const_table);
   
   
-  
-  // for numpy
-  import_array();
-  
   // setup error class
   fastjet::Error::set_print_errors(false);
-  FastJetError_ = PyErr_NewException("pyfjcore.FastJetError", NULL, NULL);
+  unsigned int mlen = strlen("pyfjcore");
+  char * msg = (char*) calloc(mlen+15, sizeof(char));
+  strcpy(msg, "pyfjcore");
+  strcat(msg, ".FastJetError");
+  FastJetError_ = PyErr_NewException(msg, NULL, NULL);
   Py_INCREF(FastJetError_);
   if (PyModule_AddObject(m, "FastJetError", FastJetError_) < 0) {
     Py_DECREF(m);
     Py_DECREF(FastJetError_);
   }
+  
+  
+  
+  // for numpy
+  import_array();
   
   // turn off printing banner
   fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());
