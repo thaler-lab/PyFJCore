@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  PYPITEST: true
+  PYPI_TEST: true
   CIBW_SKIP: pp*
   TWINE_USERNAME: __token__
   TWINE_PASSWORD_PYPITEST: ${{ secrets.TWINE_PASSWORD_PYPITEST }}
