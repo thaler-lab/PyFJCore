@@ -1,0 +1,26 @@
+name: Build and upload Python wheels
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  linux-biuld:
+    runs-on: ubuntu-latest
+    runs:
+      using: 'docker'
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        python-version: 3.8
+      - name: Install Python packages
+        run: python3 -m pip install cibuildwheel twine
+      - name: Build wheels
+        run: python3 -m cibuildwheel
+      - name: Create source dist
+        run: python3 setup.py sdist --formats=gztar
+      - name: Upload to PyPI
+        run: ./scripts/pypi-upload.sh sdist
+      

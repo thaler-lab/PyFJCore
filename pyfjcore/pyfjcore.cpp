@@ -3414,9 +3414,9 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 // using namespaces
 using namespace fastjet;
 
+
 // Python class for representing errors from FastJet
 static PyObject * FastJetError_;
-
 
 
 namespace swig {
@@ -25593,6 +25593,1630 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_new_sharedPtrPseudoJetStructureBase__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **SWIGUNUSEDPARM(swig_obj)) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *result = 0 ;
+  
+  if ((nobjs < 0) || (nobjs > 0)) SWIG_fail;
+  {
+    try {
+      result = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *)new fastjet::SharedPtr< fastjet::PseudoJetStructureBase >(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_sharedPtrPseudoJetStructureBase__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *result = 0 ;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_sharedPtrPseudoJetStructureBase" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_sharedPtrPseudoJetStructureBase" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *)new fastjet::SharedPtr< fastjet::PseudoJetStructureBase >((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_sharedPtrPseudoJetStructureBase(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "new_sharedPtrPseudoJetStructureBase", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 0) {
+    return _wrap_new_sharedPtrPseudoJetStructureBase__SWIG_0(self, argc, argv);
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_sharedPtrPseudoJetStructureBase__SWIG_1(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'new_sharedPtrPseudoJetStructureBase'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::SharedPtr< fastjet::PseudoJetStructureBase >::SharedPtr()\n"
+    "    fastjet::SharedPtr< fastjet::PseudoJetStructureBase >::SharedPtr(fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_sharedPtrPseudoJetStructureBase(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_sharedPtrPseudoJetStructureBase" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      delete arg1; 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_reset(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_reset" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      (arg1)->reset(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___call__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJetStructureBase *result = 0 ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "sharedPtrPseudoJetStructureBase___call__", 1, 1, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase___call__" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::PseudoJetStructureBase *)((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *)arg1)->operator ()(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___ref__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJetStructureBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase___ref__" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::PseudoJetStructureBase *) &((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *)arg1)->operator *(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  return resultobj;
+fail:
+  PyErr_Clear();
+  Py_INCREF(Py_NotImplemented);
+  return Py_NotImplemented;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___deref__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJetStructureBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase___deref__" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::PseudoJetStructureBase *)((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *)arg1)->operator ->(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJetStructureBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_get" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::PseudoJetStructureBase *)((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *)arg1)->get(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_unique(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_unique" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *)arg1)->unique(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_use_count(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  long result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_use_count" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (long)((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *)arg1)->use_count(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_long(static_cast< long >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___nonzero__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase___nonzero__" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)((fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *)arg1)->operator bool(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_swap(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"share",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:sharedPtrPseudoJetStructureBase_swap", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_swap" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_swap" "', argument " "2"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_swap" "', argument " "2"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp2);
+  {
+    try {
+      (arg1)->swap(*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_set_count(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  long *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  long temp2 ;
+  long val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"count",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:sharedPtrPseudoJetStructureBase_set_count", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_set_count" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  ecode2 = SWIG_AsVal_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "sharedPtrPseudoJetStructureBase_set_count" "', argument " "2"" of type '" "long""'");
+  } 
+  temp2 = static_cast< long >(val2);
+  arg2 = &temp2;
+  {
+    try {
+      (arg1)->set_count((long const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_description(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::string result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_description" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (*arg1)->description(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->has_associated_cluster_sequence(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_associated_cluster_sequence(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::ClusterSequence *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_associated_cluster_sequence" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::ClusterSequence *)(*arg1)->associated_cluster_sequence(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->has_valid_cluster_sequence(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_validated_cs(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::ClusterSequence *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_validated_cs" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::ClusterSequence *)(*arg1)->validated_cs(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_validated_csab(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::ClusterSequenceAreaBase *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_validated_csab" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (fastjet::ClusterSequenceAreaBase *)(*arg1)->validated_csab(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_partner(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  fastjet::PseudoJet *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"partner",  NULL 
+  };
+  bool result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_has_partner", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_partner" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_has_partner" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_partner" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_fastjet__PseudoJet,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "sharedPtrPseudoJetStructureBase_has_partner" "', argument " "3"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_partner" "', argument " "3"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  arg3 = reinterpret_cast< fastjet::PseudoJet * >(argp3);
+  {
+    try {
+      result = (bool)(*arg1)->has_partner((fastjet::PseudoJet const &)*arg2,*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_child(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  fastjet::PseudoJet *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"child",  NULL 
+  };
+  bool result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_has_child", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_child" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_has_child" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_child" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_fastjet__PseudoJet,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "sharedPtrPseudoJetStructureBase_has_child" "', argument " "3"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_child" "', argument " "3"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  arg3 = reinterpret_cast< fastjet::PseudoJet * >(argp3);
+  {
+    try {
+      result = (bool)(*arg1)->has_child((fastjet::PseudoJet const &)*arg2,*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_parents(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  fastjet::PseudoJet *arg3 = 0 ;
+  fastjet::PseudoJet *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"parent1",  (char *)"parent2",  NULL 
+  };
+  bool result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOOO:sharedPtrPseudoJetStructureBase_has_parents", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_parents" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_has_parents" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_parents" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_fastjet__PseudoJet,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "sharedPtrPseudoJetStructureBase_has_parents" "', argument " "3"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_parents" "', argument " "3"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  arg3 = reinterpret_cast< fastjet::PseudoJet * >(argp3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_fastjet__PseudoJet,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "sharedPtrPseudoJetStructureBase_has_parents" "', argument " "4"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_parents" "', argument " "4"" of type '" "fastjet::PseudoJet &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJet * >(argp4);
+  {
+    try {
+      result = (bool)(*arg1)->has_parents((fastjet::PseudoJet const &)*arg2,*arg3,*arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_object_in_jet(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  fastjet::PseudoJet *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"jet",  NULL 
+  };
+  bool result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_object_in_jet", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_object_in_jet" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_object_in_jet" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_object_in_jet" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "sharedPtrPseudoJetStructureBase_object_in_jet" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_object_in_jet" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg3 = reinterpret_cast< fastjet::PseudoJet * >(argp3);
+  {
+    try {
+      result = (bool)(*arg1)->object_in_jet((fastjet::PseudoJet const &)*arg2,(fastjet::PseudoJet const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_constituents(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_constituents" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->has_constituents(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_constituents(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  NULL 
+  };
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:sharedPtrPseudoJetStructureBase_constituents", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_constituents" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_constituents" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_constituents" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  {
+    try {
+      result = (*arg1)->constituents((fastjet::PseudoJet const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_exclusive_subjets(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_exclusive_subjets" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->has_exclusive_subjets(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  double *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  double temp3 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"dcut",  NULL 
+  };
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_exclusive_subjets", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  ecode3 = SWIG_AsVal_double(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets" "', argument " "3"" of type '" "double""'");
+  } 
+  temp3 = static_cast< double >(val3);
+  arg3 = &temp3;
+  {
+    try {
+      result = (*arg1)->exclusive_subjets((fastjet::PseudoJet const &)*arg2,(double const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_n_exclusive_subjets(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  double *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  double temp3 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"dcut",  NULL 
+  };
+  int result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_n_exclusive_subjets", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_n_exclusive_subjets" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_n_exclusive_subjets" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_n_exclusive_subjets" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  ecode3 = SWIG_AsVal_double(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "sharedPtrPseudoJetStructureBase_n_exclusive_subjets" "', argument " "3"" of type '" "double""'");
+  } 
+  temp3 = static_cast< double >(val3);
+  arg3 = &temp3;
+  {
+    try {
+      result = (int)(*arg1)->n_exclusive_subjets((fastjet::PseudoJet const &)*arg2,(double const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"nsub",  NULL 
+  };
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  {
+    try {
+      result = (*arg1)->exclusive_subjets_up_to((fastjet::PseudoJet const &)*arg2,arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"nsub",  NULL 
+  };
+  double result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_exclusive_subdmerge", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  {
+    try {
+      result = (double)(*arg1)->exclusive_subdmerge((fastjet::PseudoJet const &)*arg2,arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"reference",  (char *)"nsub",  NULL 
+  };
+  double result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  {
+    try {
+      result = (double)(*arg1)->exclusive_subdmerge_max((fastjet::PseudoJet const &)*arg2,arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_pieces(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"arg2",  NULL 
+  };
+  bool result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:sharedPtrPseudoJetStructureBase_has_pieces", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_pieces" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_has_pieces" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_has_pieces" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  {
+    try {
+      result = (bool)(*arg1)->has_pieces((fastjet::PseudoJet const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_pieces(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"arg2",  NULL 
+  };
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:sharedPtrPseudoJetStructureBase_pieces", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_pieces" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "sharedPtrPseudoJetStructureBase_pieces" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sharedPtrPseudoJetStructureBase_pieces" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  {
+    try {
+      result = (*arg1)->pieces((fastjet::PseudoJet const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_has_area" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->has_area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_area(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_area" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (double)(*arg1)->area(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_area_error(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_area_error" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (double)(*arg1)->area_error(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_area_4vector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  fastjet::PseudoJet result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_area_4vector" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (*arg1)->area_4vector(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *arg1 = (fastjet::SharedPtr< fastjet::PseudoJetStructureBase > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sharedPtrPseudoJetStructureBase_is_pure_ghost" "', argument " "1"" of type '" "fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::SharedPtr< fastjet::PseudoJetStructureBase > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->is_pure_ghost(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    catch (std::exception & e) {
+      SWIG_exception(SWIG_SystemError, e.what());
+    }
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *sharedPtrPseudoJetStructureBase_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *sharedPtrPseudoJetStructureBase_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { "SWIG_PyInstanceMethod_New", SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { "SWIG_PyStaticMethod_New", SWIG_PyStaticMethod_New, METH_O, NULL},
@@ -25788,12 +27412,12 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJet_validated_cs", _wrap_PseudoJet_validated_cs, METH_O, "PseudoJet_validated_cs(PseudoJet self) -> ClusterSequence"},
 	 { "PseudoJet_validated_cluster_sequence_area_base", _wrap_PseudoJet_validated_cluster_sequence_area_base, METH_O, "PseudoJet_validated_cluster_sequence_area_base(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "PseudoJet_validated_csab", _wrap_PseudoJet_validated_csab, METH_O, "PseudoJet_validated_csab(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
-	 { "PseudoJet_set_structure_shared_ptr", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_structure_shared_ptr, METH_VARARGS|METH_KEYWORDS, "PseudoJet_set_structure_shared_ptr(PseudoJet self, fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const & structure)"},
+	 { "PseudoJet_set_structure_shared_ptr", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_structure_shared_ptr, METH_VARARGS|METH_KEYWORDS, "PseudoJet_set_structure_shared_ptr(PseudoJet self, sharedPtrPseudoJetStructureBase structure)"},
 	 { "PseudoJet_has_structure", _wrap_PseudoJet_has_structure, METH_O, "PseudoJet_has_structure(PseudoJet self) -> bool"},
 	 { "PseudoJet_structure_ptr", _wrap_PseudoJet_structure_ptr, METH_O, "PseudoJet_structure_ptr(PseudoJet self) -> PseudoJetStructureBase"},
 	 { "PseudoJet_structure_non_const_ptr", _wrap_PseudoJet_structure_non_const_ptr, METH_O, "PseudoJet_structure_non_const_ptr(PseudoJet self) -> PseudoJetStructureBase"},
 	 { "PseudoJet_validated_structure_ptr", _wrap_PseudoJet_validated_structure_ptr, METH_O, "PseudoJet_validated_structure_ptr(PseudoJet self) -> PseudoJetStructureBase"},
-	 { "PseudoJet_structure_shared_ptr", _wrap_PseudoJet_structure_shared_ptr, METH_O, "PseudoJet_structure_shared_ptr(PseudoJet self) -> fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &"},
+	 { "PseudoJet_structure_shared_ptr", _wrap_PseudoJet_structure_shared_ptr, METH_O, "PseudoJet_structure_shared_ptr(PseudoJet self) -> sharedPtrPseudoJetStructureBase"},
 	 { "PseudoJet_has_partner", (PyCFunction)(void(*)(void))_wrap_PseudoJet_has_partner, METH_VARARGS|METH_KEYWORDS, "PseudoJet_has_partner(PseudoJet self, PseudoJet partner) -> bool"},
 	 { "PseudoJet_has_child", (PyCFunction)(void(*)(void))_wrap_PseudoJet_has_child, METH_VARARGS|METH_KEYWORDS, "PseudoJet_has_child(PseudoJet self, PseudoJet child) -> bool"},
 	 { "PseudoJet_has_parents", (PyCFunction)(void(*)(void))_wrap_PseudoJet_has_parents, METH_VARARGS|METH_KEYWORDS, "PseudoJet_has_parents(PseudoJet self, PseudoJet parent1, PseudoJet parent2) -> bool"},
@@ -26088,7 +27712,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "ClusterSequence_childless_pseudojets", _wrap_ClusterSequence_childless_pseudojets, METH_O, "ClusterSequence_childless_pseudojets(ClusterSequence self) -> vectorPseudoJet"},
 	 { "ClusterSequence_contains", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_contains, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_contains(ClusterSequence self, PseudoJet object) -> bool"},
 	 { "ClusterSequence_transfer_from_sequence", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_transfer_from_sequence, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_transfer_from_sequence(ClusterSequence self, ClusterSequence from_seq, fastjet::FunctionOfPseudoJet< fastjet::PseudoJet > const * action_on_jets=None)"},
-	 { "ClusterSequence_structure_shared_ptr", _wrap_ClusterSequence_structure_shared_ptr, METH_O, "ClusterSequence_structure_shared_ptr(ClusterSequence self) -> fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &"},
+	 { "ClusterSequence_structure_shared_ptr", _wrap_ClusterSequence_structure_shared_ptr, METH_O, "ClusterSequence_structure_shared_ptr(ClusterSequence self) -> sharedPtrPseudoJetStructureBase"},
 	 { "ClusterSequence_swigregister", ClusterSequence_swigregister, METH_O, NULL},
 	 { "ClusterSequence_swiginit", ClusterSequence_swiginit, METH_VARARGS, NULL},
 	 { "JetDefinition0Param", (PyCFunction)(void(*)(void))_wrap_JetDefinition0Param, METH_VARARGS|METH_KEYWORDS, "JetDefinition0Param(fastjet::JetAlgorithm jet_algorithm, fastjet::RecombinationScheme recomb_scheme=E_scheme, fastjet::Strategy strategy=Best) -> JetDefinition"},
@@ -26102,6 +27726,48 @@ static PyMethodDef SwigMethods[] = {
 	 { "pseudojets_to_ptyphim_array", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_ptyphim_array, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_ptyphim_array(vectorPseudoJet pjs, bool mass=True)"},
 	 { "pseudojets_to_array", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_array, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_array(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "user_indices", (PyCFunction)(void(*)(void))_wrap_user_indices, METH_VARARGS|METH_KEYWORDS, "user_indices(vectorPseudoJet pjs)"},
+	 { "new_sharedPtrPseudoJetStructureBase", _wrap_new_sharedPtrPseudoJetStructureBase, METH_VARARGS, "\n"
+		"sharedPtrPseudoJetStructureBase()\n"
+		"new_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase share) -> sharedPtrPseudoJetStructureBase\n"
+		""},
+	 { "delete_sharedPtrPseudoJetStructureBase", _wrap_delete_sharedPtrPseudoJetStructureBase, METH_O, "delete_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase self)"},
+	 { "sharedPtrPseudoJetStructureBase_reset", _wrap_sharedPtrPseudoJetStructureBase_reset, METH_O, "sharedPtrPseudoJetStructureBase_reset(sharedPtrPseudoJetStructureBase self)"},
+	 { "sharedPtrPseudoJetStructureBase___call__", _wrap_sharedPtrPseudoJetStructureBase___call__, METH_O, "sharedPtrPseudoJetStructureBase___call__(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase___ref__", _wrap_sharedPtrPseudoJetStructureBase___ref__, METH_O, "sharedPtrPseudoJetStructureBase___ref__(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase___deref__", _wrap_sharedPtrPseudoJetStructureBase___deref__, METH_O, "sharedPtrPseudoJetStructureBase___deref__(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase_get", _wrap_sharedPtrPseudoJetStructureBase_get, METH_O, "sharedPtrPseudoJetStructureBase_get(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase_unique", _wrap_sharedPtrPseudoJetStructureBase_unique, METH_O, "sharedPtrPseudoJetStructureBase_unique(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_use_count", _wrap_sharedPtrPseudoJetStructureBase_use_count, METH_O, "sharedPtrPseudoJetStructureBase_use_count(sharedPtrPseudoJetStructureBase self) -> long"},
+	 { "sharedPtrPseudoJetStructureBase___nonzero__", _wrap_sharedPtrPseudoJetStructureBase___nonzero__, METH_O, "sharedPtrPseudoJetStructureBase___nonzero__(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_swap", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_swap, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_swap(sharedPtrPseudoJetStructureBase self, sharedPtrPseudoJetStructureBase share)"},
+	 { "sharedPtrPseudoJetStructureBase_set_count", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_set_count, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_set_count(sharedPtrPseudoJetStructureBase self, long const & count)"},
+	 { "sharedPtrPseudoJetStructureBase_description", _wrap_sharedPtrPseudoJetStructureBase_description, METH_O, "sharedPtrPseudoJetStructureBase_description(sharedPtrPseudoJetStructureBase self) -> std::string"},
+	 { "sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence", _wrap_sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence, METH_O, "sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_associated_cluster_sequence", _wrap_sharedPtrPseudoJetStructureBase_associated_cluster_sequence, METH_O, "sharedPtrPseudoJetStructureBase_associated_cluster_sequence(sharedPtrPseudoJetStructureBase self) -> ClusterSequence"},
+	 { "sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence", _wrap_sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence, METH_O, "sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_validated_cs", _wrap_sharedPtrPseudoJetStructureBase_validated_cs, METH_O, "sharedPtrPseudoJetStructureBase_validated_cs(sharedPtrPseudoJetStructureBase self) -> ClusterSequence"},
+	 { "sharedPtrPseudoJetStructureBase_validated_csab", _wrap_sharedPtrPseudoJetStructureBase_validated_csab, METH_O, "sharedPtrPseudoJetStructureBase_validated_csab(sharedPtrPseudoJetStructureBase self) -> fastjet::ClusterSequenceAreaBase const *"},
+	 { "sharedPtrPseudoJetStructureBase_has_partner", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_partner, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_has_partner(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet partner) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_has_child", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_child, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_has_child(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet child) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_has_parents(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_object_in_jet", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_object_in_jet, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_object_in_jet(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet jet) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_has_constituents", _wrap_sharedPtrPseudoJetStructureBase_has_constituents, METH_O, "sharedPtrPseudoJetStructureBase_has_constituents(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_constituents(sharedPtrPseudoJetStructureBase self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_has_exclusive_subjets", _wrap_sharedPtrPseudoJetStructureBase_has_exclusive_subjets, METH_O, "sharedPtrPseudoJetStructureBase_has_exclusive_subjets(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_n_exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> int"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subdmerge(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_has_pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_has_area", _wrap_sharedPtrPseudoJetStructureBase_has_area, METH_O, "sharedPtrPseudoJetStructureBase_has_area(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_area", _wrap_sharedPtrPseudoJetStructureBase_area, METH_O, "sharedPtrPseudoJetStructureBase_area(sharedPtrPseudoJetStructureBase self) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_area_error", _wrap_sharedPtrPseudoJetStructureBase_area_error, METH_O, "sharedPtrPseudoJetStructureBase_area_error(sharedPtrPseudoJetStructureBase self) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_area_4vector", _wrap_sharedPtrPseudoJetStructureBase_area_4vector, METH_O, "sharedPtrPseudoJetStructureBase_area_4vector(sharedPtrPseudoJetStructureBase self) -> PseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_is_pure_ghost", _wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost, METH_O, "sharedPtrPseudoJetStructureBase_is_pure_ghost(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_swigregister", sharedPtrPseudoJetStructureBase_swigregister, METH_O, NULL},
+	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -26300,12 +27966,12 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJet_validated_cs", _wrap_PseudoJet_validated_cs, METH_O, "validated_cs(PseudoJet self) -> ClusterSequence"},
 	 { "PseudoJet_validated_cluster_sequence_area_base", _wrap_PseudoJet_validated_cluster_sequence_area_base, METH_O, "validated_cluster_sequence_area_base(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
 	 { "PseudoJet_validated_csab", _wrap_PseudoJet_validated_csab, METH_O, "validated_csab(PseudoJet self) -> fastjet::ClusterSequenceAreaBase const *"},
-	 { "PseudoJet_set_structure_shared_ptr", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_structure_shared_ptr, METH_VARARGS|METH_KEYWORDS, "set_structure_shared_ptr(PseudoJet self, fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const & structure)"},
+	 { "PseudoJet_set_structure_shared_ptr", (PyCFunction)(void(*)(void))_wrap_PseudoJet_set_structure_shared_ptr, METH_VARARGS|METH_KEYWORDS, "set_structure_shared_ptr(PseudoJet self, sharedPtrPseudoJetStructureBase structure)"},
 	 { "PseudoJet_has_structure", _wrap_PseudoJet_has_structure, METH_O, "has_structure(PseudoJet self) -> bool"},
 	 { "PseudoJet_structure_ptr", _wrap_PseudoJet_structure_ptr, METH_O, "structure_ptr(PseudoJet self) -> PseudoJetStructureBase"},
 	 { "PseudoJet_structure_non_const_ptr", _wrap_PseudoJet_structure_non_const_ptr, METH_O, "structure_non_const_ptr(PseudoJet self) -> PseudoJetStructureBase"},
 	 { "PseudoJet_validated_structure_ptr", _wrap_PseudoJet_validated_structure_ptr, METH_O, "validated_structure_ptr(PseudoJet self) -> PseudoJetStructureBase"},
-	 { "PseudoJet_structure_shared_ptr", _wrap_PseudoJet_structure_shared_ptr, METH_O, "structure_shared_ptr(PseudoJet self) -> fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &"},
+	 { "PseudoJet_structure_shared_ptr", _wrap_PseudoJet_structure_shared_ptr, METH_O, "structure_shared_ptr(PseudoJet self) -> sharedPtrPseudoJetStructureBase"},
 	 { "PseudoJet_has_partner", (PyCFunction)(void(*)(void))_wrap_PseudoJet_has_partner, METH_VARARGS|METH_KEYWORDS, "has_partner(PseudoJet self, PseudoJet partner) -> bool"},
 	 { "PseudoJet_has_child", (PyCFunction)(void(*)(void))_wrap_PseudoJet_has_child, METH_VARARGS|METH_KEYWORDS, "has_child(PseudoJet self, PseudoJet child) -> bool"},
 	 { "PseudoJet_has_parents", (PyCFunction)(void(*)(void))_wrap_PseudoJet_has_parents, METH_VARARGS|METH_KEYWORDS, "has_parents(PseudoJet self, PseudoJet parent1, PseudoJet parent2) -> bool"},
@@ -26600,7 +28266,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "ClusterSequence_childless_pseudojets", _wrap_ClusterSequence_childless_pseudojets, METH_O, "childless_pseudojets(ClusterSequence self) -> vectorPseudoJet"},
 	 { "ClusterSequence_contains", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_contains, METH_VARARGS|METH_KEYWORDS, "contains(ClusterSequence self, PseudoJet object) -> bool"},
 	 { "ClusterSequence_transfer_from_sequence", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_transfer_from_sequence, METH_VARARGS|METH_KEYWORDS, "transfer_from_sequence(ClusterSequence self, ClusterSequence from_seq, fastjet::FunctionOfPseudoJet< fastjet::PseudoJet > const * action_on_jets=None)"},
-	 { "ClusterSequence_structure_shared_ptr", _wrap_ClusterSequence_structure_shared_ptr, METH_O, "structure_shared_ptr(ClusterSequence self) -> fastjet::SharedPtr< fastjet::PseudoJetStructureBase > const &"},
+	 { "ClusterSequence_structure_shared_ptr", _wrap_ClusterSequence_structure_shared_ptr, METH_O, "structure_shared_ptr(ClusterSequence self) -> sharedPtrPseudoJetStructureBase"},
 	 { "ClusterSequence_swigregister", ClusterSequence_swigregister, METH_O, NULL},
 	 { "ClusterSequence_swiginit", ClusterSequence_swiginit, METH_VARARGS, NULL},
 	 { "JetDefinition0Param", (PyCFunction)(void(*)(void))_wrap_JetDefinition0Param, METH_VARARGS|METH_KEYWORDS, "JetDefinition0Param(fastjet::JetAlgorithm jet_algorithm, fastjet::RecombinationScheme recomb_scheme=E_scheme, fastjet::Strategy strategy=Best) -> JetDefinition"},
@@ -26614,6 +28280,48 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "pseudojets_to_ptyphim_array", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_ptyphim_array, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_ptyphim_array(vectorPseudoJet pjs, bool mass=True)"},
 	 { "pseudojets_to_array", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_array, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_array(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "user_indices", (PyCFunction)(void(*)(void))_wrap_user_indices, METH_VARARGS|METH_KEYWORDS, "user_indices(vectorPseudoJet pjs)"},
+	 { "new_sharedPtrPseudoJetStructureBase", _wrap_new_sharedPtrPseudoJetStructureBase, METH_VARARGS, "\n"
+		"sharedPtrPseudoJetStructureBase()\n"
+		"new_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase share) -> sharedPtrPseudoJetStructureBase\n"
+		""},
+	 { "delete_sharedPtrPseudoJetStructureBase", _wrap_delete_sharedPtrPseudoJetStructureBase, METH_O, "delete_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase self)"},
+	 { "sharedPtrPseudoJetStructureBase_reset", _wrap_sharedPtrPseudoJetStructureBase_reset, METH_O, "reset(sharedPtrPseudoJetStructureBase self)"},
+	 { "sharedPtrPseudoJetStructureBase___call__", _wrap_sharedPtrPseudoJetStructureBase___call__, METH_O, "__call__(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase___ref__", _wrap_sharedPtrPseudoJetStructureBase___ref__, METH_O, "__ref__(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase___deref__", _wrap_sharedPtrPseudoJetStructureBase___deref__, METH_O, "__deref__(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase_get", _wrap_sharedPtrPseudoJetStructureBase_get, METH_O, "get(sharedPtrPseudoJetStructureBase self) -> PseudoJetStructureBase"},
+	 { "sharedPtrPseudoJetStructureBase_unique", _wrap_sharedPtrPseudoJetStructureBase_unique, METH_O, "unique(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_use_count", _wrap_sharedPtrPseudoJetStructureBase_use_count, METH_O, "use_count(sharedPtrPseudoJetStructureBase self) -> long"},
+	 { "sharedPtrPseudoJetStructureBase___nonzero__", _wrap_sharedPtrPseudoJetStructureBase___nonzero__, METH_O, "__nonzero__(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_swap", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_swap, METH_VARARGS|METH_KEYWORDS, "swap(sharedPtrPseudoJetStructureBase self, sharedPtrPseudoJetStructureBase share)"},
+	 { "sharedPtrPseudoJetStructureBase_set_count", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_set_count, METH_VARARGS|METH_KEYWORDS, "set_count(sharedPtrPseudoJetStructureBase self, long const & count)"},
+	 { "sharedPtrPseudoJetStructureBase_description", _wrap_sharedPtrPseudoJetStructureBase_description, METH_O, "description(sharedPtrPseudoJetStructureBase self) -> std::string"},
+	 { "sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence", _wrap_sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence, METH_O, "has_associated_cluster_sequence(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_associated_cluster_sequence", _wrap_sharedPtrPseudoJetStructureBase_associated_cluster_sequence, METH_O, "associated_cluster_sequence(sharedPtrPseudoJetStructureBase self) -> ClusterSequence"},
+	 { "sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence", _wrap_sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence, METH_O, "has_valid_cluster_sequence(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_validated_cs", _wrap_sharedPtrPseudoJetStructureBase_validated_cs, METH_O, "validated_cs(sharedPtrPseudoJetStructureBase self) -> ClusterSequence"},
+	 { "sharedPtrPseudoJetStructureBase_validated_csab", _wrap_sharedPtrPseudoJetStructureBase_validated_csab, METH_O, "validated_csab(sharedPtrPseudoJetStructureBase self) -> fastjet::ClusterSequenceAreaBase const *"},
+	 { "sharedPtrPseudoJetStructureBase_has_partner", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_partner, METH_VARARGS|METH_KEYWORDS, "has_partner(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet partner) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_has_child", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_child, METH_VARARGS|METH_KEYWORDS, "has_child(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet child) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "has_parents(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_object_in_jet", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_object_in_jet, METH_VARARGS|METH_KEYWORDS, "object_in_jet(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet jet) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_has_constituents", _wrap_sharedPtrPseudoJetStructureBase_has_constituents, METH_O, "has_constituents(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(sharedPtrPseudoJetStructureBase self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_has_exclusive_subjets", _wrap_sharedPtrPseudoJetStructureBase_has_exclusive_subjets, METH_O, "has_exclusive_subjets(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "n_exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> int"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_has_area", _wrap_sharedPtrPseudoJetStructureBase_has_area, METH_O, "has_area(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_area", _wrap_sharedPtrPseudoJetStructureBase_area, METH_O, "area(sharedPtrPseudoJetStructureBase self) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_area_error", _wrap_sharedPtrPseudoJetStructureBase_area_error, METH_O, "area_error(sharedPtrPseudoJetStructureBase self) -> double"},
+	 { "sharedPtrPseudoJetStructureBase_area_4vector", _wrap_sharedPtrPseudoJetStructureBase_area_4vector, METH_O, "area_4vector(sharedPtrPseudoJetStructureBase self) -> PseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_is_pure_ghost", _wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost, METH_O, "is_pure_ghost(sharedPtrPseudoJetStructureBase self) -> bool"},
+	 { "sharedPtrPseudoJetStructureBase_swigregister", sharedPtrPseudoJetStructureBase_swigregister, METH_O, NULL},
+	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -27547,18 +29255,23 @@ SWIG_init(void) {
   SWIG_InstallConstants(d,swig_const_table);
   
   
-  
-  // for numpy
-  import_array();
-  
   // setup error class
   fastjet::Error::set_print_errors(false);
-  FastJetError_ = PyErr_NewException("pyfjcore.FastJetError", NULL, NULL);
+  unsigned int mlen = strlen("pyfjcore");
+  char * msg = (char*) calloc(mlen+15, sizeof(char));
+  strcpy(msg, "pyfjcore");
+  strcat(msg, ".FastJetError");
+  FastJetError_ = PyErr_NewException(msg, NULL, NULL);
   Py_INCREF(FastJetError_);
   if (PyModule_AddObject(m, "FastJetError", FastJetError_) < 0) {
     Py_DECREF(m);
     Py_DECREF(FastJetError_);
   }
+  
+  
+  
+  // for numpy
+  import_array();
   
   // turn off printing banner
   fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());

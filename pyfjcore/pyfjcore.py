@@ -729,5 +729,62 @@ pseudojets_to_epxpypz_array = _pyfjcore.pseudojets_to_epxpypz_array
 pseudojets_to_ptyphim_array = _pyfjcore.pseudojets_to_ptyphim_array
 pseudojets_to_array = _pyfjcore.pseudojets_to_array
 user_indices = _pyfjcore.user_indices
+class sharedPtrPseudoJetStructureBase(object):
+    r"""Proxy of C++ fastjet::SharedPtr< fastjet::PseudoJetStructureBase > class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        r"""
+        __init__(sharedPtrPseudoJetStructureBase self) -> sharedPtrPseudoJetStructureBase
+        __init__(sharedPtrPseudoJetStructureBase self, sharedPtrPseudoJetStructureBase share) -> sharedPtrPseudoJetStructureBase
+        """
+        _pyfjcore.sharedPtrPseudoJetStructureBase_swiginit(self, _pyfjcore.new_sharedPtrPseudoJetStructureBase(*args))
+    __swig_destroy__ = _pyfjcore.delete_sharedPtrPseudoJetStructureBase
+    reset = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_reset)
+    __call__ = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase___call__)
+    __ref__ = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase___ref__)
+    __deref__ = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase___deref__)
+    get = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_get)
+    unique = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_unique)
+    use_count = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_use_count)
+
+    def __nonzero__(self):
+        return _pyfjcore.sharedPtrPseudoJetStructureBase___nonzero__(self)
+    __bool__ = __nonzero__
+
+
+    swap = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_swap)
+    set_count = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_set_count)
+    description = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_description)
+    has_associated_cluster_sequence = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_associated_cluster_sequence)
+    associated_cluster_sequence = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_associated_cluster_sequence)
+    has_valid_cluster_sequence = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_valid_cluster_sequence)
+    validated_cs = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_validated_cs)
+    validated_csab = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_validated_csab)
+    has_partner = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_partner)
+    has_child = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_child)
+    has_parents = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_parents)
+    object_in_jet = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_object_in_jet)
+    has_constituents = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_constituents)
+    constituents = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_constituents)
+    has_exclusive_subjets = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_exclusive_subjets)
+    exclusive_subjets = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_exclusive_subjets)
+    n_exclusive_subjets = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_n_exclusive_subjets)
+    exclusive_subjets_up_to = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to)
+    exclusive_subdmerge = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_exclusive_subdmerge)
+    exclusive_subdmerge_max = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max)
+    has_pieces = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_pieces)
+    pieces = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_pieces)
+    has_area = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_has_area)
+    area = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_area)
+    area_error = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_area_error)
+    area_4vector = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_area_4vector)
+    is_pure_ghost = _swig_new_instance_method(_pyfjcore.sharedPtrPseudoJetStructureBase_is_pure_ghost)
+
+# Register sharedPtrPseudoJetStructureBase in _pyfjcore:
+_pyfjcore.sharedPtrPseudoJetStructureBase_swigregister(sharedPtrPseudoJetStructureBase)
+
 
 

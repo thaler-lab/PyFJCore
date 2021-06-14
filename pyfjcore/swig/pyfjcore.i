@@ -52,26 +52,39 @@
 
 // using namespaces
 using namespace fastjet;
+%}
 
+// define as macro for use in contrib files
+%define FASTJET_ERRORS_AS_PYTHON_EXCEPTIONS(module)
+%{
 // Python class for representing errors from FastJet
 static PyObject * FastJetError_;
-
 %}
+
+// this gets placed in the SWIG_init function
+%init %{
+  // setup error class
+  fastjet::Error::set_print_errors(false);
+  unsigned int mlen = strlen(`module`);
+  char * msg = (char*) calloc(mlen+15, sizeof(char));
+  strcpy(msg, `module`);
+  strcat(msg, ".FastJetError");
+  FastJetError_ = PyErr_NewException(msg, NULL, NULL);
+  Py_INCREF(FastJetError_);
+  if (PyModule_AddObject(m, "FastJetError", FastJetError_) < 0) {
+    Py_DECREF(m);
+    Py_DECREF(FastJetError_);
+  }
+%}
+%enddef
+
+FASTJET_ERRORS_AS_PYTHON_EXCEPTIONS(pyfjcore)
 
 // this gets placed in the SWIG_init function
 %init %{
 
   // for numpy
   import_array();
-
-  // setup error class
-  fastjet::Error::set_print_errors(false);
-  FastJetError_ = PyErr_NewException("pyfjcore.FastJetError", NULL, NULL);
-  Py_INCREF(FastJetError_);
-  if (PyModule_AddObject(m, "FastJetError", FastJetError_) < 0) {
-    Py_DECREF(m);
-    Py_DECREF(FastJetError_);
-  }
 
   // turn off printing banner
   fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());
@@ -196,6 +209,9 @@ namespace PYFJNAMESPACE {
 // include EECHist and declare templates
 %include "fjcore.hh"
 %include "PyFJCoreExtensions.hh"
+
+// template SharedPtr
+%template(sharedPtrPseudoJetStructureBase) PYFJNAMESPACE::SharedPtr<PYFJNAMESPACE::PseudoJetStructureBase>;
 
 // makes python class printable from a description method
 %define ADD_REPR_FROM_DESCRIPTION

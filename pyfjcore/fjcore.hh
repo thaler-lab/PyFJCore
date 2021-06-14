@@ -616,12 +616,12 @@ class PseudoJet {
   double pseudorapidity() const;
   double eta() const {return pseudorapidity();}
   inline double pt2() const {return _kt2;}
-  inline double  pt() const {return sqrt(_kt2);} 
+  inline double pt() const {return sqrt(_kt2);} 
   inline double perp2() const {return _kt2;}  // like CLHEP
-  inline double  perp() const {return sqrt(_kt2);}    // like CLHEP
+  inline double perp() const {return sqrt(_kt2);}    // like CLHEP
   inline double kt2() const {return _kt2;} // for bkwds compatibility
-  inline double  m2() const {return (_E+_pz)*(_E-_pz)-_kt2;}    
-  inline double  m() const;    
+  inline double m2() const {return (_E+_pz)*(_E-_pz)-_kt2;}    
+  inline double m() const;    
   inline double mperp2() const {return (_E+_pz)*(_E-_pz);}
   inline double mperp() const {return sqrt(std::abs(mperp2()));}
   inline double mt2() const {return (_E+_pz)*(_E-_pz);}
