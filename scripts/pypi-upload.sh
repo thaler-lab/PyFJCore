@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+echo "Preparing to upload to PyPI ..."
 
 # upload to test server
 if [ ! -z $PYPI_TEST ] || [ ! -z $PYPI ]; then
