@@ -14,11 +14,16 @@ jobs:
         with:
           python-version: '3.8'
       - name: Install Python packages
-        run: python3 -m pip install cibuildwheel twine
+        run: python3 -m pip install cibuildwheel twine numpy
       - name: Build wheels
         run: python3 -m cibuildwheel
+        env:
+          CIBW_SKIP: pp*
       - name: Create source dist
         run: python3 setup.py sdist --formats=gztar
       - name: Upload to PyPI
         run: ./scripts/pypi-upload.sh sdist
+        env:
+          TWINE_USERNAME: __token__
+          PYPITEST: true
       
