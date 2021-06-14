@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Preparing to upload to PyPI ..."
+twine --version
 
 # upload to test server
 if [ ! -z $PYPI_TEST ] || [ ! -z $PYPI ]; then
