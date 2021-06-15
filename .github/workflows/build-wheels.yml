@@ -2,7 +2,8 @@ name: Build and upload Python wheels
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 env:
   PYPI_TEST: true
@@ -19,14 +20,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-      - name: Install Python packages
-        run: python3 -m pip install cibuildwheel twine numpy
-      - name: Build wheels
-        run: python3 -m cibuildwheel --output-dir wheelhouse
-      - name: Create source dist
-        run: python3 setup.py sdist --formats=gztar
-      - name: Upload to PyPI
-        run: ./scripts/pypi-upload.sh sdist
+      - name: Build wheels and upload to PyPI
+        run: ./scripts/build-wheels-and-upload sdist
 
   macos-build:
     runs-on: macos-latest
@@ -36,14 +31,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-      - name: Install Python packages
-        run: python3 -m pip install cibuildwheel
-      - name: Build wheels
-        run: python3 -m cibuildwheel --output-dir wheelhouse
-      - name: Install twine
-        run: python3 -m pip install twine
-      - name: Upload to PyPI
-        run: ./scripts/pypi-upload.sh
+      - name: Build wheels and upload to PyPI
+        run: ./scripts/build-wheels-and-upload
 
   windows-build:
     runs-on: windows-latest
@@ -53,11 +42,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-      - name: Install Python packages
-        run: python3 -m pip install cibuildwheel twine numpy
-      - name: Build wheels
-        run: python3 -m cibuildwheel --output-dir wheelhouse
-      - name: Install twine
-        run: python3 -m pip install twine
-      - name: Upload to PyPI
-        run: ./scripts/pypi-upload.sh
+      - name: Build wheels and upload to PyPI
+        shell: bash
+        run: ./scripts/build-wheels-and-upload
