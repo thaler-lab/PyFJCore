@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: '3.8'
       - name: Build wheels and upload to PyPI
-        run: ./scripts/build-wheels-and-upload sdist
+        run: ./scripts/build-wheels-and-upload.sh sdist
 
   macos-build:
     runs-on: macos-latest
@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: '3.8'
       - name: Build wheels and upload to PyPI
-        run: ./scripts/build-wheels-and-upload
+        run: ./scripts/build-wheels-and-upload.sh
 
   windows-build:
     runs-on: windows-latest
@@ -44,4 +44,4 @@ jobs:
           python-version: '3.8'
       - name: Build wheels and upload to PyPI
         shell: bash
-        run: ./scripts/build-wheels-and-upload
+        run: ./scripts/build-wheels-and-upload.sh
