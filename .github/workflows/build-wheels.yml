@@ -6,10 +6,12 @@ on:
       - main
 
 env:
-  PYPI_TEST: true
+  PYPI: 0
+  PYPITEST: 1
   CIBW_SKIP: pp*
   TWINE_USERNAME: __token__
   TWINE_PASSWORD_PYPITEST: ${{ secrets.TWINE_PASSWORD_PYPITEST }}
+  TWINE_PASSWORD_PYPI: ${{ secrets.TWINE_PASSWORD_PYPI }}
 
 jobs:
   linux-build:
