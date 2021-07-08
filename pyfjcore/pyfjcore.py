@@ -652,7 +652,7 @@ class ClusterSequence(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
 
-    def __init__(self, pseudojets, jet_def, writeout_combinations=False):
+    def __init__(self, pseudojets: "vectorPseudoJet", jet_def: "JetDefinition", writeout_combinations: "bool const &"=False):
         r"""__init__(ClusterSequence self, vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence"""
         _pyfjcore.ClusterSequence_swiginit(self, _pyfjcore.new_ClusterSequence(pseudojets, jet_def, writeout_combinations))
     __swig_destroy__ = _pyfjcore.delete_ClusterSequence
@@ -725,9 +725,6 @@ set_pseudojet_format = _pyfjcore.set_pseudojet_format
 ptyphim_array_to_pseudojets = _pyfjcore.ptyphim_array_to_pseudojets
 epxpypz_array_to_pseudojets = _pyfjcore.epxpypz_array_to_pseudojets
 array_to_pseudojets = _pyfjcore.array_to_pseudojets
-pseudojets_to_epxpypz_array = _pyfjcore.pseudojets_to_epxpypz_array
-pseudojets_to_ptyphim_array = _pyfjcore.pseudojets_to_ptyphim_array
-pseudojets_to_array = _pyfjcore.pseudojets_to_array
 user_indices = _pyfjcore.user_indices
 class sharedPtrPseudoJetStructureBase(object):
     r"""Proxy of C++ fastjet::SharedPtr< fastjet::PseudoJetStructureBase > class."""
@@ -785,6 +782,42 @@ class sharedPtrPseudoJetStructureBase(object):
 
 # Register sharedPtrPseudoJetStructureBase in _pyfjcore:
 _pyfjcore.sharedPtrPseudoJetStructureBase_swigregister(sharedPtrPseudoJetStructureBase)
+
+pseudojets_to_epxpypz_array_float64 = _pyfjcore.pseudojets_to_epxpypz_array_float64
+pseudojets_to_epxpypz_array_float32 = _pyfjcore.pseudojets_to_epxpypz_array_float32
+pseudojets_to_ptyphim_array_float64 = _pyfjcore.pseudojets_to_ptyphim_array_float64
+pseudojets_to_ptyphim_array_float32 = _pyfjcore.pseudojets_to_ptyphim_array_float32
+pseudojets_to_array_float64 = _pyfjcore.pseudojets_to_array_float64
+pseudojets_to_array_float32 = _pyfjcore.pseudojets_to_array_float32
+
+
+import copyreg
+
+def _pickle_jet_definition(obj):
+    jet_alg = obj.jet_algorithm()
+    R = obj.R()
+    extra = obj.extra_param()
+    recomb = obj.recombination_scheme()
+    nparams = obj.n_parameters_for_algorithm(jet_alg)
+
+    return _unpickle_jet_definition, (jet_alg, R, extra, recomb, nparams)
+
+def _unpickle_jet_definition(jet_alg, R, extra, recomb, nparams):
+    if nparams == 1:
+        return JetDefinition(jet_alg, R, recomb)
+    else:
+        return JetDefinition(jet_alg, R, extra, recomb)
+
+copyreg.pickle(JetDefinition, _pickle_jet_definition)
+
+def _pickle_pseudojet(obj):
+    return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E())
+
+def _unpickle_pseudojet(*args):
+    return PseudoJet(*args)
+
+copyreg.pickle(PseudoJet, _pickle_pseudojet)
+
 
 
 

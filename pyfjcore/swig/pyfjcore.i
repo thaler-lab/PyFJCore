@@ -93,10 +93,14 @@ FASTJET_ERRORS_AS_PYTHON_EXCEPTIONS(pyfjcore)
   fastjet::set_pseudojet_format(fastjet::PseudoJetRepresentation::ptyphim);
 %}
 
+%numpy_typemaps(float, NPY_FLOAT, std::ptrdiff_t)
+%numpy_typemaps(double, NPY_DOUBLE, std::ptrdiff_t)
+
 // additional numpy typemaps
-%apply (double* IN_ARRAY2, int DIM1, int DIM2) {(double* particles, int mult, int nfeatures)}
-%apply (int** ARGOUTVIEWM_ARRAY1, int* DIM1) {(int** inds, int* mult)}
-%apply (double** ARGOUTVIEWM_ARRAY2, int* DIM1, int* DIM2) {(double** particles, int* mult, int* nfeatures)}
+%apply (double* IN_ARRAY2, std::ptrdiff_t DIM1, std::ptrdiff_t DIM2) {(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures)}
+%apply (std::ptrdiff_t** ARGOUTVIEWM_ARRAY1, std::ptrdiff_t* DIM1) {(std::ptrdiff_t** inds, std::ptrdiff_t* mult)}
+%apply (double** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)}
+%apply (float** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)}
 
 %pythoncode %{
 FastJetError = _pyfjcore.FastJetError;
@@ -177,32 +181,32 @@ FastJetError = _pyfjcore.FastJetError;
 
 namespace PYFJNAMESPACE {
 
-// ignore functions that otherwise get wrapped
-%ignore LimitedWarning;
-%ignore Error;
-%ignore InternalError;
-%ignore IndexedSortHelper;
-%ignore SelectorWorker;
-%ignore _NoInfo;
-%ignore operator+;
-%ignore operator-;
-%ignore operator*;
-%ignore operator/;
-%ignore operator==;
-%ignore operator!=;
-%ignore operator!;
-%ignore operator||;
-%ignore operator&&;
-%ignore ClusterSequence::print_banner;
-%ignore ClusterSequence::fastjet_banner_stream;
-%ignore ClusterSequence::set_fastjet_banner_stream;
-%ignore ClusterSequence::ClusterSequence();
-%ignore ClusterSequence::ClusterSequence(const ClusterSequence &);
-%ignore UserInfoPython;
-%ignore ArrayToPseudoJets;
-%ignore ConstructPtYPhiM;
-%ignore ConstructPtYPhi;
-%ignore ConstructEPxPyPz;
+  // ignore functions that otherwise get wrapped
+  %ignore LimitedWarning;
+  %ignore Error;
+  %ignore InternalError;
+  %ignore IndexedSortHelper;
+  %ignore SelectorWorker;
+  %ignore _NoInfo;
+  %ignore operator+;
+  %ignore operator-;
+  %ignore operator*;
+  %ignore operator/;
+  %ignore operator==;
+  %ignore operator!=;
+  %ignore operator!;
+  %ignore operator||;
+  %ignore operator&&;
+  %ignore ClusterSequence::print_banner;
+  %ignore ClusterSequence::fastjet_banner_stream;
+  %ignore ClusterSequence::set_fastjet_banner_stream;
+  %ignore ClusterSequence::ClusterSequence();
+  %ignore ClusterSequence::ClusterSequence(const ClusterSequence &);
+  %ignore UserInfoPython;
+  %ignore ArrayToPseudoJets;
+  %ignore ConstructPtYPhiM;
+  %ignore ConstructPtYPhi;
+  %ignore ConstructEPxPyPz;
 
 } // namespace PYFJNAMESPACE
 
@@ -210,8 +214,20 @@ namespace PYFJNAMESPACE {
 %include "fjcore.hh"
 %include "PyFJCoreExtensions.hh"
 
+namespace PYFJNAMESPACE {
+
 // template SharedPtr
-%template(sharedPtrPseudoJetStructureBase) PYFJNAMESPACE::SharedPtr<PYFJNAMESPACE::PseudoJetStructureBase>;
+%template(sharedPtrPseudoJetStructureBase) SharedPtr<PYFJNAMESPACE::PseudoJetStructureBase>;
+
+// template functions that return numpy arrays
+%template(pseudojets_to_epxpypz_array_float64) pseudojets_to_epxpypz_array<double>;
+%template(pseudojets_to_epxpypz_array_float32) pseudojets_to_epxpypz_array<float>;
+%template(pseudojets_to_ptyphim_array_float64) pseudojets_to_ptyphim_array<double>;
+%template(pseudojets_to_ptyphim_array_float32) pseudojets_to_ptyphim_array<float>;
+%template(pseudojets_to_array_float64) pseudojets_to_array<double>;
+%template(pseudojets_to_array_float32) pseudojets_to_array<float>;
+
+} // namespace PYFJNAMESPACE
 
 // makes python class printable from a description method
 %define ADD_REPR_FROM_DESCRIPTION
@@ -285,7 +301,7 @@ namespace PYFJNAMESPACE {
     }
     
     // these C++ operators are not automatically handled by SWIG (would only
-    // be handled if there were part of the class)
+    // be handled if they were part of the class)
     PseudoJet __add__ (const PseudoJet & p) { return *($self) + p; }
     PseudoJet __sub__ (const PseudoJet & p) { return *($self) - p; }
     bool      __eq__  (const PseudoJet & p) { return *($self) == p; }
@@ -321,3 +337,34 @@ namespace PYFJNAMESPACE {
   }
 
 } // namespace PYFJNAMESPACE
+
+%pythoncode %{
+
+import copyreg
+
+def _pickle_jet_definition(obj):
+    jet_alg = obj.jet_algorithm()
+    R = obj.R()
+    extra = obj.extra_param()
+    recomb = obj.recombination_scheme()
+    nparams = obj.n_parameters_for_algorithm(jet_alg)
+
+    return _unpickle_jet_definition, (jet_alg, R, extra, recomb, nparams)
+
+def _unpickle_jet_definition(jet_alg, R, extra, recomb, nparams):
+    if nparams == 1:
+        return JetDefinition(jet_alg, R, recomb)
+    else:
+        return JetDefinition(jet_alg, R, extra, recomb)
+
+copyreg.pickle(JetDefinition, _pickle_jet_definition)
+
+def _pickle_pseudojet(obj):
+    return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E())
+
+def _unpickle_pseudojet(*args):
+    return PseudoJet(*args)
+
+copyreg.pickle(PseudoJet, _pickle_pseudojet)
+
+%}

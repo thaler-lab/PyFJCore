@@ -28,10 +28,9 @@ import numpy as np
 with open(os.path.join('pyfjcore', '__init__.py'), 'r') as f:
     __version__ = re.search(r'__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read()).group(1)
 
-# run swig to generate eec.py and eec.cpp from eec.i
+# run swig to generate pyfjcore.py and pyfjcore.cpp from pyfjcore.i
 if sys.argv[1] == 'swig':
-    swig_opts = ['-fastproxy', '-w509,511', '-keyword', '-Ipyfjcore']
-    command = 'swig -python -c++ {} -o pyfjcore/pyfjcore.cpp pyfjcore/swig/pyfjcore.i'.format(' '.join(swig_opts))
+    command = 'swig -python -c++ -fastproxy -w509,511 -keyword -py3 -Ipyfjcore -o pyfjcore/pyfjcore.cpp pyfjcore/swig/pyfjcore.i'
     print(command)
     subprocess.run(command.split())
 

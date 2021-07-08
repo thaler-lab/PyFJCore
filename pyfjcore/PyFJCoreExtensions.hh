@@ -74,12 +74,12 @@ void set_pseudojet_format(PseudoJetRepresentation rep) {
 struct ArrayToPseudoJets {
 
   template<typename A> static
-  std::vector<PseudoJet> convert(double* particles, int mult, int nfeatures) {
+  std::vector<PseudoJet> convert(typename A::Float * particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
     std::vector<PseudoJet> pjs;
     pjs.reserve(mult);
 
     std::size_t k(0);
-    for (int i = 0; i < mult; i++, k+=nfeatures) {
+    for (std::ptrdiff_t i = 0; i < mult; i++, k+=nfeatures) {
       A::construct(pjs, particles, k);
       pjs.back().set_user_index(i);
     }
@@ -88,17 +88,17 @@ struct ArrayToPseudoJets {
   }
 
   template<typename A> static
-  std::vector<PseudoJet> convert_with_info(double* particles, int mult, int nfeatures) {
+  std::vector<PseudoJet> convert_with_info(typename A::Float * particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
     std::vector<PseudoJet> pjs;
     pjs.reserve(mult);
 
     npy_intp dims[1] = {nfeatures - 4};
-    std::size_t nfbytes(dims[0] * sizeof(double)), k(0);
-    for (int i = 0; i < mult; i++, k+=nfeatures) {
+    std::size_t nfbytes(dims[0] * sizeof(typename A::Float)), k(0);
+    for (std::ptrdiff_t i = 0; i < mult; i++, k+=nfeatures) {
       A::construct(pjs, particles, k);
       pjs.back().set_user_index(i);
 
-      PyObject* user_features(PyArray_SimpleNew(1, dims, NPY_DOUBLE));
+      PyObject* user_features(PyArray_SimpleNew(1, dims, sizeof(typename A::Float) == 4 ? NPY_FLOAT : NPY_DOUBLE));
       if (!user_features)
         throw Error("cannot allocate array for user features");
 
@@ -111,59 +111,65 @@ struct ArrayToPseudoJets {
   }
 };
 
+template<typename F>
 struct ConstructPtYPhiM {
-  static void construct(std::vector<PseudoJet> & pjs, double* particles, std::size_t k) {
+  typedef F Float;
+  static void construct(std::vector<PseudoJet> & pjs, Float* particles, std::size_t k) {
     pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2], particles[k+3]));
   }
 };
 
+template<typename F>
 struct ConstructPtYPhi {
-  static void construct(std::vector<PseudoJet> & pjs, double* particles, std::size_t k) {
+  typedef F Float;
+  static void construct(std::vector<PseudoJet> & pjs, Float* particles, std::size_t k) {
     pjs.push_back(PtYPhiM(particles[k], particles[k+1], particles[k+2]));
   }
 };
 
+template<typename F>
 struct ConstructEPxPyPz {
-  static void construct(std::vector<PseudoJet> & pjs, double* particles, std::size_t k) {
+  typedef F Float;
+  static void construct(std::vector<PseudoJet> & pjs, Float* particles, std::size_t k) {
     pjs.emplace_back(particles[k+1], particles[k+2], particles[k+3], particles[k]);
   }
 };
 
 // convert numpy array to PseudoJets
-std::vector<PseudoJet> ptyphim_array_to_pseudojets(double* particles, int mult, int nfeatures) {
+std::vector<PseudoJet> ptyphim_array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
 
   // array is pt, y, phi, m
   if (nfeatures == 4)
-    return ArrayToPseudoJets::convert<ConstructPtYPhiM>(particles, mult, 4);
+    return ArrayToPseudoJets::convert<ConstructPtYPhiM<double>>(particles, mult, 4);
 
   // array is pt, y, phi
   else if (nfeatures == 3)
-    return ArrayToPseudoJets::convert<ConstructPtYPhi>(particles, mult, 3);
+    return ArrayToPseudoJets::convert<ConstructPtYPhi<double>>(particles, mult, 3);
 
   // array is pt, y, phi, m, [more features]
   else if (nfeatures > 4)
-    return ArrayToPseudoJets::convert_with_info<ConstructPtYPhiM>(particles, mult, nfeatures);
+    return ArrayToPseudoJets::convert_with_info<ConstructPtYPhiM<double>>(particles, mult, nfeatures);
   
   throw Error("array must have at least 3 columns");
 }
 
 // convert numpy array to PseudoJets
-std::vector<PseudoJet> epxpypz_array_to_pseudojets(double* particles, int mult, int nfeatures) {
+std::vector<PseudoJet> epxpypz_array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
 
   // array is e, px, py, pz
   if (nfeatures == 4)
-    return ArrayToPseudoJets::convert<ConstructEPxPyPz>(particles, mult, 4);
+    return ArrayToPseudoJets::convert<ConstructEPxPyPz<double>>(particles, mult, 4);
 
   // array is pt, y, phi, m, [more features]
   else if (nfeatures > 4)
-    return ArrayToPseudoJets::convert_with_info<ConstructEPxPyPz>(particles, mult, nfeatures);
+    return ArrayToPseudoJets::convert_with_info<ConstructEPxPyPz<double>>(particles, mult, nfeatures);
 
   throw Error("array must have at least 4 columns");
 }
 
 // function that selects representation based on enum
-std::vector<PseudoJet> array_to_pseudojets(double* particles, int mult, int nfeatures,
-                                       PseudoJetRepresentation pjrep = ptyphim) {
+std::vector<PseudoJet> array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures,
+                                           PseudoJetRepresentation pjrep = ptyphim) {
 
   if (pjrep == ptyphim || pjrep == ptyphi)
     return ptyphim_array_to_pseudojets(particles, mult, nfeatures);
@@ -175,12 +181,13 @@ std::vector<PseudoJet> array_to_pseudojets(double* particles, int mult, int nfea
 }
 
 // convert pseudojets to numpy array of e, px, py, pz values
-void pseudojets_to_epxpypz_array(double** particles, int* mult, int* nfeatures,
+template<typename F>
+void pseudojets_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
                                  const std::vector<PseudoJet> & pjs) {
   *mult = pjs.size();
   *nfeatures = 4;
-  std::size_t nbytes = 4 * pjs.size() * sizeof(double);
-  *particles = (double *) malloc(nbytes);
+  std::size_t nbytes = 4 * pjs.size() * sizeof(F);
+  *particles = (F *) malloc(nbytes);
   if (*particles == NULL)
     throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
 
@@ -194,12 +201,13 @@ void pseudojets_to_epxpypz_array(double** particles, int* mult, int* nfeatures,
 }
 
 // convert pseudojets to numpy array of e, px, py, pz values
-void pseudojets_to_ptyphim_array(double** particles, int* mult, int* nfeatures,
-                                 const std::vector<PseudoJet> & pjs, bool mass = true) {
+template<typename F>
+void pseudojets_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                                 const std::vector<PseudoJet> & pjs, bool mass = true, bool phi_std = false) {
   *mult = pjs.size();
   *nfeatures = (mass ? 4 : 3);
-  std::size_t nbytes = (*nfeatures) * pjs.size() * sizeof(double);
-  *particles = (double *) malloc(nbytes);
+  std::size_t nbytes = (*nfeatures) * pjs.size() * sizeof(F);
+  *particles = (F *) malloc(nbytes);
   if (*particles == NULL)
     throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
 
@@ -208,19 +216,20 @@ void pseudojets_to_ptyphim_array(double** particles, int* mult, int* nfeatures,
     for (const auto & pj : pjs) {
       (*particles)[k++] = pj.pt();
       (*particles)[k++] = pj.rap();
-      (*particles)[k++] = pj.phi();
+      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
       (*particles)[k++] = pj.m();
     }
   else
     for (const auto & pj : pjs) {
       (*particles)[k++] = pj.pt();
       (*particles)[k++] = pj.rap();
-      (*particles)[k++] = pj.phi();
+      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
     }
 }
 
 // function that selects representation based on enum
-void pseudojets_to_array(double** particles, int* mult, int* nfeatures,
+template<typename F>
+void pseudojets_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
                          const std::vector<PseudoJet> & pjs,
                          PseudoJetRepresentation pjrep = ptyphim) {
 
@@ -237,10 +246,10 @@ void pseudojets_to_array(double** particles, int* mult, int* nfeatures,
 }
 
 // function that extracts user indices to a numpy array
-void user_indices(int** inds, int* mult, const std::vector<PseudoJet> & pjs) {
+void user_indices(std::ptrdiff_t** inds, std::ptrdiff_t* mult, const std::vector<PseudoJet> & pjs) {
   *mult = pjs.size();
-  std::size_t nbytes = pjs.size() * sizeof(int);
-  *inds = (int *) malloc(nbytes);
+  std::size_t nbytes = pjs.size() * sizeof(std::ptrdiff_t);
+  *inds = (std::ptrdiff_t *) malloc(nbytes);
   if (*inds == NULL)
     throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
 
