@@ -1,4 +1,4 @@
-// fjcore -- extracted from FastJet v3.3.4 (http://fastjet.fr)
+// fjcore -- extracted from FastJet v3.4.0 (http://fastjet.fr)
 //
 // fjcore constitutes a digest of the main FastJet functionality.
 // The files fjcore.hh and fjcore.cc are meant to provide easy access to these 
@@ -54,7 +54,7 @@
 //FJSTARTHEADER
 // $Id$
 //
-// Copyright (c) 2005-2020, Matteo Cacciari, Gavin P. Salam and Gregory Soyez
+// Copyright (c) 2005-2021, Matteo Cacciari, Gavin P. Salam and Gregory Soyez
 //
 //----------------------------------------------------------------------
 // This file is part of FastJet (fjcore).
@@ -1199,7 +1199,7 @@ void ClosestPair2D::_initialize(const std::vector<Coord2D> & positions,
   _left_corner = left_corner;
   _range       = max((right_corner.x - left_corner.x),
 		     (right_corner.y - left_corner.y));
-  vector<Shuffle> shuffles(n_positions);
+  std::vector<Shuffle> shuffles(n_positions);
   for (unsigned int i = 0; i < n_positions; i++) {
     _points[i].coord = positions[i];
     _points[i].neighbour_dist2 = numeric_limits<double>::max();
@@ -1237,7 +1237,7 @@ void ClosestPair2D::_initialize(const std::vector<Coord2D> & positions,
       }
     } while (++circ != start);
   }
-  vector<double> mindists2(n_positions);
+  std::vector<double> mindists2(n_positions);
   for (unsigned int i = 0; i < n_positions; i++) {
     mindists2[i] = _points[i].neighbour_dist2;}
   _heap = SharedPtr<MinHeap>(new MinHeap(mindists2, max_size));
@@ -1408,7 +1408,11 @@ FJCORE_END_NAMESPACE
 #include<set>
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 using namespace std;
-std::ostream * ClusterSequence::_fastjet_banner_ostr = &cout;
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+atomic<ostream *> ClusterSequence::_fastjet_banner_ostr{&cout};
+#else
+ostream * ClusterSequence::_fastjet_banner_ostr = &cout;
+#endif  // FJCORE_HAVE_LIMITED_THREAD_SAFETY
 ClusterSequence::~ClusterSequence () {
   if (_structure_shared_ptr){
     ClusterSequenceStructure* csi = dynamic_cast<ClusterSequenceStructure*>(_structure_shared_ptr.get()); 
@@ -1544,14 +1548,13 @@ void ClusterSequence::_initialise_and_run_no_decant () {
     throw Error(err.str());
   }
 }
-bool ClusterSequence::_first_time = true;
+thread_safety_helpers::FirstTimeTrue ClusterSequence::_first_time;
 LimitedWarning ClusterSequence::_exclusive_warnings;
 string fastjet_version_string() {
   return "FastJet version "+string(fastjet_version)+" [fjcore]";
 }
 void ClusterSequence::print_banner() {
-  if (!_first_time) {return;}
-  _first_time = false;
+  if (!_first_time()) return;
   ostream * ostr = _fastjet_banner_ostr;
   if (!ostr) return;  
   (*ostr) << "#--------------------------------------------------------------------------\n";
@@ -1817,7 +1820,7 @@ void ClusterSequence::plugin_record_ij_recombination(
 std::vector<PseudoJet> /*ptk*/ ClusterSequence::inclusive_jets (const double ptmin) const{
   double dcut = ptmin*ptmin;
   int i = _history.size() - 1; // last jet
-  vector<PseudoJet> jets_local;
+  std::vector<PseudoJet> jets_local;
   if (_jet_algorithm == kt_algorithm) {
     while (i >= 0) {
       if (_history[i].max_dij_so_far < dcut) {break;}
@@ -1893,7 +1896,7 @@ std::vector<PseudoJet> /*ptk*/ ClusterSequence::exclusive_jets_up_to (const int 
     err << "2*_initial_n != _history.size() -- this endangers internal assumptions!\n";
     throw Error(err.str());
   }
-  vector<PseudoJet> jets_local;
+  std::vector<PseudoJet> jets_local;
   for (unsigned int i = stop_point; i < _history.size(); i++) {
     int parent1 = _history[i].parent1;
     if (parent1 < stop_point) {
@@ -1927,7 +1930,7 @@ std::vector<PseudoJet> /*ptk*/ ClusterSequence::exclusive_subjets
    (const PseudoJet & jet, const double dcut) const {
   set<const history_element*> subhist;
   get_subhist_set(subhist, jet, dcut, 0);
-  vector<PseudoJet> subjets;
+  std::vector<PseudoJet> subjets;
   subjets.reserve(subhist.size());
   for (set<const history_element*>::iterator elem = subhist.begin(); 
        elem != subhist.end(); elem++) {
@@ -1943,7 +1946,7 @@ int ClusterSequence::n_exclusive_subjets(const PseudoJet & jet,
 }
 std::vector<PseudoJet> /*ptk*/ ClusterSequence::exclusive_subjets
    (const PseudoJet & jet, int nsub) const {
-  vector<PseudoJet> subjets = exclusive_subjets_up_to(jet, nsub);
+  std::vector<PseudoJet> subjets = exclusive_subjets_up_to(jet, nsub);
   if (int(subjets.size()) < nsub) {
     ostringstream err;
     err << "Requested " << nsub << " exclusive subjets, but there were only " 
@@ -1955,7 +1958,7 @@ std::vector<PseudoJet> /*ptk*/ ClusterSequence::exclusive_subjets
 std::vector<PseudoJet> /*ptk*/ ClusterSequence::exclusive_subjets_up_to
    (const PseudoJet & jet, int nsub) const {
   set<const history_element*> subhist;
-  vector<PseudoJet> subjets;
+  std::vector<PseudoJet> subjets;
   if (nsub <  0) throw Error("Requested a negative number of subjets. This is nonsensical.");
   if (nsub == 0) return subjets;
   get_subhist_set(subhist, jet, -1.0, nsub);
@@ -2070,11 +2073,11 @@ bool ClusterSequence::has_partner(const PseudoJet & jet,
   }
 }
 std::vector<PseudoJet> /*ptk*/ ClusterSequence::constituents (const PseudoJet & jet) const {
-  vector<PseudoJet> subjets;
+  std::vector<PseudoJet> subjets;
   add_constituents(jet, subjets);
   return subjets;
 }
-void ClusterSequence::print_jets_for_root(const std::vector<PseudoJet> & jets_in, 
+void ClusterSequence::print_jets_for_root(const std::vector<PseudoJet> /*ptk*/ & jets_in, 
                                           ostream & ostr) const {
   for (unsigned i = 0; i < jets_in.size(); i++) {
     ostr << i  << " "
@@ -2082,7 +2085,7 @@ void ClusterSequence::print_jets_for_root(const std::vector<PseudoJet> & jets_in
          << jets_in[i].py() << " "
          << jets_in[i].pz() << " "
          << jets_in[i].E() << endl;
-    vector<PseudoJet> cst = constituents(jets_in[i]);
+    std::vector<PseudoJet> cst = constituents(jets_in[i]);
     for (unsigned j = 0; j < cst.size() ; j++) {
       ostr << " " << j << " "
            << cst[j].rap() << " "
@@ -2092,20 +2095,20 @@ void ClusterSequence::print_jets_for_root(const std::vector<PseudoJet> & jets_in
     ostr << "#END" << endl;
   }
 }
-void ClusterSequence::print_jets_for_root(const std::vector<PseudoJet> & jets_in, 
+void ClusterSequence::print_jets_for_root(const std::vector<PseudoJet> /*ptk*/ & jets_in, 
 					  const std::string & filename,
 					  const std::string & comment ) const {
   std::ofstream ostr(filename.c_str());
   if (comment != "") ostr << "# " << comment << endl;
   print_jets_for_root(jets_in, ostr);
 }
-vector<int> ClusterSequence::particle_jet_indices(
-                        const vector<PseudoJet> & jets_in) const {
-  vector<int> indices(n_particles());
+std::vector<int> ClusterSequence::particle_jet_indices(
+                        const std::vector<PseudoJet> /*ptk*/ & jets_in) const {
+  std::vector<int> indices(n_particles());
   for (unsigned ipart = 0; ipart < n_particles(); ipart++) 
     indices[ipart] = -1;
   for (unsigned ijet = 0; ijet < jets_in.size(); ijet++) {
-    vector<PseudoJet> jet_constituents(constituents(jets_in[ijet]));
+    std::vector<PseudoJet> jet_constituents(constituents(jets_in[ijet]));
     for (unsigned ip = 0; ip < jet_constituents.size(); ip++) {
       unsigned iclust = jet_constituents[ip].cluster_hist_index();
       unsigned ipart = history()[iclust].jetp_index;
@@ -2115,7 +2118,7 @@ vector<int> ClusterSequence::particle_jet_indices(
   return indices;
 }
 void ClusterSequence::add_constituents (
-           const PseudoJet & jet, vector<PseudoJet> & subjet_vector) const {
+           const PseudoJet & jet, std::vector<PseudoJet> & subjet_vector) const {
   int i = jet.cluster_hist_index();
   int parent1 = _history[i].parent1;
   int parent2 = _history[i].parent2;
@@ -2163,7 +2166,7 @@ void ClusterSequence::_add_step_to_history (
 	 << "; y = "<< dij<<endl;
   }
 }
-vector<int> ClusterSequence::unique_history_order() const {
+std::vector<int> ClusterSequence::unique_history_order() const {
   valarray<int> lowest_constituent(_history.size());
   int hist_n = _history.size();
   lowest_constituent = hist_n; // give it a large number
@@ -2173,7 +2176,7 @@ vector<int> ClusterSequence::unique_history_order() const {
       = min(lowest_constituent[_history[i].child],lowest_constituent[i]);
   }
   valarray<bool> extracted(_history.size()); extracted = false;
-  vector<int> unique_tree;
+  std::vector<int> unique_tree;
   unique_tree.reserve(_history.size());
   for (unsigned i = 0; i < n_particles(); i++) {
     if (!extracted[i]) {
@@ -2188,7 +2191,7 @@ void ClusterSequence::_extract_tree_children(
        int position, 
        valarray<bool> & extracted, 
        const valarray<int> & lowest_constituent,
-       vector<int> & unique_tree) const {
+       std::vector<int> & unique_tree) const {
   if (!extracted[position]) {
     _extract_tree_parents(position,extracted,lowest_constituent,unique_tree);
   } 
@@ -2196,7 +2199,7 @@ void ClusterSequence::_extract_tree_children(
   if (child  >= 0) _extract_tree_children(child,extracted,lowest_constituent,unique_tree);
 }
 std::vector<PseudoJet> /*ptk*/ ClusterSequence::unclustered_particles() const {
-  vector<PseudoJet> unclustered;
+  std::vector<PseudoJet> unclustered;
   for (unsigned i = 0; i < n_particles() ; i++) {
     if (_history[i].child == Invalid) 
       unclustered.push_back(_jets[_history[i].jetp_index]);
@@ -2204,7 +2207,7 @@ std::vector<PseudoJet> /*ptk*/ ClusterSequence::unclustered_particles() const {
   return unclustered;
 }
 std::vector<PseudoJet> /*ptk*/ ClusterSequence::childless_pseudojets() const {
-  vector<PseudoJet> unclustered;
+  std::vector<PseudoJet> unclustered;
   for (unsigned i = 0; i < _history.size() ; i++) {
     if ((_history[i].child == Invalid) && (_history[i].parent2 != BeamJet))
       unclustered.push_back(_jets[_history[i].jetp_index]);
@@ -2221,7 +2224,7 @@ void ClusterSequence::_extract_tree_parents(
        int position, 
        valarray<bool> & extracted, 
        const valarray<int> & lowest_constituent,
-       vector<int> & unique_tree) const {
+       std::vector<int> & unique_tree) const {
   if (!extracted[position]) {
     int parent1 = _history[position].parent1;
     int parent2 = _history[position].parent2;
@@ -2296,9 +2299,9 @@ namespace Private {
 using namespace Private;
 void ClusterSequence::_CP2DChan_limited_cluster (double Dlim) {
   unsigned int n = _initial_n;
-  vector<MirrorInfo>   coordIDs(2*n); // coord IDs of a given jetID
-  vector<int>          jetIDs(2*n);   // jet ID for a given coord ID
-  vector<Coord2D>      coords(2*n);   // our coordinates (and copies)
+  std::vector<MirrorInfo>   coordIDs(2*n); // coord IDs of a given jetID
+  std::vector<int>          jetIDs(2*n);   // jet ID for a given coord ID
+  std::vector<Coord2D>      coords(2*n);   // our coordinates (and copies)
   double Dlim4mirror = min(Dlim,pi);
   double minrap = numeric_limits<double>::max();
   double maxrap = -minrap;
@@ -2328,9 +2331,9 @@ void ClusterSequence::_CP2DChan_limited_cluster (double Dlim) {
   Coord2D left_edge(minrap-1.0, -3.15); // a security margin below  -pi
   Coord2D right_edge(maxrap+1.0, 9.45); // a security margin above 3*pi
   ClosestPair2D cp(coords, left_edge, right_edge);
-  vector<Coord2D> new_points(2);
-  vector<unsigned int> cIDs_to_remove(4);
-  vector<unsigned int> new_cIDs(2);
+  std::vector<Coord2D> new_points(2);
+  std::vector<unsigned int> cIDs_to_remove(4);
+  std::vector<unsigned int> new_cIDs(2);
   do {
     unsigned int cID1, cID2;
     double distance2;
@@ -2377,9 +2380,9 @@ void ClusterSequence::_CP2DChan_cluster_2piMultD () {
 void ClusterSequence::_CP2DChan_cluster () {
   if (_jet_algorithm != cambridge_algorithm) throw Error("_CP2DChan_cluster called for a jet-finder that is not the cambridge algorithm");
   unsigned int n = _jets.size();
-  vector<MirrorInfo>   coordIDs(2*n);  // link from original to mirror indices
-  vector<int>          jetIDs(2*n);     // link from mirror to original indices
-  vector<Coord2D>      coords(2*n);   // our coordinates (and copies)
+  std::vector<MirrorInfo>   coordIDs(2*n);  // link from original to mirror indices
+  std::vector<int>          jetIDs(2*n);     // link from mirror to original indices
+  std::vector<Coord2D>      coords(2*n);   // our coordinates (and copies)
   double minrap = numeric_limits<double>::max();
   double maxrap = -minrap;
   int coord_index = 0;
@@ -2403,9 +2406,9 @@ void ClusterSequence::_CP2DChan_cluster () {
   Coord2D left_edge(minrap-1.0, 0.0);
   Coord2D right_edge(maxrap+1.0, 2*twopi);
   ClosestPair2D cp(coords, left_edge, right_edge);
-  vector<Coord2D> new_points(2);
-  vector<unsigned int> cIDs_to_remove(4);
-  vector<unsigned int> new_cIDs(2);
+  std::vector<Coord2D> new_points(2);
+  std::vector<unsigned int> cIDs_to_remove(4);
+  std::vector<unsigned int> new_cIDs(2);
   do {
     unsigned int cID1, cID2;
     double distance2;
@@ -2459,13 +2462,13 @@ FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 using namespace std;
 void ClusterSequence::_delaunay_cluster () {
   int n = _jets.size();
-  vector<EtaPhi> points(n); // recall EtaPhi is just a typedef'd pair<double>
+  std::vector<EtaPhi> points(n); // recall EtaPhi is just a typedef'd pair<double>
   for (int i = 0; i < n; i++) {
     points[i] = EtaPhi(_jets[i].rap(),_jets[i].phi_02pi());
     points[i].sanitize(); // make sure things are in the right range
   }
-  SharedPtr<DynamicNearestNeighbours> DNN;
   const bool verbose = false;
+  SharedPtr<DynamicNearestNeighbours> DNN;
 #ifndef __FJCORE_DROP_CGAL // strategy = NlnN* are not supported if we drop CGAL...
   bool ignore_nearest_is_mirror = (_Rparam < twopi);
   if (_strategy == NlnN4pi) {
@@ -2520,7 +2523,7 @@ void ClusterSequence::_delaunay_cluster () {
       _do_iB_recombination_step(jet_i, SmallestDij);
     }
     if (i == n-1) {break;}
-    vector<int> updated_neighbours;
+    std::vector<int> updated_neighbours;
     if (! recombine_with_beam) {
       int point3;
       DNN->RemoveCombinedAddCombination(jet_i, jet_j, 
@@ -2531,7 +2534,7 @@ void ClusterSequence::_delaunay_cluster () {
     } else {
       DNN->RemovePoint(jet_i, updated_neighbours);
     }
-    vector<int>::iterator it = updated_neighbours.begin();
+    std::vector<int>::iterator it = updated_neighbours.begin();
     for (; it != updated_neighbours.end(); ++it) {
       int ii = *it;
       _add_ktdistance_to_map(ii, DijMap, DNN.get());
@@ -2567,8 +2570,8 @@ FJCORE_END_NAMESPACE
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 using namespace std;
 void ClusterSequence::_really_dumb_cluster () {
-  vector<PseudoJet *> jetsp(_jets.size());
-  vector<int>         indices(_jets.size());
+  std::vector<PseudoJet *> jetsp(_jets.size());
+  std::vector<int>         indices(_jets.size());
   for (size_t i = 0; i<_jets.size(); i++) {
     jetsp[i] = & _jets[i];
     indices[i] = i;
@@ -2730,7 +2733,7 @@ bool ClusterSequenceStructure::has_pieces(const PseudoJet &reference) const{
 }
 std::vector<PseudoJet> /*ptk*/ ClusterSequenceStructure::pieces(const PseudoJet &reference) const{
   PseudoJet j1, j2;
-  vector<PseudoJet> res;
+  std::vector<PseudoJet> res;
   if (has_parents(reference, j1, j2)){
     res.push_back(j1);
     res.push_back(j2);
@@ -2824,10 +2827,10 @@ inline void ClusterSequence::_tj_set_jetinfo( TiledJet * const jet,
   tile->head      = jet;
 }
 void ClusterSequence::_print_tiles(TiledJet * briefjets ) const {
-  for (vector<Tile>::const_iterator tile = _tiles.begin(); 
+  for (std::vector<Tile>::const_iterator tile = _tiles.begin(); 
        tile < _tiles.end(); tile++) {
     cout << "Tile " << tile - _tiles.begin()<<" = ";
-    vector<int> list;
+    std::vector<int> list;
     for (TiledJet * jetI = tile->head; jetI != NULL; jetI = jetI->next) {
       list.push_back(jetI-briefjets);
     }
@@ -2837,7 +2840,7 @@ void ClusterSequence::_print_tiles(TiledJet * briefjets ) const {
   }
 }
 void ClusterSequence::_add_neighbours_to_tile_union(const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles) const {
+	       std::vector<int> & tile_union, int & n_near_tiles) const {
   for (Tile * const * near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     tile_union[n_near_tiles] = *near_tile - & _tiles[0];
@@ -2846,7 +2849,7 @@ void ClusterSequence::_add_neighbours_to_tile_union(const int tile_index,
 }
 inline void ClusterSequence::_add_untagged_neighbours_to_tile_union(
                const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles)  {
+	       std::vector<int> & tile_union, int & n_near_tiles)  {
   for (Tile ** near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     if (! (*near_tile)->tagged) {
@@ -2863,14 +2866,14 @@ void ClusterSequence::_tiled_N2_cluster() {
   TiledJet * jetA = briefjets, * jetB;
   TiledJet oldB;
   oldB.tile_index=0; // prevents a gcc warning
-  vector<int> tile_union(3*n_tile_neighbours);
+  std::vector<int> tile_union(3*n_tile_neighbours);
   for (int i = 0; i< n; i++) {
     _tj_set_jetinfo(jetA, i);
     jetA++; // move on to next entry of briefjets
   }
   TiledJet * tail = jetA; // a semaphore for the end of briefjets
   TiledJet * head = briefjets; // a nicer way of naming start
-  vector<Tile>::const_iterator tile;
+  std::vector<Tile>::const_iterator tile;
   for (tile = _tiles.begin(); tile != _tiles.end(); tile++) {
     for (jetA = tile->head; jetA != NULL; jetA = jetA->next) {
       for (jetB = tile->head; jetB != jetA; jetB = jetB->next) {
@@ -3017,13 +3020,13 @@ void ClusterSequence::_faster_tiled_N2_cluster() {
   TiledJet * jetA = briefjets, * jetB;
   TiledJet oldB;
   oldB.tile_index=0; // prevents a gcc warning
-  vector<int> tile_union(3*n_tile_neighbours);
+  std::vector<int> tile_union(3*n_tile_neighbours);
   for (int i = 0; i< n; i++) {
     _tj_set_jetinfo(jetA, i);
     jetA++; // move on to next entry of briefjets
   }
   TiledJet * head = briefjets; // a nicer way of naming start
-  vector<Tile>::const_iterator tile;
+  std::vector<Tile>::const_iterator tile;
   for (tile = _tiles.begin(); tile != _tiles.end(); tile++) {
     for (jetA = tile->head; jetA != NULL; jetA = jetA->next) {
       for (jetB = tile->head; jetB != jetA; jetB = jetB->next) {
@@ -3150,13 +3153,13 @@ void ClusterSequence::_minheap_faster_tiled_N2_cluster() {
   TiledJet * jetA = briefjets, * jetB;
   TiledJet oldB;
   oldB.tile_index=0; // prevents a gcc warning
-  vector<int> tile_union(3*n_tile_neighbours);
+  std::vector<int> tile_union(3*n_tile_neighbours);
   for (int i = 0; i< n; i++) {
     _tj_set_jetinfo(jetA, i);
     jetA++; // move on to next entry of briefjets
   }
   TiledJet * head = briefjets; // a nicer way of naming start
-  vector<Tile>::const_iterator tile;
+  std::vector<Tile>::const_iterator tile;
   for (tile = _tiles.begin(); tile != _tiles.end(); tile++) {
     for (jetA = tile->head; jetA != NULL; jetA = jetA->next) {
       for (jetB = tile->head; jetB != jetA; jetB = jetB->next) {
@@ -3175,13 +3178,13 @@ void ClusterSequence::_minheap_faster_tiled_N2_cluster() {
       }
     }
   }
-  vector<double> diJs(n);
+  std::vector<double> diJs(n);
   for (int i = 0; i < n; i++) {
     diJs[i] = _bj_diJ(&briefjets[i]);
     briefjets[i].label_minheap_update_done();
   }
   MinHeap minheap(diJs);
-  vector<TiledJet *> jets_for_minheap;
+  std::vector<TiledJet *> jets_for_minheap;
   jets_for_minheap.reserve(n); 
   int history_location = n-1;
   while (n > 0) {
@@ -3286,7 +3289,7 @@ void ClusterSequence::_minheap_faster_tiled_N2_cluster() {
 FJCORE_END_NAMESPACE
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 using namespace std;
-CompositeJetStructure::CompositeJetStructure(const std::vector<PseudoJet> & initial_pieces, 
+CompositeJetStructure::CompositeJetStructure(const std::vector<PseudoJet> /*ptk*/ & initial_pieces, 
 					     const JetDefinition::Recombiner * recombiner)
   : _pieces(initial_pieces){
   if (recombiner){};  // ugly trick to prevent a gcc warning
@@ -3300,10 +3303,10 @@ bool CompositeJetStructure::has_constituents() const{
   return _pieces.size()!=0;
 }
 std::vector<PseudoJet> /*ptk*/ CompositeJetStructure::constituents(const PseudoJet & /*jet*/) const{
-  vector<PseudoJet> all_constituents;
+  std::vector<PseudoJet> all_constituents;
   for (unsigned i = 0; i < _pieces.size(); i++) {
     if (_pieces[i].has_constituents()){
-      vector<PseudoJet> constits = _pieces[i].constituents();
+      std::vector<PseudoJet> constits = _pieces[i].constituents();
       copy(constits.begin(), constits.end(), back_inserter(all_constituents));
     } else {
       all_constituents.push_back(_pieces[i]);
@@ -3318,19 +3321,36 @@ FJCORE_END_NAMESPACE      // defined in fastjet/internal/base.hh
 #include <sstream>
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 using namespace std;
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+atomic<bool> Error::_print_errors{true};
+atomic<bool> Error::_print_backtrace{false};
+atomic<ostream *> Error::_default_ostr{& cerr};
+atomic<mutex *>   Error::_stream_mutex{nullptr};
+#else
 bool Error::_print_errors = true;
 bool Error::_print_backtrace = false;
 ostream * Error::_default_ostr = & cerr;
+#endif  // FJCORE_HAVE_LIMITED_THREAD_SAFETY
 #if (!defined(FJCORE_HAVE_EXECINFO_H)) || defined(__FJCORE__)
   LimitedWarning Error::_execinfo_undefined;
 #endif
 Error::Error(const std::string & message_in) {
   _message = message_in; 
-  if (_print_errors && _default_ostr){
+  ostream* ostr = _default_ostr;
+  if (_print_errors && ostr){
     ostringstream oss;
     oss << "fjcore::Error:  "<< message_in << endl;
-    *_default_ostr << oss.str();
-    _default_ostr->flush(); 
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+    if (_stream_mutex){
+      std::lock_guard<std::mutex> guard(*_stream_mutex);
+      *ostr << oss.str();
+      ostr->flush(); // get something written to file even if the program aborts
+    } else
+#endif //  FJCORE_HAVE_LIMITED_THREAD_SAFETY
+    {
+      *ostr << oss.str();
+      ostr->flush(); // get something written to file even if the program aborts
+    }
   }
 }
 void Error::set_print_backtrace(bool enabled) {
@@ -3462,7 +3482,7 @@ void JetDefinition::set_recombiner(const JetDefinition &other_jet_def){
   }
   _recombiner = other_jet_def._recombiner;
   _default_recombiner = DefaultRecombiner(external_scheme);
-  _shared_recombiner.reset(other_jet_def._shared_recombiner);
+  _shared_recombiner = other_jet_def._shared_recombiner;
 }
 bool JetDefinition::has_same_recombiner(const JetDefinition &other_jd) const{
   const RecombinationScheme & scheme = recombination_scheme();
@@ -3603,7 +3623,7 @@ void JetDefinition::DefaultRecombiner::preprocess(PseudoJet & p) const {
 void JetDefinition::Plugin::set_ghost_separation_scale(double /*scale*/) const {
   throw Error("set_ghost_separation_scale not supported");
 }
-PseudoJet join(const vector<PseudoJet> & pieces, const JetDefinition::Recombiner & recombiner){
+PseudoJet join(const std::vector<PseudoJet> /*ptk*/ & pieces, const JetDefinition::Recombiner & recombiner){
   PseudoJet result;  // automatically initialised to 0
   if (pieces.size()>0){
     result = pieces[0];
@@ -3616,18 +3636,18 @@ PseudoJet join(const vector<PseudoJet> & pieces, const JetDefinition::Recombiner
 }
 PseudoJet join(const PseudoJet & j1, 
 	       const JetDefinition::Recombiner & recombiner){
-  return join(vector<PseudoJet>(1,j1), recombiner);
+  return join(std::vector<PseudoJet>(1,j1), recombiner);
 }
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, 
 	       const JetDefinition::Recombiner & recombiner){
-  vector<PseudoJet> pieces;
+  std::vector<PseudoJet> pieces;
   pieces.push_back(j1);
   pieces.push_back(j2);
   return join(pieces, recombiner);
 }
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, const PseudoJet & j3, 
 	       const JetDefinition::Recombiner & recombiner){
-  vector<PseudoJet> pieces;
+  std::vector<PseudoJet> pieces;
   pieces.push_back(j1);
   pieces.push_back(j2);
   pieces.push_back(j3);
@@ -3635,7 +3655,7 @@ PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, const PseudoJet & j3,
 }
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, const PseudoJet & j3, const PseudoJet & j4,
 	       const JetDefinition::Recombiner & recombiner){
-  vector<PseudoJet> pieces;
+  std::vector<PseudoJet> pieces;
   pieces.push_back(j1);
   pieces.push_back(j2);
   pieces.push_back(j3);
@@ -3647,36 +3667,69 @@ FJCORE_END_NAMESPACE
 #include <limits>
 using namespace std;
 FJCORE_BEGIN_NAMESPACE
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+atomic<ostream *> LimitedWarning::_default_ostr{&cerr};
+atomic<mutex *> LimitedWarning::_stream_mutex{nullptr};
+atomic<int> LimitedWarning::_max_warn_default{5};
+std::mutex LimitedWarning::_global_warnings_summary_mutex;
+#else
 ostream * LimitedWarning::_default_ostr = &cerr;
-std::list< LimitedWarning::Summary > LimitedWarning::_global_warnings_summary;
 int LimitedWarning::_max_warn_default = 5;
+#endif // FJCORE_HAVE_LIMITED_THREAD_SAFETY
+std::list< LimitedWarning::Summary > LimitedWarning::_global_warnings_summary;
+int LimitedWarning::n_warn_so_far() const{
+  if (((LimitedWarning::Summary *)_this_warning_summary) == 0) return 0;
+  return (*_this_warning_summary).second;
+}
 void LimitedWarning::warn(const char * warning, std::ostream * ostr) {
-  if (_this_warning_summary == 0) {
+  if (((LimitedWarning::Summary *)_this_warning_summary) == 0){
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+    std::lock_guard<std::mutex> guard(_global_warnings_summary_mutex);
+    if (((LimitedWarning::Summary *)_this_warning_summary) == 0){
+      _global_warnings_summary.push_back(Summary(warning, 0));
+      _this_warning_summary = & (_global_warnings_summary.back());
+    }
+#else  
     _global_warnings_summary.push_back(Summary(warning, 0));
     _this_warning_summary = & (_global_warnings_summary.back());
+#endif // FJCORE_HAVE_LIMITED_THREAD_SAFETY
   }
-  if (_n_warn_so_far < _max_warn) {
+  unsigned int count = (*_this_warning_summary).second.step();
+  if ((_max_warn<0) || (count < (unsigned int)_max_warn)) {
     ostringstream warnstr;
     warnstr << "WARNING from FastJet: ";
     warnstr << warning;
-    _n_warn_so_far++;
-    if (_n_warn_so_far == _max_warn) warnstr << " (LAST SUCH WARNING)";
+    if ((_max_warn>0) && (count+1 == (unsigned int)_max_warn))
+      warnstr << " (LAST SUCH WARNING)";
     warnstr << std::endl;
     if (ostr) {
-      (*ostr) << warnstr.str();
-      ostr->flush(); // get something written to file even if the program aborts
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+      if (_stream_mutex){
+        std::lock_guard<std::mutex> guard(*_stream_mutex);
+        (*ostr) << warnstr.str();
+        ostr->flush(); // get something written to file even if the program aborts
+      } else 
+#endif // FJCORE_HAVE_LIMITED_THREAD_SAFETY      
+      {
+        (*ostr) << warnstr.str();
+        ostr->flush(); // get something written to file even if the program aborts
+      }
     }
-  }
-  if (_this_warning_summary->second < numeric_limits<unsigned>::max()) {
-    _this_warning_summary->second++;
   }
 }
 string LimitedWarning::summary() {
   ostringstream str;
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+  {
+    std::lock_guard<std::mutex> guard(_global_warnings_summary_mutex);
+#endif
   for (list<Summary>::const_iterator it = _global_warnings_summary.begin();
        it != _global_warnings_summary.end(); it++) {
     str << it->second << " times: " << it->first << endl;
   }
+#ifdef FJCORE_HAVE_LIMITED_THREAD_SAFETY
+  }
+#endif
   return str.str();
 }
 FJCORE_END_NAMESPACE
@@ -3748,11 +3801,50 @@ PseudoJet::PseudoJet(const double px_in, const double py_in, const double pz_in,
   this->_finish_init();
   _reset_indices();
 }
+#ifdef FJCORE_HAVE_THREAD_SAFETY
+PseudoJet & PseudoJet::operator=(const PseudoJet & other_pj){
+  _structure = other_pj._structure;
+  _user_info = other_pj._user_info;
+  _kt2 = other_pj._kt2; 
+  _cluster_hist_index = other_pj._cluster_hist_index;
+  _user_index = other_pj._user_index;
+  _px = other_pj._px;
+  _py = other_pj._py;
+  _pz = other_pj._pz;
+  _E  = other_pj._E;
+  _phi = other_pj._phi; 
+  _rap = other_pj._rap;
+  _init_status.store(other_pj._init_status);
+  return *this;
+}
+#endif // FJCORE_HAVE_THREAD_SAFETY
 void PseudoJet::_finish_init () {
   _kt2 = this->px()*this->px() + this->py()*this->py();
   _phi = pseudojet_invalid_phi;
   _rap = pseudojet_invalid_rap;
+#ifdef FJCORE_HAVE_THREAD_SAFETY
+  _init_status = Init_NotDone;
+#endif
 }
+#ifdef FJCORE_HAVE_THREAD_SAFETY
+void PseudoJet::_ensure_valid_rap_phi() const{
+  if (_init_status!=Init_Done){
+    int expected = Init_NotDone;
+    if (_init_status.compare_exchange_strong(expected, Init_InProgress,
+                                             std::memory_order_seq_cst,
+                                             std::memory_order_relaxed)){
+      _set_rap_phi();
+      _init_status = Init_Done; // can safely be done after all physics varlables are set
+    } else {
+      do{
+        expected = Init_Done;
+      } while (!_init_status.compare_exchange_weak(expected, Init_Done,
+                                                   std::memory_order_relaxed,
+                                                   std::memory_order_relaxed));
+    }
+  }
+}
+#endif
 void PseudoJet::_set_rap_phi() const {
   if (_kt2 == 0.0) {
     _phi = 0.0; } 
@@ -3913,6 +4005,9 @@ void PseudoJet::set_cached_rap_phi(double rap_in, double phi_in) {
   _rap = rap_in; _phi = phi_in;
   if (_phi >= twopi) _phi -= twopi;
   if (_phi < 0)      _phi += twopi;
+#ifdef FJCORE_HAVE_THREAD_SAFETY
+  _init_status = Init_Done;
+#endif
 }
 void PseudoJet::reset_momentum_PtYPhiM(double pt_in, double y_in, double phi_in, double m_in) {
   assert(phi_in < 2*twopi && phi_in > -twopi);
@@ -3979,7 +4074,7 @@ void PseudoJet::set_structure_shared_ptr(const SharedPtr<PseudoJetStructureBase>
   _structure = structure_in;
 }
 bool PseudoJet::has_structure() const{
-  return bool(_structure);
+  return (bool) _structure; // cast to bool has to be made explicit
 }
 const PseudoJetStructureBase* PseudoJet::structure_ptr() const {
   return _structure.get();
@@ -4029,7 +4124,7 @@ std::vector<PseudoJet> /*ptk*/ PseudoJet::exclusive_subjets_up_to (int nsub) con
   return validated_structure_ptr()->exclusive_subjets_up_to(*this, nsub);
 }
 std::vector<PseudoJet> /*ptk*/ PseudoJet::exclusive_subjets (int nsub) const {
-  vector<PseudoJet> subjets = exclusive_subjets_up_to(nsub);
+  std::vector<PseudoJet> subjets = exclusive_subjets_up_to(nsub);
   if (int(subjets.size()) < nsub) {
     ostringstream err;
     err << "Requested " << nsub << " exclusive subjets, but there were only " 
@@ -4052,32 +4147,32 @@ std::vector<PseudoJet> /*ptk*/ PseudoJet::pieces() const{
 }
 PseudoJet::InexistentUserInfo::InexistentUserInfo() : Error("you attempted to perform a dynamic cast of a PseudoJet's extra info, but the extra info pointer was null")
 {}
-void sort_indices(vector<int> & indices, 
-			 const vector<double> & values) {
+void sort_indices(std::vector<int> & indices, 
+			 const std::vector<double> & values) {
   IndexedSortHelper index_sort_helper(&values);
   sort(indices.begin(), indices.end(), index_sort_helper);
 }
-std::vector<PseudoJet> /*ptk*/ sorted_by_pt(const vector<PseudoJet> & jets) {
-  vector<double> minus_kt2(jets.size());
+std::vector<PseudoJet> /*ptk*/ sorted_by_pt(const std::vector<PseudoJet> /*ptk*/ & jets) {
+  std::vector<double> minus_kt2(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {minus_kt2[i] = -jets[i].kt2();}
   return objects_sorted_by_values(jets, minus_kt2);
 }
-std::vector<PseudoJet> /*ptk*/ sorted_by_rapidity(const vector<PseudoJet> & jets) {
-  vector<double> rapidities(jets.size());
+std::vector<PseudoJet> /*ptk*/ sorted_by_rapidity(const std::vector<PseudoJet> /*ptk*/ & jets) {
+  std::vector<double> rapidities(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {rapidities[i] = jets[i].rap();}
   return objects_sorted_by_values(jets, rapidities);
 }
-std::vector<PseudoJet> /*ptk*/ sorted_by_E(const vector<PseudoJet> & jets) {
-  vector<double> energies(jets.size());
+std::vector<PseudoJet> /*ptk*/ sorted_by_E(const std::vector<PseudoJet> /*ptk*/ & jets) {
+  std::vector<double> energies(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {energies[i] = -jets[i].E();}
   return objects_sorted_by_values(jets, energies);
 }
-std::vector<PseudoJet> /*ptk*/ sorted_by_pz(const vector<PseudoJet> & jets) {
-  vector<double> pz(jets.size());
+std::vector<PseudoJet> /*ptk*/ sorted_by_pz(const std::vector<PseudoJet> /*ptk*/ & jets) {
+  std::vector<double> pz(jets.size());
   for (size_t i = 0; i < jets.size(); i++) {pz[i] = jets[i].pz();}
   return objects_sorted_by_values(jets, pz);
 }
-PseudoJet join(const vector<PseudoJet> & pieces){
+PseudoJet join(const std::vector<PseudoJet> /*ptk*/ & pieces){
   PseudoJet result;  // automatically initialised to 0
   for (unsigned int i=0; i<pieces.size(); i++)
     result += pieces[i];
@@ -4086,17 +4181,17 @@ PseudoJet join(const vector<PseudoJet> & pieces){
   return result;
 }
 PseudoJet join(const PseudoJet & j1){
-  return join(vector<PseudoJet>(1,j1));
+  return join(std::vector<PseudoJet>(1,j1));
 }
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2){
-  vector<PseudoJet> pieces;
+  std::vector<PseudoJet> pieces;
   pieces.reserve(2);
   pieces.push_back(j1);
   pieces.push_back(j2);
   return join(pieces);
 }
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, const PseudoJet & j3){
-  vector<PseudoJet> pieces;
+  std::vector<PseudoJet> pieces;
   pieces.reserve(3);
   pieces.push_back(j1);
   pieces.push_back(j2);
@@ -4104,7 +4199,7 @@ PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, const PseudoJet & j3)
   return join(pieces);
 }
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, const PseudoJet & j3, const PseudoJet & j4){
-  vector<PseudoJet> pieces;
+  std::vector<PseudoJet> pieces;
   pieces.reserve(4);
   pieces.push_back(j1);
   pieces.push_back(j2);
@@ -4159,7 +4254,7 @@ FJCORE_END_NAMESPACE
 #include <algorithm>
 using namespace std;
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
-std::vector<PseudoJet> /*ptk*/ Selector::operator()(const std::vector<PseudoJet> & jets) const {
+std::vector<PseudoJet> /*ptk*/ Selector::operator()(const std::vector<PseudoJet> /*ptk*/ & jets) const {
   std::vector<PseudoJet> result;
   const SelectorWorker * worker_local = validated_worker();
   if (worker_local->applies_jet_by_jet()) {
@@ -4179,7 +4274,7 @@ std::vector<PseudoJet> /*ptk*/ Selector::operator()(const std::vector<PseudoJet>
   }
   return result;
 }
-unsigned int Selector::count(const std::vector<PseudoJet> & jets) const {
+unsigned int Selector::count(const std::vector<PseudoJet> /*ptk*/ & jets) const {
   unsigned n = 0;
   const SelectorWorker * worker_local = validated_worker();
   if (worker_local->applies_jet_by_jet()) {
@@ -4198,7 +4293,7 @@ unsigned int Selector::count(const std::vector<PseudoJet> & jets) const {
   }
   return n;
 }
-PseudoJet Selector::sum(const std::vector<PseudoJet> & jets) const {
+PseudoJet Selector::sum(const std::vector<PseudoJet> /*ptk*/ & jets) const {
   PseudoJet this_sum(0,0,0,0);
   const SelectorWorker * worker_local = validated_worker();
   if (worker_local->applies_jet_by_jet()) {
@@ -4217,7 +4312,7 @@ PseudoJet Selector::sum(const std::vector<PseudoJet> & jets) const {
   }
   return this_sum;
 }
-double Selector::scalar_pt_sum(const std::vector<PseudoJet> & jets) const {
+double Selector::scalar_pt_sum(const std::vector<PseudoJet> /*ptk*/ & jets) const {
   double this_sum = 0.0;
   const SelectorWorker * worker_local = validated_worker();
   if (worker_local->applies_jet_by_jet()) {
@@ -4236,9 +4331,9 @@ double Selector::scalar_pt_sum(const std::vector<PseudoJet> & jets) const {
   }
   return this_sum;
 }
-void Selector::sift(const std::vector<PseudoJet> & jets,
-		    std::vector<PseudoJet> & jets_that_pass,
-		    std::vector<PseudoJet> & jets_that_fail
+void Selector::sift(const std::vector<PseudoJet> /*ptk*/ & jets,
+		    std::vector<PseudoJet> /*ptk*/ & jets_that_pass,
+		    std::vector<PseudoJet> /*ptk*/ & jets_that_fail
 		    ) const {
   const SelectorWorker * worker_local = validated_worker();
   jets_that_pass.clear();
@@ -4279,7 +4374,7 @@ public:
   virtual bool pass(const PseudoJet &) const {
     return true;
   }
-  virtual void terminator(vector<const PseudoJet *> &) const {
+  virtual void terminator(std::vector<const PseudoJet *> &) const {
     return;
   }
   virtual string description() const { return "Identity";}
@@ -4298,19 +4393,19 @@ public:
     return ! _s.pass(jet);
   } 
   virtual bool applies_jet_by_jet() const {return _s.applies_jet_by_jet();}
-  virtual void terminator(vector<const PseudoJet *> & jets) const {
+  virtual void terminator(std::vector<const PseudoJet *> & jets) const {
     if (applies_jet_by_jet()){
       SelectorWorker::terminator(jets);
       return;
     }
-    vector<const PseudoJet *> s_jets = jets;
+    std::vector<const PseudoJet *> s_jets = jets;
     _s.worker()->terminator(s_jets);
     for (unsigned int i=0; i<s_jets.size(); i++){
       if (s_jets[i]) jets[i] = NULL;
     }
   }
   virtual string description() const {
-    ostringstream ostr;
+    std::ostringstream ostr;
     ostr << "!(" << _s.description() << ")";
     return ostr.str();
   }
@@ -4354,12 +4449,12 @@ public:
       throw Error("Cannot apply this selector worker to an individual jet");
     return _s1.pass(jet) && _s2.pass(jet);
   }
-  virtual void terminator(vector<const PseudoJet *> & jets) const {
+  virtual void terminator(std::vector<const PseudoJet *> & jets) const {
     if (applies_jet_by_jet()){
       SelectorWorker::terminator(jets);
       return;
     }
-    vector<const PseudoJet *> s1_jets = jets;
+    std::vector<const PseudoJet *> s1_jets = jets;
     _s1.worker()->terminator(s1_jets);
     _s2.worker()->terminator(jets);
     for (unsigned int i=0; i<jets.size(); i++){
@@ -4394,12 +4489,12 @@ public:
   virtual bool applies_jet_by_jet() const {
     return _s1.applies_jet_by_jet() && _s2.applies_jet_by_jet();
   }
-  virtual void terminator(vector<const PseudoJet *> & jets) const {
+  virtual void terminator(std::vector<const PseudoJet *> & jets) const {
     if (applies_jet_by_jet()){
       SelectorWorker::terminator(jets);
       return;
     }
-    vector<const PseudoJet *> s1_jets = jets;
+    std::vector<const PseudoJet *> s1_jets = jets;
     _s1.worker()->terminator(s1_jets);
     _s2.worker()->terminator(jets);
     for (unsigned int i=0; i<jets.size(); i++){
@@ -4426,7 +4521,7 @@ class SW_Mult: public SW_And {
 public:
   SW_Mult(const Selector & s1, const Selector & s2) : SW_And(s1,s2) {}
   virtual SelectorWorker* copy(){ return new SW_Mult(*this);}
-  virtual void terminator(vector<const PseudoJet *> & jets) const {
+  virtual void terminator(std::vector<const PseudoJet *> & jets) const {
     if (applies_jet_by_jet()){
       SelectorWorker::terminator(jets);
       return;
@@ -4736,10 +4831,10 @@ public:
       throw Error("Cannot apply this selector worker to an individual jet");
     return false;
   }
-  virtual void terminator(vector<const PseudoJet *> & jets) const {
+  virtual void terminator(std::vector<const PseudoJet *> & jets) const {
     if (jets.size() < _n) return;
-    vector<double> minus_pt2(jets.size());
-    vector<unsigned int> indices(jets.size());
+    std::vector<double> minus_pt2(jets.size());
+    std::vector<unsigned int> indices(jets.size());
     for (unsigned int i=0; i<jets.size(); i++){
       indices[i] = i;
       minus_pt2[i] = jets[i] ? -jets[i]->perp2() : 0.0;
@@ -4999,7 +5094,7 @@ void LazyTiling25::_initialise_tiles() {
 #endif
   _tile_half_size_eta = _tile_size_eta * 0.5;
   _tile_half_size_phi = _tile_size_phi * 0.5;
-  vector<bool> use_periodic_delta_phi(_n_tiles_phi, false);
+  std::vector<bool> use_periodic_delta_phi(_n_tiles_phi, false);
   if (_n_tiles_phi <= 5) {
     fill(use_periodic_delta_phi.begin(), use_periodic_delta_phi.end(), true);
   } else {
@@ -5099,12 +5194,12 @@ void LazyTiling25::_bj_remove_from_tiles(TiledJet * const jet) {
   }
 }
 void LazyTiling25::_print_tiles(TiledJet * briefjets ) const {
-  for (vector<Tile25>::const_iterator tile = _tiles.begin(); 
+  for (std::vector<Tile25>::const_iterator tile = _tiles.begin(); 
        tile < _tiles.end(); tile++) {
     cout << "Tile " << tile - _tiles.begin()
          << " at " << setw(10) << tile->eta_centre << "," << setw(10) << tile->phi_centre
          << " = ";
-    vector<int> list;
+    std::vector<int> list;
     for (TiledJet * jetI = tile->head; jetI != NULL; jetI = jetI->next) {
       list.push_back(jetI-briefjets);
     }
@@ -5114,7 +5209,7 @@ void LazyTiling25::_print_tiles(TiledJet * briefjets ) const {
   }
 }
 void LazyTiling25::_add_neighbours_to_tile_union(const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles) const {
+	       std::vector<int> & tile_union, int & n_near_tiles) const {
   for (Tile25 * const * near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     tile_union[n_near_tiles] = *near_tile - & _tiles[0];
@@ -5123,7 +5218,7 @@ void LazyTiling25::_add_neighbours_to_tile_union(const int tile_index,
 }
 inline void LazyTiling25::_add_untagged_neighbours_to_tile_union(
                const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles)  {
+	       std::vector<int> & tile_union, int & n_near_tiles)  {
   for (Tile25 ** near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     if (! (*near_tile)->tagged) {
@@ -5135,7 +5230,7 @@ inline void LazyTiling25::_add_untagged_neighbours_to_tile_union(
 }
 inline void LazyTiling25::_add_untagged_neighbours_to_tile_union_using_max_info(
                const TiledJet * jet, 
-	       vector<int> & tile_union, int & n_near_tiles)  {
+	       std::vector<int> & tile_union, int & n_near_tiles)  {
   Tile25 & tile = _tiles[jet->tile_index];
   for (Tile25 ** near_tile = tile.begin_tiles; near_tile != tile.end_tiles; near_tile++){
     if ((*near_tile)->tagged) continue;
@@ -5162,7 +5257,7 @@ inline double LazyTiling25::_distance_to_tile(const TiledJet * bj, const Tile25 
   if (dphi < 0) dphi = 0;
   return dphi*dphi + deta*deta;
 }
-inline void LazyTiling25::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI, vector<TiledJet *> & jets_for_minheap) {
+inline void LazyTiling25::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI, std::vector<TiledJet *> & jets_for_minheap) {
   double dist = _bj_dist(jetI,jetX);
   if (dist < jetI->NN_dist) {
     if (jetI != jetX) {
@@ -5181,7 +5276,7 @@ inline void LazyTiling25::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI,
   }
 }
 inline void LazyTiling25::_set_NN(TiledJet * jetI, 
-                              vector<TiledJet *> & jets_for_minheap) {
+                              std::vector<TiledJet *> & jets_for_minheap) {
   jetI->NN_dist = _R2;
   jetI->NN      = NULL;
   if (!jetI->minheap_update_needed()) {
@@ -5206,13 +5301,13 @@ void LazyTiling25::run() {
   TiledJet * briefjets = new TiledJet[n];
   TiledJet * jetA = briefjets, * jetB;
   TiledJet oldB = briefjets[0]; 
-  vector<int> tile_union(3*25);
+  std::vector<int> tile_union(3*25);
   for (int i = 0; i< n; i++) {
     _tj_set_jetinfo(jetA, i);
     jetA++; // move on to next entry of briefjets
   }
   TiledJet * head = briefjets; // a nicer way of naming start
-  vector<Tile25>::iterator tile;
+  std::vector<Tile25>::iterator tile;
   for (tile = _tiles.begin(); tile != _tiles.end(); tile++) {
     for (jetA = tile->head; jetA != NULL; jetA = jetA->next) {
       for (jetB = tile->head; jetB != jetA; jetB = jetB->next) {
@@ -5267,13 +5362,13 @@ void LazyTiling25::run() {
 #ifdef INSTRUMENT2
   cout << "intermediate ncall, dtt = " << _ncall << " " << _ncall_dtt << endl; // GPS tmp
 #endif // INSTRUMENT2
-  vector<double> diJs(n);
+  std::vector<double> diJs(n);
   for (int i = 0; i < n; i++) {
     diJs[i] = _bj_diJ(&briefjets[i]);
     briefjets[i].label_minheap_update_done();
   }
   MinHeap minheap(diJs);
-  vector<TiledJet *> jets_for_minheap;
+  std::vector<TiledJet *> jets_for_minheap;
   jets_for_minheap.reserve(n); 
   int history_location = n-1;
   while (n > 0) {
@@ -5407,7 +5502,7 @@ void LazyTiling9::_initialise_tiles() {
 #endif
   _tile_half_size_eta = _tile_size_eta * 0.5;
   _tile_half_size_phi = _tile_size_phi * 0.5;
-  vector<bool> use_periodic_delta_phi(_n_tiles_phi, false);
+  std::vector<bool> use_periodic_delta_phi(_n_tiles_phi, false);
   if (_n_tiles_phi <= 3) {
     fill(use_periodic_delta_phi.begin(), use_periodic_delta_phi.end(), true);
   } else {
@@ -5486,10 +5581,10 @@ void LazyTiling9::_bj_remove_from_tiles(TiledJet * const jet) {
   }
 }
 void LazyTiling9::_print_tiles(TiledJet * briefjets ) const {
-  for (vector<Tile2>::const_iterator tile = _tiles.begin(); 
+  for (std::vector<Tile2>::const_iterator tile = _tiles.begin(); 
        tile < _tiles.end(); tile++) {
     cout << "Tile " << tile - _tiles.begin()<<" = ";
-    vector<int> list;
+    std::vector<int> list;
     for (TiledJet * jetI = tile->head; jetI != NULL; jetI = jetI->next) {
       list.push_back(jetI-briefjets);
     }
@@ -5499,7 +5594,7 @@ void LazyTiling9::_print_tiles(TiledJet * briefjets ) const {
   }
 }
 void LazyTiling9::_add_neighbours_to_tile_union(const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles) const {
+	       std::vector<int> & tile_union, int & n_near_tiles) const {
   for (Tile2 * const * near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     tile_union[n_near_tiles] = *near_tile - & _tiles[0];
@@ -5508,7 +5603,7 @@ void LazyTiling9::_add_neighbours_to_tile_union(const int tile_index,
 }
 inline void LazyTiling9::_add_untagged_neighbours_to_tile_union(
                const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles)  {
+	       std::vector<int> & tile_union, int & n_near_tiles)  {
   for (Tile2 ** near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     if (! (*near_tile)->tagged) {
@@ -5520,7 +5615,7 @@ inline void LazyTiling9::_add_untagged_neighbours_to_tile_union(
 }
 inline void LazyTiling9::_add_untagged_neighbours_to_tile_union_using_max_info(
                const TiledJet * jet, 
-	       vector<int> & tile_union, int & n_near_tiles)  {
+	       std::vector<int> & tile_union, int & n_near_tiles)  {
   Tile2 & tile = _tiles[jet->tile_index];
   for (Tile2 ** near_tile = tile.begin_tiles; near_tile != tile.end_tiles; near_tile++){
     if ((*near_tile)->tagged) continue;
@@ -5547,7 +5642,7 @@ inline double LazyTiling9::_distance_to_tile(const TiledJet * bj, const Tile2 * 
   if (dphi < 0) dphi = 0;
   return dphi*dphi + deta*deta;
 }
-inline void LazyTiling9::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI, vector<TiledJet *> & jets_for_minheap) {
+inline void LazyTiling9::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI, std::vector<TiledJet *> & jets_for_minheap) {
   double dist = _bj_dist(jetI,jetX);
   if (dist < jetI->NN_dist) {
     if (jetI != jetX) {
@@ -5566,7 +5661,7 @@ inline void LazyTiling9::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI, 
   }
 }
 inline void LazyTiling9::_set_NN(TiledJet * jetI, 
-                              vector<TiledJet *> & jets_for_minheap) {
+                              std::vector<TiledJet *> & jets_for_minheap) {
   jetI->NN_dist = _R2;
   jetI->NN      = NULL;
   if (!jetI->minheap_update_needed()) {
@@ -5591,13 +5686,13 @@ void LazyTiling9::run() {
   TiledJet * briefjets = new TiledJet[n];
   TiledJet * jetA = briefjets, * jetB;
   TiledJet oldB = briefjets[0]; 
-  vector<int> tile_union(3*n_tile_neighbours);
+  std::vector<int> tile_union(3*n_tile_neighbours);
   for (int i = 0; i< n; i++) {
     _tj_set_jetinfo(jetA, i);
     jetA++; // move on to next entry of briefjets
   }
   TiledJet * head = briefjets; // a nicer way of naming start
-  vector<Tile2>::iterator tile;
+  std::vector<Tile2>::iterator tile;
   for (tile = _tiles.begin(); tile != _tiles.end(); tile++) {
     for (jetA = tile->head; jetA != NULL; jetA = jetA->next) {
       for (jetB = tile->head; jetB != jetA; jetB = jetB->next) {
@@ -5652,13 +5747,13 @@ void LazyTiling9::run() {
 #ifdef INSTRUMENT2
   cout << "intermediate ncall, dtt = " << _ncall << " " << _ncall_dtt << endl; // GPS tmp
 #endif // INSTRUMENT2
-  vector<double> diJs(n);
+  std::vector<double> diJs(n);
   for (int i = 0; i < n; i++) {
     diJs[i] = _bj_diJ(&briefjets[i]);
     briefjets[i].label_minheap_update_done();
   }
   MinHeap minheap(diJs);
-  vector<TiledJet *> jets_for_minheap;
+  std::vector<TiledJet *> jets_for_minheap;
   jets_for_minheap.reserve(n); 
   int history_location = n-1;
   while (n > 0) {
@@ -5767,7 +5862,7 @@ void LazyTiling9Alt::_initialise_tiles() {
   _tiles_eta_max = _tiles_ieta_max * _tile_size_eta;
   _tile_half_size_eta = _tile_size_eta * 0.5;
   _tile_half_size_phi = _tile_size_phi * 0.5;
-  vector<bool> use_periodic_delta_phi(_n_tiles_phi, false);
+  std::vector<bool> use_periodic_delta_phi(_n_tiles_phi, false);
   if (_n_tiles_phi <= 3) {
     fill(use_periodic_delta_phi.begin(), use_periodic_delta_phi.end(), true);
   } else {
@@ -5865,10 +5960,10 @@ void LazyTiling9Alt::_bj_remove_from_tiles(TiledJet * const jet) {
   }
 }
 void LazyTiling9Alt::_print_tiles(TiledJet * briefjets ) const {
-  for (vector<Tile>::const_iterator tile = _tiles.begin(); 
+  for (std::vector<Tile>::const_iterator tile = _tiles.begin(); 
        tile < _tiles.end(); tile++) {
     cout << "Tile " << tile - _tiles.begin()<<" = ";
-    vector<int> list;
+    std::vector<int> list;
     for (TiledJet * jetI = tile->head; jetI != NULL; jetI = jetI->next) {
       list.push_back(jetI-briefjets);
     }
@@ -5878,7 +5973,7 @@ void LazyTiling9Alt::_print_tiles(TiledJet * briefjets ) const {
   }
 }
 void LazyTiling9Alt::_add_neighbours_to_tile_union(const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles) const {
+	       std::vector<int> & tile_union, int & n_near_tiles) const {
   for (Tile::TileFnPair const * near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     tile_union[n_near_tiles] = near_tile->first - & _tiles[0];
@@ -5887,7 +5982,7 @@ void LazyTiling9Alt::_add_neighbours_to_tile_union(const int tile_index,
 }
 inline void LazyTiling9Alt::_add_untagged_neighbours_to_tile_union(
                const int tile_index, 
-	       vector<int> & tile_union, int & n_near_tiles)  {
+	       std::vector<int> & tile_union, int & n_near_tiles)  {
   for (Tile::TileFnPair * near_tile = _tiles[tile_index].begin_tiles; 
        near_tile != _tiles[tile_index].end_tiles; near_tile++){
     if (! (near_tile->first)->tagged) {
@@ -5899,7 +5994,7 @@ inline void LazyTiling9Alt::_add_untagged_neighbours_to_tile_union(
 }
 inline void LazyTiling9Alt::_add_untagged_neighbours_to_tile_union_using_max_info(
                const TiledJet * jet, 
-	       vector<int> & tile_union, int & n_near_tiles)  {
+	       std::vector<int> & tile_union, int & n_near_tiles)  {
   Tile & tile = _tiles[jet->tile_index];
   for (Tile::TileFnPair * near_tile = tile.begin_tiles; near_tile != tile.end_tiles; near_tile++){
     if ((near_tile->first)->tagged) continue;
@@ -5918,7 +6013,7 @@ ostream & operator<<(ostream & ostr, const TiledJet & jet) {
   ostr     << ", tile=" << jet.tile_index; ostr.flush();
   return ostr;
 }
-inline void LazyTiling9Alt::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI, vector<TiledJet *> & jets_for_minheap) {
+inline void LazyTiling9Alt::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jetI, std::vector<TiledJet *> & jets_for_minheap) {
   double dist = _bj_dist(jetI,jetX);
   if (dist < jetI->NN_dist) {
     if (jetI != jetX) {
@@ -5937,7 +6032,7 @@ inline void LazyTiling9Alt::_update_jetX_jetI_NN(TiledJet * jetX, TiledJet * jet
   }
 }
 inline void LazyTiling9Alt::_set_NN(TiledJet * jetI, 
-                            vector<TiledJet *> & jets_for_minheap) {
+                            std::vector<TiledJet *> & jets_for_minheap) {
   jetI->NN_dist = _R2;
   jetI->NN      = NULL;
   if (!jetI->minheap_update_needed()) {
@@ -5961,13 +6056,13 @@ void LazyTiling9Alt::run() {
   TiledJet * briefjets = new TiledJet[n];
   TiledJet * jetA = briefjets, * jetB;
   TiledJet oldB;
-  vector<int> tile_union(3*n_tile_neighbours);
+  std::vector<int> tile_union(3*n_tile_neighbours);
   for (int i = 0; i< n; i++) {
     _tj_set_jetinfo(jetA, i);
     jetA++; // move on to next entry of briefjets
   }
   TiledJet * head = briefjets; // a nicer way of naming start
-  vector<Tile>::iterator tile;
+  std::vector<Tile>::iterator tile;
   for (tile = _tiles.begin(); tile != _tiles.end(); tile++) {
     for (jetA = tile->head; jetA != NULL; jetA = jetA->next) {
       for (jetB = tile->head; jetB != jetA; jetB = jetB->next) {
@@ -6023,13 +6118,13 @@ void LazyTiling9Alt::run() {
       if (jetA->NN_dist > tile->max_NN_dist) tile->max_NN_dist = jetA->NN_dist;
     }
   }
-  vector<double> diJs(n);
+  std::vector<double> diJs(n);
   for (int i = 0; i < n; i++) {
     diJs[i] = _bj_diJ(&briefjets[i]);
     briefjets[i].label_minheap_update_done();
   }
   MinHeap minheap(diJs);
-  vector<TiledJet *> jets_for_minheap;
+  std::vector<TiledJet *> jets_for_minheap;
   jets_for_minheap.reserve(n); 
   int history_location = n-1;
   while (n > 0) {
@@ -6115,13 +6210,13 @@ FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 TilingExtent::TilingExtent(ClusterSequence & cs) {
   _determine_rapidity_extent(cs.jets());
 }
-TilingExtent::TilingExtent(const vector<PseudoJet> &particles) {
+TilingExtent::TilingExtent(const std::vector<PseudoJet> &particles) {
   _determine_rapidity_extent(particles);
 }
-void TilingExtent::_determine_rapidity_extent(const vector<PseudoJet> & particles) {
+void TilingExtent::_determine_rapidity_extent(const std::vector<PseudoJet> & particles) {
   int nrap = 20; 
   int nbins = 2*nrap;
-  vector<double> counts(nbins, 0);
+  std::vector<double> counts(nbins, 0);
   _minrap =  numeric_limits<double>::max();
   _maxrap = -numeric_limits<double>::max();
   int ibin;

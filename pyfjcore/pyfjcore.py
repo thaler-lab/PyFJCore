@@ -160,6 +160,21 @@ FJCORE_VERSION_NUMBER = _pyfjcore.FJCORE_VERSION_NUMBER
 
 FJCORE_VERSION_PATCHLEVEL = _pyfjcore.FJCORE_VERSION_PATCHLEVEL
 
+class FirstTimeTrue(object):
+    r"""Proxy of C++ fastjet::thread_safety_helpers::FirstTimeTrue class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        r"""__init__(FirstTimeTrue self) -> FirstTimeTrue"""
+        _pyfjcore.FirstTimeTrue_swiginit(self, _pyfjcore.new_FirstTimeTrue())
+    __call__ = _swig_new_instance_method(_pyfjcore.FirstTimeTrue___call__)
+    __swig_destroy__ = _pyfjcore.delete_FirstTimeTrue
+
+# Register FirstTimeTrue in _pyfjcore:
+_pyfjcore.FirstTimeTrue_swigregister(FirstTimeTrue)
+
 class PseudoJetStructureBase(object):
     r"""Proxy of C++ fastjet::PseudoJetStructureBase class."""
 
@@ -594,11 +609,6 @@ class CompositeJetStructure(PseudoJetStructureBase):
     constituents = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_constituents)
     has_pieces = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_has_pieces)
     pieces = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_pieces)
-    has_area = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_has_area)
-    area = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_area)
-    area_error = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_area_error)
-    area_4vector = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_area_4vector)
-    is_pure_ghost = _swig_new_instance_method(_pyfjcore.CompositeJetStructure_is_pure_ghost)
 
 # Register CompositeJetStructure in _pyfjcore:
 _pyfjcore.CompositeJetStructure_swigregister(CompositeJetStructure)
@@ -621,7 +631,6 @@ class ClusterSequenceStructure(PseudoJetStructureBase):
     associated_cluster_sequence = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_associated_cluster_sequence)
     has_valid_cluster_sequence = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_valid_cluster_sequence)
     validated_cs = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_validated_cs)
-    validated_csab = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_validated_csab)
     set_associated_cs = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_set_associated_cs)
     has_partner = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_partner)
     has_child = _swig_new_instance_method(_pyfjcore.ClusterSequenceStructure_has_child)
