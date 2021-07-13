@@ -254,12 +254,14 @@ namespace thread_safety_helpers{
       if (_count < std::numeric_limits<T>::max()){ _count++; }
       return count;
     }
+  #ifndef SWIG_PREPROCESSOR
     inline T operator++(){
       return step()+1;
     }
     inline T operator++(int){
       return step();
     }
+  #endif
   private:
     T _count;  ///< the actual value
   };
@@ -321,6 +323,7 @@ struct IsBaseAndDerived{
 #pragma warning(push)
 #pragma warning(disable:6334)
 #endif
+#ifndef SWIG_PREPROCESSOR
   struct Host{
 #if !((_MSC_VER !=0 ) && (_MSC_VER == 1310))
     operator B const volatile *() const;
@@ -329,11 +332,10 @@ struct IsBaseAndDerived{
 #endif
     operator D const volatile *();
   };
-#ifndef SWIG_PREPROCESSOR
   static const bool value = ((sizeof(B)!=0) && 
 			     (sizeof(D)!=0) && 
 			     (sizeof(__inheritance_helper<B,D>::check_sig(Host(), 0)) == sizeof(__yes_type)));
-#endif
+#endif // SWIG_PREPROCESSOR
 #if ((_MSC_FULL_VER != 0) && (_MSC_FULL_VER >= 140050000))
 #pragma warning(pop)
 #endif
@@ -515,6 +517,7 @@ public:
     _ptr = share._get_container();  // Note: automatically set it to NULL if share is empty
     if (_ptr!=NULL) ++(*_ptr);
   }
+#ifndef SWIG_PREPROCESSOR
   SharedPtr& operator=(SharedPtr const & share){
     reset(share);
     return *this;
@@ -523,6 +526,7 @@ public:
     reset(share);
     return *this;
   }
+#endif // SWIG_PREPROCESSOR
   FJCORE_DEPRECATED_MSG("Use SharedPtr<T>::get() instead",
   T* operator ()() const){
     if (_ptr==NULL) return NULL;
@@ -561,6 +565,7 @@ public:
     if (_ptr==NULL) return;
     _ptr->set_count(count);
   }
+#ifndef SWIG_PREPROCESSOR
   class __SharedCountingPtr{
   public:
     __SharedCountingPtr() : _ptr(NULL), _count(0){}
@@ -581,6 +586,7 @@ public:
     T *_ptr;      ///< the pointer we're counting the references to
     long _count;  ///< the number of references
   };
+#endif // SWIG_PREPROCESSOR
 private:
   inline __SharedCountingPtr* _get_container() const{
     return _ptr;
@@ -728,61 +734,10 @@ FJCORE_END_NAMESPACE
 #include <string>
 FJCORE_BEGIN_NAMESPACE      // defined in fastjet/internal/base.hh
 class PseudoJet;
+struct PseudoJetContainer;
 class ClusterSequence;
-
-#define EXTRACT_USER_INDICES                        \
-  *mult = pjs.size();                               \
-  std::size_t nbytes = pjs.size() * sizeof(int);    \
-  *inds = (int *) malloc(nbytes);                   \
-  if (*inds == NULL)                                \
-    throw Error("failed to allocate " +             \
-                std::to_string(nbytes) + " bytes"); \
-  std::size_t k(0);                                 \
-  for (const auto & pj : pjs)                       \
-    (*inds)[k++] = pj.user_index();
-
-// PTK: this ensure swig will not automatically convert to python tuple
-/*struct PseudoJetContainer {
-
-  // constructors
-  PseudoJetContainer() {}
-  PseudoJetContainer(const std::vector<PseudoJet> & pjvector) : pjvector_(pjvector) {}
-  PseudoJetContainer(std::vector<PseudoJet> && pjvector) : pjvector_(pjvector) {}
-
-  // access vector info
-  std::size_t size() const { return pjvector_.size(); }
-  const PseudoJet & operator[](std::size_t i) const { return pjvector_[i]; }
-  PseudoJet & operator[](std::size_t i) { return pjvector_[i]; }
-
-  // conversions
-#ifndef SWIG_PREPROCESSOR
-  operator const std::vector<PseudoJet> & () const { return pjvector_; }
-  operator std::vector<PseudoJet> & () { return pjvector_; }
-
-  const std::vector<PseudoJet> * as_ptr() const { return &pjvector_; }
-  std::vector<PseudoJet> * as_ptr() { return &pjvector_; }
-#endif
-
-  // for swig (should this be const?)
-  std::vector<PseudoJet> & as_vector() { return *this; }
-  void user_indices(int** inds, int* mult);
-
-private:
-  std::vector<PseudoJet> pjvector_;
-};
-
-class PseudoJetContainer : public std::vector<PseudoJet> {
-public:
-
-  PseudoJetContainer() {}
-  PseudoJetContainer(const std::vector<PseudoJet> & pjvector) { *this = pjvector; }
-  PseudoJetContainer(std::vector<PseudoJet> && pjvector) { *this = pjvector; }
-
-}; // PseudoJetContainer
-*/
-
 class ClusterSequenceAreaBase; // PTK forward declaring here so classes can match FastJet
-class PseudoJetStructureBase{
+class PseudoJetStructureBase {
 public:
   PseudoJetStructureBase(){};
   virtual ~PseudoJetStructureBase(){};
@@ -799,16 +754,16 @@ public:
   virtual bool has_parents(const PseudoJet &reference, PseudoJet &parent1, PseudoJet &parent2) const;
   virtual bool object_in_jet(const PseudoJet &reference, const PseudoJet &jet) const;
   virtual bool has_constituents() const {return false;}
-  virtual std::vector<PseudoJet> /*ptk*/ constituents(const PseudoJet &reference) const;
+  virtual PseudoJetContainer /*ptk*/ constituents(const PseudoJet &reference) const;
   virtual bool has_exclusive_subjets() const {return false;}
-  virtual std::vector<PseudoJet> /*ptk*/ exclusive_subjets(const PseudoJet &reference, const double & dcut) const;
+  virtual PseudoJetContainer /*ptk*/ exclusive_subjets(const PseudoJet &reference, const double & dcut) const;
   virtual int n_exclusive_subjets(const PseudoJet &reference, const double & dcut) const;
-  virtual std::vector<PseudoJet> /*ptk*/ exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const;
+  virtual PseudoJetContainer /*ptk*/ exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const;
   virtual double exclusive_subdmerge(const PseudoJet &reference, int nsub) const;
   virtual double exclusive_subdmerge_max(const PseudoJet &reference, int nsub) const;
   virtual bool has_pieces(const PseudoJet & /* reference */) const {
     return false;}
-  virtual std::vector<PseudoJet> /*ptk*/ pieces(const PseudoJet & /* reference */
+  virtual PseudoJetContainer /*ptk*/ pieces(const PseudoJet & /* reference */
                                         ) const;
 
   // PTK additions to match PseudoJetStructureBase class in FastJet
@@ -883,8 +838,10 @@ class PseudoJet {
     return std::min(1.0, std::max(-1.0, _pz/sqrt(modp2())));
   }
   inline double theta() const { return acos(cos_theta()); }
-  double operator () (int i) const ; 
+  double operator () (int i) const ;
+#ifndef SWIG_PREPROCESSOR
   inline double operator [] (int i) const { return (*this)(i); }; // this too
+#endif
   double kt_distance(const PseudoJet & other) const;
   double plain_distance(const PseudoJet & other) const;
   inline double squared_distance(const PseudoJet & other) const {
@@ -997,16 +954,16 @@ class PseudoJet {
   virtual bool contains(const PseudoJet &constituent) const;
   virtual bool is_inside(const PseudoJet &jet) const;
   virtual bool has_constituents() const;
-  virtual std::vector<PseudoJet> /*ptk*/ constituents() const;
+  virtual PseudoJetContainer /*ptk*/ constituents() const;
   virtual bool has_exclusive_subjets() const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_subjets (const double dcut) const;
+  PseudoJetContainer /*ptk*/ exclusive_subjets (const double dcut) const;
   int n_exclusive_subjets(const double dcut) const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_subjets (int nsub) const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_subjets_up_to (int nsub) const;
+  PseudoJetContainer /*ptk*/ exclusive_subjets (int nsub) const;
+  PseudoJetContainer /*ptk*/ exclusive_subjets_up_to (int nsub) const;
   double exclusive_subdmerge(int nsub) const;
   double exclusive_subdmerge_max(int nsub) const;
   virtual bool has_pieces() const;
-  virtual std::vector<PseudoJet> /*ptk*/ pieces() const;
+  virtual PseudoJetContainer /*ptk*/ pieces() const;
 
   // PTK additions to match PseudoJet class in FastJet
   virtual bool has_area() const { return false; }
@@ -1047,15 +1004,201 @@ class PseudoJet {
   }
 #endif
   void _set_rap_phi() const;
+#ifndef SWIG_PREPROCESSOR
   friend PseudoJet operator*(double, const PseudoJet &);
+#endif
 };
+
+////////////////////////////////////////////////////////////////////////////////
+// PTK: adding functionality
+////////////////////////////////////////////////////////////////////////////////
+
+// to select between different representations of PseudoJets
+enum PseudoJetRepresentation { epxpypz = 0, ptyphim = 1, ptyphi = 2 };
+
+// function that extracts user indices to a numpy array (defined in fjcore.cc)
+void user_indices(int** inds, std::ptrdiff_t* mult, const std::vector<PseudoJet> & pjs);
+
+template<typename F>
+void pseudojets_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                                 const std::vector<PseudoJet> & pjs) {
+  *mult = pjs.size();
+  *nfeatures = 4;
+  std::size_t nbytes = 4 * pjs.size() * sizeof(F);
+  *particles = (F *) malloc(nbytes);
+  if (*particles == NULL)
+    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
+
+  std::size_t k(0);
+  for (const auto & pj : pjs) {
+    (*particles)[k++] = pj.e();
+    (*particles)[k++] = pj.px();
+    (*particles)[k++] = pj.py();
+    (*particles)[k++] = pj.pz();
+  }
+}
+template<typename F>
+void pseudojets_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                                 const std::vector<PseudoJet> & pjs, bool mass = true, bool phi_std = false) {
+  *mult = pjs.size();
+  *nfeatures = (mass ? 4 : 3);
+  std::size_t nbytes = (*nfeatures) * pjs.size() * sizeof(F);
+  *particles = (F *) malloc(nbytes);
+  if (*particles == NULL)
+    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
+
+  std::size_t k(0);
+  if (mass)
+    for (const auto & pj : pjs) {
+      (*particles)[k++] = pj.pt();
+      (*particles)[k++] = pj.rap();
+      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
+      (*particles)[k++] = pj.m();
+    }
+  else
+    for (const auto & pj : pjs) {
+      (*particles)[k++] = pj.pt();
+      (*particles)[k++] = pj.rap();
+      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
+    }
+}
+template<typename F>
+void pseudojets_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                         const std::vector<PseudoJet> & pjs,
+                         PseudoJetRepresentation pjrep = ptyphim) {
+  if (pjrep == ptyphim)
+    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, true);
+
+  else if (pjrep == ptyphi)
+    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, false);
+
+  else if (pjrep == epxpypz)
+    pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
+
+  else throw Error("unknown pseudojet representation");
+}
+
+// PTK: this ensure swig will not automatically convert to python tuple
+struct PseudoJetContainer {
+
+  // constructors
+  PseudoJetContainer() {}
+  PseudoJetContainer(const std::vector<PseudoJet> & pjvector) : pjvector_(pjvector) {}
+
+  // copy constructor
+  PseudoJetContainer(const PseudoJetContainer & other) : pjvector_(other.pjvector_) {
+    std::cout << "PseudoJetContainer copied" << std::endl;
+  }
+
+  // partial vector interface
+#ifndef SWIG_PREPROCESSOR
+  const PseudoJet & operator[](std::size_t i) const { return pjvector_[i]; }
+  PseudoJet & operator[](std::size_t i) { return pjvector_[i]; }
+#endif
+
+  std::size_t size() const { return pjvector_.size(); }
+  std::size_t capacity() const { return pjvector_.capacity(); }
+  void resize(std::size_t s) { pjvector_.resize(s); }
+  void reserve(std::size_t s) { pjvector_.reserve(s); }
+  void push_back(const PseudoJet & pj) { pjvector_.push_back(pj); }
+  void clear() { pjvector_.clear(); }
+
+  const std::vector<PseudoJet> & as_vector() const {
+    return *this;
+  }
+
+  // python methods
+  std::size_t __len__() const {
+    return size();
+  }
+
+  const PseudoJet & __getitem__(std::ptrdiff_t i) const {
+    if (std::size_t(i) >= size())
+      throw std::length_error("index out of bounds");
+
+    return pjvector_[i];
+  }
+
+  void epxpypz_array_float64(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures) {
+    pseudojets_to_epxpypz_array(particles, mult, nfeatures, *this);
+  }
+  void epxpypz_array_float32(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures) {
+    pseudojets_to_epxpypz_array(particles, mult, nfeatures, *this);
+  }
+
+  void ptyphim_array_float64(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                     bool mass = true, bool phi_std = false) {
+    pseudojets_to_ptyphim_array(particles, mult, nfeatures, *this, mass, phi_std);
+  }
+  void ptyphim_array_float32(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                     bool mass = true, bool phi_std = false) {
+    pseudojets_to_ptyphim_array(particles, mult, nfeatures, *this, mass, phi_std);
+  }
+
+  void array_float64(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                PseudoJetRepresentation pjrep = ptyphim) {
+    pseudojets_to_array(particles, mult, nfeatures, *this, pjrep);
+  }
+  void array_float32(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                PseudoJetRepresentation pjrep = ptyphim) {
+    pseudojets_to_array(particles, mult, nfeatures, *this, pjrep);
+  }
+
+  void user_indices(int** inds, std::ptrdiff_t* mult) const {
+    ::fastjet::user_indices(inds, mult, *this);
+  }
+
+  // conversions
+#ifndef SWIG_PREPROCESSOR
+  //PseudoJetContainer(std::vector<PseudoJet> && pjvector) : pjvector_(std::move(pjvector)) {}
+  PseudoJetContainer(PseudoJetContainer &&) = default;
+  PseudoJetContainer & operator=(PseudoJetContainer &&) = default;
+  PseudoJetContainer & operator=(const PseudoJetContainer &) = default;
+  operator const std::vector<PseudoJet> & () const { return pjvector_; }
+  operator std::vector<PseudoJet> & () { return pjvector_; }
+#endif
+
+private:
+  std::vector<PseudoJet> pjvector_;
+
+}; // PseudoJetContainer
+
+inline void user_indices(int** inds, std::ptrdiff_t* mult, const PseudoJetContainer & pjc) {
+  user_indices(inds, mult, pjc.as_vector());
+}
+
+template<typename F>
+void pseudojets_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                                 const PseudoJetContainer & pjs) {
+  pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
+}
+
+template<typename F>
+void pseudojets_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                                 const PseudoJetContainer & pjs, bool mass = true, bool phi_std = false) {
+  pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, mass, phi_std);
+}
+
+template<typename F>
+void pseudojets_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                         const PseudoJetContainer & pjs,
+                         PseudoJetRepresentation pjrep = ptyphim) {
+  pseudojets_to_array(particles, mult, nfeatures, pjs, pjrep);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// PTK: end functionality
+////////////////////////////////////////////////////////////////////////////////
+
 inline PseudoJet PseudoJetStructureBase::area_4vector() const {
   throw Error("fastjet::PseudoJetStructureBase::area_4vector - no area support");
 }
 PseudoJet operator+(const PseudoJet &, const PseudoJet &);
 PseudoJet operator-(const PseudoJet &, const PseudoJet &);
+#ifndef SWIG_PREPROCESSOR
 PseudoJet operator*(double, const PseudoJet &);
 PseudoJet operator*(const PseudoJet &, double);
+#endif
 PseudoJet operator/(const PseudoJet &, double);
 bool operator==(const PseudoJet &, const PseudoJet &);
 inline bool operator!=(const PseudoJet & a, const PseudoJet & b) {return !(a==b);}
@@ -1075,10 +1218,22 @@ inline double theta(const PseudoJet & a, const PseudoJet & b) {
 }
 bool have_same_momentum(const PseudoJet &, const PseudoJet &);
 PseudoJet PtYPhiM(double pt, double y, double phi, double m = 0.0);
-std::vector<PseudoJet> /*ptk*/ sorted_by_pt(const std::vector<PseudoJet> /*ptk*/ & jets);
-std::vector<PseudoJet> /*ptk*/ sorted_by_rapidity(const std::vector<PseudoJet> /*ptk*/ & jets);
-std::vector<PseudoJet> /*ptk*/ sorted_by_E(const std::vector<PseudoJet> /*ptk*/ & jets);
-std::vector<PseudoJet> /*ptk*/ sorted_by_pz(const std::vector<PseudoJet> /*ptk*/  & jets);
+PseudoJetContainer /*ptk*/ sorted_by_pt(const std::vector<PseudoJet> /*ptk*/ & jets);
+inline PseudoJetContainer /*ptk*/ sorted_by_pt(const PseudoJetContainer /*ptk*/ & jets) {
+  return sorted_by_pt(jets.as_vector());
+}
+PseudoJetContainer /*ptk*/ sorted_by_rapidity(const std::vector<PseudoJet> /*ptk*/ & jets);
+inline PseudoJetContainer /*ptk*/ sorted_by_rapidity(const PseudoJetContainer /*ptk*/ & jets) {
+  return sorted_by_rapidity(jets.as_vector());
+}
+PseudoJetContainer /*ptk*/ sorted_by_E(const std::vector<PseudoJet> /*ptk*/ & jets);
+inline PseudoJetContainer /*ptk*/ sorted_by_E(const PseudoJetContainer /*ptk*/ & jets) {
+  return sorted_by_E(jets.as_vector());
+}
+PseudoJetContainer /*ptk*/ sorted_by_pz(const std::vector<PseudoJet> /*ptk*/  & jets);
+inline PseudoJetContainer /*ptk*/ sorted_by_pz(const PseudoJetContainer /*ptk*/  & jets) {
+  return sorted_by_pz(jets.as_vector());
+}
 void sort_indices(std::vector<int> & indices, 
 		  const std::vector<double> & values);
 template<class T> std::vector<T> objects_sorted_by_values(const std::vector<T> & objects, 
@@ -1095,10 +1250,7 @@ template<class T> std::vector<T> objects_sorted_by_values(const std::vector<T> &
   }
   return objects_sorted;
 }
-//inline void std::vector<PseudoJet> /*ptk*/::user_indices(int** inds, int* mult) {
-//  const std::vector<PseudoJet> & pjs(*this);
-//  EXTRACT_USER_INDICES
-//}
+
 class IndexedSortHelper {
 public:
   inline IndexedSortHelper (const std::vector<double> * reference_values) {
@@ -1165,6 +1317,7 @@ const typename TransformerType::StructureType & PseudoJet::structure_of() const{
   return dynamic_cast<const typename TransformerType::StructureType &>(*_structure);
 }
 PseudoJet join(const std::vector<PseudoJet> /*ptk*/ & pieces);
+inline PseudoJet join(const PseudoJetContainer /*ptk*/ & pieces) { return join(pieces.as_vector()); }
 PseudoJet join(const PseudoJet & j1);
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2);
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, const PseudoJet & j3);
@@ -1200,7 +1353,9 @@ class Selector;
 class SelectorWorker {
 public:
   virtual ~SelectorWorker() {}
+#ifndef SWIG_PREPROCESSOR
   virtual bool pass(const PseudoJet & jet) const = 0;
+#endif
   virtual void terminator(std::vector<const PseudoJet *> & jets) const {
     for (unsigned i = 0; i < jets.size(); i++) {
       if (jets[i] && !pass(*jets[i])) jets[i] = NULL;
@@ -1241,15 +1396,32 @@ public:
     return pass(jet);
   }
   unsigned int count(const std::vector<PseudoJet> /*ptk*/ & jets) const;
+  unsigned int count(const PseudoJetContainer & jets) const {
+    return count(jets.as_vector());
+  }
   PseudoJet sum(const std::vector<PseudoJet> /*ptk*/ & jets) const;
+  PseudoJet sum(const PseudoJetContainer & jets) const {
+    return sum(jets.as_vector());
+  }
   double scalar_pt_sum(const std::vector<PseudoJet> /*ptk*/ & jets) const;
+  double scalar_pt_sum(const PseudoJetContainer & jets) const {
+    return scalar_pt_sum(jets.as_vector());
+  }
   void sift(const std::vector<PseudoJet> /*ptk*/ & jets,
-		  std::vector<PseudoJet> /*ptk*/ & jets_that_pass,
-		  std::vector<PseudoJet> /*ptk*/ & jets_that_fail) const;
+		              std::vector<PseudoJet> & jets_that_pass,
+		              std::vector<PseudoJet> & jets_that_fail) const;
+  void sift(const PseudoJetContainer /*ptk*/ & jets,
+                  std::vector<PseudoJet> & jets_that_pass,
+                  std::vector<PseudoJet> & jets_that_fail) const {
+    return sift(jets.as_vector(), jets_that_pass, jets_that_fail);
+  }
   bool applies_jet_by_jet() const {
     return validated_worker()->applies_jet_by_jet();
   }
-  std::vector<PseudoJet> /*ptk*/ operator()(const std::vector<PseudoJet> /*ptk*/ & jets) const;
+  PseudoJetContainer /*ptk*/ operator()(const std::vector<PseudoJet> /*ptk*/ & jets) const;
+  PseudoJetContainer /*ptk*/ operator()(const PseudoJetContainer & jets) const {
+    return operator()(jets.as_vector());
+  }
   virtual void nullify_non_selected(std::vector<const PseudoJet *> & jets) const {
     validated_worker()->terminator(jets);
   }
@@ -1287,6 +1459,7 @@ public:
   double area() const { throw Error("fjcore has no area support"); return -1; }
   double area(double) const { throw Error("fjcore has no area support"); return -1; }
 
+#ifndef SWIG_PREPROCESSOR
   class InvalidWorker : public Error {
   public:
     InvalidWorker() : Error("Attempt to use Selector with no valid underlying worker") {}
@@ -1295,6 +1468,7 @@ public:
   public:
     InvalidArea() : Error("Attempt to obtain area from Selector for which this is not meaningful") {}
   };
+#endif // SWIG_PREPROCESSOR
   Selector & operator &=(const Selector & b);
   Selector & operator |=(const Selector & b);
 protected:
@@ -1319,9 +1493,9 @@ Selector SelectorEtRange(double Etmin, double Etmax);    ///< select objects wit
 Selector SelectorEMin(double Emin);                      ///< select objects with E >= Emin
 Selector SelectorEMax(double Emax);                      ///< select objects with E <= Emax
 Selector SelectorERange(double Emin, double Emax);       ///< select objects with Emin <= E <= Emax
-Selector SelectorMassMin(double Mmin);                      ///< select objects with Mass >= Mmin
-Selector SelectorMassMax(double Mmax);                      ///< select objects with Mass <= Mmax
-Selector SelectorMassRange(double Mmin, double Mmax);       ///< select objects with Mmin <= Mass <= Mmax
+Selector SelectorMassMin(double Mmin);                   ///< select objects with Mass >= Mmin
+Selector SelectorMassMax(double Mmax);                   ///< select objects with Mass <= Mmax
+Selector SelectorMassRange(double Mmin, double Mmax);    ///< select objects with Mmin <= Mass <= Mmax
 Selector SelectorRapMin(double rapmin);                  ///< select objects with rap >= rapmin
 Selector SelectorRapMax(double rapmax);                  ///< select objects with rap <= rapmax
 Selector SelectorRapRange(double rapmin, double rapmax); ///< select objects with rapmin <= rap <= rapmax
@@ -1477,7 +1651,10 @@ public:
                 int nparameters_in = 1)){
     (*this) = JetDefinition(jet_algorithm_in,R_in,recomb_scheme_in,strategy_in,nparameters_in);
   }
-  inline std::vector<PseudoJet> /*ptk*/ operator()(const std::vector<PseudoJet> /*ptk*/ & particles) const;
+  inline PseudoJetContainer /*ptk*/ operator()(const std::vector<PseudoJet> /*ptk*/ & particles) const;
+  PseudoJetContainer /*ptk*/ operator()(const PseudoJetContainer /*ptk*/ & particles) const {
+    return operator()(particles.as_vector());
+  }
   static const double max_allowable_R; //= 1000.0;
   void set_recombination_scheme(RecombinationScheme);
   void set_recombiner(const Recombiner * recomb) {
@@ -1508,6 +1685,7 @@ public:
   static std::string algorithm_description(const JetAlgorithm jet_alg);
   static unsigned int n_parameters_for_algorithm(const JetAlgorithm jet_alg);
 public:
+#ifndef SWIG_PREPROCESSOR
   class Recombiner {
   public:
     virtual std::string description() const = 0;
@@ -1545,6 +1723,7 @@ public:
     virtual bool is_spherical() const {return false;}
     virtual ~Plugin() {};
   };
+#endif // SWIG_PREPROCESSOR
 private:
   JetAlgorithm _jet_algorithm;
   double    _Rparam;
@@ -1557,6 +1736,9 @@ private:
   SharedPtr<const Recombiner> _shared_recombiner;
 };
 PseudoJet join(const std::vector<PseudoJet> /*ptk*/ & pieces, const JetDefinition::Recombiner & recombiner);
+inline PseudoJet join(const PseudoJetContainer /*ptk*/ & pieces, const JetDefinition::Recombiner & recombiner) {
+  return join(pieces.as_vector(), recombiner);
+}
 PseudoJet join(const PseudoJet & j1, 
 	       const JetDefinition::Recombiner & recombiner);
 PseudoJet join(const PseudoJet & j1, const PseudoJet & j2, 
@@ -1580,9 +1762,9 @@ public:
   };
   virtual std::string description() const FJCORE_OVERRIDE;
   virtual bool has_constituents() const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> /*ptk*/ constituents(const PseudoJet &jet) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer /*ptk*/ constituents(const PseudoJet &jet) const FJCORE_OVERRIDE;
   virtual bool has_pieces(const PseudoJet & /*jet*/) const FJCORE_OVERRIDE {return true;}
-  virtual std::vector<PseudoJet> /*ptk*/ pieces(const PseudoJet &jet) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer /*ptk*/ pieces(const PseudoJet &jet) const FJCORE_OVERRIDE;
 protected:
   std::vector<PseudoJet> _pieces;  ///< the pieces building the jet
   PseudoJet * _area_4vector_ptr;   ///< pointer to the 4-vector jet area
@@ -1697,15 +1879,15 @@ public:
   virtual bool has_parents(const PseudoJet &reference, PseudoJet &parent1, PseudoJet &parent2) const FJCORE_OVERRIDE;
   virtual bool object_in_jet(const PseudoJet &reference, const PseudoJet &jet) const FJCORE_OVERRIDE;
   virtual bool has_constituents() const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> /*ptk*/ constituents(const PseudoJet &reference) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer /*ptk*/ constituents(const PseudoJet &reference) const FJCORE_OVERRIDE;
   virtual bool has_exclusive_subjets() const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> /*ptk*/ exclusive_subjets(const PseudoJet &reference, const double & dcut) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer /*ptk*/ exclusive_subjets(const PseudoJet &reference, const double & dcut) const FJCORE_OVERRIDE;
   virtual int n_exclusive_subjets(const PseudoJet &reference, const double & dcut) const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> /*ptk*/ exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer /*ptk*/ exclusive_subjets_up_to (const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
   virtual double exclusive_subdmerge(const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
   virtual double exclusive_subdmerge_max(const PseudoJet &reference, int nsub) const FJCORE_OVERRIDE;
   virtual bool has_pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
-  virtual std::vector<PseudoJet> /*ptk*/ pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
+  virtual PseudoJetContainer /*ptk*/ pieces(const PseudoJet &reference) const FJCORE_OVERRIDE;
 
   // PTK additions to match PseudoJetStructureBase class in FastJet
   virtual bool has_area() const FJCORE_OVERRIDE { return false; }
@@ -1751,32 +1933,38 @@ class ClusterSequence {
     _decant_options_partial();
     _initialise_and_run_no_decant();
   }
+  ClusterSequence (const PseudoJetContainer /*ptk*/ & pseudojets,
+                   const JetDefinition & jet_def,
+                   const bool & writeout_combinations = false) :
+    ClusterSequence(pseudojets.as_vector(), jet_def, writeout_combinations) {}
   ClusterSequence (const ClusterSequence & cs) : _deletes_self_when_unused(false) {
     transfer_from_sequence(cs);
   }
+#ifndef SWIG_PREPROCESSOR
   ClusterSequence & operator=(const ClusterSequence & cs);
+#endif
   virtual ~ClusterSequence (); //{}
-  std::vector<PseudoJet> /*ptk*/ inclusive_jets (const double ptmin = 0.0) const;
+  PseudoJetContainer /*ptk*/ inclusive_jets (const double ptmin = 0.0) const;
   int n_exclusive_jets (const double dcut) const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_jets (const double dcut) const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_jets (const int njets) const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_jets_up_to (const int njets) const;
+  PseudoJetContainer /*ptk*/ exclusive_jets (const double dcut) const;
+  PseudoJetContainer /*ptk*/ exclusive_jets (const int njets) const;
+  PseudoJetContainer /*ptk*/ exclusive_jets_up_to (const int njets) const;
   double exclusive_dmerge (const int njets) const;
   double exclusive_dmerge_max (const int njets) const;
   double exclusive_ymerge (int njets) const {return exclusive_dmerge(njets) / Q2();}
   double exclusive_ymerge_max (int njets) const {return exclusive_dmerge_max(njets)/Q2();}
   int n_exclusive_jets_ycut (double ycut) const {return n_exclusive_jets(ycut*Q2());}
-  std::vector<PseudoJet> /*ptk*/ exclusive_jets_ycut (double ycut) const {
+  PseudoJetContainer /*ptk*/ exclusive_jets_ycut (double ycut) const {
     int njets = n_exclusive_jets_ycut(ycut);
     return exclusive_jets(njets);
   }
-  std::vector<PseudoJet> /*ptk*/ exclusive_subjets (const PseudoJet & jet, 
+  PseudoJetContainer /*ptk*/ exclusive_subjets (const PseudoJet & jet, 
                                             const double dcut) const;
   int n_exclusive_subjets(const PseudoJet & jet, 
                           const double dcut) const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_subjets (const PseudoJet & jet, 
+  PseudoJetContainer /*ptk*/ exclusive_subjets (const PseudoJet & jet, 
                                             int nsub) const;
-  std::vector<PseudoJet> /*ptk*/ exclusive_subjets_up_to (const PseudoJet & jet, 
+  PseudoJetContainer /*ptk*/ exclusive_subjets_up_to (const PseudoJet & jet, 
 						  int nsub) const;
   double exclusive_subdmerge(const PseudoJet & jet, int nsub) const;
   double exclusive_subdmerge_max(const PseudoJet & jet, int nsub) const;
@@ -1788,12 +1976,21 @@ class ClusterSequence {
   bool has_child(const PseudoJet & jet, PseudoJet & child) const;
   bool has_child(const PseudoJet & jet, const PseudoJet * & childp) const;
   bool has_partner(const PseudoJet & jet, PseudoJet & partner) const;
-  std::vector<PseudoJet> /*ptk*/ constituents (const PseudoJet & jet) const;
+  PseudoJetContainer /*ptk*/ constituents (const PseudoJet & jet) const;
   void print_jets_for_root(const std::vector<PseudoJet> /*ptk*/ & jets, 
                            std::ostream & ostr = std::cout) const;
+  void print_jets_for_root(const PseudoJetContainer /*ptk*/ & jets, 
+                           std::ostream & ostr = std::cout) const {
+    print_jets_for_root(jets.as_vector(), ostr);
+  }
   void print_jets_for_root(const std::vector<PseudoJet> /*ptk*/ & jets, 
                            const std::string & filename,
 			                     const std::string & comment = "") const;
+  void print_jets_for_root(const PseudoJetContainer /*ptk*/ & jets, 
+                           const std::string & filename,
+                           const std::string & comment = "") const {
+    print_jets_for_root(jets.as_vector(), filename, comment);
+  }
   void add_constituents (const PseudoJet & jet, std::vector<PseudoJet> & subjet_vector) const;
   inline Strategy strategy_used () const {return _strategy;}
   std::string strategy_string () const {return strategy_string(_strategy);}
@@ -1856,9 +2053,12 @@ public:
   const std::vector<history_element> & history() const;
   unsigned int n_particles() const;
   std::vector<int> particle_jet_indices(const std::vector<PseudoJet> /*ptk*/ &) const;
+  std::vector<int> particle_jet_indices(const PseudoJetContainer /*ptk*/ & pjs) const {
+    return particle_jet_indices(pjs.as_vector());
+  }
   std::vector<int> unique_history_order() const;
-  std::vector<PseudoJet> /*ptk*/ unclustered_particles() const;
-  std::vector<PseudoJet> /*ptk*/ childless_pseudojets() const;
+  PseudoJetContainer /*ptk*/ unclustered_particles() const;
+  PseudoJetContainer /*ptk*/ childless_pseudojets() const;
   bool contains(const PseudoJet & object) const;
   void transfer_from_sequence(const ClusterSequence & from_seq,
 			      const FunctionOfPseudoJet<PseudoJet> * action_on_jets = 0);
@@ -1892,6 +2092,7 @@ protected:
   void _set_structure_shared_ptr(PseudoJet & j);
   void _update_structure_use_count();
   Strategy _best_strategy() const;
+#ifndef SWIG_PREPROCESSOR
   class _Parabola {
   public:
     _Parabola(double a, double b, double c) : _a(a), _b(b), _c(c) {}
@@ -1906,6 +2107,7 @@ protected:
   private:
     double _a, _b;
   };
+#endif // SWIG_PREPROCESSOR
   std::vector<PseudoJet> _jets;
   std::vector<history_element> _history;
   void get_subhist_set(std::set<const history_element*> & subhist,
@@ -2039,7 +2241,7 @@ inline const std::vector<ClusterSequence::history_element> & ClusterSequence::hi
 }
 inline unsigned int ClusterSequence::n_particles() const {return _initial_n;}
 #ifndef __CINT__
-std::vector<PseudoJet> /*ptk*/ JetDefinition::operator()(const std::vector<PseudoJet> /*ptk*/ & particles) const {
+PseudoJetContainer /*ptk*/ JetDefinition::operator()(const std::vector<PseudoJet> /*ptk*/ & particles) const {
   ClusterSequence * cs = new ClusterSequence(particles, *this);
   std::vector<PseudoJet> jets;
   if (is_spherical()) {

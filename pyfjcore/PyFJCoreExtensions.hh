@@ -39,7 +39,7 @@ private:
 // JetDefinition0Param(algorithm, recomb_scheme, strategy)
 JetDefinition JetDefinition0Param(JetAlgorithm jet_algorithm, 
                                   RecombinationScheme recomb_scheme = E_scheme,
-                                  Strategy strategy = Best){
+                                  Strategy strategy = Best) {
   return JetDefinition(jet_algorithm, recomb_scheme, strategy);
 }
 
@@ -47,7 +47,7 @@ JetDefinition JetDefinition0Param(JetAlgorithm jet_algorithm,
 JetDefinition JetDefinition1Param(JetAlgorithm jet_algorithm, 
                                   double R_in, 
                                   RecombinationScheme recomb_scheme = E_scheme,
-                                  Strategy strategy = Best){
+                                  Strategy strategy = Best) {
   return JetDefinition(jet_algorithm, R_in, recomb_scheme, strategy);
 }
 
@@ -56,12 +56,9 @@ JetDefinition JetDefinition2Param(JetAlgorithm jet_algorithm,
                                   double R_in, 
                                   double xtra_param,
                                   RecombinationScheme recomb_scheme = E_scheme,
-                                  Strategy strategy = Best){
+                                  Strategy strategy = Best) {
   return JetDefinition(jet_algorithm, R_in, xtra_param, recomb_scheme, strategy);
 }
-
-// to select between different representations of PseudoJets
-enum PseudoJetRepresentation { epxpypz = 0, ptyphim = 1, ptyphi = 2 };
 
 static PseudoJetRepresentation PseudoJetRep_;
 void set_pseudojet_format(PseudoJetRepresentation rep) {
@@ -136,7 +133,7 @@ struct ConstructEPxPyPz {
 };
 
 // convert numpy array to PseudoJets
-std::vector<PseudoJet> ptyphim_array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
+PseudoJetContainer ptyphim_array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
 
   // array is pt, y, phi, m
   if (nfeatures == 4)
@@ -154,7 +151,7 @@ std::vector<PseudoJet> ptyphim_array_to_pseudojets(double* particles, std::ptrdi
 }
 
 // convert numpy array to PseudoJets
-std::vector<PseudoJet> epxpypz_array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
+PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures) {
 
   // array is e, px, py, pz
   if (nfeatures == 4)
@@ -168,7 +165,7 @@ std::vector<PseudoJet> epxpypz_array_to_pseudojets(double* particles, std::ptrdi
 }
 
 // function that selects representation based on enum
-std::vector<PseudoJet> array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures,
+PseudoJetContainer array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures,
                                            PseudoJetRepresentation pjrep = ptyphim) {
 
   if (pjrep == ptyphim || pjrep == ptyphi)
@@ -178,84 +175,6 @@ std::vector<PseudoJet> array_to_pseudojets(double* particles, std::ptrdiff_t mul
     return epxpypz_array_to_pseudojets(particles, mult, nfeatures);
 
   throw Error("unknown pseudojet representation");
-}
-
-// convert pseudojets to numpy array of e, px, py, pz values
-template<typename F>
-void pseudojets_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                                 const std::vector<PseudoJet> & pjs) {
-  *mult = pjs.size();
-  *nfeatures = 4;
-  std::size_t nbytes = 4 * pjs.size() * sizeof(F);
-  *particles = (F *) malloc(nbytes);
-  if (*particles == NULL)
-    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
-
-  std::size_t k(0);
-  for (const auto & pj : pjs) {
-    (*particles)[k++] = pj.e();
-    (*particles)[k++] = pj.px();
-    (*particles)[k++] = pj.py();
-    (*particles)[k++] = pj.pz();
-  }
-}
-
-// convert pseudojets to numpy array of e, px, py, pz values
-template<typename F>
-void pseudojets_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                                 const std::vector<PseudoJet> & pjs, bool mass = true, bool phi_std = false) {
-  *mult = pjs.size();
-  *nfeatures = (mass ? 4 : 3);
-  std::size_t nbytes = (*nfeatures) * pjs.size() * sizeof(F);
-  *particles = (F *) malloc(nbytes);
-  if (*particles == NULL)
-    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
-
-  std::size_t k(0);
-  if (mass)
-    for (const auto & pj : pjs) {
-      (*particles)[k++] = pj.pt();
-      (*particles)[k++] = pj.rap();
-      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
-      (*particles)[k++] = pj.m();
-    }
-  else
-    for (const auto & pj : pjs) {
-      (*particles)[k++] = pj.pt();
-      (*particles)[k++] = pj.rap();
-      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
-    }
-}
-
-// function that selects representation based on enum
-template<typename F>
-void pseudojets_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                         const std::vector<PseudoJet> & pjs,
-                         PseudoJetRepresentation pjrep = ptyphim) {
-
-  if (pjrep == ptyphim)
-    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, true);
-
-  else if (pjrep == ptyphi)
-    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, false);
-
-  else if (pjrep == epxpypz)
-    pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
-
-  else throw Error("unknown pseudojet representation");
-}
-
-// function that extracts user indices to a numpy array
-void user_indices(std::ptrdiff_t** inds, std::ptrdiff_t* mult, const std::vector<PseudoJet> & pjs) {
-  *mult = pjs.size();
-  std::size_t nbytes = pjs.size() * sizeof(std::ptrdiff_t);
-  *inds = (std::ptrdiff_t *) malloc(nbytes);
-  if (*inds == NULL)
-    throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
-
-  std::size_t k(0);
-  for (const auto & pj : pjs)
-    (*inds)[k++] = pj.user_index();
 }
 
 FJCORE_END_NAMESPACE

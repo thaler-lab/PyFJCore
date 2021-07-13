@@ -368,6 +368,67 @@ MaxRap = cvar.MaxRap
 pseudojet_invalid_phi = cvar.pseudojet_invalid_phi
 pseudojet_invalid_rap = cvar.pseudojet_invalid_rap
 
+epxpypz = _pyfjcore.epxpypz
+
+ptyphim = _pyfjcore.ptyphim
+
+ptyphi = _pyfjcore.ptyphi
+
+class PseudoJetContainer(object):
+    r"""Proxy of C++ fastjet::PseudoJetContainer class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        r"""
+        __init__(PseudoJetContainer self) -> PseudoJetContainer
+        __init__(PseudoJetContainer self, vectorPseudoJet pjvector) -> PseudoJetContainer
+        __init__(PseudoJetContainer self, PseudoJetContainer other) -> PseudoJetContainer
+        """
+        _pyfjcore.PseudoJetContainer_swiginit(self, _pyfjcore.new_PseudoJetContainer(*args))
+    size = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_size)
+    capacity = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_capacity)
+    resize = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_resize)
+    reserve = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_reserve)
+    push_back = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_push_back)
+    clear = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_clear)
+    as_vector = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_as_vector)
+    __len__ = _swig_new_instance_method(_pyfjcore.PseudoJetContainer___len__)
+    __getitem__ = _swig_new_instance_method(_pyfjcore.PseudoJetContainer___getitem__)
+    epxpypz_array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_epxpypz_array_float64)
+    epxpypz_array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_epxpypz_array_float32)
+    ptyphim_array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_ptyphim_array_float64)
+    ptyphim_array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_ptyphim_array_float32)
+    array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float64)
+    array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float32)
+    user_indices = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_user_indices)
+    __setitem__ = _swig_new_instance_method(_pyfjcore.PseudoJetContainer___setitem__)
+
+
+    def __iter__(self):
+        return self.vector.__iter__();
+
+    def __repr__(self):
+        s = ['PseudoJetContainer[' + str(len(self)) + '](']
+        for pj in self:
+            s.append('  ' + repr(pj) + ',')
+        s.append(')')
+        return '\n'.join(s)
+
+    @property
+    def vector(self):
+        if not hasattr(self, '_vector'):
+            self._vector = self.as_vector()
+        return self._vector
+
+
+    __swig_destroy__ = _pyfjcore.delete_PseudoJetContainer
+
+# Register PseudoJetContainer in _pyfjcore:
+_pyfjcore.PseudoJetContainer_swigregister(PseudoJetContainer)
+
+user_indices = _pyfjcore.user_indices
 dot_product = _pyfjcore.dot_product
 cos_theta = _pyfjcore.cos_theta
 theta = _pyfjcore.theta
@@ -391,7 +452,7 @@ class Selector(object):
         """
         _pyfjcore.Selector_swiginit(self, _pyfjcore.new_Selector(*args))
     __swig_destroy__ = _pyfjcore.delete_Selector
-    _pass = _swig_new_instance_method(_pyfjcore.Selector__pass)
+    passes = _swig_new_instance_method(_pyfjcore.Selector_passes)
     count = _swig_new_instance_method(_pyfjcore.Selector_count)
     sum = _swig_new_instance_method(_pyfjcore.Selector_sum)
     scalar_pt_sum = _swig_new_instance_method(_pyfjcore.Selector_scalar_pt_sum)
@@ -554,6 +615,7 @@ class JetDefinition(object):
         __init__(JetDefinition self, fastjet::JetAlgorithm jet_algorithm_in, double R_in, fastjet::Strategy strategy_in, fastjet::RecombinationScheme recomb_scheme_in=E_scheme, int nparameters_in=1) -> JetDefinition
         """
         _pyfjcore.JetDefinition_swiginit(self, _pyfjcore.new_JetDefinition(*args))
+    __call__ = _swig_new_instance_method(_pyfjcore.JetDefinition___call__)
     set_recombination_scheme = _swig_new_instance_method(_pyfjcore.JetDefinition_set_recombination_scheme)
     set_recombiner = _swig_new_instance_method(_pyfjcore.JetDefinition_set_recombiner)
     delete_recombiner_when_unused = _swig_new_instance_method(_pyfjcore.JetDefinition_delete_recombiner_when_unused)
@@ -579,7 +641,6 @@ class JetDefinition(object):
     def __repr__(self):
         return self.description()
 
-    __call__ = _swig_new_instance_method(_pyfjcore.JetDefinition___call__)
     __swig_destroy__ = _pyfjcore.delete_JetDefinition
 
 # Register JetDefinition in _pyfjcore:
@@ -661,9 +722,12 @@ class ClusterSequence(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
 
-    def __init__(self, pseudojets: "vectorPseudoJet", jet_def: "JetDefinition", writeout_combinations: "bool const &"=False):
-        r"""__init__(ClusterSequence self, vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence"""
-        _pyfjcore.ClusterSequence_swiginit(self, _pyfjcore.new_ClusterSequence(pseudojets, jet_def, writeout_combinations))
+    def __init__(self, *args):
+        r"""
+        __init__(ClusterSequence self, vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence
+        __init__(ClusterSequence self, PseudoJetContainer pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence
+        """
+        _pyfjcore.ClusterSequence_swiginit(self, _pyfjcore.new_ClusterSequence(*args))
     __swig_destroy__ = _pyfjcore.delete_ClusterSequence
     inclusive_jets = _swig_new_instance_method(_pyfjcore.ClusterSequence_inclusive_jets)
     n_exclusive_jets = _swig_new_instance_method(_pyfjcore.ClusterSequence_n_exclusive_jets)
@@ -724,17 +788,10 @@ _pyfjcore.ClusterSequence_swigregister(ClusterSequence)
 JetDefinition0Param = _pyfjcore.JetDefinition0Param
 JetDefinition1Param = _pyfjcore.JetDefinition1Param
 JetDefinition2Param = _pyfjcore.JetDefinition2Param
-epxpypz = _pyfjcore.epxpypz
-
-ptyphim = _pyfjcore.ptyphim
-
-ptyphi = _pyfjcore.ptyphi
-
 set_pseudojet_format = _pyfjcore.set_pseudojet_format
 ptyphim_array_to_pseudojets = _pyfjcore.ptyphim_array_to_pseudojets
 epxpypz_array_to_pseudojets = _pyfjcore.epxpypz_array_to_pseudojets
 array_to_pseudojets = _pyfjcore.array_to_pseudojets
-user_indices = _pyfjcore.user_indices
 class sharedPtrPseudoJetStructureBase(object):
     r"""Proxy of C++ fastjet::SharedPtr< fastjet::PseudoJetStructureBase > class."""
 

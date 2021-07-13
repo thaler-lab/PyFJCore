@@ -30,7 +30,7 @@ with open(os.path.join('pyfjcore', '__init__.py'), 'r') as f:
 
 # run swig to generate pyfjcore.py and pyfjcore.cpp from pyfjcore.i
 if sys.argv[1] == 'swig':
-    command = 'swig -python -c++ -fastproxy -w509,511 -keyword -py3 -Ipyfjcore -o pyfjcore/pyfjcore.cpp pyfjcore/swig/pyfjcore.i'
+    command = 'swig -python -c++ -fastproxy -w325,402,509,511 -keyword -py3 -Ipyfjcore -o pyfjcore/pyfjcore.cpp pyfjcore/swig/pyfjcore.i'
     print(command)
     subprocess.run(command.split())
 

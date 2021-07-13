@@ -95,12 +95,14 @@ FASTJET_ERRORS_AS_PYTHON_EXCEPTIONS(pyfjcore)
 
 %numpy_typemaps(float, NPY_FLOAT, std::ptrdiff_t)
 %numpy_typemaps(double, NPY_DOUBLE, std::ptrdiff_t)
+%numpy_typemaps(int, NPY_INT, std::ptrdiff_t)
 
 // additional numpy typemaps
 %apply (double* IN_ARRAY2, std::ptrdiff_t DIM1, std::ptrdiff_t DIM2) {(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures)}
-%apply (std::ptrdiff_t** ARGOUTVIEWM_ARRAY1, std::ptrdiff_t* DIM1) {(std::ptrdiff_t** inds, std::ptrdiff_t* mult)}
+%apply (int** ARGOUTVIEWM_ARRAY1, std::ptrdiff_t* DIM1) {(int** inds, std::ptrdiff_t* mult)}
 %apply (double** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)}
 %apply (float** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)}
+
 
 %pythoncode %{
 FastJetError = _pyfjcore.FastJetError;
@@ -109,33 +111,11 @@ FastJetError = _pyfjcore.FastJetError;
 // vector templates
 %template(vectorPseudoJet) std::vector<fastjet::PseudoJet>;
 
-/*%typemap(typecheck, precedence=159) const std::vector<fjcore::PseudoJet> & {
-  // ptk: custom typecheck so that PseudoJetContainer can be used const std::vector<PseudoJet> & is expected
-  int res = SWIG_ConvertPtr($input, 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-  if (!($1 = SWIG_CheckState(res))) {
-    int res = swig::asptr($input, (std::vector<fjcore::PseudoJet>**)(0));
-    $1 = SWIG_CheckState(res);
-  }
-}
-
-%typemap(in) const std::vector<fjcore::PseudoJet> & (int res = SWIG_OLDOBJ) {
-  // ptk: custom typemap so that PseudoJetContainer can be passed where const std::vector<PseudoJet> & is expected
-  void* argp = 0;
-  res = SWIG_ConvertPtr($input, &argp, SWIGTYPE_p_fastjet__PseudoJetContainer, 0);
-  if (SWIG_IsOK(res) && argp) {
-    $1 = reinterpret_cast< fjcore::PseudoJetContainer * >(argp)->as_ptr();
-    res = SWIG_OLDOBJ;
-  }
-  else {
-    std::vector<PseudoJet> *ptr = (std::vector<PseudoJet> *) 0;
-    res = swig::asptr($input, &ptr);
-    if (SWIG_IsOK(res) && ptr)
-      $1 = ptr;
-    else {
-      SWIG_exception_fail(SWIG_ArgError(res), "in method '$symname', argument $argnum of type '$type'");
-    }
-  }
-}*/
+// to ensure that we move-construct the heap container from the stack container
+%typemap(out) fastjet::PseudoJetContainer %{
+  $result = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move($1)),
+                               SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+%}
 
 // basic exception handling for all functions
 %exception {
@@ -144,8 +124,9 @@ FastJetError = _pyfjcore.FastJetError;
     PyErr_SetString(FastJetError_, e.message().c_str());
     SWIG_fail;
   }
-  catch (std::exception & e) {
-    SWIG_exception(SWIG_SystemError, e.what());
+  SWIG_CATCH_STDEXCEPT
+  catch (...) {
+    SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
   }
 }
 
@@ -208,6 +189,8 @@ namespace PYFJNAMESPACE {
   %ignore ConstructPtYPhi;
   %ignore ConstructEPxPyPz;
 
+  %rename(passes) Selector::pass;
+
 } // namespace PYFJNAMESPACE
 
 // include EECHist and declare templates
@@ -239,10 +222,16 @@ namespace PYFJNAMESPACE {
 
 namespace PYFJNAMESPACE {
 
-  /*%extend PseudoJetContainer {
+  %extend PseudoJetContainer {
+
+    void __setitem__(std::ptrdiff_t key, const PseudoJet & val) {
+      if (std::size_t(key) >= $self->size())
+        throw std::length_error("index out of bounds");
+
+      (*$self)[key] = val;
+    }
+
     %pythoncode {
-      def __len__(self):
-          return len(self.vector)
 
       def __iter__(self):
           return self.vector.__iter__();
@@ -254,22 +243,14 @@ namespace PYFJNAMESPACE {
           s.append(')')
           return '\n'.join(s)
 
-      def __delitem__(self, key):
-          self.vector.__delitem__(key)
-
-      def __getitem__(self, key):
-          return self.vector.__getitem__(key)
-
-      def __setitem__(self, key, val):
-          self.vector.__setitem__(key, val)
-
       @property
       def vector(self):
           if not hasattr(self, '_vector'):
               self._vector = self.as_vector()
           return self._vector
+
     }
-  }*/
+  }
 
   %extend PseudoJet {
 
@@ -302,15 +283,15 @@ namespace PYFJNAMESPACE {
     
     // these C++ operators are not automatically handled by SWIG (would only
     // be handled if they were part of the class)
-    PseudoJet __add__ (const PseudoJet & p) { return *($self) + p; }
-    PseudoJet __sub__ (const PseudoJet & p) { return *($self) - p; }
-    bool      __eq__  (const PseudoJet & p) { return *($self) == p; }
-    bool      __ne__  (const PseudoJet & p) { return *($self) != p; }
-    PseudoJet __mul__ (double x) { return *($self) * x; }
-    PseudoJet __rmul__(double x) { return *($self) * x; }
-    PseudoJet __div__ (double x) { return *($self) / x; }
-    bool      __eq__  (double x) { return *($self) == x; }
-    bool      __ne__  (double x) { return *($self) != x; }
+    PseudoJet __add__ (const PseudoJet & p) { return (*$self) + p; }
+    PseudoJet __sub__ (const PseudoJet & p) { return (*$self) - p; }
+    bool      __eq__  (const PseudoJet & p) { return (*$self) == p; }
+    bool      __ne__  (const PseudoJet & p) { return (*$self) != p; }
+    PseudoJet __mul__ (double x) { return (*$self) * x; }
+    PseudoJet __rmul__(double x) { return (*$self) * x; }
+    PseudoJet __div__ (double x) { return (*$self) / x; }
+    bool      __eq__  (double x) { return (*$self) == x; }
+    bool      __ne__  (double x) { return (*$self) != x; }
 
     %pythoncode {
       def __getitem__(self, key):
@@ -321,9 +302,9 @@ namespace PYFJNAMESPACE {
   // extend JetDefinition
   %extend JetDefinition {
     ADD_REPR_FROM_DESCRIPTION
-    std::vector<PseudoJet> __call__(const std::vector<PseudoJet> & particles) {
+    /*PseudoJetContainer __call__(const std::vector<PseudoJet> & particles) {
       return (*self)(particles);
-    }
+    }*/
   }
 
   %extend Selector {

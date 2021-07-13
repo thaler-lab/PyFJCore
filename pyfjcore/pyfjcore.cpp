@@ -2710,37 +2710,38 @@ SWIGINTERN PyObject *SWIG_PyStaticMethod_New(PyObject *SWIGUNUSEDPARM(self), PyO
 #define SWIGTYPE_p_fastjet__JetDefinition__Plugin swig_types[15]
 #define SWIGTYPE_p_fastjet__JetDefinition__Recombiner swig_types[16]
 #define SWIGTYPE_p_fastjet__PseudoJet swig_types[17]
-#define SWIGTYPE_p_fastjet__PseudoJetStructureBase swig_types[18]
-#define SWIGTYPE_p_fastjet__PseudoJet__UserInfoBase swig_types[19]
-#define SWIGTYPE_p_fastjet__Selector swig_types[20]
-#define SWIGTYPE_p_fastjet__SelectorWorker swig_types[21]
-#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t swig_types[22]
-#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJet__UserInfoBase_t swig_types[23]
-#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__SelectorWorker_t swig_types[24]
-#define SWIGTYPE_p_fastjet__integral_typeT_bool_false_t swig_types[25]
-#define SWIGTYPE_p_fastjet__integral_typeT_bool_true_t swig_types[26]
-#define SWIGTYPE_p_fastjet__thread_safety_helpers__FirstTimeTrue swig_types[27]
-#define SWIGTYPE_p_int swig_types[28]
-#define SWIGTYPE_p_p_PyObject swig_types[29]
-#define SWIGTYPE_p_p_double swig_types[30]
-#define SWIGTYPE_p_p_fastjet__PseudoJet swig_types[31]
-#define SWIGTYPE_p_p_float swig_types[32]
-#define SWIGTYPE_p_p_std__ptrdiff_t swig_types[33]
-#define SWIGTYPE_p_size_type swig_types[34]
-#define SWIGTYPE_p_std__allocatorT_fastjet__PseudoJet_t swig_types[35]
-#define SWIGTYPE_p_std__invalid_argument swig_types[36]
-#define SWIGTYPE_p_std__ostream swig_types[37]
-#define SWIGTYPE_p_std__ptrdiff_t swig_types[38]
-#define SWIGTYPE_p_std__valarrayT_double_t swig_types[39]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[40]
-#define SWIGTYPE_p_std__vectorT_fastjet__ClusterSequence__history_element_std__allocatorT_fastjet__ClusterSequence__history_element_t_t swig_types[41]
-#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_const_p_std__allocatorT_fastjet__PseudoJet_const_p_t_t swig_types[42]
-#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t swig_types[43]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[44]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[45]
-#define SWIGTYPE_p_value_type swig_types[46]
-static swig_type_info *swig_types[48];
-static swig_module_info swig_module = {swig_types, 47, 0, 0, 0, 0};
+#define SWIGTYPE_p_fastjet__PseudoJetContainer swig_types[18]
+#define SWIGTYPE_p_fastjet__PseudoJetStructureBase swig_types[19]
+#define SWIGTYPE_p_fastjet__PseudoJet__UserInfoBase swig_types[20]
+#define SWIGTYPE_p_fastjet__Selector swig_types[21]
+#define SWIGTYPE_p_fastjet__SelectorWorker swig_types[22]
+#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t swig_types[23]
+#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJet__UserInfoBase_t swig_types[24]
+#define SWIGTYPE_p_fastjet__SharedPtrT_fastjet__SelectorWorker_t swig_types[25]
+#define SWIGTYPE_p_fastjet__integral_typeT_bool_false_t swig_types[26]
+#define SWIGTYPE_p_fastjet__integral_typeT_bool_true_t swig_types[27]
+#define SWIGTYPE_p_fastjet__thread_safety_helpers__FirstTimeTrue swig_types[28]
+#define SWIGTYPE_p_int swig_types[29]
+#define SWIGTYPE_p_p_PyObject swig_types[30]
+#define SWIGTYPE_p_p_double swig_types[31]
+#define SWIGTYPE_p_p_fastjet__PseudoJet swig_types[32]
+#define SWIGTYPE_p_p_float swig_types[33]
+#define SWIGTYPE_p_p_int swig_types[34]
+#define SWIGTYPE_p_size_type swig_types[35]
+#define SWIGTYPE_p_std__allocatorT_fastjet__PseudoJet_t swig_types[36]
+#define SWIGTYPE_p_std__invalid_argument swig_types[37]
+#define SWIGTYPE_p_std__ostream swig_types[38]
+#define SWIGTYPE_p_std__ptrdiff_t swig_types[39]
+#define SWIGTYPE_p_std__valarrayT_double_t swig_types[40]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[41]
+#define SWIGTYPE_p_std__vectorT_fastjet__ClusterSequence__history_element_std__allocatorT_fastjet__ClusterSequence__history_element_t_t swig_types[42]
+#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_const_p_std__allocatorT_fastjet__PseudoJet_const_p_t_t swig_types[43]
+#define SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t swig_types[44]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[45]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[46]
+#define SWIGTYPE_p_value_type swig_types[47]
+static swig_type_info *swig_types[49];
+static swig_module_info swig_module = {swig_types, 48, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -4904,15 +4905,97 @@ SWIGINTERN PyObject *fastjet_PseudoJet_python_info(fastjet::PseudoJet const *sel
         return self->user_info<UserInfoPython>().get_pyobj();
       Py_RETURN_NONE;
     }
-SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___add__(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return *(self) + p; }
-SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___sub__(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return *(self) - p; }
-SWIGINTERN bool fastjet_PseudoJet___eq____SWIG_0(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return *(self) == p; }
-SWIGINTERN bool fastjet_PseudoJet___ne____SWIG_0(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return *(self) != p; }
-SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___mul__(fastjet::PseudoJet *self,double x){ return *(self) * x; }
-SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___rmul__(fastjet::PseudoJet *self,double x){ return *(self) * x; }
-SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___div__(fastjet::PseudoJet *self,double x){ return *(self) / x; }
-SWIGINTERN bool fastjet_PseudoJet___eq____SWIG_1(fastjet::PseudoJet *self,double x){ return *(self) == x; }
-SWIGINTERN bool fastjet_PseudoJet___ne____SWIG_1(fastjet::PseudoJet *self,double x){ return *(self) != x; }
+SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___add__(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return (*self) + p; }
+SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___sub__(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return (*self) - p; }
+SWIGINTERN bool fastjet_PseudoJet___eq____SWIG_0(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return (*self) == p; }
+SWIGINTERN bool fastjet_PseudoJet___ne____SWIG_0(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return (*self) != p; }
+SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___mul__(fastjet::PseudoJet *self,double x){ return (*self) * x; }
+SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___rmul__(fastjet::PseudoJet *self,double x){ return (*self) * x; }
+SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___div__(fastjet::PseudoJet *self,double x){ return (*self) / x; }
+SWIGINTERN bool fastjet_PseudoJet___eq____SWIG_1(fastjet::PseudoJet *self,double x){ return (*self) == x; }
+SWIGINTERN bool fastjet_PseudoJet___ne____SWIG_1(fastjet::PseudoJet *self,double x){ return (*self) != x; }
+
+#if NPY_API_VERSION < 0x00000007
+#define NPY_ARRAY_DEFAULT NPY_DEFAULT
+#define NPY_ARRAY_FARRAY  NPY_FARRAY
+#define NPY_FORTRANORDER  NPY_FORTRAN
+#endif
+
+
+  /* Given a PyObject, return a string describing its type.
+   */
+  const char* pytype_string(PyObject* py_obj)
+  {
+    if (py_obj == NULL          ) return "C NULL value";
+    if (py_obj == Py_None       ) return "Python None" ;
+    if (PyCallable_Check(py_obj)) return "callable"    ;
+    if (PyBytes_Check(   py_obj)) return "string"      ;
+    if (PyLong_Check(    py_obj)) return "int"         ;
+    if (PyFloat_Check(   py_obj)) return "float"       ;
+    if (PyDict_Check(    py_obj)) return "dict"        ;
+    if (PyList_Check(    py_obj)) return "list"        ;
+    if (PyTuple_Check(   py_obj)) return "tuple"       ;
+
+    return "unknown type";
+  }
+
+  /* Given a NumPy typecode, return a string describing the type.
+   */
+  const char* typecode_string(int typecode)
+  {
+    static const char* type_names[25] = {"bool",
+                                         "byte",
+                                         "unsigned byte",
+                                         "short",
+                                         "unsigned short",
+                                         "int",
+                                         "unsigned int",
+                                         "long",
+                                         "unsigned long",
+                                         "long long",
+                                         "unsigned long long",
+                                         "float",
+                                         "double",
+                                         "long double",
+                                         "complex float",
+                                         "complex double",
+                                         "complex long double",
+                                         "object",
+                                         "string",
+                                         "unicode",
+                                         "void",
+                                         "ntypes",
+                                         "notype",
+                                         "char",
+                                         "unknown"};
+    return typecode < 24 ? type_names[typecode] : type_names[24];
+  }
+
+  /* Make sure input has correct numpy type.  This now just calls
+     PyArray_EquivTypenums().
+   */
+  int type_match(int actual_type,
+                 int desired_type)
+  {
+    return PyArray_EquivTypenums(actual_type, desired_type);
+  }
+
+#ifdef SWIGPY_USE_CAPSULE
+  void free_cap(PyObject * cap)
+  {
+    void* array = (void*) PyCapsule_GetPointer(cap,SWIGPY_CAPSULE_NAME);
+    if (array != NULL) free(array);
+  }
+#endif
+
+
+
+SWIGINTERN void fastjet_PseudoJetContainer___setitem__(fastjet::PseudoJetContainer *self,std::ptrdiff_t key,fastjet::PseudoJet const &val){
+      if (std::size_t(key) >= self->size())
+        throw std::length_error("index out of bounds");
+
+      (*self)[key] = val;
+    }
 
 SWIGINTERNINLINE PyObject*
   SWIG_From_unsigned_SS_int  (unsigned int value)
@@ -4940,9 +5023,6 @@ SWIG_AsVal_unsigned_SS_int (PyObject * obj, unsigned int *val)
   return res;
 }
 
-SWIGINTERN std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > fastjet_JetDefinition___call____SWIG_1(fastjet::JetDefinition *self,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &particles){
-      return (*self)(particles);
-    }
 
 SWIGINTERN int
 SWIG_AsCharPtrAndSize(PyObject *obj, char** cptr, size_t* psize, int *alloc)
@@ -5082,82 +5162,6 @@ SWIG_AsPtr_std_string (PyObject * obj, std::string **val)
   }
   return SWIG_ERROR;
 }
-
-
-#if NPY_API_VERSION < 0x00000007
-#define NPY_ARRAY_DEFAULT NPY_DEFAULT
-#define NPY_ARRAY_FARRAY  NPY_FARRAY
-#define NPY_FORTRANORDER  NPY_FORTRAN
-#endif
-
-
-  /* Given a PyObject, return a string describing its type.
-   */
-  const char* pytype_string(PyObject* py_obj)
-  {
-    if (py_obj == NULL          ) return "C NULL value";
-    if (py_obj == Py_None       ) return "Python None" ;
-    if (PyCallable_Check(py_obj)) return "callable"    ;
-    if (PyBytes_Check(   py_obj)) return "string"      ;
-    if (PyLong_Check(    py_obj)) return "int"         ;
-    if (PyFloat_Check(   py_obj)) return "float"       ;
-    if (PyDict_Check(    py_obj)) return "dict"        ;
-    if (PyList_Check(    py_obj)) return "list"        ;
-    if (PyTuple_Check(   py_obj)) return "tuple"       ;
-
-    return "unknown type";
-  }
-
-  /* Given a NumPy typecode, return a string describing the type.
-   */
-  const char* typecode_string(int typecode)
-  {
-    static const char* type_names[25] = {"bool",
-                                         "byte",
-                                         "unsigned byte",
-                                         "short",
-                                         "unsigned short",
-                                         "int",
-                                         "unsigned int",
-                                         "long",
-                                         "unsigned long",
-                                         "long long",
-                                         "unsigned long long",
-                                         "float",
-                                         "double",
-                                         "long double",
-                                         "complex float",
-                                         "complex double",
-                                         "complex long double",
-                                         "object",
-                                         "string",
-                                         "unicode",
-                                         "void",
-                                         "ntypes",
-                                         "notype",
-                                         "char",
-                                         "unknown"};
-    return typecode < 24 ? type_names[typecode] : type_names[24];
-  }
-
-  /* Make sure input has correct numpy type.  This now just calls
-     PyArray_EquivTypenums().
-   */
-  int type_match(int actual_type,
-                 int desired_type)
-  {
-    return PyArray_EquivTypenums(actual_type, desired_type);
-  }
-
-#ifdef SWIGPY_USE_CAPSULE
-  void free_cap(PyObject * cap)
-  {
-    void* array = (void*) PyCapsule_GetPointer(cap,SWIGPY_CAPSULE_NAME);
-    if (array != NULL) free(array);
-  }
-#endif
-
-
 
 
   /* Given a PyObject pointer, cast it to a PyArrayObject pointer if
@@ -8076,8 +8080,25 @@ SWIGINTERN PyObject *_wrap_delete_vectorPseudoJet(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -8111,8 +8132,25 @@ SWIGINTERN PyObject *_wrap_new_FirstTimeTrue(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__thread_safety_helpers__FirstTimeTrue, SWIG_POINTER_NEW |  0 );
@@ -8144,8 +8182,25 @@ SWIGINTERN PyObject *_wrap_FirstTimeTrue___call__(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8177,8 +8232,25 @@ SWIGINTERN PyObject *_wrap_delete_FirstTimeTrue(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -8310,8 +8382,25 @@ SWIGINTERN PyObject *_wrap_new_PseudoJetStructureBase(PyObject *SWIGUNUSEDPARM(s
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, SWIG_POINTER_NEW |  0 );
@@ -8343,8 +8432,25 @@ SWIGINTERN PyObject *_wrap_delete_PseudoJetStructureBase(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -8377,8 +8483,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_description(PyObject *SWIGUNUS
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -8411,8 +8534,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_associated_cluster_sequenc
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8445,8 +8585,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_associated_cluster_sequence(Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -8479,8 +8636,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_valid_cluster_sequence(PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8513,8 +8687,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_validated_cs(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -8547,8 +8738,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_validated_csab(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
@@ -8607,8 +8815,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_partner(PyObject *SWIGUNUS
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8667,8 +8892,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_child(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8739,8 +8981,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_parents(PyObject *SWIGUNUS
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8799,8 +9058,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_object_in_jet(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8833,8 +9109,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_constituents(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8857,7 +9150,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_constituents(PyObject *SWIGUNU
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetStructureBase_constituents", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -8881,11 +9174,31 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_constituents(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -8915,8 +9228,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_exclusive_subjets(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -8944,7 +9274,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_exclusive_subjets(PyObject *SW
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  (char *)"dcut",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:PseudoJetStructureBase_exclusive_subjets", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -8974,11 +9304,31 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_exclusive_subjets(PyObject *SW
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -9033,8 +9383,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_n_exclusive_subjets(PyObject *
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -9061,7 +9428,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_exclusive_subjets_up_to(PyObje
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  (char *)"nsub",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:PseudoJetStructureBase_exclusive_subjets_up_to", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -9090,11 +9457,31 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_exclusive_subjets_up_to(PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -9147,8 +9534,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_exclusive_subdmerge(PyObject *
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9204,8 +9608,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_exclusive_subdmerge_max(PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9252,8 +9673,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_pieces(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -9276,7 +9714,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_pieces(PyObject *SWIGUNUSEDPAR
   char * kwnames[] = {
     (char *)"self",  (char *)"arg2",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetStructureBase_pieces", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -9300,11 +9738,31 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_pieces(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -9334,8 +9792,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_has_area(PyObject *SWIGUNUSEDP
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -9368,8 +9843,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_area(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9402,8 +9894,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_area_error(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9436,8 +9945,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_area_4vector(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -9470,8 +9996,25 @@ SWIGINTERN PyObject *_wrap_PseudoJetStructureBase_is_pure_ghost(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -9547,8 +10090,25 @@ SWIGINTERN PyObject *_wrap_new_PseudoJet__SWIG_0(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NEW |  0 );
@@ -9603,8 +10163,25 @@ SWIGINTERN PyObject *_wrap_new_PseudoJet__SWIG_1(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NEW |  0 );
@@ -9635,8 +10212,25 @@ SWIGINTERN PyObject *_wrap_new_PseudoJet__SWIG_2(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NEW |  0 );
@@ -9728,8 +10322,25 @@ SWIGINTERN PyObject *_wrap_delete_PseudoJet(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -9762,8 +10373,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_E(PyObject *SWIGUNUSEDPARM(self), PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9796,8 +10424,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_e(PyObject *SWIGUNUSEDPARM(self), PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9830,8 +10475,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_px(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9864,8 +10526,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_py(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9898,8 +10577,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_pz(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9932,8 +10628,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_phi(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -9966,8 +10679,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_phi_std(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10000,8 +10730,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_phi_02pi(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10034,8 +10781,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_rap(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10068,8 +10832,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_rapidity(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10102,8 +10883,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_pseudorapidity(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10136,8 +10934,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_eta(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10170,8 +10985,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_pt2(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10204,8 +11036,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_pt(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10238,8 +11087,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_perp2(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10272,8 +11138,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_perp(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10306,8 +11189,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_kt2(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10340,8 +11240,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_m2(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10374,8 +11291,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_m(PyObject *SWIGUNUSEDPARM(self), PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10408,8 +11342,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_mperp2(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10442,8 +11393,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_mperp(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10476,8 +11444,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_mt2(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10510,8 +11495,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_mt(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10544,8 +11546,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_modp2(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10578,8 +11597,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_modp(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10612,8 +11648,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_Et(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10646,8 +11699,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_Et2(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10680,8 +11750,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_cos_theta(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10714,8 +11801,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_theta(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10759,8 +11863,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___call__(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10807,8 +11928,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_kt_distance(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10855,8 +11993,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_plain_distance(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10903,8 +12058,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_squared_distance(PyObject *SWIGUNUSEDPARM(s
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10951,8 +12123,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_delta_R(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -10999,8 +12188,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_delta_phi_to(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -11033,8 +12239,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_beam_distance(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -11067,8 +12290,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_four_mom(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new std::valarray< double >(static_cast< const std::valarray< double >& >(result))), SWIGTYPE_p_std__valarrayT_double_t, SWIG_POINTER_OWN |  0 );
@@ -11115,8 +12355,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_boost(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
@@ -11163,8 +12420,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_unboost(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
@@ -11208,8 +12482,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___imul__(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -11253,8 +12544,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___itruediv__(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -11301,8 +12609,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___iadd__(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -11349,8 +12674,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___isub__(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -11412,8 +12754,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_reset__SWIG_0(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -11454,8 +12813,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_reset__SWIG_1(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -11591,8 +12967,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_reset_PtYPhiM(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -11654,8 +13047,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_reset_momentum__SWIG_0(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -11696,8 +13106,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_reset_momentum__SWIG_1(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -11833,8 +13260,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_reset_momentum_PtYPhiM(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -11886,8 +13330,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_set_cached_rap_phi(PyObject *SWIGUNUSEDPARM
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -11920,8 +13381,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_user_index(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -11964,8 +13442,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_set_user_index(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -12008,8 +13503,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_set_user_info(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -12042,8 +13554,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_user_info(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12076,8 +13605,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_user_info_ptr(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet__UserInfoBase, 0 |  0 );
@@ -12108,8 +13654,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_user_info_shared_ptr__SWIG_0(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJet__UserInfoBase_t, 0 |  0 );
@@ -12140,8 +13703,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_user_info_shared_ptr__SWIG_1(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJet__UserInfoBase_t, 0 |  0 );
@@ -12210,8 +13790,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_description(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -12244,8 +13841,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_associated_cluster_sequence(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12278,8 +13892,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_associated_cs(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12312,8 +13943,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_valid_cluster_sequence(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12346,8 +13994,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_valid_cs(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12380,8 +14045,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_associated_cluster_sequence(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -12414,8 +14096,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_associated_cs(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -12448,8 +14147,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_validated_cluster_sequence(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -12482,8 +14198,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_validated_cs(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -12516,8 +14249,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_validated_cluster_sequence_area_base(PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
@@ -12550,8 +14300,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_validated_csab(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
@@ -12597,8 +14364,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_set_structure_shared_ptr(PyObject *SWIGUNUS
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -12631,8 +14415,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_structure(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12665,8 +14466,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_structure_ptr(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -12699,8 +14517,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_structure_non_const_ptr(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -12733,8 +14568,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_validated_structure_ptr(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -12767,8 +14619,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_structure_shared_ptr(PyObject *SWIGUNUSEDPA
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
@@ -12815,8 +14684,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_partner(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12863,8 +14749,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_child(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12923,8 +14826,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_parents(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -12971,8 +14891,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_contains(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -13019,8 +14956,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_is_inside(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -13053,8 +15007,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_constituents(PyObject *SWIGUNUSEDPARM(s
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -13070,7 +15041,7 @@ SWIGINTERN PyObject *_wrap_PseudoJet_constituents(PyObject *SWIGUNUSEDPARM(self)
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[1] ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
@@ -13087,11 +15058,31 @@ SWIGINTERN PyObject *_wrap_PseudoJet_constituents(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -13121,8 +15112,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_exclusive_subjets(PyObject *SWIGUNUSEDP
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -13140,7 +15148,7 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subjets__SWIG_0(PyObject *SWIGUNU
   int res1 = 0 ;
   double val2 ;
   int ecode2 = 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
@@ -13161,11 +15169,31 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subjets__SWIG_0(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -13206,8 +15234,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_n_exclusive_subjets(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -13225,7 +15270,7 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subjets__SWIG_1(PyObject *SWIGUNU
   int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
@@ -13246,11 +15291,31 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subjets__SWIG_1(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -13318,7 +15383,7 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subjets_up_to(PyObject *SWIGUNUSE
   char * kwnames[] = {
     (char *)"self",  (char *)"nsub",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJet_exclusive_subjets_up_to", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
@@ -13339,11 +15404,31 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subjets_up_to(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -13384,8 +15469,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subdmerge(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -13429,8 +15531,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_exclusive_subdmerge_max(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -13463,8 +15582,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_pieces(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -13480,7 +15616,7 @@ SWIGINTERN PyObject *_wrap_PseudoJet_pieces(PyObject *SWIGUNUSEDPARM(self), PyOb
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[1] ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
@@ -13497,11 +15633,31 @@ SWIGINTERN PyObject *_wrap_PseudoJet_pieces(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -13531,8 +15687,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_has_area(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -13565,8 +15738,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_area(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -13599,8 +15789,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_area_error(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -13633,8 +15840,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_area_4vector(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -13667,8 +15891,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_is_pure_ghost(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -13701,8 +15942,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_cluster_hist_index(PyObject *SWIGUNUSEDPARM
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -13745,8 +16003,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_set_cluster_hist_index(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -13779,8 +16054,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_cluster_sequence_history_index(PyObject *SW
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -13823,8 +16115,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_set_cluster_sequence_history_index(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -13857,8 +16166,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___repr__(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -13895,8 +16221,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_set_python_info(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -13929,8 +16272,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet_python_info(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = result;
@@ -13977,8 +16337,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___add__(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -14027,8 +16404,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___sub__(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -14072,8 +16466,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___eq____SWIG_0(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -14117,8 +16528,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___ne____SWIG_0(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -14164,8 +16592,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___mul__(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -14211,8 +16656,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___rmul__(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -14258,8 +16720,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___div__(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -14300,8 +16779,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___eq____SWIG_1(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -14385,8 +16881,25 @@ SWIGINTERN PyObject *_wrap_PseudoJet___ne____SWIG_1(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -14452,6 +16965,1690 @@ SWIGINTERN PyObject *PseudoJet_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject
   return SWIG_Python_InitShadowInstance(args);
 }
 
+SWIGINTERN PyObject *_wrap_user_indices__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  int **arg1 = (int **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg3 = 0 ;
+  int *data_temp1 = NULL ;
+  std::ptrdiff_t dim_temp1 ;
+  int res3 = SWIG_OLDOBJ ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  {
+    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
+    res3 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "user_indices" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "user_indices" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  {
+    try {
+      fastjet::user_indices(arg1,arg2,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[1] = {
+      *arg2 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(1, dims, NPY_INT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PseudoJetContainer__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **SWIGUNUSEDPARM(swig_obj)) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *result = 0 ;
+  
+  if ((nobjs < 0) || (nobjs > 0)) SWIG_fail;
+  {
+    try {
+      result = (fastjet::PseudoJetContainer *)new fastjet::PseudoJetContainer(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PseudoJetContainer__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  fastjet::PseudoJetContainer *result = 0 ;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  {
+    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  {
+    try {
+      result = (fastjet::PseudoJetContainer *)new fastjet::PseudoJetContainer((std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NEW |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PseudoJetContainer__SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::PseudoJetContainer *result = 0 ;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = (fastjet::PseudoJetContainer *)new fastjet::PseudoJetContainer((fastjet::PseudoJetContainer const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PseudoJetContainer(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "new_PseudoJetContainer", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 0) {
+    return _wrap_new_PseudoJetContainer__SWIG_0(self, argc, argv);
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_PseudoJetContainer__SWIG_2(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_PseudoJetContainer__SWIG_1(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'new_PseudoJetContainer'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::PseudoJetContainer::PseudoJetContainer()\n"
+    "    fastjet::PseudoJetContainer::PseudoJetContainer(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::PseudoJetContainer::PseudoJetContainer(fastjet::PseudoJetContainer const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::size_t result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_size" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = ((fastjet::PseudoJetContainer const *)arg1)->size(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_capacity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::size_t result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_capacity" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = ((fastjet::PseudoJetContainer const *)arg1)->capacity(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_resize(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  std::size_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"s",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetContainer_resize", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_resize" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer_resize" "', argument " "2"" of type '" "std::size_t""'");
+  } 
+  arg2 = static_cast< std::size_t >(val2);
+  {
+    try {
+      (arg1)->resize(arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_reserve(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  std::size_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"s",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetContainer_reserve", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_reserve" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer_reserve" "', argument " "2"" of type '" "std::size_t""'");
+  } 
+  arg2 = static_cast< std::size_t >(val2);
+  {
+    try {
+      (arg1)->reserve(arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_push_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  fastjet::PseudoJet *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"pj",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetContainer_push_back", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_push_back" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PseudoJetContainer_push_back" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PseudoJetContainer_push_back" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
+  {
+    try {
+      (arg1)->push_back((fastjet::PseudoJet const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_clear(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_clear" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      (arg1)->clear(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_as_vector(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *result = 0 ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_as_vector" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *) &((fastjet::PseudoJetContainer const *)arg1)->as_vector(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer___len__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::size_t result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer___len__" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = ((fastjet::PseudoJetContainer const *)arg1)->__len__(); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer___getitem__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  std::ptrdiff_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"i",  NULL 
+  };
+  fastjet::PseudoJet *result = 0 ;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetContainer___getitem__", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer___getitem__" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer___getitem__" "', argument " "2"" of type '" "std::ptrdiff_t""'");
+  } 
+  arg2 = static_cast< std::ptrdiff_t >(val2);
+  {
+    try {
+      result = (fastjet::PseudoJet *) &((fastjet::PseudoJetContainer const *)arg1)->__getitem__(arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_epxpypz_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  double **arg2 = (double **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double *data_temp2 = NULL ;
+  std::ptrdiff_t dim1_temp2 ;
+  std::ptrdiff_t dim2_temp2 ;
+  PyObject *swig_obj[1] ;
+  
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim1_temp2;
+    arg4 = &dim2_temp2;
+  }
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_epxpypz_array_float64" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      (arg1)->epxpypz_array_float64(arg2,arg3,arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg3, *arg4 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_epxpypz_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  float **arg2 = (float **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  float *data_temp2 = NULL ;
+  std::ptrdiff_t dim1_temp2 ;
+  std::ptrdiff_t dim2_temp2 ;
+  PyObject *swig_obj[1] ;
+  
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim1_temp2;
+    arg4 = &dim2_temp2;
+  }
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_epxpypz_array_float32" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      (arg1)->epxpypz_array_float32(arg2,arg3,arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg3, *arg4 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  double **arg2 = (double **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
+  bool arg5 = (bool) true ;
+  bool arg6 = (bool) false ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double *data_temp2 = NULL ;
+  std::ptrdiff_t dim1_temp2 ;
+  std::ptrdiff_t dim2_temp2 ;
+  bool val5 ;
+  int ecode5 = 0 ;
+  bool val6 ;
+  int ecode6 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"mass",  (char *)"phi_std",  NULL 
+  };
+  
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim1_temp2;
+    arg4 = &dim2_temp2;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OO:PseudoJetContainer_ptyphim_array_float64", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_ptyphim_array_float64" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_bool(obj1, &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "PseudoJetContainer_ptyphim_array_float64" "', argument " "5"" of type '" "bool""'");
+    } 
+    arg5 = static_cast< bool >(val5);
+  }
+  if (obj2) {
+    ecode6 = SWIG_AsVal_bool(obj2, &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "PseudoJetContainer_ptyphim_array_float64" "', argument " "6"" of type '" "bool""'");
+    } 
+    arg6 = static_cast< bool >(val6);
+  }
+  {
+    try {
+      (arg1)->ptyphim_array_float64(arg2,arg3,arg4,arg5,arg6); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg3, *arg4 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  float **arg2 = (float **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
+  bool arg5 = (bool) true ;
+  bool arg6 = (bool) false ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  float *data_temp2 = NULL ;
+  std::ptrdiff_t dim1_temp2 ;
+  std::ptrdiff_t dim2_temp2 ;
+  bool val5 ;
+  int ecode5 = 0 ;
+  bool val6 ;
+  int ecode6 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"mass",  (char *)"phi_std",  NULL 
+  };
+  
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim1_temp2;
+    arg4 = &dim2_temp2;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OO:PseudoJetContainer_ptyphim_array_float32", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_ptyphim_array_float32" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_bool(obj1, &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "PseudoJetContainer_ptyphim_array_float32" "', argument " "5"" of type '" "bool""'");
+    } 
+    arg5 = static_cast< bool >(val5);
+  }
+  if (obj2) {
+    ecode6 = SWIG_AsVal_bool(obj2, &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "PseudoJetContainer_ptyphim_array_float32" "', argument " "6"" of type '" "bool""'");
+    } 
+    arg6 = static_cast< bool >(val6);
+  }
+  {
+    try {
+      (arg1)->ptyphim_array_float32(arg2,arg3,arg4,arg5,arg6); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg3, *arg4 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  double **arg2 = (double **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double *data_temp2 = NULL ;
+  std::ptrdiff_t dim1_temp2 ;
+  std::ptrdiff_t dim2_temp2 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"pjrep",  NULL 
+  };
+  
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim1_temp2;
+    arg4 = &dim2_temp2;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:PseudoJetContainer_array_float64", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_array_float64" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_int(obj1, &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "PseudoJetContainer_array_float64" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+    } 
+    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
+  }
+  {
+    try {
+      (arg1)->array_float64(arg2,arg3,arg4,arg5); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg3, *arg4 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  float **arg2 = (float **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  float *data_temp2 = NULL ;
+  std::ptrdiff_t dim1_temp2 ;
+  std::ptrdiff_t dim2_temp2 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"pjrep",  NULL 
+  };
+  
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim1_temp2;
+    arg4 = &dim2_temp2;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:PseudoJetContainer_array_float32", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_array_float32" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_int(obj1, &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "PseudoJetContainer_array_float32" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+    } 
+    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
+  }
+  {
+    try {
+      (arg1)->array_float32(arg2,arg3,arg4,arg5); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg3, *arg4 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_user_indices(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  int **arg2 = (int **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int *data_temp2 = NULL ;
+  std::ptrdiff_t dim_temp2 ;
+  PyObject *swig_obj[1] ;
+  
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim_temp2;
+  }
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_user_indices" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      ((fastjet::PseudoJetContainer const *)arg1)->user_indices(arg2,arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[1] = {
+      *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(1, dims, NPY_INT, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer___setitem__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  std::ptrdiff_t arg2 ;
+  fastjet::PseudoJet *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"key",  (char *)"val",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:PseudoJetContainer___setitem__", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer___setitem__" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer___setitem__" "', argument " "2"" of type '" "std::ptrdiff_t""'");
+  } 
+  arg2 = static_cast< std::ptrdiff_t >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PseudoJetContainer___setitem__" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PseudoJetContainer___setitem__" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
+  }
+  arg3 = reinterpret_cast< fastjet::PseudoJet * >(argp3);
+  {
+    try {
+      fastjet_PseudoJetContainer___setitem__(arg1,arg2,(fastjet::PseudoJet const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_PseudoJetContainer(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PseudoJetContainer" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      delete arg1; 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *PseudoJetContainer_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *PseudoJetContainer_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
+SWIGINTERN PyObject *_wrap_user_indices__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  int **arg1 = (int **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg3 = 0 ;
+  int *data_temp1 = NULL ;
+  std::ptrdiff_t dim_temp1 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res3 = SWIG_ConvertPtr(swig_obj[0], &argp3, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "user_indices" "', argument " "3"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "user_indices" "', argument " "3"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg3 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp3);
+  {
+    try {
+      fastjet::user_indices(arg1,arg2,(fastjet::PseudoJetContainer const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[1] = {
+      *arg2 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(1, dims, NPY_INT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_user_indices(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "user_indices", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_user_indices__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_user_indices__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'user_indices'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::user_indices(int **,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::user_indices(int **,std::ptrdiff_t *,fastjet::PseudoJetContainer const &)\n");
+  return 0;
+}
+
+
 SWIGINTERN PyObject *_wrap_dot_product(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
@@ -14492,8 +18689,25 @@ SWIGINTERN PyObject *_wrap_dot_product(PyObject *SWIGUNUSEDPARM(self), PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -14543,8 +18757,25 @@ SWIGINTERN PyObject *_wrap_cos_theta(PyObject *SWIGUNUSEDPARM(self), PyObject *a
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -14594,8 +18825,25 @@ SWIGINTERN PyObject *_wrap_theta(PyObject *SWIGUNUSEDPARM(self), PyObject *args,
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -14645,8 +18893,25 @@ SWIGINTERN PyObject *_wrap_have_same_momentum(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -14710,8 +18975,25 @@ SWIGINTERN PyObject *_wrap_PtYPhiM(PyObject *SWIGUNUSEDPARM(self), PyObject *arg
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -14721,20 +19003,16 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_sorted_by_pt(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_sorted_by_pt__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg1 = 0 ;
   int res1 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  char * kwnames[] = {
-    (char *)"jets",  NULL 
-  };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_pt", kwnames, &obj0)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res1 = swig::asptr(obj0, &ptr);
+    res1 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res1)) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_pt" "', argument " "1"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -14751,11 +19029,31 @@ SWIGINTERN PyObject *_wrap_sorted_by_pt(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
@@ -14764,20 +19062,105 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_sorted_by_rapidity(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_sorted_by_pt__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::PseudoJetContainer result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_pt" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sorted_by_pt" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = fastjet::sorted_by_pt((fastjet::PseudoJetContainer const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_pt(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "sorted_by_pt", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_pt__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_pt__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'sorted_by_pt'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::sorted_by_pt(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::sorted_by_pt(fastjet::PseudoJetContainer const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_rapidity__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg1 = 0 ;
   int res1 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  char * kwnames[] = {
-    (char *)"jets",  NULL 
-  };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_rapidity", kwnames, &obj0)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res1 = swig::asptr(obj0, &ptr);
+    res1 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res1)) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_rapidity" "', argument " "1"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -14794,11 +19177,31 @@ SWIGINTERN PyObject *_wrap_sorted_by_rapidity(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
@@ -14807,20 +19210,105 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_sorted_by_E(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_sorted_by_rapidity__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::PseudoJetContainer result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_rapidity" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sorted_by_rapidity" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = fastjet::sorted_by_rapidity((fastjet::PseudoJetContainer const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_rapidity(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "sorted_by_rapidity", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_rapidity__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_rapidity__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'sorted_by_rapidity'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::sorted_by_rapidity(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::sorted_by_rapidity(fastjet::PseudoJetContainer const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_E__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg1 = 0 ;
   int res1 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  char * kwnames[] = {
-    (char *)"jets",  NULL 
-  };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_E", kwnames, &obj0)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res1 = swig::asptr(obj0, &ptr);
+    res1 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res1)) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_E" "', argument " "1"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -14837,11 +19325,31 @@ SWIGINTERN PyObject *_wrap_sorted_by_E(PyObject *SWIGUNUSEDPARM(self), PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
@@ -14850,20 +19358,105 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_sorted_by_pz(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_sorted_by_E__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::PseudoJetContainer result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_E" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sorted_by_E" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = fastjet::sorted_by_E((fastjet::PseudoJetContainer const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_E(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "sorted_by_E", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_E__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_E__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'sorted_by_E'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::sorted_by_E(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::sorted_by_E(fastjet::PseudoJetContainer const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_pz__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg1 = 0 ;
   int res1 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  char * kwnames[] = {
-    (char *)"jets",  NULL 
-  };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:sorted_by_pz", kwnames, &obj0)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res1 = swig::asptr(obj0, &ptr);
+    res1 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res1)) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_pz" "', argument " "1"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -14880,16 +19473,125 @@ SWIGINTERN PyObject *_wrap_sorted_by_pz(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
   if (SWIG_IsNewObj(res1)) delete arg1;
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_pz__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::PseudoJetContainer result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sorted_by_pz" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "sorted_by_pz" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = fastjet::sorted_by_pz((fastjet::PseudoJetContainer const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sorted_by_pz(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "sorted_by_pz", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_pz__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_sorted_by_pz__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'sorted_by_pz'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::sorted_by_pz(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::sorted_by_pz(fastjet::PseudoJetContainer const &)\n");
+  return 0;
 }
 
 
@@ -14932,8 +19634,25 @@ SWIGINTERN PyObject *_wrap_sort_indices(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -14969,8 +19688,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -14983,6 +19719,58 @@ fail:
 
 
 SWIGINTERN PyObject *_wrap_join__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::PseudoJet result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "join" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "join" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = fastjet::join((fastjet::PseudoJetContainer const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_join__SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   void *argp1 = 0 ;
@@ -15006,8 +19794,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -15017,7 +19822,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_join__SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_3(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   fastjet::PseudoJet *arg2 = 0 ;
@@ -15052,8 +19857,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -15063,7 +19885,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_join__SWIG_3(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_4(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   fastjet::PseudoJet *arg2 = 0 ;
@@ -15109,8 +19931,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_3(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -15120,7 +19959,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_join__SWIG_4(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_5(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   fastjet::PseudoJet *arg2 = 0 ;
@@ -15177,8 +20016,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_4(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -15201,8 +20057,25 @@ SWIGINTERN PyObject *_wrap_new_Selector__SWIG_0(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_NEW |  0 );
@@ -15233,8 +20106,25 @@ SWIGINTERN PyObject *_wrap_new_Selector__SWIG_1(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_NEW |  0 );
@@ -15296,8 +20186,25 @@ SWIGINTERN PyObject *_wrap_delete_Selector(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -15307,7 +20214,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Selector__pass(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_Selector_passes(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
   fastjet::PseudoJet *arg2 = 0 ;
@@ -15322,18 +20229,18 @@ SWIGINTERN PyObject *_wrap_Selector__pass(PyObject *SWIGUNUSEDPARM(self), PyObje
   };
   bool result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:Selector__pass", kwnames, &obj0, &obj1)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:Selector_passes", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector__pass" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_passes" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector__pass" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_passes" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
   }
   if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector__pass" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_passes" "', argument " "2"" of type '" "fastjet::PseudoJet const &""'"); 
   }
   arg2 = reinterpret_cast< fastjet::PseudoJet * >(argp2);
   {
@@ -15344,8 +20251,25 @@ SWIGINTERN PyObject *_wrap_Selector__pass(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -15387,8 +20311,25 @@ SWIGINTERN PyObject *_wrap_Selector___call____SWIG_0(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -15398,29 +20339,24 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Selector_count(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_Selector_count__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int res2 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  char * kwnames[] = {
-    (char *)"self",  (char *)"jets",  NULL 
-  };
   unsigned int result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:Selector_count", kwnames, &obj0, &obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_count" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res2 = swig::asptr(obj1, &ptr);
+    res2 = swig::asptr(swig_obj[1], &ptr);
     if (!SWIG_IsOK(res2)) {
       SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_count" "', argument " "2"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -15437,8 +20373,25 @@ SWIGINTERN PyObject *_wrap_Selector_count(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
@@ -15450,29 +20403,128 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Selector_sum(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_Selector_count__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  unsigned int result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_count" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_count" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_count" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  {
+    try {
+      result = (unsigned int)((fastjet::Selector const *)arg1)->count((fastjet::PseudoJetContainer const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_count(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "Selector_count", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Selector_count__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Selector_count__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'Selector_count'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::Selector::count(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n"
+    "    fastjet::Selector::count(fastjet::PseudoJetContainer const &) const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_sum__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int res2 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  char * kwnames[] = {
-    (char *)"self",  (char *)"jets",  NULL 
-  };
   fastjet::PseudoJet result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:Selector_sum", kwnames, &obj0, &obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_sum" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res2 = swig::asptr(obj1, &ptr);
+    res2 = swig::asptr(swig_obj[1], &ptr);
     if (!SWIG_IsOK(res2)) {
       SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_sum" "', argument " "2"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -15489,8 +20541,25 @@ SWIGINTERN PyObject *_wrap_Selector_sum(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -15502,29 +20571,128 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Selector_scalar_pt_sum(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_Selector_sum__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  fastjet::PseudoJet result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_sum" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_sum" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_sum" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  {
+    try {
+      result = ((fastjet::Selector const *)arg1)->sum((fastjet::PseudoJetContainer const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_sum(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "Selector_sum", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Selector_sum__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Selector_sum__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'Selector_sum'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::Selector::sum(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n"
+    "    fastjet::Selector::sum(fastjet::PseudoJetContainer const &) const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_scalar_pt_sum__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int res2 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  char * kwnames[] = {
-    (char *)"self",  (char *)"jets",  NULL 
-  };
   double result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:Selector_scalar_pt_sum", kwnames, &obj0, &obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_scalar_pt_sum" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res2 = swig::asptr(obj1, &ptr);
+    res2 = swig::asptr(swig_obj[1], &ptr);
     if (!SWIG_IsOK(res2)) {
       SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_scalar_pt_sum" "', argument " "2"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -15541,8 +20709,25 @@ SWIGINTERN PyObject *_wrap_Selector_scalar_pt_sum(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -15554,7 +20739,111 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_Selector_scalar_pt_sum__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  double result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_scalar_pt_sum" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_scalar_pt_sum" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_scalar_pt_sum" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  {
+    try {
+      result = (double)((fastjet::Selector const *)arg1)->scalar_pt_sum((fastjet::PseudoJetContainer const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_scalar_pt_sum(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "Selector_scalar_pt_sum", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Selector_scalar_pt_sum__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Selector_scalar_pt_sum__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'Selector_scalar_pt_sum'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::Selector::scalar_pt_sum(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n"
+    "    fastjet::Selector::scalar_pt_sum(fastjet::PseudoJetContainer const &) const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_sift__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg2 = 0 ;
@@ -15567,23 +20856,16 @@ SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *SWIGUNUSEDPARM(self), PyObjec
   int res3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  PyObject * obj3 = 0 ;
-  char * kwnames[] = {
-    (char *)"self",  (char *)"jets",  (char *)"jets_that_pass",  (char *)"jets_that_fail",  NULL 
-  };
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOOO:Selector_sift", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if ((nobjs < 4) || (nobjs > 4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_sift" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res2 = swig::asptr(obj1, &ptr);
+    res2 = swig::asptr(swig_obj[1], &ptr);
     if (!SWIG_IsOK(res2)) {
       SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_sift" "', argument " "2"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -15592,7 +20874,7 @@ SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *SWIGUNUSEDPARM(self), PyObjec
     }
     arg2 = ptr;
   }
-  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t,  0 );
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t,  0 );
   if (!SWIG_IsOK(res3)) {
     SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Selector_sift" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &""'"); 
   }
@@ -15600,7 +20882,7 @@ SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *SWIGUNUSEDPARM(self), PyObjec
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_sift" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &""'"); 
   }
   arg3 = reinterpret_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > * >(argp3);
-  res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t,  0 );
+  res4 = SWIG_ConvertPtr(swig_obj[3], &argp4, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t,  0 );
   if (!SWIG_IsOK(res4)) {
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Selector_sift" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &""'"); 
   }
@@ -15616,8 +20898,25 @@ SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -15626,6 +20925,151 @@ SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *SWIGUNUSEDPARM(self), PyObjec
 fail:
   if (SWIG_IsNewObj(res2)) delete arg2;
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_sift__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg3 = 0 ;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  
+  if ((nobjs < 4) || (nobjs > 4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector_sift" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector_sift" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_sift" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Selector_sift" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_sift" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > * >(argp3);
+  res4 = SWIG_ConvertPtr(swig_obj[3], &argp4, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Selector_sift" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector_sift" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > * >(argp4);
+  {
+    try {
+      ((fastjet::Selector const *)arg1)->sift((fastjet::PseudoJetContainer const &)*arg2,*arg3,*arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector_sift(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[5] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "Selector_sift", 0, 4, argv))) SWIG_fail;
+  --argc;
+  if (argc == 4) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t, SWIG_POINTER_NO_NULL);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          void *vptr = 0;
+          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t, SWIG_POINTER_NO_NULL);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_Selector_sift__SWIG_1(self, argc, argv);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t, SWIG_POINTER_NO_NULL);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          void *vptr = 0;
+          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_std__vectorT_fastjet__PseudoJet_std__allocatorT_fastjet__PseudoJet_t_t, SWIG_POINTER_NO_NULL);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_Selector_sift__SWIG_0(self, argc, argv);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'Selector_sift'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::Selector::sift(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &) const\n"
+    "    fastjet::Selector::sift(fastjet::PseudoJetContainer const &,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > &) const\n");
+  return 0;
 }
 
 
@@ -15652,8 +21096,25 @@ SWIGINTERN PyObject *_wrap_Selector_applies_jet_by_jet(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -15670,7 +21131,7 @@ SWIGINTERN PyObject *_wrap_Selector___call____SWIG_1(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   int res2 = SWIG_OLDOBJ ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
@@ -15697,15 +21158,98 @@ SWIGINTERN PyObject *_wrap_Selector___call____SWIG_1(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
 fail:
   if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Selector___call____SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  fastjet::PseudoJetContainer result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector___call__" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Selector___call__" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Selector___call__" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  {
+    try {
+      result = ((fastjet::Selector const *)arg1)->operator ()((fastjet::PseudoJetContainer const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -15737,6 +21281,19 @@ SWIGINTERN PyObject *_wrap_Selector___call__(PyObject *self, PyObject *args) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Selector___call____SWIG_2(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__Selector, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
       int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
       _v = SWIG_CheckState(res);
       if (_v) {
@@ -15749,7 +21306,8 @@ fail:
   SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'Selector___call__'.\n"
     "  Possible C/C++ prototypes are:\n"
     "    fastjet::Selector::operator ()(fastjet::PseudoJet const &) const\n"
-    "    fastjet::Selector::operator ()(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n");
+    "    fastjet::Selector::operator ()(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n"
+    "    fastjet::Selector::operator ()(fastjet::PseudoJetContainer const &) const\n");
   return 0;
 }
 
@@ -15790,8 +21348,25 @@ SWIGINTERN PyObject *_wrap_Selector_nullify_non_selected(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -15849,8 +21424,25 @@ SWIGINTERN PyObject *_wrap_Selector_get_rapidity_extent(PyObject *SWIGUNUSEDPARM
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -15883,8 +21475,25 @@ SWIGINTERN PyObject *_wrap_Selector_description(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -15917,8 +21526,25 @@ SWIGINTERN PyObject *_wrap_Selector_is_geometric(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -15951,8 +21577,25 @@ SWIGINTERN PyObject *_wrap_Selector_has_finite_area(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -15985,8 +21628,25 @@ SWIGINTERN PyObject *_wrap_Selector_worker(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__SelectorWorker_t, 0 |  0 );
@@ -16019,8 +21679,25 @@ SWIGINTERN PyObject *_wrap_Selector_validated_worker(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SelectorWorker, 0 |  0 );
@@ -16053,8 +21730,25 @@ SWIGINTERN PyObject *_wrap_Selector_takes_reference(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -16101,8 +21795,25 @@ SWIGINTERN PyObject *_wrap_Selector_set_reference(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__Selector, 0 |  0 );
@@ -16133,8 +21844,25 @@ SWIGINTERN PyObject *_wrap_Selector_area__SWIG_0(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -16173,8 +21901,25 @@ SWIGINTERN PyObject *_wrap_Selector_area__SWIG_1(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -16263,8 +22008,25 @@ SWIGINTERN PyObject *_wrap_Selector___iand__(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16311,8 +22073,25 @@ SWIGINTERN PyObject *_wrap_Selector___ior__(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16359,8 +22138,25 @@ SWIGINTERN PyObject *_wrap_Selector___mul__(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16409,8 +22205,25 @@ SWIGINTERN PyObject *_wrap_Selector___and__(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16459,8 +22272,25 @@ SWIGINTERN PyObject *_wrap_Selector___or__(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16495,8 +22325,25 @@ SWIGINTERN PyObject *_wrap_Selector___invert__(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16530,8 +22377,25 @@ SWIGINTERN PyObject *_wrap_SelectorIdentity(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16566,8 +22430,25 @@ SWIGINTERN PyObject *_wrap_SelectorPtMin(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16602,8 +22483,25 @@ SWIGINTERN PyObject *_wrap_SelectorPtMax(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16647,8 +22545,25 @@ SWIGINTERN PyObject *_wrap_SelectorPtRange(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16683,8 +22598,25 @@ SWIGINTERN PyObject *_wrap_SelectorEtMin(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16719,8 +22651,25 @@ SWIGINTERN PyObject *_wrap_SelectorEtMax(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16764,8 +22713,25 @@ SWIGINTERN PyObject *_wrap_SelectorEtRange(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16800,8 +22766,25 @@ SWIGINTERN PyObject *_wrap_SelectorEMin(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16836,8 +22819,25 @@ SWIGINTERN PyObject *_wrap_SelectorEMax(PyObject *SWIGUNUSEDPARM(self), PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16881,8 +22881,25 @@ SWIGINTERN PyObject *_wrap_SelectorERange(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16917,8 +22934,25 @@ SWIGINTERN PyObject *_wrap_SelectorMassMin(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16953,8 +22987,25 @@ SWIGINTERN PyObject *_wrap_SelectorMassMax(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -16998,8 +23049,25 @@ SWIGINTERN PyObject *_wrap_SelectorMassRange(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17034,8 +23102,25 @@ SWIGINTERN PyObject *_wrap_SelectorRapMin(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17070,8 +23155,25 @@ SWIGINTERN PyObject *_wrap_SelectorRapMax(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17115,8 +23217,25 @@ SWIGINTERN PyObject *_wrap_SelectorRapRange(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17151,8 +23270,25 @@ SWIGINTERN PyObject *_wrap_SelectorAbsRapMin(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17187,8 +23323,25 @@ SWIGINTERN PyObject *_wrap_SelectorAbsRapMax(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17232,8 +23385,25 @@ SWIGINTERN PyObject *_wrap_SelectorAbsRapRange(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17268,8 +23438,25 @@ SWIGINTERN PyObject *_wrap_SelectorEtaMin(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17304,8 +23491,25 @@ SWIGINTERN PyObject *_wrap_SelectorEtaMax(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17349,8 +23553,25 @@ SWIGINTERN PyObject *_wrap_SelectorEtaRange(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17385,8 +23606,25 @@ SWIGINTERN PyObject *_wrap_SelectorAbsEtaMin(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17421,8 +23659,25 @@ SWIGINTERN PyObject *_wrap_SelectorAbsEtaMax(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17466,8 +23721,25 @@ SWIGINTERN PyObject *_wrap_SelectorAbsEtaRange(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17511,8 +23783,25 @@ SWIGINTERN PyObject *_wrap_SelectorPhiRange(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17574,8 +23863,25 @@ SWIGINTERN PyObject *_wrap_SelectorRapPhiRange(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17610,8 +23916,25 @@ SWIGINTERN PyObject *_wrap_SelectorNHardest(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17646,8 +23969,25 @@ SWIGINTERN PyObject *_wrap_SelectorCircle(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17691,8 +24031,25 @@ SWIGINTERN PyObject *_wrap_SelectorDoughnut(PyObject *SWIGUNUSEDPARM(self), PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17727,8 +24084,25 @@ SWIGINTERN PyObject *_wrap_SelectorStrip(PyObject *SWIGUNUSEDPARM(self), PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17772,8 +24146,25 @@ SWIGINTERN PyObject *_wrap_SelectorRectangle(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17808,8 +24199,25 @@ SWIGINTERN PyObject *_wrap_SelectorPtFractionMin(PyObject *SWIGUNUSEDPARM(self),
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17832,8 +24240,25 @@ SWIGINTERN PyObject *_wrap_SelectorIsZero(PyObject *SWIGUNUSEDPARM(self), PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17856,8 +24281,25 @@ SWIGINTERN PyObject *_wrap_SelectorIsPureGhost(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::Selector(static_cast< const fastjet::Selector& >(result))), SWIGTYPE_p_fastjet__Selector, SWIG_POINTER_OWN |  0 );
@@ -17880,8 +24322,25 @@ SWIGINTERN PyObject *_wrap_fastjet_version_string(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -17968,8 +24427,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_0(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18020,8 +24496,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_1(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18088,8 +24581,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_2(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18146,8 +24656,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_3(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18196,8 +24723,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_4(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18262,8 +24806,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_5(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18286,8 +24847,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_6(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18318,8 +24896,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_7(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18382,8 +24977,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_8(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18450,8 +25062,25 @@ SWIGINTERN PyObject *_wrap_new_JetDefinition__SWIG_9(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NEW |  0 );
@@ -18772,7 +25401,7 @@ SWIGINTERN PyObject *_wrap_JetDefinition___call____SWIG_0(PyObject *SWIGUNUSEDPA
   void *argp1 = 0 ;
   int res1 = 0 ;
   int res2 = SWIG_OLDOBJ ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__JetDefinition, 0 |  0 );
@@ -18799,16 +25428,143 @@ SWIGINTERN PyObject *_wrap_JetDefinition___call____SWIG_0(PyObject *SWIGUNUSEDPA
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
 fail:
   if (SWIG_IsNewObj(res2)) delete arg2;
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_JetDefinition___call____SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::JetDefinition *arg1 = (fastjet::JetDefinition *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  fastjet::PseudoJetContainer result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__JetDefinition, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "JetDefinition___call__" "', argument " "1"" of type '" "fastjet::JetDefinition const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::JetDefinition * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "JetDefinition___call__" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "JetDefinition___call__" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  {
+    try {
+      result = ((fastjet::JetDefinition const *)arg1)->operator ()((fastjet::PseudoJetContainer const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_JetDefinition___call__(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "JetDefinition___call__", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__JetDefinition, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_JetDefinition___call____SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__JetDefinition, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_JetDefinition___call____SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'JetDefinition___call__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::JetDefinition::operator ()(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n"
+    "    fastjet::JetDefinition::operator ()(fastjet::PseudoJetContainer const &) const\n");
+  return 0;
 }
 
 
@@ -18859,8 +25615,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_set_recombination_scheme(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -18898,8 +25671,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_set_recombiner__SWIG_0(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -18940,8 +25730,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_set_recombiner__SWIG_1(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -19018,8 +25825,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_delete_recombiner_when_unused(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -19052,8 +25876,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_plugin(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition__Plugin, 0 |  0 );
@@ -19085,8 +25926,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_delete_plugin_when_unused(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -19119,8 +25977,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_jet_algorithm(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -19153,8 +26028,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_jet_finder(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -19187,8 +26079,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_R(PyObject *SWIGUNUSEDPARM(self), PyObj
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -19221,8 +26130,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_extra_param(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -19255,8 +26181,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_strategy(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -19289,8 +26232,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_recombination_scheme(PyObject *SWIGUNUS
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -19333,8 +26293,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_set_jet_algorithm(PyObject *SWIGUNUSEDP
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -19377,8 +26354,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_set_jet_finder(PyObject *SWIGUNUSEDPARM
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -19421,8 +26415,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_set_extra_param(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -19455,8 +26466,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_recombiner(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition__Recombiner, 0 |  0 );
@@ -19503,8 +26531,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_has_same_recombiner(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -19537,8 +26582,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_is_spherical(PyObject *SWIGUNUSEDPARM(s
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -19571,8 +26633,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_description(PyObject *SWIGUNUSEDPARM(se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -19605,8 +26684,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_description_no_recombiner(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -19641,8 +26737,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition_algorithm_description(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -19677,105 +26790,31 @@ SWIGINTERN PyObject *_wrap_JetDefinition_n_parameters_for_algorithm(PyObject *SW
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return resultobj;
 fail:
   return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_JetDefinition___call____SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  fastjet::JetDefinition *arg1 = (fastjet::JetDefinition *) 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
-  
-  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__JetDefinition, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "JetDefinition___call__" "', argument " "1"" of type '" "fastjet::JetDefinition *""'"); 
-  }
-  arg1 = reinterpret_cast< fastjet::JetDefinition * >(argp1);
-  {
-    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res2 = swig::asptr(swig_obj[1], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "JetDefinition___call__" "', argument " "2"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "JetDefinition___call__" "', argument " "2"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    arg2 = ptr;
-  }
-  {
-    try {
-      result = fastjet_JetDefinition___call____SWIG_1(arg1,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg2); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
-    }
-  }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return resultobj;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_JetDefinition___call__(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[3] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "JetDefinition___call__", 0, 2, argv))) SWIG_fail;
-  --argc;
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__JetDefinition, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_JetDefinition___call____SWIG_1(self, argc, argv);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__JetDefinition, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_JetDefinition___call____SWIG_0(self, argc, argv);
-      }
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'JetDefinition___call__'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::JetDefinition::operator ()(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n"
-    "    fastjet::JetDefinition::__call__(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n");
-  return 0;
 }
 
 
@@ -19801,8 +26840,25 @@ SWIGINTERN PyObject *_wrap_delete_JetDefinition(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -19823,7 +26879,7 @@ SWIGINTERN PyObject *JetDefinition_swiginit(PyObject *SWIGUNUSEDPARM(self), PyOb
   return SWIG_Python_InitShadowInstance(args);
 }
 
-SWIGINTERN PyObject *_wrap_join__SWIG_5(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_6(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg1 = 0 ;
   fastjet::JetDefinition::Recombiner *arg2 = 0 ;
@@ -19860,8 +26916,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_5(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -19873,7 +26946,70 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_join__SWIG_6(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_7(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  fastjet::JetDefinition::Recombiner *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  fastjet::PseudoJet result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "join" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "join" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__JetDefinition__Recombiner,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "join" "', argument " "2"" of type '" "fastjet::JetDefinition::Recombiner const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "join" "', argument " "2"" of type '" "fastjet::JetDefinition::Recombiner const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::JetDefinition::Recombiner * >(argp2);
+  {
+    try {
+      result = fastjet::join((fastjet::PseudoJetContainer const &)*arg1,(fastjet::JetDefinition::Recombiner const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_join__SWIG_8(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   fastjet::JetDefinition::Recombiner *arg2 = 0 ;
@@ -19908,8 +27044,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_6(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -19919,7 +27072,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_join__SWIG_7(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_9(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   fastjet::PseudoJet *arg2 = 0 ;
@@ -19965,8 +27118,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_7(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -19976,7 +27146,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_join__SWIG_8(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_10(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   fastjet::PseudoJet *arg2 = 0 ;
@@ -20033,8 +27203,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_8(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -20044,7 +27231,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_join__SWIG_9(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_join__SWIG_11(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = 0 ;
   fastjet::PseudoJet *arg2 = 0 ;
@@ -20112,8 +27299,25 @@ SWIGINTERN PyObject *_wrap_join__SWIG_9(PyObject *SWIGUNUSEDPARM(self), Py_ssize
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -20133,10 +27337,18 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
   --argc;
   if (argc == 1) {
     int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NO_NULL | 0);
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
     _v = SWIG_CheckState(res);
     if (_v) {
       return _wrap_join__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_join__SWIG_2(self, argc, argv);
     }
   }
   if (argc == 1) {
@@ -20155,7 +27367,19 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
       int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NO_NULL | 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_join__SWIG_2(self, argc, argv);
+        return _wrap_join__SWIG_3(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__JetDefinition__Recombiner, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_join__SWIG_7(self, argc, argv);
       }
     }
   }
@@ -20167,7 +27391,7 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
       int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__JetDefinition__Recombiner, SWIG_POINTER_NO_NULL | 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_join__SWIG_6(self, argc, argv);
+        return _wrap_join__SWIG_8(self, argc, argv);
       }
     }
   }
@@ -20179,7 +27403,7 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
       int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__JetDefinition__Recombiner, SWIG_POINTER_NO_NULL | 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_join__SWIG_5(self, argc, argv);
+        return _wrap_join__SWIG_6(self, argc, argv);
       }
     }
   }
@@ -20194,7 +27418,7 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
         int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NO_NULL | 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_join__SWIG_3(self, argc, argv);
+          return _wrap_join__SWIG_4(self, argc, argv);
         }
       }
     }
@@ -20210,7 +27434,7 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
         int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_fastjet__JetDefinition__Recombiner, SWIG_POINTER_NO_NULL | 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_join__SWIG_7(self, argc, argv);
+          return _wrap_join__SWIG_9(self, argc, argv);
         }
       }
     }
@@ -20229,7 +27453,7 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
           int res = SWIG_ConvertPtr(argv[3], 0, SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_NO_NULL | 0);
           _v = SWIG_CheckState(res);
           if (_v) {
-            return _wrap_join__SWIG_4(self, argc, argv);
+            return _wrap_join__SWIG_5(self, argc, argv);
           }
         }
       }
@@ -20249,7 +27473,7 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
           int res = SWIG_ConvertPtr(argv[3], 0, SWIGTYPE_p_fastjet__JetDefinition__Recombiner, SWIG_POINTER_NO_NULL | 0);
           _v = SWIG_CheckState(res);
           if (_v) {
-            return _wrap_join__SWIG_8(self, argc, argv);
+            return _wrap_join__SWIG_10(self, argc, argv);
           }
         }
       }
@@ -20272,7 +27496,7 @@ SWIGINTERN PyObject *_wrap_join(PyObject *self, PyObject *args) {
             int res = SWIG_ConvertPtr(argv[4], 0, SWIGTYPE_p_fastjet__JetDefinition__Recombiner, SWIG_POINTER_NO_NULL | 0);
             _v = SWIG_CheckState(res);
             if (_v) {
-              return _wrap_join__SWIG_9(self, argc, argv);
+              return _wrap_join__SWIG_11(self, argc, argv);
             }
           }
         }
@@ -20284,11 +27508,13 @@ fail:
   SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'join'.\n"
     "  Possible C/C++ prototypes are:\n"
     "    fastjet::join(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::join(fastjet::PseudoJetContainer const &)\n"
     "    fastjet::join(fastjet::PseudoJet const &)\n"
     "    fastjet::join(fastjet::PseudoJet const &,fastjet::PseudoJet const &)\n"
     "    fastjet::join(fastjet::PseudoJet const &,fastjet::PseudoJet const &,fastjet::PseudoJet const &)\n"
     "    fastjet::join(fastjet::PseudoJet const &,fastjet::PseudoJet const &,fastjet::PseudoJet const &,fastjet::PseudoJet const &)\n"
     "    fastjet::join(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,fastjet::JetDefinition::Recombiner const &)\n"
+    "    fastjet::join(fastjet::PseudoJetContainer const &,fastjet::JetDefinition::Recombiner const &)\n"
     "    fastjet::join(fastjet::PseudoJet const &,fastjet::JetDefinition::Recombiner const &)\n"
     "    fastjet::join(fastjet::PseudoJet const &,fastjet::PseudoJet const &,fastjet::JetDefinition::Recombiner const &)\n"
     "    fastjet::join(fastjet::PseudoJet const &,fastjet::PseudoJet const &,fastjet::PseudoJet const &,fastjet::JetDefinition::Recombiner const &)\n"
@@ -20310,8 +27536,25 @@ SWIGINTERN PyObject *_wrap_new_CompositeJetStructure__SWIG_0(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__CompositeJetStructure, SWIG_POINTER_NEW |  0 );
@@ -20357,8 +27600,25 @@ SWIGINTERN PyObject *_wrap_new_CompositeJetStructure__SWIG_1(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__CompositeJetStructure, SWIG_POINTER_NEW |  0 );
@@ -20429,8 +27689,25 @@ SWIGINTERN PyObject *_wrap_delete_CompositeJetStructure(PyObject *SWIGUNUSEDPARM
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -20463,8 +27740,25 @@ SWIGINTERN PyObject *_wrap_CompositeJetStructure_description(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -20497,8 +27791,25 @@ SWIGINTERN PyObject *_wrap_CompositeJetStructure_has_constituents(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -20521,7 +27832,7 @@ SWIGINTERN PyObject *_wrap_CompositeJetStructure_constituents(PyObject *SWIGUNUS
   char * kwnames[] = {
     (char *)"self",  (char *)"jet",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:CompositeJetStructure_constituents", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__CompositeJetStructure, 0 |  0 );
@@ -20545,11 +27856,31 @@ SWIGINTERN PyObject *_wrap_CompositeJetStructure_constituents(PyObject *SWIGUNUS
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -20593,8 +27924,25 @@ SWIGINTERN PyObject *_wrap_CompositeJetStructure_has_pieces(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -20617,7 +27965,7 @@ SWIGINTERN PyObject *_wrap_CompositeJetStructure_pieces(PyObject *SWIGUNUSEDPARM
   char * kwnames[] = {
     (char *)"self",  (char *)"jet",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:CompositeJetStructure_pieces", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__CompositeJetStructure, 0 |  0 );
@@ -20641,11 +27989,31 @@ SWIGINTERN PyObject *_wrap_CompositeJetStructure_pieces(PyObject *SWIGUNUSEDPARM
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -20676,8 +28044,25 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequenceStructure__SWIG_0(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceStructure, SWIG_POINTER_NEW |  0 );
@@ -20708,8 +28093,25 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequenceStructure__SWIG_1(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceStructure, SWIG_POINTER_NEW |  0 );
@@ -20771,8 +28173,25 @@ SWIGINTERN PyObject *_wrap_delete_ClusterSequenceStructure(PyObject *SWIGUNUSEDP
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -20805,8 +28224,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_description(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -20839,8 +28275,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_associated_cluster_seque
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -20873,8 +28326,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_associated_cluster_sequence(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -20907,8 +28377,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_valid_cluster_sequence(P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -20941,8 +28428,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_validated_cs(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -20985,8 +28489,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_set_associated_cs(PyObject *
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -21045,8 +28566,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_partner(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21105,8 +28643,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_child(PyObject *SWIGUNUS
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21177,8 +28732,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_parents(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21237,8 +28809,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_object_in_jet(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21271,8 +28860,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_constituents(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21295,7 +28901,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_constituents(PyObject *SWIGU
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:ClusterSequenceStructure_constituents", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
@@ -21319,11 +28925,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_constituents(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -21353,8 +28979,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_exclusive_subjets(PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21382,7 +29025,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_exclusive_subjets(PyObject *
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  (char *)"dcut",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:ClusterSequenceStructure_exclusive_subjets", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
@@ -21412,11 +29055,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_exclusive_subjets(PyObject *
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -21471,8 +29134,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_n_exclusive_subjets(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -21499,7 +29179,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_exclusive_subjets_up_to(PyOb
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  (char *)"nsub",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:ClusterSequenceStructure_exclusive_subjets_up_to", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
@@ -21528,11 +29208,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_exclusive_subjets_up_to(PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -21585,8 +29285,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_exclusive_subdmerge(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -21642,8 +29359,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_exclusive_subdmerge_max(PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -21690,8 +29424,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_pieces(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21714,7 +29465,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_pieces(PyObject *SWIGUNUSEDP
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:ClusterSequenceStructure_pieces", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequenceStructure, 0 |  0 );
@@ -21738,11 +29489,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_pieces(PyObject *SWIGUNUSEDP
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -21772,8 +29543,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_has_area(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21806,8 +29594,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_area(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -21840,8 +29645,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_area_error(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -21874,8 +29696,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_area_4vector(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -21908,8 +29747,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequenceStructure_is_pure_ghost(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -21930,7 +29786,7 @@ SWIGINTERN PyObject *ClusterSequenceStructure_swiginit(PyObject *SWIGUNUSEDPARM(
   return SWIG_Python_InitShadowInstance(args);
 }
 
-SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_new_ClusterSequence__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg1 = 0 ;
   fastjet::JetDefinition *arg2 = 0 ;
@@ -21942,18 +29798,12 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *SWIGUNUSEDPARM(self), P
   bool temp3 ;
   bool val3 ;
   int ecode3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  char * kwnames[] = {
-    (char *)"pseudojets",  (char *)"jet_def",  (char *)"writeout_combinations",  NULL 
-  };
   fastjet::ClusterSequence *result = 0 ;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO|O:new_ClusterSequence", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  if ((nobjs < 2) || (nobjs > 3)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res1 = swig::asptr(obj0, &ptr);
+    res1 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res1)) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ClusterSequence" "', argument " "1"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -21962,7 +29812,7 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *SWIGUNUSEDPARM(self), P
     }
     arg1 = ptr;
   }
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_fastjet__JetDefinition,  0  | 0);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__JetDefinition,  0  | 0);
   if (!SWIG_IsOK(res2)) {
     SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_ClusterSequence" "', argument " "2"" of type '" "fastjet::JetDefinition const &""'"); 
   }
@@ -21970,8 +29820,8 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ClusterSequence" "', argument " "2"" of type '" "fastjet::JetDefinition const &""'"); 
   }
   arg2 = reinterpret_cast< fastjet::JetDefinition * >(argp2);
-  if (obj2) {
-    ecode3 = SWIG_AsVal_bool(obj2, &val3);
+  if (swig_obj[2]) {
+    ecode3 = SWIG_AsVal_bool(swig_obj[2], &val3);
     if (!SWIG_IsOK(ecode3)) {
       SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_ClusterSequence" "', argument " "3"" of type '" "bool""'");
     } 
@@ -21986,8 +29836,25 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, SWIG_POINTER_NEW |  0 );
@@ -21996,6 +29863,142 @@ SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *SWIGUNUSEDPARM(self), P
 fail:
   if (SWIG_IsNewObj(res1)) delete arg1;
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_ClusterSequence__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  fastjet::JetDefinition *arg2 = 0 ;
+  bool arg3_defvalue = false ;
+  bool *arg3 = (bool *) &arg3_defvalue ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  bool temp3 ;
+  bool val3 ;
+  int ecode3 = 0 ;
+  fastjet::ClusterSequence *result = 0 ;
+  
+  if ((nobjs < 2) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ClusterSequence" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ClusterSequence" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__JetDefinition,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_ClusterSequence" "', argument " "2"" of type '" "fastjet::JetDefinition const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ClusterSequence" "', argument " "2"" of type '" "fastjet::JetDefinition const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::JetDefinition * >(argp2);
+  if (swig_obj[2]) {
+    ecode3 = SWIG_AsVal_bool(swig_obj[2], &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_ClusterSequence" "', argument " "3"" of type '" "bool""'");
+    } 
+    temp3 = static_cast< bool >(val3);
+    arg3 = &temp3;
+  }
+  {
+    try {
+      result = (fastjet::ClusterSequence *)new fastjet::ClusterSequence((fastjet::PseudoJetContainer const &)*arg1,(fastjet::JetDefinition const &)*arg2,(bool const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_ClusterSequence(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "new_ClusterSequence", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if ((argc >= 2) && (argc <= 3)) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        if (argc <= 2) {
+          return _wrap_new_ClusterSequence__SWIG_1(self, argc, argv);
+        }
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_new_ClusterSequence__SWIG_1(self, argc, argv);
+        }
+      }
+    }
+  }
+  if ((argc >= 2) && (argc <= 3)) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        if (argc <= 2) {
+          return _wrap_new_ClusterSequence__SWIG_0(self, argc, argv);
+        }
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_new_ClusterSequence__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'new_ClusterSequence'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::ClusterSequence::ClusterSequence(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,fastjet::JetDefinition const &,bool const &)\n"
+    "    fastjet::ClusterSequence::ClusterSequence(fastjet::PseudoJetContainer const &,fastjet::JetDefinition const &,bool const &)\n");
+  return 0;
 }
 
 
@@ -22021,8 +30024,25 @@ SWIGINTERN PyObject *_wrap_delete_ClusterSequence(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -22045,7 +30065,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_inclusive_jets(PyObject *SWIGUNUSEDPA
   char * kwnames[] = {
     (char *)"self",  (char *)"ptmin",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:ClusterSequence_inclusive_jets", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22068,11 +30088,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_inclusive_jets(PyObject *SWIGUNUSEDPA
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22113,8 +30153,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_n_exclusive_jets(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -22132,7 +30189,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets__SWIG_0(PyObject *SWIG
   int res1 = 0 ;
   double val2 ;
   int ecode2 = 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22153,11 +30210,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets__SWIG_0(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22172,7 +30249,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets__SWIG_1(PyObject *SWIG
   int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22193,11 +30270,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets__SWIG_1(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22265,7 +30362,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets_up_to(PyObject *SWIGUN
   char * kwnames[] = {
     (char *)"self",  (char *)"njets",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:ClusterSequence_exclusive_jets_up_to", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22286,11 +30383,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets_up_to(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22331,8 +30448,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_dmerge(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -22376,8 +30510,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_dmerge_max(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -22421,8 +30572,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_ymerge(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -22466,8 +30634,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_ymerge_max(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -22511,8 +30696,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_n_exclusive_jets_ycut(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -22535,7 +30737,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets_ycut(PyObject *SWIGUNU
   char * kwnames[] = {
     (char *)"self",  (char *)"ycut",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:ClusterSequence_exclusive_jets_ycut", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22556,11 +30758,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_jets_ycut(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22578,7 +30800,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subjets__SWIG_0(PyObject *S
   int res2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22607,11 +30829,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subjets__SWIG_0(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22664,8 +30906,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_n_exclusive_subjets(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -22686,7 +30945,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subjets__SWIG_1(PyObject *S
   int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22715,11 +30974,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subjets__SWIG_1(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22799,7 +31078,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subjets_up_to(PyObject *SWI
   char * kwnames[] = {
     (char *)"self",  (char *)"jet",  (char *)"nsub",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:ClusterSequence_exclusive_subjets_up_to", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -22828,11 +31107,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subjets_up_to(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -22885,8 +31184,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subdmerge(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -22942,8 +31258,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_exclusive_subdmerge_max(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -22976,8 +31309,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_Q(PyObject *SWIGUNUSEDPARM(self), PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -23010,8 +31360,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_Q2(PyObject *SWIGUNUSEDPARM(self), Py
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -23070,8 +31437,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_object_in_jet(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -23142,8 +31526,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_has_parents(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -23196,8 +31597,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_has_child__SWIG_0(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -23250,8 +31668,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_has_child__SWIG_1(PyObject *SWIGUNUSE
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -23364,8 +31799,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_has_partner(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -23388,7 +31840,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_constituents(PyObject *SWIGUNUSEDPARM
   char * kwnames[] = {
     (char *)"self",  (char *)"jet",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:ClusterSequence_constituents", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -23412,11 +31864,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_constituents(PyObject *SWIGUNUSEDPARM
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -23470,8 +31942,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root__SWIG_0(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -23484,6 +31973,79 @@ fail:
 
 
 SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequence *arg1 = (fastjet::ClusterSequence *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  std::ostream &arg3_defvalue = std::cout ;
+  std::ostream *arg3 = (std::ostream *) &arg3_defvalue ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  
+  if ((nobjs < 2) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequence_print_jets_for_root" "', argument " "1"" of type '" "fastjet::ClusterSequence const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequence * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ClusterSequence_print_jets_for_root" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ClusterSequence_print_jets_for_root" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  if (swig_obj[2]) {
+    res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__ostream,  0 );
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ClusterSequence_print_jets_for_root" "', argument " "3"" of type '" "std::ostream &""'"); 
+    }
+    if (!argp3) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ClusterSequence_print_jets_for_root" "', argument " "3"" of type '" "std::ostream &""'"); 
+    }
+    arg3 = reinterpret_cast< std::ostream * >(argp3);
+  }
+  {
+    try {
+      ((fastjet::ClusterSequence const *)arg1)->print_jets_for_root((fastjet::PseudoJetContainer const &)*arg2,*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root__SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::ClusterSequence *arg1 = (fastjet::ClusterSequence *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg2 = 0 ;
@@ -23545,8 +32107,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root__SWIG_1(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -23562,6 +32141,98 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root__SWIG_3(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequence *arg1 = (fastjet::ClusterSequence *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  std::string const &arg4_defvalue = "" ;
+  std::string *arg4 = (std::string *) &arg4_defvalue ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  int res4 = SWIG_OLDOBJ ;
+  
+  if ((nobjs < 3) || (nobjs > 4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequence_print_jets_for_root" "', argument " "1"" of type '" "fastjet::ClusterSequence const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequence * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ClusterSequence_print_jets_for_root" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ClusterSequence_print_jets_for_root" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  {
+    std::string *ptr = (std::string *)0;
+    res3 = SWIG_AsPtr_std_string(swig_obj[2], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ClusterSequence_print_jets_for_root" "', argument " "3"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ClusterSequence_print_jets_for_root" "', argument " "3"" of type '" "std::string const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  if (swig_obj[3]) {
+    {
+      std::string *ptr = (std::string *)0;
+      res4 = SWIG_AsPtr_std_string(swig_obj[3], &ptr);
+      if (!SWIG_IsOK(res4)) {
+        SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "ClusterSequence_print_jets_for_root" "', argument " "4"" of type '" "std::string const &""'"); 
+      }
+      if (!ptr) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ClusterSequence_print_jets_for_root" "', argument " "4"" of type '" "std::string const &""'"); 
+      }
+      arg4 = ptr;
+    }
+  }
+  {
+    try {
+      ((fastjet::ClusterSequence const *)arg1)->print_jets_for_root((fastjet::PseudoJetContainer const &)*arg2,(std::string const &)*arg3,(std::string const &)*arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root(PyObject *self, PyObject *args) {
   Py_ssize_t argc;
   PyObject *argv[5] = {
@@ -23570,6 +32241,27 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root(PyObject *self, P
   
   if (!(argc = SWIG_Python_UnpackTuple(args, "ClusterSequence_print_jets_for_root", 0, 4, argv))) SWIG_fail;
   --argc;
+  if ((argc >= 2) && (argc <= 3)) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__ClusterSequence, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        if (argc <= 2) {
+          return _wrap_ClusterSequence_print_jets_for_root__SWIG_1(self, argc, argv);
+        }
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_std__ostream, SWIG_POINTER_NO_NULL);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_ClusterSequence_print_jets_for_root__SWIG_1(self, argc, argv);
+        }
+      }
+    }
+  }
   if ((argc >= 2) && (argc <= 3)) {
     int _v;
     void *vptr = 0;
@@ -23597,6 +32289,30 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root(PyObject *self, P
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__ClusterSequence, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        int res = SWIG_AsPtr_std_string(argv[2], (std::string**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          if (argc <= 3) {
+            return _wrap_ClusterSequence_print_jets_for_root__SWIG_3(self, argc, argv);
+          }
+          int res = SWIG_AsPtr_std_string(argv[3], (std::string**)(0));
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_ClusterSequence_print_jets_for_root__SWIG_3(self, argc, argv);
+          }
+        }
+      }
+    }
+  }
+  if ((argc >= 3) && (argc <= 4)) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__ClusterSequence, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
       int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
       _v = SWIG_CheckState(res);
       if (_v) {
@@ -23604,12 +32320,12 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_print_jets_for_root(PyObject *self, P
         _v = SWIG_CheckState(res);
         if (_v) {
           if (argc <= 3) {
-            return _wrap_ClusterSequence_print_jets_for_root__SWIG_1(self, argc, argv);
+            return _wrap_ClusterSequence_print_jets_for_root__SWIG_2(self, argc, argv);
           }
           int res = SWIG_AsPtr_std_string(argv[3], (std::string**)(0));
           _v = SWIG_CheckState(res);
           if (_v) {
-            return _wrap_ClusterSequence_print_jets_for_root__SWIG_1(self, argc, argv);
+            return _wrap_ClusterSequence_print_jets_for_root__SWIG_2(self, argc, argv);
           }
         }
       }
@@ -23620,7 +32336,9 @@ fail:
   SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'ClusterSequence_print_jets_for_root'.\n"
     "  Possible C/C++ prototypes are:\n"
     "    fastjet::ClusterSequence::print_jets_for_root(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,std::ostream &) const\n"
-    "    fastjet::ClusterSequence::print_jets_for_root(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,std::string const &,std::string const &) const\n");
+    "    fastjet::ClusterSequence::print_jets_for_root(fastjet::PseudoJetContainer const &,std::ostream &) const\n"
+    "    fastjet::ClusterSequence::print_jets_for_root(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,std::string const &,std::string const &) const\n"
+    "    fastjet::ClusterSequence::print_jets_for_root(fastjet::PseudoJetContainer const &,std::string const &,std::string const &) const\n");
   return 0;
 }
 
@@ -23673,8 +32391,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_add_constituents(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -23707,8 +32442,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_strategy_used(PyObject *SWIGUNUSEDPAR
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -23739,8 +32491,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_strategy_string__SWIG_0(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -23779,8 +32548,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_strategy_string__SWIG_1(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -23855,8 +32641,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_jet_def(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__JetDefinition, 0 |  0 );
@@ -23888,8 +32691,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_delete_self_when_unused(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -23922,8 +32742,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_will_delete_self_when_unused(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -23955,8 +32792,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_signal_imminent_self_deletion(PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -24003,8 +32857,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_jet_scale_for_algorithm(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -24069,8 +32940,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_plugin_record_ij_recombination__SWIG_
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -24146,8 +33034,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_plugin_record_ij_recombination__SWIG_
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -24285,8 +33190,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_plugin_record_iB_recombination(PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -24329,8 +33251,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_plugin_associate_extras(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -24363,8 +33302,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_plugin_activated(PyObject *SWIGUNUSED
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -24397,8 +33353,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_extras(PyObject *SWIGUNUSEDPARM(self)
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence__Extras, 0 |  0 );
@@ -24431,8 +33404,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_jets(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(*result));
@@ -24465,8 +33455,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_history(PyObject *SWIGUNUSEDPARM(self
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_fastjet__ClusterSequence__history_element_std__allocatorT_fastjet__ClusterSequence__history_element_t_t, 0 |  0 );
@@ -24499,8 +33506,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_n_particles(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
@@ -24510,29 +33534,24 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_ClusterSequence_particle_jet_indices(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_ClusterSequence_particle_jet_indices__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   fastjet::ClusterSequence *arg1 = (fastjet::ClusterSequence *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int res2 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  char * kwnames[] = {
-    (char *)"self",  (char *)"arg2",  NULL 
-  };
   SwigValueWrapper< std::vector< int,std::allocator< int > > > result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:ClusterSequence_particle_jet_indices", kwnames, &obj0, &obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequence_particle_jet_indices" "', argument " "1"" of type '" "fastjet::ClusterSequence const *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::ClusterSequence * >(argp1);
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res2 = swig::asptr(obj1, &ptr);
+    res2 = swig::asptr(swig_obj[1], &ptr);
     if (!SWIG_IsOK(res2)) {
       SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ClusterSequence_particle_jet_indices" "', argument " "2"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -24549,8 +33568,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_particle_jet_indices(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
@@ -24559,6 +33595,110 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_particle_jet_indices(PyObject *SWIGUN
 fail:
   if (SWIG_IsNewObj(res2)) delete arg2;
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequence_particle_jet_indices__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::ClusterSequence *arg1 = (fastjet::ClusterSequence *) 0 ;
+  fastjet::PseudoJetContainer *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  SwigValueWrapper< std::vector< int,std::allocator< int > > > result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClusterSequence_particle_jet_indices" "', argument " "1"" of type '" "fastjet::ClusterSequence const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::ClusterSequence * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ClusterSequence_particle_jet_indices" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ClusterSequence_particle_jet_indices" "', argument " "2"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg2 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp2);
+  {
+    try {
+      result = ((fastjet::ClusterSequence const *)arg1)->particle_jet_indices((fastjet::PseudoJetContainer const &)*arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ClusterSequence_particle_jet_indices(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "ClusterSequence_particle_jet_indices", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__ClusterSequence, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_ClusterSequence_particle_jet_indices__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_fastjet__ClusterSequence, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_ClusterSequence_particle_jet_indices__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'ClusterSequence_particle_jet_indices'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::ClusterSequence::particle_jet_indices(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &) const\n"
+    "    fastjet::ClusterSequence::particle_jet_indices(fastjet::PseudoJetContainer const &) const\n");
+  return 0;
 }
 
 
@@ -24585,8 +33725,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_unique_history_order(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new std::vector< int,std::allocator< int > >(static_cast< const std::vector< int,std::allocator< int > >& >(result))), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, SWIG_POINTER_OWN |  0 );
@@ -24602,7 +33759,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_unclustered_particles(PyObject *SWIGU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[1] ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
@@ -24619,11 +33776,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_unclustered_particles(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -24636,7 +33813,7 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_childless_pseudojets(PyObject *SWIGUN
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[1] ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
@@ -24653,11 +33830,31 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_childless_pseudojets(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -24701,8 +33898,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_contains(PyObject *SWIGUNUSEDPARM(sel
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -24759,8 +33973,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_transfer_from_sequence(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -24793,8 +34024,25 @@ SWIGINTERN PyObject *_wrap_ClusterSequence_structure_shared_ptr(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
@@ -24862,8 +34110,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition0Param(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::JetDefinition(static_cast< const fastjet::JetDefinition& >(result))), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_OWN |  0 );
@@ -24929,8 +34194,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition1Param(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::JetDefinition(static_cast< const fastjet::JetDefinition& >(result))), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_OWN |  0 );
@@ -25005,8 +34287,25 @@ SWIGINTERN PyObject *_wrap_JetDefinition2Param(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::JetDefinition(static_cast< const fastjet::JetDefinition& >(result))), SWIGTYPE_p_fastjet__JetDefinition, SWIG_POINTER_OWN |  0 );
@@ -25063,8 +34362,25 @@ SWIGINTERN PyObject *_wrap_set_pseudojet_format(PyObject *SWIGUNUSEDPARM(self), 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -25085,7 +34401,7 @@ SWIGINTERN PyObject *_wrap_ptyphim_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(
   char * kwnames[] = {
     (char *)"particles",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:ptyphim_array_to_pseudojets", kwnames, &obj0)) SWIG_fail;
   {
@@ -25108,11 +34424,31 @@ SWIGINTERN PyObject *_wrap_ptyphim_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   {
     if (is_new_object1 && array1)
     {
@@ -25142,7 +34478,7 @@ SWIGINTERN PyObject *_wrap_epxpypz_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(
   char * kwnames[] = {
     (char *)"particles",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:epxpypz_array_to_pseudojets", kwnames, &obj0)) SWIG_fail;
   {
@@ -25165,11 +34501,31 @@ SWIGINTERN PyObject *_wrap_epxpypz_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   {
     if (is_new_object1 && array1)
     {
@@ -25203,7 +34559,7 @@ SWIGINTERN PyObject *_wrap_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(self), P
   char * kwnames[] = {
     (char *)"particles",  (char *)"pjrep",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:array_to_pseudojets", kwnames, &obj0, &obj1)) SWIG_fail;
   {
@@ -25233,85 +34589,45 @@ SWIGINTERN PyObject *_wrap_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(self), P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
-  {
-    if (is_new_object1 && array1)
-    {
-      Py_DECREF(array1); 
-    }
-  }
-  return resultobj;
-fail:
-  {
-    if (is_new_object1 && array1)
-    {
-      Py_DECREF(array1); 
-    }
-  }
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_user_indices(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
-  PyObject *resultobj = 0;
-  std::ptrdiff_t **arg1 = (std::ptrdiff_t **) 0 ;
-  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg3 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int res3 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  char * kwnames[] = {
-    (char *)"inds",  (char *)"mult",  (char *)"pjs",  NULL 
-  };
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:user_indices", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_p_std__ptrdiff_t, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "user_indices" "', argument " "1"" of type '" "std::ptrdiff_t **""'"); 
-  }
-  arg1 = reinterpret_cast< std::ptrdiff_t ** >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__ptrdiff_t, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "user_indices" "', argument " "2"" of type '" "std::ptrdiff_t *""'"); 
-  }
-  arg2 = reinterpret_cast< std::ptrdiff_t * >(argp2);
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   {
-    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res3 = swig::asptr(obj2, &ptr);
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "user_indices" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "user_indices" "', argument " "3"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    arg3 = ptr;
-  }
-  {
-    try {
-      fastjet::user_indices(arg1,arg2,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg3); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    if (is_new_object1 && array1)
+    {
+      Py_DECREF(array1); 
     }
   }
-  resultobj = SWIG_Py_Void();
-  if (SWIG_IsNewObj(res3)) delete arg3;
   return resultobj;
 fail:
-  if (SWIG_IsNewObj(res3)) delete arg3;
+  {
+    if (is_new_object1 && array1)
+    {
+      Py_DECREF(array1); 
+    }
+  }
   return NULL;
 }
 
@@ -25329,8 +34645,25 @@ SWIGINTERN PyObject *_wrap_new_sharedPtrPseudoJetStructureBase__SWIG_0(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, SWIG_POINTER_NEW |  0 );
@@ -25364,8 +34697,25 @@ SWIGINTERN PyObject *_wrap_new_sharedPtrPseudoJetStructureBase__SWIG_1(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, SWIG_POINTER_NEW |  0 );
@@ -25426,8 +34776,25 @@ SWIGINTERN PyObject *_wrap_delete_sharedPtrPseudoJetStructureBase(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -25459,8 +34826,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_reset(PyObject *SWIGU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -25492,8 +34876,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___call__(PyObject *SW
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -25526,8 +34927,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___ref__(PyObject *SWI
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -25562,8 +34980,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___deref__(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -25596,8 +35031,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_get(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetStructureBase, 0 |  0 );
@@ -25630,8 +35082,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_unique(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -25664,8 +35133,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_use_count(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_long(static_cast< long >(result));
@@ -25698,8 +35184,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase___nonzero__(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -25745,8 +35248,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_swap(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -25791,8 +35311,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_set_count(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -25825,8 +35362,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_description(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_std_string(static_cast< std::string >(result));
@@ -25859,8 +35413,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_associated_cluste
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -25893,8 +35464,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_associated_cluster_se
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -25927,8 +35515,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_valid_cluster_seq
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -25961,8 +35566,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_validated_cs(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequence, 0 |  0 );
@@ -25995,8 +35617,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_validated_csab(PyObje
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__ClusterSequenceAreaBase, 0 |  0 );
@@ -26055,8 +35694,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_partner(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26115,8 +35771,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_child(PyObject *S
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26187,8 +35860,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_parents(PyObject 
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26247,8 +35937,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_object_in_jet(PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26281,8 +35988,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_constituents(PyOb
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26305,7 +36029,7 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_constituents(PyObject
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:sharedPtrPseudoJetStructureBase_constituents", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
@@ -26329,11 +36053,31 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_constituents(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -26363,8 +36107,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_exclusive_subjets
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26392,7 +36153,7 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets(PyO
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  (char *)"dcut",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_exclusive_subjets", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
@@ -26422,11 +36183,31 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets(PyO
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -26481,8 +36262,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_n_exclusive_subjets(P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_int(static_cast< int >(result));
@@ -26509,7 +36307,7 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_
   char * kwnames[] = {
     (char *)"self",  (char *)"reference",  (char *)"nsub",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
@@ -26538,11 +36336,31 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -26595,8 +36413,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge(P
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -26652,8 +36487,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge_m
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -26700,8 +36552,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_pieces(PyObject *
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26724,7 +36593,7 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_pieces(PyObject *SWIG
   char * kwnames[] = {
     (char *)"self",  (char *)"arg2",  NULL 
   };
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > result;
+  fastjet::PseudoJetContainer result;
   
   if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:sharedPtrPseudoJetStructureBase_pieces", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__SharedPtrT_fastjet__PseudoJetStructureBase_t, 0 |  0 );
@@ -26748,11 +36617,31 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_pieces(PyObject *SWIG
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = swig::from(static_cast< std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > >(result));
+  
+  resultobj = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move(result)),
+    SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
+  
   return resultobj;
 fail:
   return NULL;
@@ -26782,8 +36671,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_has_area(PyObject *SW
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26816,8 +36722,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_area(PyObject *SWIGUN
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -26850,8 +36773,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_area_error(PyObject *
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_double(static_cast< double >(result));
@@ -26884,8 +36824,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_area_4vector(PyObject
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_NewPointerObj((new fastjet::PseudoJet(static_cast< const fastjet::PseudoJet& >(result))), SWIGTYPE_p_fastjet__PseudoJet, SWIG_POINTER_OWN |  0 );
@@ -26918,8 +36875,25 @@ SWIGINTERN PyObject *_wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost(PyObjec
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -26940,7 +36914,7 @@ SWIGINTERN PyObject *sharedPtrPseudoJetStructureBase_swiginit(PyObject *SWIGUNUS
   return SWIG_Python_InitShadowInstance(args);
 }
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   double **arg1 = (double **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -26950,20 +36924,16 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64(PyObject *SWIGUNU
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
   int res4 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  char * kwnames[] = {
-    (char *)"pjs",  NULL 
-  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:pseudojets_to_epxpypz_array_float64", kwnames, &obj0)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(obj0, &ptr);
+    res4 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res4)) {
       SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -26980,8 +36950,25 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -27016,7 +37003,126 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  double **arg1 = (double **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  double *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_epxpypz_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_epxpypz_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_epxpypz_array_float64", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_pseudojets_to_epxpypz_array_float64__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_pseudojets_to_epxpypz_array_float64__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_epxpypz_array_float64'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::pseudojets_to_epxpypz_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::pseudojets_to_epxpypz_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   float **arg1 = (float **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -27026,20 +37132,16 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32(PyObject *SWIGUNU
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
   int res4 = SWIG_OLDOBJ ;
-  PyObject * obj0 = 0 ;
-  char * kwnames[] = {
-    (char *)"pjs",  NULL 
-  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:pseudojets_to_epxpypz_array_float32", kwnames, &obj0)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(obj0, &ptr);
+    res4 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res4)) {
       SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -27056,8 +37158,25 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -27092,7 +37211,126 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  float **arg1 = (float **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  float *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_epxpypz_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_epxpypz_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_epxpypz_array_float32", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_pseudojets_to_epxpypz_array_float32__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_pseudojets_to_epxpypz_array_float32__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_epxpypz_array_float32'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::pseudojets_to_epxpypz_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::pseudojets_to_epxpypz_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   double **arg1 = (double **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -27108,22 +37346,16 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64(PyObject *SWIGUNU
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  char * kwnames[] = {
-    (char *)"pjs",  (char *)"mass",  (char *)"phi_std",  NULL 
-  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OO:pseudojets_to_ptyphim_array_float64", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(obj0, &ptr);
+    res4 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res4)) {
       SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -27132,15 +37364,15 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64(PyObject *SWIGUNU
     }
     arg4 = ptr;
   }
-  if (obj1) {
-    ecode5 = SWIG_AsVal_bool(obj1, &val5);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
     if (!SWIG_IsOK(ecode5)) {
       SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "5"" of type '" "bool""'");
     } 
     arg5 = static_cast< bool >(val5);
   }
-  if (obj2) {
-    ecode6 = SWIG_AsVal_bool(obj2, &val6);
+  if (swig_obj[2]) {
+    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
     if (!SWIG_IsOK(ecode6)) {
       SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "6"" of type '" "bool""'");
     } 
@@ -27154,8 +37386,25 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -27190,7 +37439,182 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  double **arg1 = (double **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  bool arg5 = (bool) true ;
+  bool arg6 = (bool) false ;
+  double *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  bool val5 ;
+  int ecode5 = 0 ;
+  bool val6 ;
+  int ecode6 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "5"" of type '" "bool""'");
+    } 
+    arg5 = static_cast< bool >(val5);
+  }
+  if (swig_obj[2]) {
+    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "6"" of type '" "bool""'");
+    } 
+    arg6 = static_cast< bool >(val6);
+  }
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_ptyphim_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5,arg6); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_ptyphim_array_float64", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if ((argc >= 1) && (argc <= 3)) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        if (argc <= 2) {
+          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(self, argc, argv);
+        }
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(self, argc, argv);
+        }
+      }
+    }
+  }
+  if ((argc >= 1) && (argc <= 3)) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        if (argc <= 2) {
+          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(self, argc, argv);
+        }
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_ptyphim_array_float64'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::pseudojets_to_ptyphim_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,bool,bool)\n"
+    "    fastjet::pseudojets_to_ptyphim_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,bool,bool)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   float **arg1 = (float **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -27206,22 +37630,16 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32(PyObject *SWIGUNU
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  char * kwnames[] = {
-    (char *)"pjs",  (char *)"mass",  (char *)"phi_std",  NULL 
-  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OO:pseudojets_to_ptyphim_array_float32", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(obj0, &ptr);
+    res4 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res4)) {
       SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -27230,15 +37648,15 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32(PyObject *SWIGUNU
     }
     arg4 = ptr;
   }
-  if (obj1) {
-    ecode5 = SWIG_AsVal_bool(obj1, &val5);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
     if (!SWIG_IsOK(ecode5)) {
       SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "5"" of type '" "bool""'");
     } 
     arg5 = static_cast< bool >(val5);
   }
-  if (obj2) {
-    ecode6 = SWIG_AsVal_bool(obj2, &val6);
+  if (swig_obj[2]) {
+    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
     if (!SWIG_IsOK(ecode6)) {
       SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "6"" of type '" "bool""'");
     } 
@@ -27252,8 +37670,25 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32(PyObject *SWIGUNU
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -27288,7 +37723,182 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  float **arg1 = (float **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  bool arg5 = (bool) true ;
+  bool arg6 = (bool) false ;
+  float *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  bool val5 ;
+  int ecode5 = 0 ;
+  bool val6 ;
+  int ecode6 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "5"" of type '" "bool""'");
+    } 
+    arg5 = static_cast< bool >(val5);
+  }
+  if (swig_obj[2]) {
+    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "6"" of type '" "bool""'");
+    } 
+    arg6 = static_cast< bool >(val6);
+  }
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_ptyphim_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5,arg6); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_ptyphim_array_float32", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if ((argc >= 1) && (argc <= 3)) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        if (argc <= 2) {
+          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(self, argc, argv);
+        }
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(self, argc, argv);
+        }
+      }
+    }
+  }
+  if ((argc >= 1) && (argc <= 3)) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        if (argc <= 2) {
+          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(self, argc, argv);
+        }
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_ptyphim_array_float32'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::pseudojets_to_ptyphim_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,bool,bool)\n"
+    "    fastjet::pseudojets_to_ptyphim_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,bool,bool)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   double **arg1 = (double **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -27301,21 +37911,16 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64(PyObject *SWIGUNUSEDPARM(
   int res4 = SWIG_OLDOBJ ;
   int val5 ;
   int ecode5 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  char * kwnames[] = {
-    (char *)"pjs",  (char *)"pjrep",  NULL 
-  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pseudojets_to_array_float64", kwnames, &obj0, &obj1)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(obj0, &ptr);
+    res4 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res4)) {
       SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -27324,8 +37929,8 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64(PyObject *SWIGUNUSEDPARM(
     }
     arg4 = ptr;
   }
-  if (obj1) {
-    ecode5 = SWIG_AsVal_int(obj1, &val5);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
     if (!SWIG_IsOK(ecode5)) {
       SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float64" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
     } 
@@ -27339,8 +37944,25 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -27375,7 +37997,154 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  double **arg1 = (double **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  double *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float64" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+    } 
+    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
+  }
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_array_float64", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if ((argc >= 1) && (argc <= 2)) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_array_float64__SWIG_1(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_pseudojets_to_array_float64__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if ((argc >= 1) && (argc <= 2)) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_array_float64__SWIG_0(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_pseudojets_to_array_float64__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_array_float64'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::pseudojets_to_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,fastjet::PseudoJetRepresentation)\n"
+    "    fastjet::pseudojets_to_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,fastjet::PseudoJetRepresentation)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   float **arg1 = (float **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -27388,21 +38157,16 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32(PyObject *SWIGUNUSEDPARM(
   int res4 = SWIG_OLDOBJ ;
   int val5 ;
   int ecode5 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  char * kwnames[] = {
-    (char *)"pjs",  (char *)"pjrep",  NULL 
-  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pseudojets_to_array_float32", kwnames, &obj0, &obj1)) SWIG_fail;
+  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(obj0, &ptr);
+    res4 = swig::asptr(swig_obj[0], &ptr);
     if (!SWIG_IsOK(res4)) {
       SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
@@ -27411,8 +38175,8 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32(PyObject *SWIGUNUSEDPARM(
     }
     arg4 = ptr;
   }
-  if (obj1) {
-    ecode5 = SWIG_AsVal_int(obj1, &val5);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
     if (!SWIG_IsOK(ecode5)) {
       SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float32" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
     } 
@@ -27426,8 +38190,25 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32(PyObject *SWIGUNUSEDPARM(
       PyErr_SetString(FastJetError_, e.message().c_str());
       SWIG_fail;
     }
-    catch (std::exception & e) {
-      SWIG_exception(SWIG_SystemError, e.what());
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
   resultobj = SWIG_Py_Void();
@@ -27459,6 +38240,153 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32(PyObject *SWIGUNUSEDPARM(
 fail:
   if (SWIG_IsNewObj(res4)) delete arg4;
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  float **arg1 = (float **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  float *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  if (swig_obj[1]) {
+    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float32" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+    } 
+    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
+  }
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_array_float32", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if ((argc >= 1) && (argc <= 2)) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_array_float32__SWIG_1(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_pseudojets_to_array_float32__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if ((argc >= 1) && (argc <= 2)) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      if (argc <= 1) {
+        return _wrap_pseudojets_to_array_float32__SWIG_0(self, argc, argv);
+      }
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_pseudojets_to_array_float32__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_array_float32'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::pseudojets_to_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,fastjet::PseudoJetRepresentation)\n"
+    "    fastjet::pseudojets_to_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,fastjet::PseudoJetRepresentation)\n");
+  return 0;
 }
 
 
@@ -27566,15 +38494,15 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_has_parents(PseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
 	 { "PseudoJetStructureBase_object_in_jet", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_object_in_jet, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_object_in_jet(PseudoJetStructureBase self, PseudoJet reference, PseudoJet jet) -> bool"},
 	 { "PseudoJetStructureBase_has_constituents", _wrap_PseudoJetStructureBase_has_constituents, METH_O, "PseudoJetStructureBase_has_constituents(PseudoJetStructureBase self) -> bool"},
-	 { "PseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_constituents(PseudoJetStructureBase self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_constituents(PseudoJetStructureBase self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_has_exclusive_subjets", _wrap_PseudoJetStructureBase_has_exclusive_subjets, METH_O, "PseudoJetStructureBase_has_exclusive_subjets(PseudoJetStructureBase self) -> bool"},
-	 { "PseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_exclusive_subjets(PseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_exclusive_subjets(PseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_n_exclusive_subjets(PseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> int"},
-	 { "PseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_exclusive_subjets_up_to(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_exclusive_subjets_up_to(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_exclusive_subdmerge(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "PseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_exclusive_subdmerge_max(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "PseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_has_pieces(PseudoJetStructureBase self, PseudoJet arg2) -> bool"},
-	 { "PseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_pieces(PseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "PseudoJetStructureBase_pieces(PseudoJetStructureBase self, PseudoJet arg2) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_has_area", _wrap_PseudoJetStructureBase_has_area, METH_O, "PseudoJetStructureBase_has_area(PseudoJetStructureBase self) -> bool"},
 	 { "PseudoJetStructureBase_area", _wrap_PseudoJetStructureBase_area, METH_O, "PseudoJetStructureBase_area(PseudoJetStructureBase self) -> double"},
 	 { "PseudoJetStructureBase_area_error", _wrap_PseudoJetStructureBase_area_error, METH_O, "PseudoJetStructureBase_area_error(PseudoJetStructureBase self) -> double"},
@@ -27674,18 +38602,18 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJet_contains", (PyCFunction)(void(*)(void))_wrap_PseudoJet_contains, METH_VARARGS|METH_KEYWORDS, "PseudoJet_contains(PseudoJet self, PseudoJet constituent) -> bool"},
 	 { "PseudoJet_is_inside", (PyCFunction)(void(*)(void))_wrap_PseudoJet_is_inside, METH_VARARGS|METH_KEYWORDS, "PseudoJet_is_inside(PseudoJet self, PseudoJet jet) -> bool"},
 	 { "PseudoJet_has_constituents", _wrap_PseudoJet_has_constituents, METH_O, "PseudoJet_has_constituents(PseudoJet self) -> bool"},
-	 { "PseudoJet_constituents", _wrap_PseudoJet_constituents, METH_O, "PseudoJet_constituents(PseudoJet self) -> vectorPseudoJet"},
+	 { "PseudoJet_constituents", _wrap_PseudoJet_constituents, METH_O, "PseudoJet_constituents(PseudoJet self) -> PseudoJetContainer"},
 	 { "PseudoJet_has_exclusive_subjets", _wrap_PseudoJet_has_exclusive_subjets, METH_O, "PseudoJet_has_exclusive_subjets(PseudoJet self) -> bool"},
 	 { "PseudoJet_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJet_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "PseudoJet_n_exclusive_subjets(PseudoJet self, double const dcut) -> int"},
 	 { "PseudoJet_exclusive_subjets", _wrap_PseudoJet_exclusive_subjets, METH_VARARGS, "\n"
-		"PseudoJet_exclusive_subjets(PseudoJet self, double const dcut) -> vectorPseudoJet\n"
-		"PseudoJet_exclusive_subjets(PseudoJet self, int nsub) -> vectorPseudoJet\n"
+		"PseudoJet_exclusive_subjets(PseudoJet self, double const dcut) -> PseudoJetContainer\n"
+		"PseudoJet_exclusive_subjets(PseudoJet self, int nsub) -> PseudoJetContainer\n"
 		""},
-	 { "PseudoJet_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "PseudoJet_exclusive_subjets_up_to(PseudoJet self, int nsub) -> vectorPseudoJet"},
+	 { "PseudoJet_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "PseudoJet_exclusive_subjets_up_to(PseudoJet self, int nsub) -> PseudoJetContainer"},
 	 { "PseudoJet_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "PseudoJet_exclusive_subdmerge(PseudoJet self, int nsub) -> double"},
 	 { "PseudoJet_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "PseudoJet_exclusive_subdmerge_max(PseudoJet self, int nsub) -> double"},
 	 { "PseudoJet_has_pieces", _wrap_PseudoJet_has_pieces, METH_O, "PseudoJet_has_pieces(PseudoJet self) -> bool"},
-	 { "PseudoJet_pieces", _wrap_PseudoJet_pieces, METH_O, "PseudoJet_pieces(PseudoJet self) -> vectorPseudoJet"},
+	 { "PseudoJet_pieces", _wrap_PseudoJet_pieces, METH_O, "PseudoJet_pieces(PseudoJet self) -> PseudoJetContainer"},
 	 { "PseudoJet_has_area", _wrap_PseudoJet_has_area, METH_O, "PseudoJet_has_area(PseudoJet self) -> bool"},
 	 { "PseudoJet_area", _wrap_PseudoJet_area, METH_O, "PseudoJet_area(PseudoJet self) -> double"},
 	 { "PseudoJet_area_error", _wrap_PseudoJet_area_error, METH_O, "PseudoJet_area_error(PseudoJet self) -> double"},
@@ -27713,30 +38641,84 @@ static PyMethodDef SwigMethods[] = {
 		""},
 	 { "PseudoJet_swigregister", PseudoJet_swigregister, METH_O, NULL},
 	 { "PseudoJet_swiginit", PseudoJet_swiginit, METH_VARARGS, NULL},
+	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
+		"PseudoJetContainer()\n"
+		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
+		"new_PseudoJetContainer(PseudoJetContainer other) -> PseudoJetContainer\n"
+		""},
+	 { "PseudoJetContainer_size", _wrap_PseudoJetContainer_size, METH_O, "PseudoJetContainer_size(PseudoJetContainer self) -> std::size_t"},
+	 { "PseudoJetContainer_capacity", _wrap_PseudoJetContainer_capacity, METH_O, "PseudoJetContainer_capacity(PseudoJetContainer self) -> std::size_t"},
+	 { "PseudoJetContainer_resize", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_resize, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_resize(PseudoJetContainer self, std::size_t s)"},
+	 { "PseudoJetContainer_reserve", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_reserve, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_reserve(PseudoJetContainer self, std::size_t s)"},
+	 { "PseudoJetContainer_push_back", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_push_back, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_push_back(PseudoJetContainer self, PseudoJet pj)"},
+	 { "PseudoJetContainer_clear", _wrap_PseudoJetContainer_clear, METH_O, "PseudoJetContainer_clear(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_as_vector", _wrap_PseudoJetContainer_as_vector, METH_O, "PseudoJetContainer_as_vector(PseudoJetContainer self) -> vectorPseudoJet"},
+	 { "PseudoJetContainer___len__", _wrap_PseudoJetContainer___len__, METH_O, "PseudoJetContainer___len__(PseudoJetContainer self) -> std::size_t"},
+	 { "PseudoJetContainer___getitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___getitem__, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer___getitem__(PseudoJetContainer self, std::ptrdiff_t i) -> PseudoJet"},
+	 { "PseudoJetContainer_epxpypz_array_float64", _wrap_PseudoJetContainer_epxpypz_array_float64, METH_O, "PseudoJetContainer_epxpypz_array_float64(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_epxpypz_array_float32", _wrap_PseudoJetContainer_epxpypz_array_float32, METH_O, "PseudoJetContainer_epxpypz_array_float32(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
+	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
+	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "PseudoJetContainer_user_indices(PseudoJetContainer self)"},
+	 { "PseudoJetContainer___setitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___setitem__, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer___setitem__(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "delete_PseudoJetContainer", _wrap_delete_PseudoJetContainer, METH_O, "delete_PseudoJetContainer(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_swigregister", PseudoJetContainer_swigregister, METH_O, NULL},
+	 { "PseudoJetContainer_swiginit", PseudoJetContainer_swiginit, METH_VARARGS, NULL},
+	 { "user_indices", _wrap_user_indices, METH_VARARGS, "\n"
+		"user_indices(vectorPseudoJet pjs)\n"
+		"user_indices(PseudoJetContainer pjc)\n"
+		""},
 	 { "dot_product", (PyCFunction)(void(*)(void))_wrap_dot_product, METH_VARARGS|METH_KEYWORDS, "dot_product(PseudoJet a, PseudoJet b) -> double"},
 	 { "cos_theta", (PyCFunction)(void(*)(void))_wrap_cos_theta, METH_VARARGS|METH_KEYWORDS, "cos_theta(PseudoJet a, PseudoJet b) -> double"},
 	 { "theta", (PyCFunction)(void(*)(void))_wrap_theta, METH_VARARGS|METH_KEYWORDS, "theta(PseudoJet a, PseudoJet b) -> double"},
 	 { "have_same_momentum", (PyCFunction)(void(*)(void))_wrap_have_same_momentum, METH_VARARGS|METH_KEYWORDS, "have_same_momentum(PseudoJet arg1, PseudoJet arg2) -> bool"},
 	 { "PtYPhiM", (PyCFunction)(void(*)(void))_wrap_PtYPhiM, METH_VARARGS|METH_KEYWORDS, "PtYPhiM(double pt, double y, double phi, double m=0.0) -> PseudoJet"},
-	 { "sorted_by_pt", (PyCFunction)(void(*)(void))_wrap_sorted_by_pt, METH_VARARGS|METH_KEYWORDS, "sorted_by_pt(vectorPseudoJet jets) -> vectorPseudoJet"},
-	 { "sorted_by_rapidity", (PyCFunction)(void(*)(void))_wrap_sorted_by_rapidity, METH_VARARGS|METH_KEYWORDS, "sorted_by_rapidity(vectorPseudoJet jets) -> vectorPseudoJet"},
-	 { "sorted_by_E", (PyCFunction)(void(*)(void))_wrap_sorted_by_E, METH_VARARGS|METH_KEYWORDS, "sorted_by_E(vectorPseudoJet jets) -> vectorPseudoJet"},
-	 { "sorted_by_pz", (PyCFunction)(void(*)(void))_wrap_sorted_by_pz, METH_VARARGS|METH_KEYWORDS, "sorted_by_pz(vectorPseudoJet jets) -> vectorPseudoJet"},
+	 { "sorted_by_pt", _wrap_sorted_by_pt, METH_VARARGS, "\n"
+		"sorted_by_pt(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_pt(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
+	 { "sorted_by_rapidity", _wrap_sorted_by_rapidity, METH_VARARGS, "\n"
+		"sorted_by_rapidity(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_rapidity(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
+	 { "sorted_by_E", _wrap_sorted_by_E, METH_VARARGS, "\n"
+		"sorted_by_E(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_E(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
+	 { "sorted_by_pz", _wrap_sorted_by_pz, METH_VARARGS, "\n"
+		"sorted_by_pz(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_pz(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
 	 { "sort_indices", (PyCFunction)(void(*)(void))_wrap_sort_indices, METH_VARARGS|METH_KEYWORDS, "sort_indices(std::vector< int,std::allocator< int > > & indices, std::vector< double,std::allocator< double > > const & values)"},
 	 { "new_Selector", _wrap_new_Selector, METH_VARARGS, "\n"
 		"Selector()\n"
 		"new_Selector(fastjet::SelectorWorker * worker_in) -> Selector\n"
 		""},
 	 { "delete_Selector", _wrap_delete_Selector, METH_O, "delete_Selector(Selector self)"},
-	 { "Selector__pass", (PyCFunction)(void(*)(void))_wrap_Selector__pass, METH_VARARGS|METH_KEYWORDS, "Selector__pass(Selector self, PseudoJet jet) -> bool"},
-	 { "Selector_count", (PyCFunction)(void(*)(void))_wrap_Selector_count, METH_VARARGS|METH_KEYWORDS, "Selector_count(Selector self, vectorPseudoJet jets) -> unsigned int"},
-	 { "Selector_sum", (PyCFunction)(void(*)(void))_wrap_Selector_sum, METH_VARARGS|METH_KEYWORDS, "Selector_sum(Selector self, vectorPseudoJet jets) -> PseudoJet"},
-	 { "Selector_scalar_pt_sum", (PyCFunction)(void(*)(void))_wrap_Selector_scalar_pt_sum, METH_VARARGS|METH_KEYWORDS, "Selector_scalar_pt_sum(Selector self, vectorPseudoJet jets) -> double"},
-	 { "Selector_sift", (PyCFunction)(void(*)(void))_wrap_Selector_sift, METH_VARARGS|METH_KEYWORDS, "Selector_sift(Selector self, vectorPseudoJet jets, vectorPseudoJet jets_that_pass, vectorPseudoJet jets_that_fail)"},
+	 { "Selector_passes", (PyCFunction)(void(*)(void))_wrap_Selector_passes, METH_VARARGS|METH_KEYWORDS, "Selector_passes(Selector self, PseudoJet jet) -> bool"},
+	 { "Selector_count", _wrap_Selector_count, METH_VARARGS, "\n"
+		"Selector_count(Selector self, vectorPseudoJet jets) -> unsigned int\n"
+		"Selector_count(Selector self, PseudoJetContainer jets) -> unsigned int\n"
+		""},
+	 { "Selector_sum", _wrap_Selector_sum, METH_VARARGS, "\n"
+		"Selector_sum(Selector self, vectorPseudoJet jets) -> PseudoJet\n"
+		"Selector_sum(Selector self, PseudoJetContainer jets) -> PseudoJet\n"
+		""},
+	 { "Selector_scalar_pt_sum", _wrap_Selector_scalar_pt_sum, METH_VARARGS, "\n"
+		"Selector_scalar_pt_sum(Selector self, vectorPseudoJet jets) -> double\n"
+		"Selector_scalar_pt_sum(Selector self, PseudoJetContainer jets) -> double\n"
+		""},
+	 { "Selector_sift", _wrap_Selector_sift, METH_VARARGS, "\n"
+		"Selector_sift(Selector self, vectorPseudoJet jets, vectorPseudoJet jets_that_pass, vectorPseudoJet jets_that_fail)\n"
+		"Selector_sift(Selector self, PseudoJetContainer jets, vectorPseudoJet jets_that_pass, vectorPseudoJet jets_that_fail)\n"
+		""},
 	 { "Selector_applies_jet_by_jet", _wrap_Selector_applies_jet_by_jet, METH_O, "Selector_applies_jet_by_jet(Selector self) -> bool"},
 	 { "Selector___call__", _wrap_Selector___call__, METH_VARARGS, "\n"
 		"Selector___call__(Selector self, PseudoJet jet) -> bool\n"
-		"Selector___call__(Selector self, vectorPseudoJet jets) -> vectorPseudoJet\n"
+		"Selector___call__(Selector self, vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"Selector___call__(Selector self, PseudoJetContainer jets) -> PseudoJetContainer\n"
 		""},
 	 { "Selector_nullify_non_selected", (PyCFunction)(void(*)(void))_wrap_Selector_nullify_non_selected, METH_VARARGS|METH_KEYWORDS, "Selector_nullify_non_selected(Selector self, std::vector< fastjet::PseudoJet const *,std::allocator< fastjet::PseudoJet const * > > & jets)"},
 	 { "Selector_get_rapidity_extent", (PyCFunction)(void(*)(void))_wrap_Selector_get_rapidity_extent, METH_VARARGS|METH_KEYWORDS, "Selector_get_rapidity_extent(Selector self, double & rapmin, double & rapmax)"},
@@ -27807,6 +38789,10 @@ static PyMethodDef SwigMethods[] = {
 		"JetDefinition(fastjet::JetAlgorithm jet_algorithm_in, double R_in, fastjet::RecombinationScheme recomb_scheme_in, fastjet::Strategy strategy_in, int nparameters_in)\n"
 		"new_JetDefinition(fastjet::JetAlgorithm jet_algorithm_in, double R_in, fastjet::Strategy strategy_in, fastjet::RecombinationScheme recomb_scheme_in=E_scheme, int nparameters_in=1) -> JetDefinition\n"
 		""},
+	 { "JetDefinition___call__", _wrap_JetDefinition___call__, METH_VARARGS, "\n"
+		"JetDefinition___call__(JetDefinition self, vectorPseudoJet particles) -> PseudoJetContainer\n"
+		"JetDefinition___call__(JetDefinition self, PseudoJetContainer particles) -> PseudoJetContainer\n"
+		""},
 	 { "JetDefinition_set_recombination_scheme", (PyCFunction)(void(*)(void))_wrap_JetDefinition_set_recombination_scheme, METH_VARARGS|METH_KEYWORDS, "JetDefinition_set_recombination_scheme(JetDefinition self, fastjet::RecombinationScheme arg2)"},
 	 { "JetDefinition_set_recombiner", _wrap_JetDefinition_set_recombiner, METH_VARARGS, "\n"
 		"JetDefinition_set_recombiner(JetDefinition self, fastjet::JetDefinition::Recombiner const * recomb)\n"
@@ -27831,20 +38817,18 @@ static PyMethodDef SwigMethods[] = {
 	 { "JetDefinition_description_no_recombiner", _wrap_JetDefinition_description_no_recombiner, METH_O, "JetDefinition_description_no_recombiner(JetDefinition self) -> std::string"},
 	 { "JetDefinition_algorithm_description", (PyCFunction)(void(*)(void))_wrap_JetDefinition_algorithm_description, METH_VARARGS|METH_KEYWORDS, "JetDefinition_algorithm_description(fastjet::JetAlgorithm const jet_alg) -> std::string"},
 	 { "JetDefinition_n_parameters_for_algorithm", (PyCFunction)(void(*)(void))_wrap_JetDefinition_n_parameters_for_algorithm, METH_VARARGS|METH_KEYWORDS, "JetDefinition_n_parameters_for_algorithm(fastjet::JetAlgorithm const jet_alg) -> unsigned int"},
-	 { "JetDefinition___call__", _wrap_JetDefinition___call__, METH_VARARGS, "\n"
-		"JetDefinition___call__(JetDefinition self, vectorPseudoJet particles) -> vectorPseudoJet\n"
-		"JetDefinition___call__(JetDefinition self, vectorPseudoJet particles) -> vectorPseudoJet\n"
-		""},
 	 { "delete_JetDefinition", _wrap_delete_JetDefinition, METH_O, "delete_JetDefinition(JetDefinition self)"},
 	 { "JetDefinition_swigregister", JetDefinition_swigregister, METH_O, NULL},
 	 { "JetDefinition_swiginit", JetDefinition_swiginit, METH_VARARGS, NULL},
 	 { "join", _wrap_join, METH_VARARGS, "\n"
 		"join(vectorPseudoJet pieces) -> PseudoJet\n"
+		"join(PseudoJetContainer pieces) -> PseudoJet\n"
 		"join(PseudoJet j1) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, PseudoJet j3) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, PseudoJet j3, PseudoJet j4) -> PseudoJet\n"
 		"join(vectorPseudoJet pieces, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
+		"join(PseudoJetContainer pieces, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
 		"join(PseudoJet j1, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, PseudoJet j3, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
@@ -27857,9 +38841,9 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_CompositeJetStructure", _wrap_delete_CompositeJetStructure, METH_O, "delete_CompositeJetStructure(CompositeJetStructure self)"},
 	 { "CompositeJetStructure_description", _wrap_CompositeJetStructure_description, METH_O, "CompositeJetStructure_description(CompositeJetStructure self) -> std::string"},
 	 { "CompositeJetStructure_has_constituents", _wrap_CompositeJetStructure_has_constituents, METH_O, "CompositeJetStructure_has_constituents(CompositeJetStructure self) -> bool"},
-	 { "CompositeJetStructure_constituents", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_constituents, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_constituents(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "CompositeJetStructure_constituents", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_constituents, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_constituents(CompositeJetStructure self, PseudoJet jet) -> PseudoJetContainer"},
 	 { "CompositeJetStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_has_pieces(CompositeJetStructure self, PseudoJet arg2) -> bool"},
-	 { "CompositeJetStructure_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_pieces, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_pieces(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "CompositeJetStructure_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_pieces, METH_VARARGS|METH_KEYWORDS, "CompositeJetStructure_pieces(CompositeJetStructure self, PseudoJet jet) -> PseudoJetContainer"},
 	 { "CompositeJetStructure_swigregister", CompositeJetStructure_swigregister, METH_O, NULL},
 	 { "CompositeJetStructure_swiginit", CompositeJetStructure_swiginit, METH_VARARGS, NULL},
 	 { "new_ClusterSequenceStructure", _wrap_new_ClusterSequenceStructure, METH_VARARGS, "\n"
@@ -27878,15 +38862,15 @@ static PyMethodDef SwigMethods[] = {
 	 { "ClusterSequenceStructure_has_parents", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_parents, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_has_parents(ClusterSequenceStructure self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
 	 { "ClusterSequenceStructure_object_in_jet", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_object_in_jet, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_object_in_jet(ClusterSequenceStructure self, PseudoJet reference, PseudoJet jet) -> bool"},
 	 { "ClusterSequenceStructure_has_constituents", _wrap_ClusterSequenceStructure_has_constituents, METH_O, "ClusterSequenceStructure_has_constituents(ClusterSequenceStructure self) -> bool"},
-	 { "ClusterSequenceStructure_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_constituents, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_constituents(ClusterSequenceStructure self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_constituents, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_constituents(ClusterSequenceStructure self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_has_exclusive_subjets", _wrap_ClusterSequenceStructure_has_exclusive_subjets, METH_O, "ClusterSequenceStructure_has_exclusive_subjets(ClusterSequenceStructure self) -> bool"},
-	 { "ClusterSequenceStructure_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_exclusive_subjets(ClusterSequenceStructure self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_exclusive_subjets(ClusterSequenceStructure self, PseudoJet reference, double const & dcut) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_n_exclusive_subjets(ClusterSequenceStructure self, PseudoJet reference, double const & dcut) -> int"},
-	 { "ClusterSequenceStructure_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_exclusive_subjets_up_to(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_exclusive_subjets_up_to(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_exclusive_subdmerge(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> double"},
 	 { "ClusterSequenceStructure_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_exclusive_subdmerge_max(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> double"},
 	 { "ClusterSequenceStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_has_pieces(ClusterSequenceStructure self, PseudoJet reference) -> bool"},
-	 { "ClusterSequenceStructure_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_pieces, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_pieces(ClusterSequenceStructure self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_pieces, METH_VARARGS|METH_KEYWORDS, "ClusterSequenceStructure_pieces(ClusterSequenceStructure self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_has_area", _wrap_ClusterSequenceStructure_has_area, METH_O, "ClusterSequenceStructure_has_area(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_area", _wrap_ClusterSequenceStructure_area, METH_O, "ClusterSequenceStructure_area(ClusterSequenceStructure self) -> double"},
 	 { "ClusterSequenceStructure_area_error", _wrap_ClusterSequenceStructure_area_error, METH_O, "ClusterSequenceStructure_area_error(ClusterSequenceStructure self) -> double"},
@@ -27894,27 +38878,30 @@ static PyMethodDef SwigMethods[] = {
 	 { "ClusterSequenceStructure_is_pure_ghost", _wrap_ClusterSequenceStructure_is_pure_ghost, METH_O, "ClusterSequenceStructure_is_pure_ghost(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_swigregister", ClusterSequenceStructure_swigregister, METH_O, NULL},
 	 { "ClusterSequenceStructure_swiginit", ClusterSequenceStructure_swiginit, METH_VARARGS, NULL},
-	 { "new_ClusterSequence", (PyCFunction)(void(*)(void))_wrap_new_ClusterSequence, METH_VARARGS|METH_KEYWORDS, "new_ClusterSequence(vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence"},
+	 { "new_ClusterSequence", _wrap_new_ClusterSequence, METH_VARARGS, "\n"
+		"ClusterSequence(vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False)\n"
+		"new_ClusterSequence(PseudoJetContainer pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence\n"
+		""},
 	 { "delete_ClusterSequence", _wrap_delete_ClusterSequence, METH_O, "delete_ClusterSequence(ClusterSequence self)"},
-	 { "ClusterSequence_inclusive_jets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_inclusive_jets, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_inclusive_jets(ClusterSequence self, double const ptmin=0.0) -> vectorPseudoJet"},
+	 { "ClusterSequence_inclusive_jets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_inclusive_jets, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_inclusive_jets(ClusterSequence self, double const ptmin=0.0) -> PseudoJetContainer"},
 	 { "ClusterSequence_n_exclusive_jets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_n_exclusive_jets, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_n_exclusive_jets(ClusterSequence self, double const dcut) -> int"},
 	 { "ClusterSequence_exclusive_jets", _wrap_ClusterSequence_exclusive_jets, METH_VARARGS, "\n"
-		"ClusterSequence_exclusive_jets(ClusterSequence self, double const dcut) -> vectorPseudoJet\n"
-		"ClusterSequence_exclusive_jets(ClusterSequence self, int const njets) -> vectorPseudoJet\n"
+		"ClusterSequence_exclusive_jets(ClusterSequence self, double const dcut) -> PseudoJetContainer\n"
+		"ClusterSequence_exclusive_jets(ClusterSequence self, int const njets) -> PseudoJetContainer\n"
 		""},
-	 { "ClusterSequence_exclusive_jets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_up_to, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_jets_up_to(ClusterSequence self, int const njets) -> vectorPseudoJet"},
+	 { "ClusterSequence_exclusive_jets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_up_to, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_jets_up_to(ClusterSequence self, int const njets) -> PseudoJetContainer"},
 	 { "ClusterSequence_exclusive_dmerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_dmerge, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_dmerge(ClusterSequence self, int const njets) -> double"},
 	 { "ClusterSequence_exclusive_dmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_dmerge_max, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_dmerge_max(ClusterSequence self, int const njets) -> double"},
 	 { "ClusterSequence_exclusive_ymerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_ymerge, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_ymerge(ClusterSequence self, int njets) -> double"},
 	 { "ClusterSequence_exclusive_ymerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_ymerge_max, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_ymerge_max(ClusterSequence self, int njets) -> double"},
 	 { "ClusterSequence_n_exclusive_jets_ycut", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_n_exclusive_jets_ycut, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_n_exclusive_jets_ycut(ClusterSequence self, double ycut) -> int"},
-	 { "ClusterSequence_exclusive_jets_ycut", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_ycut, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_jets_ycut(ClusterSequence self, double ycut) -> vectorPseudoJet"},
+	 { "ClusterSequence_exclusive_jets_ycut", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_ycut, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_jets_ycut(ClusterSequence self, double ycut) -> PseudoJetContainer"},
 	 { "ClusterSequence_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_n_exclusive_subjets(ClusterSequence self, PseudoJet jet, double const dcut) -> int"},
 	 { "ClusterSequence_exclusive_subjets", _wrap_ClusterSequence_exclusive_subjets, METH_VARARGS, "\n"
-		"ClusterSequence_exclusive_subjets(ClusterSequence self, PseudoJet jet, double const dcut) -> vectorPseudoJet\n"
-		"ClusterSequence_exclusive_subjets(ClusterSequence self, PseudoJet jet, int nsub) -> vectorPseudoJet\n"
+		"ClusterSequence_exclusive_subjets(ClusterSequence self, PseudoJet jet, double const dcut) -> PseudoJetContainer\n"
+		"ClusterSequence_exclusive_subjets(ClusterSequence self, PseudoJet jet, int nsub) -> PseudoJetContainer\n"
 		""},
-	 { "ClusterSequence_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_subjets_up_to(ClusterSequence self, PseudoJet jet, int nsub) -> vectorPseudoJet"},
+	 { "ClusterSequence_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_subjets_up_to(ClusterSequence self, PseudoJet jet, int nsub) -> PseudoJetContainer"},
 	 { "ClusterSequence_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_subdmerge(ClusterSequence self, PseudoJet jet, int nsub) -> double"},
 	 { "ClusterSequence_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_exclusive_subdmerge_max(ClusterSequence self, PseudoJet jet, int nsub) -> double"},
 	 { "ClusterSequence_Q", _wrap_ClusterSequence_Q, METH_O, "ClusterSequence_Q(ClusterSequence self) -> double"},
@@ -27926,10 +38913,12 @@ static PyMethodDef SwigMethods[] = {
 		"ClusterSequence_has_child(ClusterSequence self, PseudoJet jet, fastjet::PseudoJet const *& childp) -> bool\n"
 		""},
 	 { "ClusterSequence_has_partner", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_has_partner, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_has_partner(ClusterSequence self, PseudoJet jet, PseudoJet partner) -> bool"},
-	 { "ClusterSequence_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_constituents, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_constituents(ClusterSequence self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "ClusterSequence_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_constituents, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_constituents(ClusterSequence self, PseudoJet jet) -> PseudoJetContainer"},
 	 { "ClusterSequence_print_jets_for_root", _wrap_ClusterSequence_print_jets_for_root, METH_VARARGS, "\n"
 		"ClusterSequence_print_jets_for_root(ClusterSequence self, vectorPseudoJet jets, std::ostream & ostr=std::cout)\n"
+		"ClusterSequence_print_jets_for_root(ClusterSequence self, PseudoJetContainer jets, std::ostream & ostr=std::cout)\n"
 		"ClusterSequence_print_jets_for_root(ClusterSequence self, vectorPseudoJet jets, std::string const & filename, std::string const & comment=\"\")\n"
+		"ClusterSequence_print_jets_for_root(ClusterSequence self, PseudoJetContainer jets, std::string const & filename, std::string const & comment=\"\")\n"
 		""},
 	 { "ClusterSequence_add_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_add_constituents, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_add_constituents(ClusterSequence self, PseudoJet jet, vectorPseudoJet subjet_vector)"},
 	 { "ClusterSequence_strategy_used", _wrap_ClusterSequence_strategy_used, METH_O, "ClusterSequence_strategy_used(ClusterSequence self) -> fastjet::Strategy"},
@@ -27953,10 +38942,13 @@ static PyMethodDef SwigMethods[] = {
 	 { "ClusterSequence_jets", _wrap_ClusterSequence_jets, METH_O, "ClusterSequence_jets(ClusterSequence self) -> vectorPseudoJet"},
 	 { "ClusterSequence_history", _wrap_ClusterSequence_history, METH_O, "ClusterSequence_history(ClusterSequence self) -> std::vector< fastjet::ClusterSequence::history_element,std::allocator< fastjet::ClusterSequence::history_element > > const &"},
 	 { "ClusterSequence_n_particles", _wrap_ClusterSequence_n_particles, METH_O, "ClusterSequence_n_particles(ClusterSequence self) -> unsigned int"},
-	 { "ClusterSequence_particle_jet_indices", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_particle_jet_indices, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_particle_jet_indices(ClusterSequence self, vectorPseudoJet arg2) -> std::vector< int,std::allocator< int > >"},
+	 { "ClusterSequence_particle_jet_indices", _wrap_ClusterSequence_particle_jet_indices, METH_VARARGS, "\n"
+		"ClusterSequence_particle_jet_indices(ClusterSequence self, vectorPseudoJet arg2) -> std::vector< int,std::allocator< int > >\n"
+		"ClusterSequence_particle_jet_indices(ClusterSequence self, PseudoJetContainer pjs) -> std::vector< int,std::allocator< int > >\n"
+		""},
 	 { "ClusterSequence_unique_history_order", _wrap_ClusterSequence_unique_history_order, METH_O, "ClusterSequence_unique_history_order(ClusterSequence self) -> std::vector< int,std::allocator< int > >"},
-	 { "ClusterSequence_unclustered_particles", _wrap_ClusterSequence_unclustered_particles, METH_O, "ClusterSequence_unclustered_particles(ClusterSequence self) -> vectorPseudoJet"},
-	 { "ClusterSequence_childless_pseudojets", _wrap_ClusterSequence_childless_pseudojets, METH_O, "ClusterSequence_childless_pseudojets(ClusterSequence self) -> vectorPseudoJet"},
+	 { "ClusterSequence_unclustered_particles", _wrap_ClusterSequence_unclustered_particles, METH_O, "ClusterSequence_unclustered_particles(ClusterSequence self) -> PseudoJetContainer"},
+	 { "ClusterSequence_childless_pseudojets", _wrap_ClusterSequence_childless_pseudojets, METH_O, "ClusterSequence_childless_pseudojets(ClusterSequence self) -> PseudoJetContainer"},
 	 { "ClusterSequence_contains", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_contains, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_contains(ClusterSequence self, PseudoJet object) -> bool"},
 	 { "ClusterSequence_transfer_from_sequence", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_transfer_from_sequence, METH_VARARGS|METH_KEYWORDS, "ClusterSequence_transfer_from_sequence(ClusterSequence self, ClusterSequence from_seq, fastjet::FunctionOfPseudoJet< fastjet::PseudoJet > const * action_on_jets=None)"},
 	 { "ClusterSequence_structure_shared_ptr", _wrap_ClusterSequence_structure_shared_ptr, METH_O, "ClusterSequence_structure_shared_ptr(ClusterSequence self) -> sharedPtrPseudoJetStructureBase"},
@@ -27966,10 +38958,9 @@ static PyMethodDef SwigMethods[] = {
 	 { "JetDefinition1Param", (PyCFunction)(void(*)(void))_wrap_JetDefinition1Param, METH_VARARGS|METH_KEYWORDS, "JetDefinition1Param(fastjet::JetAlgorithm jet_algorithm, double R_in, fastjet::RecombinationScheme recomb_scheme=E_scheme, fastjet::Strategy strategy=Best) -> JetDefinition"},
 	 { "JetDefinition2Param", (PyCFunction)(void(*)(void))_wrap_JetDefinition2Param, METH_VARARGS|METH_KEYWORDS, "JetDefinition2Param(fastjet::JetAlgorithm jet_algorithm, double R_in, double xtra_param, fastjet::RecombinationScheme recomb_scheme=E_scheme, fastjet::Strategy strategy=Best) -> JetDefinition"},
 	 { "set_pseudojet_format", (PyCFunction)(void(*)(void))_wrap_set_pseudojet_format, METH_VARARGS|METH_KEYWORDS, "set_pseudojet_format(fastjet::PseudoJetRepresentation rep)"},
-	 { "ptyphim_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_ptyphim_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_to_pseudojets(double * particles) -> vectorPseudoJet"},
-	 { "epxpypz_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_epxpypz_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "epxpypz_array_to_pseudojets(double * particles) -> vectorPseudoJet"},
-	 { "array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "array_to_pseudojets(double * particles, fastjet::PseudoJetRepresentation pjrep=ptyphim) -> vectorPseudoJet"},
-	 { "user_indices", (PyCFunction)(void(*)(void))_wrap_user_indices, METH_VARARGS|METH_KEYWORDS, "user_indices(std::ptrdiff_t ** inds, std::ptrdiff_t * mult, vectorPseudoJet pjs)"},
+	 { "ptyphim_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_ptyphim_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
+	 { "epxpypz_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_epxpypz_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "epxpypz_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
+	 { "array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "array_to_pseudojets(double * particles, fastjet::PseudoJetRepresentation pjrep=ptyphim) -> PseudoJetContainer"},
 	 { "new_sharedPtrPseudoJetStructureBase", _wrap_new_sharedPtrPseudoJetStructureBase, METH_VARARGS, "\n"
 		"sharedPtrPseudoJetStructureBase()\n"
 		"new_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase share) -> sharedPtrPseudoJetStructureBase\n"
@@ -27996,15 +38987,15 @@ static PyMethodDef SwigMethods[] = {
 	 { "sharedPtrPseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_has_parents(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_object_in_jet", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_object_in_jet, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_object_in_jet(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet jet) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_has_constituents", _wrap_sharedPtrPseudoJetStructureBase_has_constituents, METH_O, "sharedPtrPseudoJetStructureBase_has_constituents(sharedPtrPseudoJetStructureBase self) -> bool"},
-	 { "sharedPtrPseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_constituents(sharedPtrPseudoJetStructureBase self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_constituents(sharedPtrPseudoJetStructureBase self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_has_exclusive_subjets", _wrap_sharedPtrPseudoJetStructureBase_has_exclusive_subjets, METH_O, "sharedPtrPseudoJetStructureBase_has_exclusive_subjets(sharedPtrPseudoJetStructureBase self) -> bool"},
-	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_n_exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> int"},
-	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subdmerge(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "sharedPtrPseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_has_pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> bool"},
-	 { "sharedPtrPseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "sharedPtrPseudoJetStructureBase_pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_has_area", _wrap_sharedPtrPseudoJetStructureBase_has_area, METH_O, "sharedPtrPseudoJetStructureBase_has_area(sharedPtrPseudoJetStructureBase self) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_area", _wrap_sharedPtrPseudoJetStructureBase_area, METH_O, "sharedPtrPseudoJetStructureBase_area(sharedPtrPseudoJetStructureBase self) -> double"},
 	 { "sharedPtrPseudoJetStructureBase_area_error", _wrap_sharedPtrPseudoJetStructureBase_area_error, METH_O, "sharedPtrPseudoJetStructureBase_area_error(sharedPtrPseudoJetStructureBase self) -> double"},
@@ -28012,12 +39003,30 @@ static PyMethodDef SwigMethods[] = {
 	 { "sharedPtrPseudoJetStructureBase_is_pure_ghost", _wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost, METH_O, "sharedPtrPseudoJetStructureBase_is_pure_ghost(sharedPtrPseudoJetStructureBase self) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_swigregister", sharedPtrPseudoJetStructureBase_swigregister, METH_O, NULL},
 	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
-	 { "pseudojets_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_epxpypz_array_float64(vectorPseudoJet pjs)"},
-	 { "pseudojets_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_epxpypz_array_float32(vectorPseudoJet pjs)"},
-	 { "pseudojets_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)"},
-	 { "pseudojets_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)"},
-	 { "pseudojets_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
-	 { "pseudojets_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pseudojets_to_epxpypz_array_float64", _wrap_pseudojets_to_epxpypz_array_float64, METH_VARARGS, "\n"
+		"pseudojets_to_epxpypz_array_float64(vectorPseudoJet pjs)\n"
+		"pseudojets_to_epxpypz_array_float64(PseudoJetContainer pjs)\n"
+		""},
+	 { "pseudojets_to_epxpypz_array_float32", _wrap_pseudojets_to_epxpypz_array_float32, METH_VARARGS, "\n"
+		"pseudojets_to_epxpypz_array_float32(vectorPseudoJet pjs)\n"
+		"pseudojets_to_epxpypz_array_float32(PseudoJetContainer pjs)\n"
+		""},
+	 { "pseudojets_to_ptyphim_array_float64", _wrap_pseudojets_to_ptyphim_array_float64, METH_VARARGS, "\n"
+		"pseudojets_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
+		"pseudojets_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
+		""},
+	 { "pseudojets_to_ptyphim_array_float32", _wrap_pseudojets_to_ptyphim_array_float32, METH_VARARGS, "\n"
+		"pseudojets_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
+		"pseudojets_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
+		""},
+	 { "pseudojets_to_array_float64", _wrap_pseudojets_to_array_float64, METH_VARARGS, "\n"
+		"pseudojets_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		"pseudojets_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		""},
+	 { "pseudojets_to_array_float32", _wrap_pseudojets_to_array_float32, METH_VARARGS, "\n"
+		"pseudojets_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		"pseudojets_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		""},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -28125,15 +39134,15 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "has_parents(PseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
 	 { "PseudoJetStructureBase_object_in_jet", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_object_in_jet, METH_VARARGS|METH_KEYWORDS, "object_in_jet(PseudoJetStructureBase self, PseudoJet reference, PseudoJet jet) -> bool"},
 	 { "PseudoJetStructureBase_has_constituents", _wrap_PseudoJetStructureBase_has_constituents, METH_O, "has_constituents(PseudoJetStructureBase self) -> bool"},
-	 { "PseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(PseudoJetStructureBase self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(PseudoJetStructureBase self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_has_exclusive_subjets", _wrap_PseudoJetStructureBase_has_exclusive_subjets, METH_O, "has_exclusive_subjets(PseudoJetStructureBase self) -> bool"},
-	 { "PseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets(PseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets(PseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "n_exclusive_subjets(PseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> int"},
-	 { "PseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "PseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(PseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "PseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(PseudoJetStructureBase self, PseudoJet arg2) -> bool"},
-	 { "PseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(PseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "PseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_PseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(PseudoJetStructureBase self, PseudoJet arg2) -> PseudoJetContainer"},
 	 { "PseudoJetStructureBase_has_area", _wrap_PseudoJetStructureBase_has_area, METH_O, "has_area(PseudoJetStructureBase self) -> bool"},
 	 { "PseudoJetStructureBase_area", _wrap_PseudoJetStructureBase_area, METH_O, "area(PseudoJetStructureBase self) -> double"},
 	 { "PseudoJetStructureBase_area_error", _wrap_PseudoJetStructureBase_area_error, METH_O, "area_error(PseudoJetStructureBase self) -> double"},
@@ -28233,18 +39242,18 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJet_contains", (PyCFunction)(void(*)(void))_wrap_PseudoJet_contains, METH_VARARGS|METH_KEYWORDS, "contains(PseudoJet self, PseudoJet constituent) -> bool"},
 	 { "PseudoJet_is_inside", (PyCFunction)(void(*)(void))_wrap_PseudoJet_is_inside, METH_VARARGS|METH_KEYWORDS, "is_inside(PseudoJet self, PseudoJet jet) -> bool"},
 	 { "PseudoJet_has_constituents", _wrap_PseudoJet_has_constituents, METH_O, "has_constituents(PseudoJet self) -> bool"},
-	 { "PseudoJet_constituents", _wrap_PseudoJet_constituents, METH_O, "constituents(PseudoJet self) -> vectorPseudoJet"},
+	 { "PseudoJet_constituents", _wrap_PseudoJet_constituents, METH_O, "constituents(PseudoJet self) -> PseudoJetContainer"},
 	 { "PseudoJet_has_exclusive_subjets", _wrap_PseudoJet_has_exclusive_subjets, METH_O, "has_exclusive_subjets(PseudoJet self) -> bool"},
 	 { "PseudoJet_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_PseudoJet_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "n_exclusive_subjets(PseudoJet self, double const dcut) -> int"},
 	 { "PseudoJet_exclusive_subjets", _wrap_PseudoJet_exclusive_subjets, METH_VARARGS, "\n"
-		"exclusive_subjets(PseudoJet self, double const dcut) -> vectorPseudoJet\n"
-		"exclusive_subjets(PseudoJet self, int nsub) -> vectorPseudoJet\n"
+		"exclusive_subjets(PseudoJet self, double const dcut) -> PseudoJetContainer\n"
+		"exclusive_subjets(PseudoJet self, int nsub) -> PseudoJetContainer\n"
 		""},
-	 { "PseudoJet_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(PseudoJet self, int nsub) -> vectorPseudoJet"},
+	 { "PseudoJet_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(PseudoJet self, int nsub) -> PseudoJetContainer"},
 	 { "PseudoJet_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge(PseudoJet self, int nsub) -> double"},
 	 { "PseudoJet_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_PseudoJet_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(PseudoJet self, int nsub) -> double"},
 	 { "PseudoJet_has_pieces", _wrap_PseudoJet_has_pieces, METH_O, "has_pieces(PseudoJet self) -> bool"},
-	 { "PseudoJet_pieces", _wrap_PseudoJet_pieces, METH_O, "pieces(PseudoJet self) -> vectorPseudoJet"},
+	 { "PseudoJet_pieces", _wrap_PseudoJet_pieces, METH_O, "pieces(PseudoJet self) -> PseudoJetContainer"},
 	 { "PseudoJet_has_area", _wrap_PseudoJet_has_area, METH_O, "has_area(PseudoJet self) -> bool"},
 	 { "PseudoJet_area", _wrap_PseudoJet_area, METH_O, "area(PseudoJet self) -> double"},
 	 { "PseudoJet_area_error", _wrap_PseudoJet_area_error, METH_O, "area_error(PseudoJet self) -> double"},
@@ -28272,30 +39281,84 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 		""},
 	 { "PseudoJet_swigregister", PseudoJet_swigregister, METH_O, NULL},
 	 { "PseudoJet_swiginit", PseudoJet_swiginit, METH_VARARGS, NULL},
+	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
+		"PseudoJetContainer()\n"
+		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
+		"new_PseudoJetContainer(PseudoJetContainer other) -> PseudoJetContainer\n"
+		""},
+	 { "PseudoJetContainer_size", _wrap_PseudoJetContainer_size, METH_O, "size(PseudoJetContainer self) -> std::size_t"},
+	 { "PseudoJetContainer_capacity", _wrap_PseudoJetContainer_capacity, METH_O, "capacity(PseudoJetContainer self) -> std::size_t"},
+	 { "PseudoJetContainer_resize", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_resize, METH_VARARGS|METH_KEYWORDS, "resize(PseudoJetContainer self, std::size_t s)"},
+	 { "PseudoJetContainer_reserve", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_reserve, METH_VARARGS|METH_KEYWORDS, "reserve(PseudoJetContainer self, std::size_t s)"},
+	 { "PseudoJetContainer_push_back", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_push_back, METH_VARARGS|METH_KEYWORDS, "push_back(PseudoJetContainer self, PseudoJet pj)"},
+	 { "PseudoJetContainer_clear", _wrap_PseudoJetContainer_clear, METH_O, "clear(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_as_vector", _wrap_PseudoJetContainer_as_vector, METH_O, "as_vector(PseudoJetContainer self) -> vectorPseudoJet"},
+	 { "PseudoJetContainer___len__", _wrap_PseudoJetContainer___len__, METH_O, "__len__(PseudoJetContainer self) -> std::size_t"},
+	 { "PseudoJetContainer___getitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___getitem__, METH_VARARGS|METH_KEYWORDS, "__getitem__(PseudoJetContainer self, std::ptrdiff_t i) -> PseudoJet"},
+	 { "PseudoJetContainer_epxpypz_array_float64", _wrap_PseudoJetContainer_epxpypz_array_float64, METH_O, "epxpypz_array_float64(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_epxpypz_array_float32", _wrap_PseudoJetContainer_epxpypz_array_float32, METH_O, "epxpypz_array_float32(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
+	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
+	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "user_indices(PseudoJetContainer self)"},
+	 { "PseudoJetContainer___setitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___setitem__, METH_VARARGS|METH_KEYWORDS, "__setitem__(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "delete_PseudoJetContainer", _wrap_delete_PseudoJetContainer, METH_O, "delete_PseudoJetContainer(PseudoJetContainer self)"},
+	 { "PseudoJetContainer_swigregister", PseudoJetContainer_swigregister, METH_O, NULL},
+	 { "PseudoJetContainer_swiginit", PseudoJetContainer_swiginit, METH_VARARGS, NULL},
+	 { "user_indices", _wrap_user_indices, METH_VARARGS, "\n"
+		"user_indices(vectorPseudoJet pjs)\n"
+		"user_indices(PseudoJetContainer pjc)\n"
+		""},
 	 { "dot_product", (PyCFunction)(void(*)(void))_wrap_dot_product, METH_VARARGS|METH_KEYWORDS, "dot_product(PseudoJet a, PseudoJet b) -> double"},
 	 { "cos_theta", (PyCFunction)(void(*)(void))_wrap_cos_theta, METH_VARARGS|METH_KEYWORDS, "cos_theta(PseudoJet a, PseudoJet b) -> double"},
 	 { "theta", (PyCFunction)(void(*)(void))_wrap_theta, METH_VARARGS|METH_KEYWORDS, "theta(PseudoJet a, PseudoJet b) -> double"},
 	 { "have_same_momentum", (PyCFunction)(void(*)(void))_wrap_have_same_momentum, METH_VARARGS|METH_KEYWORDS, "have_same_momentum(PseudoJet arg1, PseudoJet arg2) -> bool"},
 	 { "PtYPhiM", (PyCFunction)(void(*)(void))_wrap_PtYPhiM, METH_VARARGS|METH_KEYWORDS, "PtYPhiM(double pt, double y, double phi, double m=0.0) -> PseudoJet"},
-	 { "sorted_by_pt", (PyCFunction)(void(*)(void))_wrap_sorted_by_pt, METH_VARARGS|METH_KEYWORDS, "sorted_by_pt(vectorPseudoJet jets) -> vectorPseudoJet"},
-	 { "sorted_by_rapidity", (PyCFunction)(void(*)(void))_wrap_sorted_by_rapidity, METH_VARARGS|METH_KEYWORDS, "sorted_by_rapidity(vectorPseudoJet jets) -> vectorPseudoJet"},
-	 { "sorted_by_E", (PyCFunction)(void(*)(void))_wrap_sorted_by_E, METH_VARARGS|METH_KEYWORDS, "sorted_by_E(vectorPseudoJet jets) -> vectorPseudoJet"},
-	 { "sorted_by_pz", (PyCFunction)(void(*)(void))_wrap_sorted_by_pz, METH_VARARGS|METH_KEYWORDS, "sorted_by_pz(vectorPseudoJet jets) -> vectorPseudoJet"},
+	 { "sorted_by_pt", _wrap_sorted_by_pt, METH_VARARGS, "\n"
+		"sorted_by_pt(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_pt(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
+	 { "sorted_by_rapidity", _wrap_sorted_by_rapidity, METH_VARARGS, "\n"
+		"sorted_by_rapidity(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_rapidity(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
+	 { "sorted_by_E", _wrap_sorted_by_E, METH_VARARGS, "\n"
+		"sorted_by_E(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_E(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
+	 { "sorted_by_pz", _wrap_sorted_by_pz, METH_VARARGS, "\n"
+		"sorted_by_pz(vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"sorted_by_pz(PseudoJetContainer jets) -> PseudoJetContainer\n"
+		""},
 	 { "sort_indices", (PyCFunction)(void(*)(void))_wrap_sort_indices, METH_VARARGS|METH_KEYWORDS, "sort_indices(std::vector< int,std::allocator< int > > & indices, std::vector< double,std::allocator< double > > const & values)"},
 	 { "new_Selector", _wrap_new_Selector, METH_VARARGS, "\n"
 		"Selector()\n"
 		"new_Selector(fastjet::SelectorWorker * worker_in) -> Selector\n"
 		""},
 	 { "delete_Selector", _wrap_delete_Selector, METH_O, "delete_Selector(Selector self)"},
-	 { "Selector__pass", (PyCFunction)(void(*)(void))_wrap_Selector__pass, METH_VARARGS|METH_KEYWORDS, "_pass(Selector self, PseudoJet jet) -> bool"},
-	 { "Selector_count", (PyCFunction)(void(*)(void))_wrap_Selector_count, METH_VARARGS|METH_KEYWORDS, "count(Selector self, vectorPseudoJet jets) -> unsigned int"},
-	 { "Selector_sum", (PyCFunction)(void(*)(void))_wrap_Selector_sum, METH_VARARGS|METH_KEYWORDS, "sum(Selector self, vectorPseudoJet jets) -> PseudoJet"},
-	 { "Selector_scalar_pt_sum", (PyCFunction)(void(*)(void))_wrap_Selector_scalar_pt_sum, METH_VARARGS|METH_KEYWORDS, "scalar_pt_sum(Selector self, vectorPseudoJet jets) -> double"},
-	 { "Selector_sift", (PyCFunction)(void(*)(void))_wrap_Selector_sift, METH_VARARGS|METH_KEYWORDS, "sift(Selector self, vectorPseudoJet jets, vectorPseudoJet jets_that_pass, vectorPseudoJet jets_that_fail)"},
+	 { "Selector_passes", (PyCFunction)(void(*)(void))_wrap_Selector_passes, METH_VARARGS|METH_KEYWORDS, "passes(Selector self, PseudoJet jet) -> bool"},
+	 { "Selector_count", _wrap_Selector_count, METH_VARARGS, "\n"
+		"count(Selector self, vectorPseudoJet jets) -> unsigned int\n"
+		"count(Selector self, PseudoJetContainer jets) -> unsigned int\n"
+		""},
+	 { "Selector_sum", _wrap_Selector_sum, METH_VARARGS, "\n"
+		"sum(Selector self, vectorPseudoJet jets) -> PseudoJet\n"
+		"sum(Selector self, PseudoJetContainer jets) -> PseudoJet\n"
+		""},
+	 { "Selector_scalar_pt_sum", _wrap_Selector_scalar_pt_sum, METH_VARARGS, "\n"
+		"scalar_pt_sum(Selector self, vectorPseudoJet jets) -> double\n"
+		"scalar_pt_sum(Selector self, PseudoJetContainer jets) -> double\n"
+		""},
+	 { "Selector_sift", _wrap_Selector_sift, METH_VARARGS, "\n"
+		"sift(Selector self, vectorPseudoJet jets, vectorPseudoJet jets_that_pass, vectorPseudoJet jets_that_fail)\n"
+		"sift(Selector self, PseudoJetContainer jets, vectorPseudoJet jets_that_pass, vectorPseudoJet jets_that_fail)\n"
+		""},
 	 { "Selector_applies_jet_by_jet", _wrap_Selector_applies_jet_by_jet, METH_O, "applies_jet_by_jet(Selector self) -> bool"},
 	 { "Selector___call__", _wrap_Selector___call__, METH_VARARGS, "\n"
 		"__call__(Selector self, PseudoJet jet) -> bool\n"
-		"__call__(Selector self, vectorPseudoJet jets) -> vectorPseudoJet\n"
+		"__call__(Selector self, vectorPseudoJet jets) -> PseudoJetContainer\n"
+		"__call__(Selector self, PseudoJetContainer jets) -> PseudoJetContainer\n"
 		""},
 	 { "Selector_nullify_non_selected", (PyCFunction)(void(*)(void))_wrap_Selector_nullify_non_selected, METH_VARARGS|METH_KEYWORDS, "nullify_non_selected(Selector self, std::vector< fastjet::PseudoJet const *,std::allocator< fastjet::PseudoJet const * > > & jets)"},
 	 { "Selector_get_rapidity_extent", (PyCFunction)(void(*)(void))_wrap_Selector_get_rapidity_extent, METH_VARARGS|METH_KEYWORDS, "get_rapidity_extent(Selector self, double & rapmin, double & rapmax)"},
@@ -28366,6 +39429,10 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 		"JetDefinition(fastjet::JetAlgorithm jet_algorithm_in, double R_in, fastjet::RecombinationScheme recomb_scheme_in, fastjet::Strategy strategy_in, int nparameters_in)\n"
 		"new_JetDefinition(fastjet::JetAlgorithm jet_algorithm_in, double R_in, fastjet::Strategy strategy_in, fastjet::RecombinationScheme recomb_scheme_in=E_scheme, int nparameters_in=1) -> JetDefinition\n"
 		""},
+	 { "JetDefinition___call__", _wrap_JetDefinition___call__, METH_VARARGS, "\n"
+		"__call__(JetDefinition self, vectorPseudoJet particles) -> PseudoJetContainer\n"
+		"__call__(JetDefinition self, PseudoJetContainer particles) -> PseudoJetContainer\n"
+		""},
 	 { "JetDefinition_set_recombination_scheme", (PyCFunction)(void(*)(void))_wrap_JetDefinition_set_recombination_scheme, METH_VARARGS|METH_KEYWORDS, "set_recombination_scheme(JetDefinition self, fastjet::RecombinationScheme arg2)"},
 	 { "JetDefinition_set_recombiner", _wrap_JetDefinition_set_recombiner, METH_VARARGS, "\n"
 		"set_recombiner(JetDefinition self, fastjet::JetDefinition::Recombiner const * recomb)\n"
@@ -28390,20 +39457,18 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "JetDefinition_description_no_recombiner", _wrap_JetDefinition_description_no_recombiner, METH_O, "description_no_recombiner(JetDefinition self) -> std::string"},
 	 { "JetDefinition_algorithm_description", (PyCFunction)(void(*)(void))_wrap_JetDefinition_algorithm_description, METH_VARARGS|METH_KEYWORDS, "algorithm_description(fastjet::JetAlgorithm const jet_alg) -> std::string"},
 	 { "JetDefinition_n_parameters_for_algorithm", (PyCFunction)(void(*)(void))_wrap_JetDefinition_n_parameters_for_algorithm, METH_VARARGS|METH_KEYWORDS, "n_parameters_for_algorithm(fastjet::JetAlgorithm const jet_alg) -> unsigned int"},
-	 { "JetDefinition___call__", _wrap_JetDefinition___call__, METH_VARARGS, "\n"
-		"__call__(JetDefinition self, vectorPseudoJet particles) -> vectorPseudoJet\n"
-		"__call__(JetDefinition self, vectorPseudoJet particles) -> vectorPseudoJet\n"
-		""},
 	 { "delete_JetDefinition", _wrap_delete_JetDefinition, METH_O, "delete_JetDefinition(JetDefinition self)"},
 	 { "JetDefinition_swigregister", JetDefinition_swigregister, METH_O, NULL},
 	 { "JetDefinition_swiginit", JetDefinition_swiginit, METH_VARARGS, NULL},
 	 { "join", _wrap_join, METH_VARARGS, "\n"
 		"join(vectorPseudoJet pieces) -> PseudoJet\n"
+		"join(PseudoJetContainer pieces) -> PseudoJet\n"
 		"join(PseudoJet j1) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, PseudoJet j3) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, PseudoJet j3, PseudoJet j4) -> PseudoJet\n"
 		"join(vectorPseudoJet pieces, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
+		"join(PseudoJetContainer pieces, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
 		"join(PseudoJet j1, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
 		"join(PseudoJet j1, PseudoJet j2, PseudoJet j3, fastjet::JetDefinition::Recombiner const & recombiner) -> PseudoJet\n"
@@ -28416,9 +39481,9 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "delete_CompositeJetStructure", _wrap_delete_CompositeJetStructure, METH_O, "delete_CompositeJetStructure(CompositeJetStructure self)"},
 	 { "CompositeJetStructure_description", _wrap_CompositeJetStructure_description, METH_O, "description(CompositeJetStructure self) -> std::string"},
 	 { "CompositeJetStructure_has_constituents", _wrap_CompositeJetStructure_has_constituents, METH_O, "has_constituents(CompositeJetStructure self) -> bool"},
-	 { "CompositeJetStructure_constituents", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "CompositeJetStructure_constituents", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(CompositeJetStructure self, PseudoJet jet) -> PseudoJetContainer"},
 	 { "CompositeJetStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(CompositeJetStructure self, PseudoJet arg2) -> bool"},
-	 { "CompositeJetStructure_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(CompositeJetStructure self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "CompositeJetStructure_pieces", (PyCFunction)(void(*)(void))_wrap_CompositeJetStructure_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(CompositeJetStructure self, PseudoJet jet) -> PseudoJetContainer"},
 	 { "CompositeJetStructure_swigregister", CompositeJetStructure_swigregister, METH_O, NULL},
 	 { "CompositeJetStructure_swiginit", CompositeJetStructure_swiginit, METH_VARARGS, NULL},
 	 { "new_ClusterSequenceStructure", _wrap_new_ClusterSequenceStructure, METH_VARARGS, "\n"
@@ -28437,15 +39502,15 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "ClusterSequenceStructure_has_parents", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_parents, METH_VARARGS|METH_KEYWORDS, "has_parents(ClusterSequenceStructure self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
 	 { "ClusterSequenceStructure_object_in_jet", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_object_in_jet, METH_VARARGS|METH_KEYWORDS, "object_in_jet(ClusterSequenceStructure self, PseudoJet reference, PseudoJet jet) -> bool"},
 	 { "ClusterSequenceStructure_has_constituents", _wrap_ClusterSequenceStructure_has_constituents, METH_O, "has_constituents(ClusterSequenceStructure self) -> bool"},
-	 { "ClusterSequenceStructure_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(ClusterSequenceStructure self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(ClusterSequenceStructure self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_has_exclusive_subjets", _wrap_ClusterSequenceStructure_has_exclusive_subjets, METH_O, "has_exclusive_subjets(ClusterSequenceStructure self) -> bool"},
-	 { "ClusterSequenceStructure_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets(ClusterSequenceStructure self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets(ClusterSequenceStructure self, PseudoJet reference, double const & dcut) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "n_exclusive_subjets(ClusterSequenceStructure self, PseudoJet reference, double const & dcut) -> int"},
-	 { "ClusterSequenceStructure_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> double"},
 	 { "ClusterSequenceStructure_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(ClusterSequenceStructure self, PseudoJet reference, int nsub) -> double"},
 	 { "ClusterSequenceStructure_has_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(ClusterSequenceStructure self, PseudoJet reference) -> bool"},
-	 { "ClusterSequenceStructure_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(ClusterSequenceStructure self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "ClusterSequenceStructure_pieces", (PyCFunction)(void(*)(void))_wrap_ClusterSequenceStructure_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(ClusterSequenceStructure self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "ClusterSequenceStructure_has_area", _wrap_ClusterSequenceStructure_has_area, METH_O, "has_area(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_area", _wrap_ClusterSequenceStructure_area, METH_O, "area(ClusterSequenceStructure self) -> double"},
 	 { "ClusterSequenceStructure_area_error", _wrap_ClusterSequenceStructure_area_error, METH_O, "area_error(ClusterSequenceStructure self) -> double"},
@@ -28453,27 +39518,30 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "ClusterSequenceStructure_is_pure_ghost", _wrap_ClusterSequenceStructure_is_pure_ghost, METH_O, "is_pure_ghost(ClusterSequenceStructure self) -> bool"},
 	 { "ClusterSequenceStructure_swigregister", ClusterSequenceStructure_swigregister, METH_O, NULL},
 	 { "ClusterSequenceStructure_swiginit", ClusterSequenceStructure_swiginit, METH_VARARGS, NULL},
-	 { "new_ClusterSequence", (PyCFunction)(void(*)(void))_wrap_new_ClusterSequence, METH_VARARGS|METH_KEYWORDS, "new_ClusterSequence(vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence"},
+	 { "new_ClusterSequence", _wrap_new_ClusterSequence, METH_VARARGS, "\n"
+		"ClusterSequence(vectorPseudoJet pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False)\n"
+		"new_ClusterSequence(PseudoJetContainer pseudojets, JetDefinition jet_def, bool const & writeout_combinations=False) -> ClusterSequence\n"
+		""},
 	 { "delete_ClusterSequence", _wrap_delete_ClusterSequence, METH_O, "delete_ClusterSequence(ClusterSequence self)"},
-	 { "ClusterSequence_inclusive_jets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_inclusive_jets, METH_VARARGS|METH_KEYWORDS, "inclusive_jets(ClusterSequence self, double const ptmin=0.0) -> vectorPseudoJet"},
+	 { "ClusterSequence_inclusive_jets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_inclusive_jets, METH_VARARGS|METH_KEYWORDS, "inclusive_jets(ClusterSequence self, double const ptmin=0.0) -> PseudoJetContainer"},
 	 { "ClusterSequence_n_exclusive_jets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_n_exclusive_jets, METH_VARARGS|METH_KEYWORDS, "n_exclusive_jets(ClusterSequence self, double const dcut) -> int"},
 	 { "ClusterSequence_exclusive_jets", _wrap_ClusterSequence_exclusive_jets, METH_VARARGS, "\n"
-		"exclusive_jets(ClusterSequence self, double const dcut) -> vectorPseudoJet\n"
-		"exclusive_jets(ClusterSequence self, int const njets) -> vectorPseudoJet\n"
+		"exclusive_jets(ClusterSequence self, double const dcut) -> PseudoJetContainer\n"
+		"exclusive_jets(ClusterSequence self, int const njets) -> PseudoJetContainer\n"
 		""},
-	 { "ClusterSequence_exclusive_jets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_jets_up_to(ClusterSequence self, int const njets) -> vectorPseudoJet"},
+	 { "ClusterSequence_exclusive_jets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_jets_up_to(ClusterSequence self, int const njets) -> PseudoJetContainer"},
 	 { "ClusterSequence_exclusive_dmerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_dmerge, METH_VARARGS|METH_KEYWORDS, "exclusive_dmerge(ClusterSequence self, int const njets) -> double"},
 	 { "ClusterSequence_exclusive_dmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_dmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_dmerge_max(ClusterSequence self, int const njets) -> double"},
 	 { "ClusterSequence_exclusive_ymerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_ymerge, METH_VARARGS|METH_KEYWORDS, "exclusive_ymerge(ClusterSequence self, int njets) -> double"},
 	 { "ClusterSequence_exclusive_ymerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_ymerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_ymerge_max(ClusterSequence self, int njets) -> double"},
 	 { "ClusterSequence_n_exclusive_jets_ycut", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_n_exclusive_jets_ycut, METH_VARARGS|METH_KEYWORDS, "n_exclusive_jets_ycut(ClusterSequence self, double ycut) -> int"},
-	 { "ClusterSequence_exclusive_jets_ycut", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_ycut, METH_VARARGS|METH_KEYWORDS, "exclusive_jets_ycut(ClusterSequence self, double ycut) -> vectorPseudoJet"},
+	 { "ClusterSequence_exclusive_jets_ycut", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_jets_ycut, METH_VARARGS|METH_KEYWORDS, "exclusive_jets_ycut(ClusterSequence self, double ycut) -> PseudoJetContainer"},
 	 { "ClusterSequence_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "n_exclusive_subjets(ClusterSequence self, PseudoJet jet, double const dcut) -> int"},
 	 { "ClusterSequence_exclusive_subjets", _wrap_ClusterSequence_exclusive_subjets, METH_VARARGS, "\n"
-		"exclusive_subjets(ClusterSequence self, PseudoJet jet, double const dcut) -> vectorPseudoJet\n"
-		"exclusive_subjets(ClusterSequence self, PseudoJet jet, int nsub) -> vectorPseudoJet\n"
+		"exclusive_subjets(ClusterSequence self, PseudoJet jet, double const dcut) -> PseudoJetContainer\n"
+		"exclusive_subjets(ClusterSequence self, PseudoJet jet, int nsub) -> PseudoJetContainer\n"
 		""},
-	 { "ClusterSequence_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(ClusterSequence self, PseudoJet jet, int nsub) -> vectorPseudoJet"},
+	 { "ClusterSequence_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(ClusterSequence self, PseudoJet jet, int nsub) -> PseudoJetContainer"},
 	 { "ClusterSequence_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge(ClusterSequence self, PseudoJet jet, int nsub) -> double"},
 	 { "ClusterSequence_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(ClusterSequence self, PseudoJet jet, int nsub) -> double"},
 	 { "ClusterSequence_Q", _wrap_ClusterSequence_Q, METH_O, "Q(ClusterSequence self) -> double"},
@@ -28485,10 +39553,12 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 		"has_child(ClusterSequence self, PseudoJet jet, fastjet::PseudoJet const *& childp) -> bool\n"
 		""},
 	 { "ClusterSequence_has_partner", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_has_partner, METH_VARARGS|METH_KEYWORDS, "has_partner(ClusterSequence self, PseudoJet jet, PseudoJet partner) -> bool"},
-	 { "ClusterSequence_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(ClusterSequence self, PseudoJet jet) -> vectorPseudoJet"},
+	 { "ClusterSequence_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(ClusterSequence self, PseudoJet jet) -> PseudoJetContainer"},
 	 { "ClusterSequence_print_jets_for_root", _wrap_ClusterSequence_print_jets_for_root, METH_VARARGS, "\n"
 		"print_jets_for_root(ClusterSequence self, vectorPseudoJet jets, std::ostream & ostr=std::cout)\n"
+		"print_jets_for_root(ClusterSequence self, PseudoJetContainer jets, std::ostream & ostr=std::cout)\n"
 		"print_jets_for_root(ClusterSequence self, vectorPseudoJet jets, std::string const & filename, std::string const & comment=\"\")\n"
+		"print_jets_for_root(ClusterSequence self, PseudoJetContainer jets, std::string const & filename, std::string const & comment=\"\")\n"
 		""},
 	 { "ClusterSequence_add_constituents", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_add_constituents, METH_VARARGS|METH_KEYWORDS, "add_constituents(ClusterSequence self, PseudoJet jet, vectorPseudoJet subjet_vector)"},
 	 { "ClusterSequence_strategy_used", _wrap_ClusterSequence_strategy_used, METH_O, "strategy_used(ClusterSequence self) -> fastjet::Strategy"},
@@ -28512,10 +39582,13 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "ClusterSequence_jets", _wrap_ClusterSequence_jets, METH_O, "jets(ClusterSequence self) -> vectorPseudoJet"},
 	 { "ClusterSequence_history", _wrap_ClusterSequence_history, METH_O, "history(ClusterSequence self) -> std::vector< fastjet::ClusterSequence::history_element,std::allocator< fastjet::ClusterSequence::history_element > > const &"},
 	 { "ClusterSequence_n_particles", _wrap_ClusterSequence_n_particles, METH_O, "n_particles(ClusterSequence self) -> unsigned int"},
-	 { "ClusterSequence_particle_jet_indices", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_particle_jet_indices, METH_VARARGS|METH_KEYWORDS, "particle_jet_indices(ClusterSequence self, vectorPseudoJet arg2) -> std::vector< int,std::allocator< int > >"},
+	 { "ClusterSequence_particle_jet_indices", _wrap_ClusterSequence_particle_jet_indices, METH_VARARGS, "\n"
+		"particle_jet_indices(ClusterSequence self, vectorPseudoJet arg2) -> std::vector< int,std::allocator< int > >\n"
+		"particle_jet_indices(ClusterSequence self, PseudoJetContainer pjs) -> std::vector< int,std::allocator< int > >\n"
+		""},
 	 { "ClusterSequence_unique_history_order", _wrap_ClusterSequence_unique_history_order, METH_O, "unique_history_order(ClusterSequence self) -> std::vector< int,std::allocator< int > >"},
-	 { "ClusterSequence_unclustered_particles", _wrap_ClusterSequence_unclustered_particles, METH_O, "unclustered_particles(ClusterSequence self) -> vectorPseudoJet"},
-	 { "ClusterSequence_childless_pseudojets", _wrap_ClusterSequence_childless_pseudojets, METH_O, "childless_pseudojets(ClusterSequence self) -> vectorPseudoJet"},
+	 { "ClusterSequence_unclustered_particles", _wrap_ClusterSequence_unclustered_particles, METH_O, "unclustered_particles(ClusterSequence self) -> PseudoJetContainer"},
+	 { "ClusterSequence_childless_pseudojets", _wrap_ClusterSequence_childless_pseudojets, METH_O, "childless_pseudojets(ClusterSequence self) -> PseudoJetContainer"},
 	 { "ClusterSequence_contains", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_contains, METH_VARARGS|METH_KEYWORDS, "contains(ClusterSequence self, PseudoJet object) -> bool"},
 	 { "ClusterSequence_transfer_from_sequence", (PyCFunction)(void(*)(void))_wrap_ClusterSequence_transfer_from_sequence, METH_VARARGS|METH_KEYWORDS, "transfer_from_sequence(ClusterSequence self, ClusterSequence from_seq, fastjet::FunctionOfPseudoJet< fastjet::PseudoJet > const * action_on_jets=None)"},
 	 { "ClusterSequence_structure_shared_ptr", _wrap_ClusterSequence_structure_shared_ptr, METH_O, "structure_shared_ptr(ClusterSequence self) -> sharedPtrPseudoJetStructureBase"},
@@ -28525,10 +39598,9 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "JetDefinition1Param", (PyCFunction)(void(*)(void))_wrap_JetDefinition1Param, METH_VARARGS|METH_KEYWORDS, "JetDefinition1Param(fastjet::JetAlgorithm jet_algorithm, double R_in, fastjet::RecombinationScheme recomb_scheme=E_scheme, fastjet::Strategy strategy=Best) -> JetDefinition"},
 	 { "JetDefinition2Param", (PyCFunction)(void(*)(void))_wrap_JetDefinition2Param, METH_VARARGS|METH_KEYWORDS, "JetDefinition2Param(fastjet::JetAlgorithm jet_algorithm, double R_in, double xtra_param, fastjet::RecombinationScheme recomb_scheme=E_scheme, fastjet::Strategy strategy=Best) -> JetDefinition"},
 	 { "set_pseudojet_format", (PyCFunction)(void(*)(void))_wrap_set_pseudojet_format, METH_VARARGS|METH_KEYWORDS, "set_pseudojet_format(fastjet::PseudoJetRepresentation rep)"},
-	 { "ptyphim_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_ptyphim_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_to_pseudojets(double * particles) -> vectorPseudoJet"},
-	 { "epxpypz_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_epxpypz_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "epxpypz_array_to_pseudojets(double * particles) -> vectorPseudoJet"},
-	 { "array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "array_to_pseudojets(double * particles, fastjet::PseudoJetRepresentation pjrep=ptyphim) -> vectorPseudoJet"},
-	 { "user_indices", (PyCFunction)(void(*)(void))_wrap_user_indices, METH_VARARGS|METH_KEYWORDS, "user_indices(std::ptrdiff_t ** inds, std::ptrdiff_t * mult, vectorPseudoJet pjs)"},
+	 { "ptyphim_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_ptyphim_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
+	 { "epxpypz_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_epxpypz_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "epxpypz_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
+	 { "array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "array_to_pseudojets(double * particles, fastjet::PseudoJetRepresentation pjrep=ptyphim) -> PseudoJetContainer"},
 	 { "new_sharedPtrPseudoJetStructureBase", _wrap_new_sharedPtrPseudoJetStructureBase, METH_VARARGS, "\n"
 		"sharedPtrPseudoJetStructureBase()\n"
 		"new_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase share) -> sharedPtrPseudoJetStructureBase\n"
@@ -28555,15 +39627,15 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "sharedPtrPseudoJetStructureBase_has_parents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_parents, METH_VARARGS|METH_KEYWORDS, "has_parents(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet parent1, PseudoJet parent2) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_object_in_jet", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_object_in_jet, METH_VARARGS|METH_KEYWORDS, "object_in_jet(sharedPtrPseudoJetStructureBase self, PseudoJet reference, PseudoJet jet) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_has_constituents", _wrap_sharedPtrPseudoJetStructureBase_has_constituents, METH_O, "has_constituents(sharedPtrPseudoJetStructureBase self) -> bool"},
-	 { "sharedPtrPseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(sharedPtrPseudoJetStructureBase self, PseudoJet reference) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_constituents", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_constituents, METH_VARARGS|METH_KEYWORDS, "constituents(sharedPtrPseudoJetStructureBase self, PseudoJet reference) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_has_exclusive_subjets", _wrap_sharedPtrPseudoJetStructureBase_has_exclusive_subjets, METH_O, "has_exclusive_subjets(sharedPtrPseudoJetStructureBase self) -> bool"},
-	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_n_exclusive_subjets", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_n_exclusive_subjets, METH_VARARGS|METH_KEYWORDS, "n_exclusive_subjets(sharedPtrPseudoJetStructureBase self, PseudoJet reference, double const & dcut) -> int"},
-	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subjets_up_to, METH_VARARGS|METH_KEYWORDS, "exclusive_subjets_up_to(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_exclusive_subdmerge_max, METH_VARARGS|METH_KEYWORDS, "exclusive_subdmerge_max(sharedPtrPseudoJetStructureBase self, PseudoJet reference, int nsub) -> double"},
 	 { "sharedPtrPseudoJetStructureBase_has_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_has_pieces, METH_VARARGS|METH_KEYWORDS, "has_pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> bool"},
-	 { "sharedPtrPseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> vectorPseudoJet"},
+	 { "sharedPtrPseudoJetStructureBase_pieces", (PyCFunction)(void(*)(void))_wrap_sharedPtrPseudoJetStructureBase_pieces, METH_VARARGS|METH_KEYWORDS, "pieces(sharedPtrPseudoJetStructureBase self, PseudoJet arg2) -> PseudoJetContainer"},
 	 { "sharedPtrPseudoJetStructureBase_has_area", _wrap_sharedPtrPseudoJetStructureBase_has_area, METH_O, "has_area(sharedPtrPseudoJetStructureBase self) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_area", _wrap_sharedPtrPseudoJetStructureBase_area, METH_O, "area(sharedPtrPseudoJetStructureBase self) -> double"},
 	 { "sharedPtrPseudoJetStructureBase_area_error", _wrap_sharedPtrPseudoJetStructureBase_area_error, METH_O, "area_error(sharedPtrPseudoJetStructureBase self) -> double"},
@@ -28571,12 +39643,30 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "sharedPtrPseudoJetStructureBase_is_pure_ghost", _wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost, METH_O, "is_pure_ghost(sharedPtrPseudoJetStructureBase self) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_swigregister", sharedPtrPseudoJetStructureBase_swigregister, METH_O, NULL},
 	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
-	 { "pseudojets_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_epxpypz_array_float64(vectorPseudoJet pjs)"},
-	 { "pseudojets_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_epxpypz_array_float32(vectorPseudoJet pjs)"},
-	 { "pseudojets_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)"},
-	 { "pseudojets_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)"},
-	 { "pseudojets_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
-	 { "pseudojets_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pseudojets_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pseudojets_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pseudojets_to_epxpypz_array_float64", _wrap_pseudojets_to_epxpypz_array_float64, METH_VARARGS, "\n"
+		"pseudojets_to_epxpypz_array_float64(vectorPseudoJet pjs)\n"
+		"pseudojets_to_epxpypz_array_float64(PseudoJetContainer pjs)\n"
+		""},
+	 { "pseudojets_to_epxpypz_array_float32", _wrap_pseudojets_to_epxpypz_array_float32, METH_VARARGS, "\n"
+		"pseudojets_to_epxpypz_array_float32(vectorPseudoJet pjs)\n"
+		"pseudojets_to_epxpypz_array_float32(PseudoJetContainer pjs)\n"
+		""},
+	 { "pseudojets_to_ptyphim_array_float64", _wrap_pseudojets_to_ptyphim_array_float64, METH_VARARGS, "\n"
+		"pseudojets_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
+		"pseudojets_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
+		""},
+	 { "pseudojets_to_ptyphim_array_float32", _wrap_pseudojets_to_ptyphim_array_float32, METH_VARARGS, "\n"
+		"pseudojets_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
+		"pseudojets_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
+		""},
+	 { "pseudojets_to_array_float64", _wrap_pseudojets_to_array_float64, METH_VARARGS, "\n"
+		"pseudojets_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		"pseudojets_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		""},
+	 { "pseudojets_to_array_float32", _wrap_pseudojets_to_array_float32, METH_VARARGS, "\n"
+		"pseudojets_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		"pseudojets_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
+		""},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -28610,6 +39700,7 @@ static swig_type_info _swigt__p_fastjet__JetDefinition = {"_p_fastjet__JetDefini
 static swig_type_info _swigt__p_fastjet__JetDefinition__Plugin = {"_p_fastjet__JetDefinition__Plugin", "fastjet::JetDefinition::Plugin *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__JetDefinition__Recombiner = {"_p_fastjet__JetDefinition__Recombiner", "fastjet::JetDefinition::Recombiner *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__PseudoJet = {"_p_fastjet__PseudoJet", "std::vector< fastjet::PseudoJet >::value_type *|fastjet::PseudoJet *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_fastjet__PseudoJetContainer = {"_p_fastjet__PseudoJetContainer", "fastjet::PseudoJetContainer *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__PseudoJetStructureBase = {"_p_fastjet__PseudoJetStructureBase", "fastjet::PseudoJetStructureBase *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__PseudoJet__UserInfoBase = {"_p_fastjet__PseudoJet__UserInfoBase", "fastjet::PseudoJet::UserInfoBase *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fastjet__Selector = {"_p_fastjet__Selector", "fastjet::Selector *", 0, 0, (void*)0, 0};
@@ -28625,7 +39716,7 @@ static swig_type_info _swigt__p_p_PyObject = {"_p_p_PyObject", "PyObject **", 0,
 static swig_type_info _swigt__p_p_double = {"_p_p_double", "double **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_fastjet__PseudoJet = {"_p_p_fastjet__PseudoJet", "fastjet::PseudoJet **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_float = {"_p_p_float", "float **", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_p_std__ptrdiff_t = {"_p_p_std__ptrdiff_t", "std::ptrdiff_t **", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_p_int = {"_p_p_int", "int **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_fastjet__PseudoJet_t = {"_p_std__allocatorT_fastjet__PseudoJet_t", "std::allocator< fastjet::PseudoJet > *|std::vector< fastjet::PseudoJet >::allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
@@ -28659,6 +39750,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_fastjet__JetDefinition__Plugin,
   &_swigt__p_fastjet__JetDefinition__Recombiner,
   &_swigt__p_fastjet__PseudoJet,
+  &_swigt__p_fastjet__PseudoJetContainer,
   &_swigt__p_fastjet__PseudoJetStructureBase,
   &_swigt__p_fastjet__PseudoJet__UserInfoBase,
   &_swigt__p_fastjet__Selector,
@@ -28674,7 +39766,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_p_double,
   &_swigt__p_p_fastjet__PseudoJet,
   &_swigt__p_p_float,
-  &_swigt__p_p_std__ptrdiff_t,
+  &_swigt__p_p_int,
   &_swigt__p_size_type,
   &_swigt__p_std__allocatorT_fastjet__PseudoJet_t,
   &_swigt__p_std__invalid_argument,
@@ -28708,6 +39800,7 @@ static swig_cast_info _swigc__p_fastjet__JetDefinition[] = {  {&_swigt__p_fastje
 static swig_cast_info _swigc__p_fastjet__JetDefinition__Plugin[] = {  {&_swigt__p_fastjet__JetDefinition__Plugin, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__JetDefinition__Recombiner[] = {  {&_swigt__p_fastjet__JetDefinition__Recombiner, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__PseudoJet[] = {  {&_swigt__p_fastjet__PseudoJet, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_fastjet__PseudoJetContainer[] = {  {&_swigt__p_fastjet__PseudoJetContainer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__PseudoJetStructureBase[] = {  {&_swigt__p_fastjet__PseudoJetStructureBase, 0, 0, 0},  {&_swigt__p_fastjet__CompositeJetStructure, _p_fastjet__CompositeJetStructureTo_p_fastjet__PseudoJetStructureBase, 0, 0},  {&_swigt__p_fastjet__ClusterSequenceStructure, _p_fastjet__ClusterSequenceStructureTo_p_fastjet__PseudoJetStructureBase, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__PseudoJet__UserInfoBase[] = {  {&_swigt__p_fastjet__PseudoJet__UserInfoBase, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fastjet__Selector[] = {  {&_swigt__p_fastjet__Selector, 0, 0, 0},{0, 0, 0, 0}};
@@ -28723,7 +39816,7 @@ static swig_cast_info _swigc__p_p_PyObject[] = {  {&_swigt__p_p_PyObject, 0, 0, 
 static swig_cast_info _swigc__p_p_double[] = {  {&_swigt__p_p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_fastjet__PseudoJet[] = {  {&_swigt__p_p_fastjet__PseudoJet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_float[] = {  {&_swigt__p_p_float, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_p_std__ptrdiff_t[] = {  {&_swigt__p_p_std__ptrdiff_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_p_int[] = {  {&_swigt__p_p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_fastjet__PseudoJet_t[] = {  {&_swigt__p_std__allocatorT_fastjet__PseudoJet_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
@@ -28757,6 +39850,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_fastjet__JetDefinition__Plugin,
   _swigc__p_fastjet__JetDefinition__Recombiner,
   _swigc__p_fastjet__PseudoJet,
+  _swigc__p_fastjet__PseudoJetContainer,
   _swigc__p_fastjet__PseudoJetStructureBase,
   _swigc__p_fastjet__PseudoJet__UserInfoBase,
   _swigc__p_fastjet__Selector,
@@ -28772,7 +39866,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_p_double,
   _swigc__p_p_fastjet__PseudoJet,
   _swigc__p_p_float,
-  _swigc__p_p_std__ptrdiff_t,
+  _swigc__p_p_int,
   _swigc__p_size_type,
   _swigc__p_std__allocatorT_fastjet__PseudoJet_t,
   _swigc__p_std__invalid_argument,
@@ -29582,6 +40676,9 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "PseudoJet_T",SWIG_From_int(static_cast< int >(fastjet::PseudoJet::T)));
   SWIG_Python_SetConstant(d, "PseudoJet_NUM_COORDINATES",SWIG_From_int(static_cast< int >(fastjet::PseudoJet::NUM_COORDINATES)));
   SWIG_Python_SetConstant(d, "PseudoJet_SIZE",SWIG_From_int(static_cast< int >(fastjet::PseudoJet::SIZE)));
+  SWIG_Python_SetConstant(d, "epxpypz",SWIG_From_int(static_cast< int >(fastjet::epxpypz)));
+  SWIG_Python_SetConstant(d, "ptyphim",SWIG_From_int(static_cast< int >(fastjet::ptyphim)));
+  SWIG_Python_SetConstant(d, "ptyphi",SWIG_From_int(static_cast< int >(fastjet::ptyphi)));
   SWIG_Python_SetConstant(d, "N2MHTLazy9AntiKtSeparateGhosts",SWIG_From_int(static_cast< int >(fastjet::N2MHTLazy9AntiKtSeparateGhosts)));
   SWIG_Python_SetConstant(d, "N2MHTLazy9",SWIG_From_int(static_cast< int >(fastjet::N2MHTLazy9)));
   SWIG_Python_SetConstant(d, "N2MHTLazy25",SWIG_From_int(static_cast< int >(fastjet::N2MHTLazy25)));
@@ -29626,9 +40723,6 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "ClusterSequence_Invalid",SWIG_From_int(static_cast< int >(fastjet::ClusterSequence::Invalid)));
   SWIG_Python_SetConstant(d, "ClusterSequence_InexistentParent",SWIG_From_int(static_cast< int >(fastjet::ClusterSequence::InexistentParent)));
   SWIG_Python_SetConstant(d, "ClusterSequence_BeamJet",SWIG_From_int(static_cast< int >(fastjet::ClusterSequence::BeamJet)));
-  SWIG_Python_SetConstant(d, "epxpypz",SWIG_From_int(static_cast< int >(fastjet::epxpypz)));
-  SWIG_Python_SetConstant(d, "ptyphim",SWIG_From_int(static_cast< int >(fastjet::ptyphim)));
-  SWIG_Python_SetConstant(d, "ptyphi",SWIG_From_int(static_cast< int >(fastjet::ptyphi)));
   SWIG_addvarlink(globals, "PseudoJetRep_", Swig_var_PseudoJetRep__get, Swig_var_PseudoJetRep__set);
 #if PY_VERSION_HEX >= 0x03000000
   return m;
