@@ -131,10 +131,18 @@ FastJetError = _pyfjcore.FastJetError;
 }
 
 // a macro to get support for description through __str__ method
-%define FASTJET_SWIG_ADD_STR(Class)
+/*%define FASTJET_SWIG_ADD_STR(Class)
 %extend Class {
   std::string __str__() const {return $self->description();}
 }
+%enddef*/
+
+// makes python class printable from a description method
+%define ADD_REPR_FROM_DESCRIPTION
+%pythoncode %{
+  def __repr__(self):
+      return self.description()
+%}
 %enddef
 
 // ignore variables
@@ -191,6 +199,8 @@ namespace PYFJNAMESPACE {
 
   %rename(passes) Selector::pass;
 
+  %copyctor PseudoJetContainer;
+
 } // namespace PYFJNAMESPACE
 
 // include EECHist and declare templates
@@ -199,32 +209,37 @@ namespace PYFJNAMESPACE {
 
 namespace PYFJNAMESPACE {
 
-// template SharedPtr
-%template(sharedPtrPseudoJetStructureBase) SharedPtr<PYFJNAMESPACE::PseudoJetStructureBase>;
+  // template SharedPtr
+  %template(sharedPtrPseudoJetStructureBase) SharedPtr<PYFJNAMESPACE::PseudoJetStructureBase>;
 
-// template functions that return numpy arrays
-%template(pseudojets_to_epxpypz_array_float64) pseudojets_to_epxpypz_array<double>;
-%template(pseudojets_to_epxpypz_array_float32) pseudojets_to_epxpypz_array<float>;
-%template(pseudojets_to_ptyphim_array_float64) pseudojets_to_ptyphim_array<double>;
-%template(pseudojets_to_ptyphim_array_float32) pseudojets_to_ptyphim_array<float>;
-%template(pseudojets_to_array_float64) pseudojets_to_array<double>;
-%template(pseudojets_to_array_float32) pseudojets_to_array<float>;
+  // functions accepting a vector of pseudojets and returning a numpy array
+  %template(pjs_to_epxpypz_array_float64) pjs_to_epxpypz_array<double>;
+  %template(pjs_to_epxpypz_array_float32) pjs_to_epxpypz_array<float>;
+  %template(pjs_to_ptyphim_array_float64) pjs_to_ptyphim_array<double>;
+  %template(pjs_to_ptyphim_array_float32) pjs_to_ptyphim_array<float>;
+  %template(pjs_to_array_float64) pjs_to_array<double>;
+  %template(pjs_to_array_float32) pjs_to_array<float>;
 
-} // namespace PYFJNAMESPACE
+  // functions accepting a pseudojet container and returning a numpy array
+  %template(pjc_to_epxpypz_array_float64) pjc_to_epxpypz_array<double>;
+  %template(pjc_to_epxpypz_array_float32) pjc_to_epxpypz_array<float>;
+  %template(pjc_to_ptyphim_array_float64) pjc_to_ptyphim_array<double>;
+  %template(pjc_to_ptyphim_array_float32) pjc_to_ptyphim_array<float>;  
+  %template(pjc_to_array_float64) pjc_to_array<double>; 
+  %template(pjc_to_array_float32) pjc_to_array<float>;
 
-// makes python class printable from a description method
-%define ADD_REPR_FROM_DESCRIPTION
-%pythoncode %{
-  def __repr__(self):
-      return self.description()
-%}
-%enddef
-
-namespace PYFJNAMESPACE {
+  // member functions of pseudojet container that retu  rn a numpy array
+  %template(epxpypz_array_float64) PseudoJetContainer::epxpypz_array<double>;
+  %template(epxpypz_array_float32) PseudoJetContainer::epxpypz_array<float>;
+  %template(ptyphim_array_float64) PseudoJetContainer::ptyphim_array<double>;
+  %template(ptyphim_array_float32) PseudoJetContainer::ptyphim_array<float>;
+  %template(array_float64) PseudoJetContainer::array<double>;
+  %template(array_float32) PseudoJetContainer::array<float>;
 
   %extend PseudoJetContainer {
 
-    void __setitem__(std::ptrdiff_t key, const PseudoJet & val) {
+    void _setitem(std::ptrdiff_t key, const PseudoJet & val) {
+      if (key < 0) key += $self->size();
       if (std::size_t(key) >= $self->size())
         throw std::length_error("index out of bounds");
 
@@ -233,15 +248,18 @@ namespace PYFJNAMESPACE {
 
     %pythoncode {
 
-      def __iter__(self):
-          return self.vector.__iter__();
+      def epxpypz_array(self, float32=False):
+          return self.epxpypz_array_float32() if float32 else self.epxpypz_array_float64()
 
-      def __repr__(self):
-          s = ['PseudoJetContainer[' + str(len(self)) + '](']
-          for pj in self:
-              s.append('  ' + repr(pj) + ',')
-          s.append(')')
-          return '\n'.join(s)
+      def ptyphims_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
+          return (self.ptyphim_array_float32(mass, phi_std, phi_ref) if float32 else
+                  self.ptyphim_array_float64(mass, phi_std, phi_ref))
+
+      def array(self, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
+          return self.array_float32(pjrep) if float32 else self.array_float64(pjrep)
+
+      def __len__(self):
+          return self.size()
 
       @property
       def vector(self):
@@ -249,6 +267,26 @@ namespace PYFJNAMESPACE {
               self._vector = self.as_vector()
           return self._vector
 
+      def __iter__(self):
+          return self.vector.__iter__();
+
+      def __setitem__(self, key, val):
+          if hasattr(self, '_vector'):
+              del self._vector
+          self._setitem(key, val)
+
+      def __getitem__(self, key):
+          return self.vector.__getitem__(key)
+
+      def __repr__(self):
+          s = ['PseudoJetContainer[' + str(len(self)) + '](']
+          for i,pj in enumerate(self):
+              if i >= 25:
+                  s.append('  ...')
+                  break
+              s.append('  ' + repr(pj) + ',')
+          s.append(')')
+          return '\n'.join(s)
     }
   }
 
@@ -258,15 +296,15 @@ namespace PYFJNAMESPACE {
       const unsigned len_max = 512;
       char temp[len_max];
       if (PseudoJetRep_ == PseudoJetRepresentation::ptyphim)
-        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g)",
+        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g, index=%i)",
                  $self->pt(), $self->rap(), $self->phi(),
-                 [](double m){return std::fabs(m) < 1e-6 ? 0 : m;}($self->m()));
+                 [](double m){return std::fabs(m) < 1e-5 ? 0 : m;}($self->m()), $self->user_index());
       else if (PseudoJetRep_ == PseudoJetRepresentation::epxpypz)
-        snprintf(temp, len_max, "PseudoJet(e=%.6g, px=%.6g, py=%.6g, pz=%.6g)",
-                 $self->e(), $self->px(), $self->py(), $self->pz());
+        snprintf(temp, len_max, "PseudoJet(e=%.6g, px=%.6g, py=%.6g, pz=%.6g, index=%i)",
+                 $self->e(), $self->px(), $self->py(), $self->pz(), $self->user_index());
       else
-        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g)",
-                 $self->pt(), $self->rap(), $self->phi());
+        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, index=%i)",
+                 $self->pt(), $self->rap(), $self->phi(), $self->user_index());
       return std::string(temp);
     }
 
@@ -289,7 +327,7 @@ namespace PYFJNAMESPACE {
     bool      __ne__  (const PseudoJet & p) { return (*$self) != p; }
     PseudoJet __mul__ (double x) { return (*$self) * x; }
     PseudoJet __rmul__(double x) { return (*$self) * x; }
-    PseudoJet __div__ (double x) { return (*$self) / x; }
+    PseudoJet __truediv__ (double x) { return (*$self) / x; }
     bool      __eq__  (double x) { return (*$self) == x; }
     bool      __ne__  (double x) { return (*$self) != x; }
 
@@ -320,6 +358,27 @@ namespace PYFJNAMESPACE {
 } // namespace PYFJNAMESPACE
 
 %pythoncode %{
+
+def pseudojets_to_epxpypz_array(arg, float32=False):
+    is_pjc = isinstance(arg, PseudoJetContainer)
+    if float32:
+        return pjc_to_epxpypz_array_float32(arg) if is_pjc else pjs_to_epxpypz_array_float32(arg)
+    return pjc_to_epxpypz_array_float64(arg) if is_pjc else pjs_to_epxpypz_array_float64(arg)
+
+def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=False, phi_ref=None, float32=False):
+    phi_ref = phi_ref or pseudojet_invalid_phi
+    is_pjc = isinstance(arg, PseudoJetContainer)
+    if float32:
+        return (pjc_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref) if is_pjc else
+                pjs_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref))
+    return (pjc_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref) if is_pjc else
+            pjs_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref))
+
+def pseudojets_to_array(arg, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
+    is_pjc = isinstance(arg, PseudoJetContainer)
+    if float32:
+        return pjc_to_array_float32(arg, pjrep) if is_pjc else pjs_to_array_float32(arg, pjrep)
+    return pjc_to_array_float64(arg, pjrep) if is_pjc else pjs_to_array_float64(arg, pjrep)
 
 import copyreg
 

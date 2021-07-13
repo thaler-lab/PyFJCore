@@ -62,7 +62,7 @@ JetDefinition JetDefinition2Param(JetAlgorithm jet_algorithm,
 
 static PseudoJetRepresentation PseudoJetRep_;
 void set_pseudojet_format(PseudoJetRepresentation rep) {
-  if (rep > 2 || rep < 0)
+  if (int(rep) > 2 || int(rep) < 0)
     throw Error("invalid PseudoJetRepresentation");
 
   PseudoJetRep_ = rep;
@@ -166,15 +166,19 @@ PseudoJetContainer epxpypz_array_to_pseudojets(double* particles, std::ptrdiff_t
 
 // function that selects representation based on enum
 PseudoJetContainer array_to_pseudojets(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures,
-                                           PseudoJetRepresentation pjrep = ptyphim) {
+                                           PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
 
-  if (pjrep == ptyphim || pjrep == ptyphi)
+  if (pjrep == PseudoJetRepresentation::ptyphim || pjrep == PseudoJetRepresentation::ptyphi)
     return ptyphim_array_to_pseudojets(particles, mult, nfeatures);
 
-  else if (pjrep == epxpypz)
+  else if (pjrep == PseudoJetRepresentation::epxpypz)
     return epxpypz_array_to_pseudojets(particles, mult, nfeatures);
 
   throw Error("unknown pseudojet representation");
+}
+
+void user_indices(int** inds, std::ptrdiff_t* mult, const PseudoJetContainer & pjc) {
+  user_indices(inds, mult, pjc.as_vector());
 }
 
 FJCORE_END_NAMESPACE

@@ -1014,14 +1014,32 @@ class PseudoJet {
 ////////////////////////////////////////////////////////////////////////////////
 
 // to select between different representations of PseudoJets
-enum PseudoJetRepresentation { epxpypz = 0, ptyphim = 1, ptyphi = 2 };
+enum class PseudoJetRepresentation : int { epxpypz = 0, ptyphim = 1, ptyphi = 2 };
+
+inline double phi_fix(double phi, double ref_phi) {
+  double diff(phi - ref_phi);
+  if (diff > pi) phi -= twopi;
+  else if (diff < -pi) phi += twopi;
+  return phi; 
+}
+
+#ifndef SWIG_PREPROCESSOR
+const float pi_float = pi;
+const float twopi_float = twopi;
+inline float phi_fix(float phi, float ref_phi) {
+  float diff(phi - ref_phi);
+  if (diff > pi) phi -= twopi;
+  else if (diff < -pi) phi += twopi;
+  return phi; 
+}
+#endif
 
 // function that extracts user indices to a numpy array (defined in fjcore.cc)
 void user_indices(int** inds, std::ptrdiff_t* mult, const std::vector<PseudoJet> & pjs);
 
 template<typename F>
-void pseudojets_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                                 const std::vector<PseudoJet> & pjs) {
+void pjs_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                          const std::vector<PseudoJet> & pjs) {
   *mult = pjs.size();
   *nfeatures = 4;
   std::size_t nbytes = 4 * pjs.size() * sizeof(F);
@@ -1038,8 +1056,9 @@ void pseudojets_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdi
   }
 }
 template<typename F>
-void pseudojets_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                                 const std::vector<PseudoJet> & pjs, bool mass = true, bool phi_std = false) {
+void pjs_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                          const std::vector<PseudoJet> & pjs, bool mass = true, bool phi_std = false,
+                          F phi_ref = pseudojet_invalid_phi) {
   *mult = pjs.size();
   *nfeatures = (mass ? 4 : 3);
   std::size_t nbytes = (*nfeatures) * pjs.size() * sizeof(F);
@@ -1047,33 +1066,30 @@ void pseudojets_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdi
   if (*particles == NULL)
     throw Error("failed to allocate " + std::to_string(nbytes) + " bytes");
 
+  bool using_phi_fix(phi_ref != pseudojet_invalid_phi);
   std::size_t k(0);
-  if (mass)
-    for (const auto & pj : pjs) {
-      (*particles)[k++] = pj.pt();
-      (*particles)[k++] = pj.rap();
-      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
-      (*particles)[k++] = pj.m();
-    }
-  else
-    for (const auto & pj : pjs) {
-      (*particles)[k++] = pj.pt();
-      (*particles)[k++] = pj.rap();
-      (*particles)[k++] = phi_std ? pj.phi_std() : pj.phi();
-    }
+  for (const auto & pj : pjs) {
+    (*particles)[k++] = pj.pt();
+    (*particles)[k++] = pj.rap();
+
+    F phi(phi_std ? pj.phi_std() : pj.phi());
+    (*particles)[k++] = using_phi_fix ? phi_fix(phi, phi_ref) : phi;
+
+    if (mass) (*particles)[k++] = pj.m();
+  }
 }
 template<typename F>
-void pseudojets_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                         const std::vector<PseudoJet> & pjs,
-                         PseudoJetRepresentation pjrep = ptyphim) {
-  if (pjrep == ptyphim)
-    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, true);
+void pjs_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                  const std::vector<PseudoJet> & pjs,
+                  PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
+  if (pjrep == PseudoJetRepresentation::ptyphim)
+    pjs_to_ptyphim_array(particles, mult, nfeatures, pjs, true);
 
-  else if (pjrep == ptyphi)
-    pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, false);
+  else if (pjrep == PseudoJetRepresentation::ptyphi)
+    pjs_to_ptyphim_array(particles, mult, nfeatures, pjs, false);
 
-  else if (pjrep == epxpypz)
-    pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
+  else if (pjrep == PseudoJetRepresentation::epxpypz)
+    pjs_to_epxpypz_array(particles, mult, nfeatures, pjs);
 
   else throw Error("unknown pseudojet representation");
 }
@@ -1084,11 +1100,6 @@ struct PseudoJetContainer {
   // constructors
   PseudoJetContainer() {}
   PseudoJetContainer(const std::vector<PseudoJet> & pjvector) : pjvector_(pjvector) {}
-
-  // copy constructor
-  PseudoJetContainer(const PseudoJetContainer & other) : pjvector_(other.pjvector_) {
-    std::cout << "PseudoJetContainer copied" << std::endl;
-  }
 
   // partial vector interface
 #ifndef SWIG_PREPROCESSOR
@@ -1107,53 +1118,29 @@ struct PseudoJetContainer {
     return *this;
   }
 
-  // python methods
-  std::size_t __len__() const {
-    return size();
+  template<typename F>
+  void epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures) {
+    pjs_to_epxpypz_array(particles, mult, nfeatures, *this);
   }
 
-  const PseudoJet & __getitem__(std::ptrdiff_t i) const {
-    if (std::size_t(i) >= size())
-      throw std::length_error("index out of bounds");
-
-    return pjvector_[i];
+  template<typename F>
+  void ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                     bool mass = true, bool phi_std = false, F phi_ref = pseudojet_invalid_phi) {
+    pjs_to_ptyphim_array(particles, mult, nfeatures, *this, mass, phi_std, phi_ref);
   }
 
-  void epxpypz_array_float64(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures) {
-    pseudojets_to_epxpypz_array(particles, mult, nfeatures, *this);
-  }
-  void epxpypz_array_float32(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures) {
-    pseudojets_to_epxpypz_array(particles, mult, nfeatures, *this);
-  }
-
-  void ptyphim_array_float64(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                     bool mass = true, bool phi_std = false) {
-    pseudojets_to_ptyphim_array(particles, mult, nfeatures, *this, mass, phi_std);
-  }
-  void ptyphim_array_float32(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                     bool mass = true, bool phi_std = false) {
-    pseudojets_to_ptyphim_array(particles, mult, nfeatures, *this, mass, phi_std);
-  }
-
-  void array_float64(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                PseudoJetRepresentation pjrep = ptyphim) {
-    pseudojets_to_array(particles, mult, nfeatures, *this, pjrep);
-  }
-  void array_float32(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                PseudoJetRepresentation pjrep = ptyphim) {
-    pseudojets_to_array(particles, mult, nfeatures, *this, pjrep);
+  template<typename F>
+  void array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
+    pjs_to_array(particles, mult, nfeatures, *this, pjrep);
   }
 
   void user_indices(int** inds, std::ptrdiff_t* mult) const {
     ::fastjet::user_indices(inds, mult, *this);
   }
 
-  // conversions
+  // conversions to vector
 #ifndef SWIG_PREPROCESSOR
-  //PseudoJetContainer(std::vector<PseudoJet> && pjvector) : pjvector_(std::move(pjvector)) {}
-  PseudoJetContainer(PseudoJetContainer &&) = default;
-  PseudoJetContainer & operator=(PseudoJetContainer &&) = default;
-  PseudoJetContainer & operator=(const PseudoJetContainer &) = default;
   operator const std::vector<PseudoJet> & () const { return pjvector_; }
   operator std::vector<PseudoJet> & () { return pjvector_; }
 #endif
@@ -1163,27 +1150,24 @@ private:
 
 }; // PseudoJetContainer
 
-inline void user_indices(int** inds, std::ptrdiff_t* mult, const PseudoJetContainer & pjc) {
-  user_indices(inds, mult, pjc.as_vector());
+template<typename F>
+void pjc_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                          const PseudoJetContainer & pjs) {
+  pjs_to_epxpypz_array(particles, mult, nfeatures, pjs);
 }
 
 template<typename F>
-void pseudojets_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                                 const PseudoJetContainer & pjs) {
-  pseudojets_to_epxpypz_array(particles, mult, nfeatures, pjs);
+void pjc_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                          const PseudoJetContainer & pjs,
+                          bool mass = true, bool phi_std = false, F phi_ref = pseudojet_invalid_phi) {
+  pjs_to_ptyphim_array(particles, mult, nfeatures, pjs, mass, phi_std, phi_ref);
 }
 
 template<typename F>
-void pseudojets_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                                 const PseudoJetContainer & pjs, bool mass = true, bool phi_std = false) {
-  pseudojets_to_ptyphim_array(particles, mult, nfeatures, pjs, mass, phi_std);
-}
-
-template<typename F>
-void pseudojets_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                         const PseudoJetContainer & pjs,
-                         PseudoJetRepresentation pjrep = ptyphim) {
-  pseudojets_to_array(particles, mult, nfeatures, pjs, pjrep);
+void pjc_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
+                  const PseudoJetContainer & pjs,
+                  PseudoJetRepresentation pjrep = PseudoJetRepresentation::ptyphim) {
+  pjs_to_array(particles, mult, nfeatures, pjs, pjrep);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

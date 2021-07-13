@@ -354,7 +354,7 @@ class PseudoJet(object):
     __sub__ = _swig_new_instance_method(_pyfjcore.PseudoJet___sub__)
     __mul__ = _swig_new_instance_method(_pyfjcore.PseudoJet___mul__)
     __rmul__ = _swig_new_instance_method(_pyfjcore.PseudoJet___rmul__)
-    __div__ = _swig_new_instance_method(_pyfjcore.PseudoJet___div__)
+    __truediv__ = _swig_new_instance_method(_pyfjcore.PseudoJet___truediv__)
     __eq__ = _swig_new_instance_method(_pyfjcore.PseudoJet___eq__)
     __ne__ = _swig_new_instance_method(_pyfjcore.PseudoJet___ne__)
 
@@ -368,17 +368,75 @@ MaxRap = cvar.MaxRap
 pseudojet_invalid_phi = cvar.pseudojet_invalid_phi
 pseudojet_invalid_rap = cvar.pseudojet_invalid_rap
 
-epxpypz = _pyfjcore.epxpypz
+PseudoJetRepresentation_epxpypz = _pyfjcore.PseudoJetRepresentation_epxpypz
 
-ptyphim = _pyfjcore.ptyphim
+PseudoJetRepresentation_ptyphim = _pyfjcore.PseudoJetRepresentation_ptyphim
 
-ptyphi = _pyfjcore.ptyphi
+PseudoJetRepresentation_ptyphi = _pyfjcore.PseudoJetRepresentation_ptyphi
 
+phi_fix = _pyfjcore.phi_fix
 class PseudoJetContainer(object):
     r"""Proxy of C++ fastjet::PseudoJetContainer class."""
 
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
+    size = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_size)
+    capacity = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_capacity)
+    resize = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_resize)
+    reserve = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_reserve)
+    push_back = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_push_back)
+    clear = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_clear)
+    as_vector = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_as_vector)
+    user_indices = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_user_indices)
+    epxpypz_array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_epxpypz_array_float64)
+    epxpypz_array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_epxpypz_array_float32)
+    ptyphim_array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_ptyphim_array_float64)
+    ptyphim_array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_ptyphim_array_float32)
+    array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float64)
+    array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float32)
+    _setitem = _swig_new_instance_method(_pyfjcore.PseudoJetContainer__setitem)
+
+
+    def epxpypz_array(self, float32=False):
+        return self.epxpypz_array_float32() if float32 else self.epxpypz_array_float64()
+
+    def ptyphims_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
+        return (self.ptyphim_array_float32(mass, phi_std, phi_ref) if float32 else
+                self.ptyphim_array_float64(mass, phi_std, phi_ref))
+
+    def array(self, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
+        return self.array_float32(pjrep) if float32 else self.array_float64(pjrep)
+
+    def __len__(self):
+        return self.size()
+
+    @property
+    def vector(self):
+        if not hasattr(self, '_vector'):
+            self._vector = self.as_vector()
+        return self._vector
+
+    def __iter__(self):
+        return self.vector.__iter__();
+
+    def __setitem__(self, key, val):
+        if hasattr(self, '_vector'):
+            del self._vector
+        self._setitem(key, val)
+
+    def __getitem__(self, key):
+        return self.vector.__getitem__(key)
+
+    def __repr__(self):
+        s = ['PseudoJetContainer[' + str(len(self)) + '](']
+        for i,pj in enumerate(self):
+            if i >= 25:
+                s.append('  ...')
+                break
+            s.append('  ' + repr(pj) + ',')
+        s.append(')')
+        return '\n'.join(s)
+
 
     def __init__(self, *args):
         r"""
@@ -387,48 +445,11 @@ class PseudoJetContainer(object):
         __init__(PseudoJetContainer self, PseudoJetContainer other) -> PseudoJetContainer
         """
         _pyfjcore.PseudoJetContainer_swiginit(self, _pyfjcore.new_PseudoJetContainer(*args))
-    size = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_size)
-    capacity = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_capacity)
-    resize = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_resize)
-    reserve = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_reserve)
-    push_back = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_push_back)
-    clear = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_clear)
-    as_vector = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_as_vector)
-    __len__ = _swig_new_instance_method(_pyfjcore.PseudoJetContainer___len__)
-    __getitem__ = _swig_new_instance_method(_pyfjcore.PseudoJetContainer___getitem__)
-    epxpypz_array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_epxpypz_array_float64)
-    epxpypz_array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_epxpypz_array_float32)
-    ptyphim_array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_ptyphim_array_float64)
-    ptyphim_array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_ptyphim_array_float32)
-    array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float64)
-    array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float32)
-    user_indices = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_user_indices)
-    __setitem__ = _swig_new_instance_method(_pyfjcore.PseudoJetContainer___setitem__)
-
-
-    def __iter__(self):
-        return self.vector.__iter__();
-
-    def __repr__(self):
-        s = ['PseudoJetContainer[' + str(len(self)) + '](']
-        for pj in self:
-            s.append('  ' + repr(pj) + ',')
-        s.append(')')
-        return '\n'.join(s)
-
-    @property
-    def vector(self):
-        if not hasattr(self, '_vector'):
-            self._vector = self.as_vector()
-        return self._vector
-
-
     __swig_destroy__ = _pyfjcore.delete_PseudoJetContainer
 
 # Register PseudoJetContainer in _pyfjcore:
 _pyfjcore.PseudoJetContainer_swigregister(PseudoJetContainer)
 
-user_indices = _pyfjcore.user_indices
 dot_product = _pyfjcore.dot_product
 cos_theta = _pyfjcore.cos_theta
 theta = _pyfjcore.theta
@@ -792,6 +813,7 @@ set_pseudojet_format = _pyfjcore.set_pseudojet_format
 ptyphim_array_to_pseudojets = _pyfjcore.ptyphim_array_to_pseudojets
 epxpypz_array_to_pseudojets = _pyfjcore.epxpypz_array_to_pseudojets
 array_to_pseudojets = _pyfjcore.array_to_pseudojets
+user_indices = _pyfjcore.user_indices
 class sharedPtrPseudoJetStructureBase(object):
     r"""Proxy of C++ fastjet::SharedPtr< fastjet::PseudoJetStructureBase > class."""
 
@@ -849,13 +871,40 @@ class sharedPtrPseudoJetStructureBase(object):
 # Register sharedPtrPseudoJetStructureBase in _pyfjcore:
 _pyfjcore.sharedPtrPseudoJetStructureBase_swigregister(sharedPtrPseudoJetStructureBase)
 
-pseudojets_to_epxpypz_array_float64 = _pyfjcore.pseudojets_to_epxpypz_array_float64
-pseudojets_to_epxpypz_array_float32 = _pyfjcore.pseudojets_to_epxpypz_array_float32
-pseudojets_to_ptyphim_array_float64 = _pyfjcore.pseudojets_to_ptyphim_array_float64
-pseudojets_to_ptyphim_array_float32 = _pyfjcore.pseudojets_to_ptyphim_array_float32
-pseudojets_to_array_float64 = _pyfjcore.pseudojets_to_array_float64
-pseudojets_to_array_float32 = _pyfjcore.pseudojets_to_array_float32
+pjs_to_epxpypz_array_float64 = _pyfjcore.pjs_to_epxpypz_array_float64
+pjs_to_epxpypz_array_float32 = _pyfjcore.pjs_to_epxpypz_array_float32
+pjs_to_ptyphim_array_float64 = _pyfjcore.pjs_to_ptyphim_array_float64
+pjs_to_ptyphim_array_float32 = _pyfjcore.pjs_to_ptyphim_array_float32
+pjs_to_array_float64 = _pyfjcore.pjs_to_array_float64
+pjs_to_array_float32 = _pyfjcore.pjs_to_array_float32
+pjc_to_epxpypz_array_float64 = _pyfjcore.pjc_to_epxpypz_array_float64
+pjc_to_epxpypz_array_float32 = _pyfjcore.pjc_to_epxpypz_array_float32
+pjc_to_ptyphim_array_float64 = _pyfjcore.pjc_to_ptyphim_array_float64
+pjc_to_ptyphim_array_float32 = _pyfjcore.pjc_to_ptyphim_array_float32
+pjc_to_array_float64 = _pyfjcore.pjc_to_array_float64
+pjc_to_array_float32 = _pyfjcore.pjc_to_array_float32
 
+
+def pseudojets_to_epxpypz_array(arg, float32=False):
+    is_pjc = isinstance(arg, PseudoJetContainer)
+    if float32:
+        return pjc_to_epxpypz_array_float32(arg) if is_pjc else pjs_to_epxpypz_array_float32(arg)
+    return pjc_to_epxpypz_array_float64(arg) if is_pjc else pjs_to_epxpypz_array_float64(arg)
+
+def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=False, phi_ref=None, float32=False):
+    phi_ref = phi_ref or pseudojet_invalid_phi
+    is_pjc = isinstance(arg, PseudoJetContainer)
+    if float32:
+        return (pjc_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref) if is_pjc else
+                pjs_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref))
+    return (pjc_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref) if is_pjc else
+            pjs_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref))
+
+def pseudojets_to_array(arg, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
+    is_pjc = isinstance(arg, PseudoJetContainer)
+    if float32:
+        return pjc_to_array_float32(arg, pjrep) if is_pjc else pjs_to_array_float32(arg, pjrep)
+    return pjc_to_array_float64(arg, pjrep) if is_pjc else pjs_to_array_float64(arg, pjrep)
 
 import copyreg
 

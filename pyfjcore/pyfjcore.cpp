@@ -4885,15 +4885,15 @@ SWIGINTERN std::string fastjet_PseudoJet___repr__(fastjet::PseudoJet *self){
       const unsigned len_max = 512;
       char temp[len_max];
       if (PseudoJetRep_ == PseudoJetRepresentation::ptyphim)
-        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g)",
+        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g, index=%i)",
                  self->pt(), self->rap(), self->phi(),
-                 [](double m){return std::fabs(m) < 1e-6 ? 0 : m;}(self->m()));
+                 [](double m){return std::fabs(m) < 1e-5 ? 0 : m;}(self->m()), self->user_index());
       else if (PseudoJetRep_ == PseudoJetRepresentation::epxpypz)
-        snprintf(temp, len_max, "PseudoJet(e=%.6g, px=%.6g, py=%.6g, pz=%.6g)",
-                 self->e(), self->px(), self->py(), self->pz());
+        snprintf(temp, len_max, "PseudoJet(e=%.6g, px=%.6g, py=%.6g, pz=%.6g, index=%i)",
+                 self->e(), self->px(), self->py(), self->pz(), self->user_index());
       else
-        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g)",
-                 self->pt(), self->rap(), self->phi());
+        snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, index=%i)",
+                 self->pt(), self->rap(), self->phi(), self->user_index());
       return std::string(temp);
     }
 SWIGINTERN void fastjet_PseudoJet_set_python_info(fastjet::PseudoJet *self,PyObject *pyobj){
@@ -4911,7 +4911,7 @@ SWIGINTERN bool fastjet_PseudoJet___eq____SWIG_0(fastjet::PseudoJet *self,fastje
 SWIGINTERN bool fastjet_PseudoJet___ne____SWIG_0(fastjet::PseudoJet *self,fastjet::PseudoJet const &p){ return (*self) != p; }
 SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___mul__(fastjet::PseudoJet *self,double x){ return (*self) * x; }
 SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___rmul__(fastjet::PseudoJet *self,double x){ return (*self) * x; }
-SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___div__(fastjet::PseudoJet *self,double x){ return (*self) / x; }
+SWIGINTERN fastjet::PseudoJet fastjet_PseudoJet___truediv__(fastjet::PseudoJet *self,double x){ return (*self) / x; }
 SWIGINTERN bool fastjet_PseudoJet___eq____SWIG_1(fastjet::PseudoJet *self,double x){ return (*self) == x; }
 SWIGINTERN bool fastjet_PseudoJet___ne____SWIG_1(fastjet::PseudoJet *self,double x){ return (*self) != x; }
 
@@ -4990,7 +4990,68 @@ SWIGINTERN bool fastjet_PseudoJet___ne____SWIG_1(fastjet::PseudoJet *self,double
 
 
 
-SWIGINTERN void fastjet_PseudoJetContainer___setitem__(fastjet::PseudoJetContainer *self,std::ptrdiff_t key,fastjet::PseudoJet const &val){
+
+/* Getting isfinite working pre C99 across multiple platforms is non-trivial. Users can provide SWIG_isfinite on older platforms. */
+#ifndef SWIG_isfinite
+/* isfinite() is a macro for C99 */
+# if defined(isfinite)
+#  define SWIG_isfinite(X) (isfinite(X))
+# elif defined(__cplusplus) && __cplusplus >= 201103L
+/* Use a template so that this works whether isfinite() is std::isfinite() or
+ * in the global namespace.  The reality seems to vary between compiler
+ * versions.
+ *
+ * Make sure namespace std exists to avoid compiler warnings.
+ *
+ * extern "C++" is required as this fragment can end up inside an extern "C" { } block
+ */
+namespace std { }
+extern "C++" template<typename T>
+inline int SWIG_isfinite_func(T x) {
+  using namespace std;
+  return isfinite(x);
+}
+#  define SWIG_isfinite(X) (SWIG_isfinite_func(X))
+# elif defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 2))
+#  define SWIG_isfinite(X) (__builtin_isfinite(X))
+# elif defined(__clang__) && defined(__has_builtin)
+#  if __has_builtin(__builtin_isfinite)
+#   define SWIG_isfinite(X) (__builtin_isfinite(X))
+#  endif
+# elif defined(_MSC_VER)
+#  define SWIG_isfinite(X) (_finite(X))
+# elif defined(__sun) && defined(__SVR4)
+#  include <ieeefp.h>
+#  define SWIG_isfinite(X) (finite(X))
+# endif
+#endif
+
+
+/* Accept infinite as a valid float value unless we are unable to check if a value is finite */
+#ifdef SWIG_isfinite
+# define SWIG_Float_Overflow_Check(X) ((X < -FLT_MAX || X > FLT_MAX) && SWIG_isfinite(X))
+#else
+# define SWIG_Float_Overflow_Check(X) ((X < -FLT_MAX || X > FLT_MAX))
+#endif
+
+
+SWIGINTERN int
+SWIG_AsVal_float (PyObject * obj, float *val)
+{
+  double v;
+  int res = SWIG_AsVal_double (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if (SWIG_Float_Overflow_Check(v)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< float >(v);
+    }
+  }  
+  return res;
+}
+
+SWIGINTERN void fastjet_PseudoJetContainer__setitem(fastjet::PseudoJetContainer *self,std::ptrdiff_t key,fastjet::PseudoJet const &val){
+      if (key < 0) key += self->size();
       if (std::size_t(key) >= self->size())
         throw std::length_error("index out of bounds");
 
@@ -16686,7 +16747,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_PseudoJet___div__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_PseudoJet___truediv__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::PseudoJet *arg1 = (fastjet::PseudoJet *) 0 ;
   double arg2 ;
@@ -16701,20 +16762,20 @@ SWIGINTERN PyObject *_wrap_PseudoJet___div__(PyObject *SWIGUNUSEDPARM(self), PyO
   };
   fastjet::PseudoJet result;
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJet___div__", kwnames, &obj0, &obj1)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJet___truediv__", kwnames, &obj0, &obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet___div__" "', argument " "1"" of type '" "fastjet::PseudoJet *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJet___truediv__" "', argument " "1"" of type '" "fastjet::PseudoJet *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::PseudoJet * >(argp1);
   ecode2 = SWIG_AsVal_double(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJet___div__" "', argument " "2"" of type '" "double""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJet___truediv__" "', argument " "2"" of type '" "double""'");
   } 
   arg2 = static_cast< double >(val2);
   {
     try {
-      result = fastjet_PseudoJet___div__(arg1,arg2); 
+      result = fastjet_PseudoJet___truediv__(arg1,arg2); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -16965,6 +17026,68 @@ SWIGINTERN PyObject *PseudoJet_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject
   return SWIG_Python_InitShadowInstance(args);
 }
 
+SWIGINTERN PyObject *_wrap_phi_fix(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  double arg1 ;
+  double arg2 ;
+  double val1 ;
+  int ecode1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"phi",  (char *)"ref_phi",  NULL 
+  };
+  double result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:phi_fix", kwnames, &obj0, &obj1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_double(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "phi_fix" "', argument " "1"" of type '" "double""'");
+  } 
+  arg1 = static_cast< double >(val1);
+  ecode2 = SWIG_AsVal_double(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "phi_fix" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  {
+    try {
+      result = (double)fastjet::phi_fix(arg1,arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_user_indices__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   int **arg1 = (int **) 0 ;
@@ -17145,96 +17268,6 @@ SWIGINTERN PyObject *_wrap_new_PseudoJetContainer__SWIG_1(PyObject *SWIGUNUSEDPA
 fail:
   if (SWIG_IsNewObj(res1)) delete arg1;
   return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_PseudoJetContainer__SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  fastjet::PseudoJetContainer *arg1 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  fastjet::PseudoJetContainer *result = 0 ;
-  
-  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
-  {
-    try {
-      result = (fastjet::PseudoJetContainer *)new fastjet::PseudoJetContainer((fastjet::PseudoJetContainer const &)*arg1); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_PseudoJetContainer(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[2] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "new_PseudoJetContainer", 0, 1, argv))) SWIG_fail;
-  --argc;
-  if (argc == 0) {
-    return _wrap_new_PseudoJetContainer__SWIG_0(self, argc, argv);
-  }
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_PseudoJetContainer__SWIG_2(self, argc, argv);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_PseudoJetContainer__SWIG_1(self, argc, argv);
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'new_PseudoJetContainer'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::PseudoJetContainer::PseudoJetContainer()\n"
-    "    fastjet::PseudoJetContainer::PseudoJetContainer(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
-    "    fastjet::PseudoJetContainer::PseudoJetContainer(fastjet::PseudoJetContainer const &)\n");
-  return 0;
 }
 
 
@@ -17627,24 +17660,31 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_PseudoJetContainer___len__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_PseudoJetContainer_user_indices(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  int **arg2 = (int **) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  int *data_temp2 = NULL ;
+  std::ptrdiff_t dim_temp2 ;
   PyObject *swig_obj[1] ;
-  std::size_t result;
   
+  {
+    arg2 = &data_temp2;
+    arg3 = &dim_temp2;
+  }
   if (!args) SWIG_fail;
   swig_obj[0] = args;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer___len__" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_user_indices" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
   {
     try {
-      result = ((fastjet::PseudoJetContainer const *)arg1)->__len__(); 
+      ((fastjet::PseudoJetContainer const *)arg1)->user_indices(arg2,arg3); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -17671,69 +17711,30 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer___len__(PyObject *SWIGUNUSEDPARM(s
       SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
     }
   }
-  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_PseudoJetContainer___getitem__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
-  PyObject *resultobj = 0;
-  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
-  std::ptrdiff_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  ptrdiff_t val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  char * kwnames[] = {
-    (char *)"self",  (char *)"i",  NULL 
-  };
-  fastjet::PseudoJet *result = 0 ;
-  
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetContainer___getitem__", kwnames, &obj0, &obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer___getitem__" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
-  }
-  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
-  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer___getitem__" "', argument " "2"" of type '" "std::ptrdiff_t""'");
-  } 
-  arg2 = static_cast< std::ptrdiff_t >(val2);
+  resultobj = SWIG_Py_Void();
   {
-    try {
-      result = (fastjet::PseudoJet *) &((fastjet::PseudoJetContainer const *)arg1)->__getitem__(arg2); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
+    npy_intp dims[1] = {
+      *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(1, dims, NPY_INT, (void*)(*arg2));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
   }
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJet, 0 |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17767,7 +17768,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_epxpypz_array_float64(PyObject *SW
   arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
   {
     try {
-      (arg1)->epxpypz_array_float64(arg2,arg3,arg4); 
+      (arg1)->SWIGTEMPLATEDISAMBIGUATOR epxpypz_array< double >(arg2,arg3,arg4); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -17851,7 +17852,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_epxpypz_array_float32(PyObject *SW
   arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
   {
     try {
-      (arg1)->epxpypz_array_float32(arg2,arg3,arg4); 
+      (arg1)->SWIGTEMPLATEDISAMBIGUATOR epxpypz_array< float >(arg2,arg3,arg4); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -17916,6 +17917,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float64(PyObject *SW
   std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
   bool arg5 = (bool) true ;
   bool arg6 = (bool) false ;
+  double arg7 = (double) fastjet::pseudojet_invalid_phi ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   double *data_temp2 = NULL ;
@@ -17925,11 +17927,14 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float64(PyObject *SW
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
+  double val7 ;
+  int ecode7 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
   char * kwnames[] = {
-    (char *)"self",  (char *)"mass",  (char *)"phi_std",  NULL 
+    (char *)"self",  (char *)"mass",  (char *)"phi_std",  (char *)"phi_ref",  NULL 
   };
   
   {
@@ -17937,7 +17942,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float64(PyObject *SW
     arg3 = &dim1_temp2;
     arg4 = &dim2_temp2;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OO:PseudoJetContainer_ptyphim_array_float64", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OOO:PseudoJetContainer_ptyphim_array_float64", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_ptyphim_array_float64" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
@@ -17957,9 +17962,16 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float64(PyObject *SW
     } 
     arg6 = static_cast< bool >(val6);
   }
+  if (obj3) {
+    ecode7 = SWIG_AsVal_double(obj3, &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "PseudoJetContainer_ptyphim_array_float64" "', argument " "7"" of type '" "double""'");
+    } 
+    arg7 = static_cast< double >(val7);
+  }
   {
     try {
-      (arg1)->ptyphim_array_float64(arg2,arg3,arg4,arg5,arg6); 
+      (arg1)->SWIGTEMPLATEDISAMBIGUATOR ptyphim_array< double >(arg2,arg3,arg4,arg5,arg6,arg7); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -18024,6 +18036,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float32(PyObject *SW
   std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
   bool arg5 = (bool) true ;
   bool arg6 = (bool) false ;
+  float arg7 = (float) fastjet::pseudojet_invalid_phi ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   float *data_temp2 = NULL ;
@@ -18033,11 +18046,14 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float32(PyObject *SW
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
+  float val7 ;
+  int ecode7 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
   char * kwnames[] = {
-    (char *)"self",  (char *)"mass",  (char *)"phi_std",  NULL 
+    (char *)"self",  (char *)"mass",  (char *)"phi_std",  (char *)"phi_ref",  NULL 
   };
   
   {
@@ -18045,7 +18061,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float32(PyObject *SW
     arg3 = &dim1_temp2;
     arg4 = &dim2_temp2;
   }
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OO:PseudoJetContainer_ptyphim_array_float32", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OOO:PseudoJetContainer_ptyphim_array_float32", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_ptyphim_array_float32" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
@@ -18065,9 +18081,16 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float32(PyObject *SW
     } 
     arg6 = static_cast< bool >(val6);
   }
+  if (obj3) {
+    ecode7 = SWIG_AsVal_float(obj3, &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "PseudoJetContainer_ptyphim_array_float32" "', argument " "7"" of type '" "float""'");
+    } 
+    arg7 = static_cast< float >(val7);
+  }
   {
     try {
-      (arg1)->ptyphim_array_float32(arg2,arg3,arg4,arg5,arg6); 
+      (arg1)->SWIGTEMPLATEDISAMBIGUATOR ptyphim_array< float >(arg2,arg3,arg4,arg5,arg6,arg7); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -18130,7 +18153,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_array_float64(PyObject *SWIGUNUSED
   double **arg2 = (double **) 0 ;
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
-  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   double *data_temp2 = NULL ;
@@ -18164,7 +18187,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_array_float64(PyObject *SWIGUNUSED
   }
   {
     try {
-      (arg1)->array_float64(arg2,arg3,arg4,arg5); 
+      (arg1)->SWIGTEMPLATEDISAMBIGUATOR array< double >(arg2,arg3,arg4,arg5); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -18227,7 +18250,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_array_float32(PyObject *SWIGUNUSED
   float **arg2 = (float **) 0 ;
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
-  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   float *data_temp2 = NULL ;
@@ -18261,7 +18284,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_array_float32(PyObject *SWIGUNUSED
   }
   {
     try {
-      (arg1)->array_float32(arg2,arg3,arg4,arg5); 
+      (arg1)->SWIGTEMPLATEDISAMBIGUATOR array< float >(arg2,arg3,arg4,arg5); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -18318,88 +18341,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_PseudoJetContainer_user_indices(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
-  int **arg2 = (int **) 0 ;
-  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int *data_temp2 = NULL ;
-  std::ptrdiff_t dim_temp2 ;
-  PyObject *swig_obj[1] ;
-  
-  {
-    arg2 = &data_temp2;
-    arg3 = &dim_temp2;
-  }
-  if (!args) SWIG_fail;
-  swig_obj[0] = args;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer_user_indices" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const *""'"); 
-  }
-  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
-  {
-    try {
-      ((fastjet::PseudoJetContainer const *)arg1)->user_indices(arg2,arg3); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_Py_Void();
-  {
-    npy_intp dims[1] = {
-      *arg3 
-    };
-    PyObject* obj = PyArray_SimpleNewFromData(1, dims, NPY_INT, (void*)(*arg2));
-    PyArrayObject* array = (PyArrayObject*) obj;
-    
-    if (!array) SWIG_fail;
-    
-#ifdef SWIGPY_USE_CAPSULE
-    PyObject* cap = PyCapsule_New((void*)(*arg2), SWIGPY_CAPSULE_NAME, free_cap);
-#else
-    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg2), free);
-#endif
-    
-#if NPY_API_VERSION < 0x00000007
-    PyArray_BASE(array) = cap;
-#else
-    PyArray_SetBaseObject(array,cap);
-#endif
-    
-    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_PseudoJetContainer___setitem__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+SWIGINTERN PyObject *_wrap_PseudoJetContainer__setitem(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
   std::ptrdiff_t arg2 ;
@@ -18417,28 +18359,28 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer___setitem__(PyObject *SWIGUNUSEDPA
     (char *)"self",  (char *)"key",  (char *)"val",  NULL 
   };
   
-  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:PseudoJetContainer___setitem__", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:PseudoJetContainer__setitem", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer___setitem__" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer__setitem" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
   }
   arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
   ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer___setitem__" "', argument " "2"" of type '" "std::ptrdiff_t""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer__setitem" "', argument " "2"" of type '" "std::ptrdiff_t""'");
   } 
   arg2 = static_cast< std::ptrdiff_t >(val2);
   res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_fastjet__PseudoJet,  0  | 0);
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PseudoJetContainer___setitem__" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PseudoJetContainer__setitem" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
   }
   if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PseudoJetContainer___setitem__" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PseudoJetContainer__setitem" "', argument " "3"" of type '" "fastjet::PseudoJet const &""'"); 
   }
   arg3 = reinterpret_cast< fastjet::PseudoJet * >(argp3);
   {
     try {
-      fastjet_PseudoJetContainer___setitem__(arg1,arg2,(fastjet::PseudoJet const &)*arg3); 
+      fastjet_PseudoJetContainer__setitem(arg1,arg2,(fastjet::PseudoJet const &)*arg3); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -18469,6 +18411,96 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer___setitem__(PyObject *SWIGUNUSEDPA
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PseudoJetContainer__SWIG_2(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  fastjet::PseudoJetContainer *result = 0 ;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PseudoJetContainer" "', argument " "1"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  {
+    try {
+      result = (fastjet::PseudoJetContainer *)new fastjet::PseudoJetContainer((fastjet::PseudoJetContainer const &)*arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PseudoJetContainer(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "new_PseudoJetContainer", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 0) {
+    return _wrap_new_PseudoJetContainer__SWIG_0(self, argc, argv);
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_PseudoJetContainer__SWIG_2(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_PseudoJetContainer__SWIG_1(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'new_PseudoJetContainer'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::PseudoJetContainer::PseudoJetContainer()\n"
+    "    fastjet::PseudoJetContainer::PseudoJetContainer(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::PseudoJetContainer::PseudoJetContainer(fastjet::PseudoJetContainer const &)\n");
+  return 0;
 }
 
 
@@ -18532,122 +18564,6 @@ SWIGINTERN PyObject *PseudoJetContainer_swigregister(PyObject *SWIGUNUSEDPARM(se
 SWIGINTERN PyObject *PseudoJetContainer_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   return SWIG_Python_InitShadowInstance(args);
 }
-
-SWIGINTERN PyObject *_wrap_user_indices__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  int **arg1 = (int **) 0 ;
-  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
-  fastjet::PseudoJetContainer *arg3 = 0 ;
-  int *data_temp1 = NULL ;
-  std::ptrdiff_t dim_temp1 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  
-  {
-    arg1 = &data_temp1;
-    arg2 = &dim_temp1;
-  }
-  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
-  res3 = SWIG_ConvertPtr(swig_obj[0], &argp3, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "user_indices" "', argument " "3"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "user_indices" "', argument " "3"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  arg3 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp3);
-  {
-    try {
-      fastjet::user_indices(arg1,arg2,(fastjet::PseudoJetContainer const &)*arg3); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_Py_Void();
-  {
-    npy_intp dims[1] = {
-      *arg2 
-    };
-    PyObject* obj = PyArray_SimpleNewFromData(1, dims, NPY_INT, (void*)(*arg1));
-    PyArrayObject* array = (PyArrayObject*) obj;
-    
-    if (!array) SWIG_fail;
-    
-#ifdef SWIGPY_USE_CAPSULE
-    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
-#else
-    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
-#endif
-    
-#if NPY_API_VERSION < 0x00000007
-    PyArray_BASE(array) = cap;
-#else
-    PyArray_SetBaseObject(array,cap);
-#endif
-    
-    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_user_indices(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[2] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "user_indices", 0, 1, argv))) SWIG_fail;
-  --argc;
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_user_indices__SWIG_1(self, argc, argv);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_user_indices__SWIG_0(self, argc, argv);
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'user_indices'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::user_indices(int **,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
-    "    fastjet::user_indices(int **,std::ptrdiff_t *,fastjet::PseudoJetContainer const &)\n");
-  return 0;
-}
-
 
 SWIGINTERN PyObject *_wrap_dot_product(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
@@ -34549,7 +34465,7 @@ SWIGINTERN PyObject *_wrap_array_to_pseudojets(PyObject *SWIGUNUSEDPARM(self), P
   double *arg1 = (double *) 0 ;
   std::ptrdiff_t arg2 ;
   std::ptrdiff_t arg3 ;
-  fastjet::PseudoJetRepresentation arg4 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  fastjet::PseudoJetRepresentation arg4 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
   PyArrayObject *array1 = NULL ;
   int is_new_object1 = 0 ;
   int val4 ;
@@ -34629,6 +34545,122 @@ fail:
     }
   }
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_user_indices__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  int **arg1 = (int **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg3 = 0 ;
+  int *data_temp1 = NULL ;
+  std::ptrdiff_t dim_temp1 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim_temp1;
+  }
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  res3 = SWIG_ConvertPtr(swig_obj[0], &argp3, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "user_indices" "', argument " "3"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "user_indices" "', argument " "3"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg3 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp3);
+  {
+    try {
+      fastjet::user_indices(arg1,arg2,(fastjet::PseudoJetContainer const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[1] = {
+      *arg2 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(1, dims, NPY_INT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_user_indices(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "user_indices", 0, 1, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_user_indices__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_user_indices__SWIG_0(self, argc, argv);
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'user_indices'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    fastjet::user_indices(int **,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
+    "    fastjet::user_indices(int **,std::ptrdiff_t *,fastjet::PseudoJetContainer const &)\n");
+  return 0;
 }
 
 
@@ -36914,7 +36946,7 @@ SWIGINTERN PyObject *sharedPtrPseudoJetStructureBase_swiginit(PyObject *SWIGUNUS
   return SWIG_Python_InitShadowInstance(args);
 }
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_pjs_to_epxpypz_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   double **arg1 = (double **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -36924,27 +36956,31 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64__SWIG_0(PyObject 
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
   int res4 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  NULL 
+  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:pjs_to_epxpypz_array_float64", kwnames, &obj0)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(swig_obj[0], &ptr);
+    res4 = swig::asptr(obj0, &ptr);
     if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjs_to_epxpypz_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_epxpypz_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjs_to_epxpypz_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
     arg4 = ptr;
   }
   {
     try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_epxpypz_array< double >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4); 
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjs_to_epxpypz_array< double >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -37003,126 +37039,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  double **arg1 = (double **) 0 ;
-  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
-  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
-  fastjet::PseudoJetContainer *arg4 = 0 ;
-  double *data_temp1 = NULL ;
-  std::ptrdiff_t dim1_temp1 ;
-  std::ptrdiff_t dim2_temp1 ;
-  void *argp4 = 0 ;
-  int res4 = 0 ;
-  
-  {
-    arg1 = &data_temp1;
-    arg2 = &dim1_temp1;
-    arg3 = &dim2_temp1;
-  }
-  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
-  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
-  if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_epxpypz_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
-  {
-    try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_epxpypz_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_Py_Void();
-  {
-    npy_intp dims[2] = {
-      *arg2, *arg3 
-    };
-    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg1));
-    PyArrayObject* array = (PyArrayObject*) obj;
-    
-    if (!array) SWIG_fail;
-    
-#ifdef SWIGPY_USE_CAPSULE
-    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
-#else
-    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
-#endif
-    
-#if NPY_API_VERSION < 0x00000007
-    PyArray_BASE(array) = cap;
-#else
-    PyArray_SetBaseObject(array,cap);
-#endif
-    
-    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float64(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[2] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_epxpypz_array_float64", 0, 1, argv))) SWIG_fail;
-  --argc;
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_pseudojets_to_epxpypz_array_float64__SWIG_1(self, argc, argv);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_pseudojets_to_epxpypz_array_float64__SWIG_0(self, argc, argv);
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_epxpypz_array_float64'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::pseudojets_to_epxpypz_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
-    "    fastjet::pseudojets_to_epxpypz_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_pjs_to_epxpypz_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   float **arg1 = (float **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -37132,27 +37049,31 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32__SWIG_0(PyObject 
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
   int res4 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  NULL 
+  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:pjs_to_epxpypz_array_float32", kwnames, &obj0)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(swig_obj[0], &ptr);
+    res4 = swig::asptr(obj0, &ptr);
     if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjs_to_epxpypz_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_epxpypz_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjs_to_epxpypz_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
     arg4 = ptr;
   }
   {
     try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_epxpypz_array< float >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4); 
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjs_to_epxpypz_array< float >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -37211,126 +37132,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  float **arg1 = (float **) 0 ;
-  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
-  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
-  fastjet::PseudoJetContainer *arg4 = 0 ;
-  float *data_temp1 = NULL ;
-  std::ptrdiff_t dim1_temp1 ;
-  std::ptrdiff_t dim2_temp1 ;
-  void *argp4 = 0 ;
-  int res4 = 0 ;
-  
-  {
-    arg1 = &data_temp1;
-    arg2 = &dim1_temp1;
-    arg3 = &dim2_temp1;
-  }
-  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
-  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
-  if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_epxpypz_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_epxpypz_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
-  }
-  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
-  {
-    try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_epxpypz_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_Py_Void();
-  {
-    npy_intp dims[2] = {
-      *arg2, *arg3 
-    };
-    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
-    PyArrayObject* array = (PyArrayObject*) obj;
-    
-    if (!array) SWIG_fail;
-    
-#ifdef SWIGPY_USE_CAPSULE
-    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
-#else
-    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
-#endif
-    
-#if NPY_API_VERSION < 0x00000007
-    PyArray_BASE(array) = cap;
-#else
-    PyArray_SetBaseObject(array,cap);
-#endif
-    
-    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_epxpypz_array_float32(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[2] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_epxpypz_array_float32", 0, 1, argv))) SWIG_fail;
-  --argc;
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_pseudojets_to_epxpypz_array_float32__SWIG_1(self, argc, argv);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_pseudojets_to_epxpypz_array_float32__SWIG_0(self, argc, argv);
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_epxpypz_array_float32'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::pseudojets_to_epxpypz_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)\n"
-    "    fastjet::pseudojets_to_epxpypz_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_pjs_to_ptyphim_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   double **arg1 = (double **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -37338,6 +37140,7 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(PyObject 
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
   bool arg5 = (bool) true ;
   bool arg6 = (bool) false ;
+  double arg7 = (double) fastjet::pseudojet_invalid_phi ;
   double *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
@@ -37346,41 +37149,57 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(PyObject 
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
+  double val7 ;
+  int ecode7 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"mass",  (char *)"phi_std",  (char *)"phi_ref",  NULL 
+  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OOO:pjs_to_ptyphim_array_float64", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
   {
     std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(swig_obj[0], &ptr);
+    res4 = swig::asptr(obj0, &ptr);
     if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjs_to_ptyphim_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjs_to_ptyphim_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
     }
     arg4 = ptr;
   }
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_bool(obj1, &val5);
     if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "5"" of type '" "bool""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjs_to_ptyphim_array_float64" "', argument " "5"" of type '" "bool""'");
     } 
     arg5 = static_cast< bool >(val5);
   }
-  if (swig_obj[2]) {
-    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
+  if (obj2) {
+    ecode6 = SWIG_AsVal_bool(obj2, &val6);
     if (!SWIG_IsOK(ecode6)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "6"" of type '" "bool""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pjs_to_ptyphim_array_float64" "', argument " "6"" of type '" "bool""'");
     } 
     arg6 = static_cast< bool >(val6);
   }
+  if (obj3) {
+    ecode7 = SWIG_AsVal_double(obj3, &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "pjs_to_ptyphim_array_float64" "', argument " "7"" of type '" "double""'");
+    } 
+    arg7 = static_cast< double >(val7);
+  }
   {
     try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_ptyphim_array< double >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5,arg6); 
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjs_to_ptyphim_array< double >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5,arg6,arg7); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -37439,7 +37258,519 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_pjs_to_ptyphim_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  float **arg1 = (float **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
+  bool arg5 = (bool) true ;
+  bool arg6 = (bool) false ;
+  float arg7 = (float) fastjet::pseudojet_invalid_phi ;
+  float *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  int res4 = SWIG_OLDOBJ ;
+  bool val5 ;
+  int ecode5 = 0 ;
+  bool val6 ;
+  int ecode6 = 0 ;
+  float val7 ;
+  int ecode7 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"mass",  (char *)"phi_std",  (char *)"phi_ref",  NULL 
+  };
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OOO:pjs_to_ptyphim_array_float32", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
+  {
+    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
+    res4 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjs_to_ptyphim_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjs_to_ptyphim_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  if (obj1) {
+    ecode5 = SWIG_AsVal_bool(obj1, &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjs_to_ptyphim_array_float32" "', argument " "5"" of type '" "bool""'");
+    } 
+    arg5 = static_cast< bool >(val5);
+  }
+  if (obj2) {
+    ecode6 = SWIG_AsVal_bool(obj2, &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pjs_to_ptyphim_array_float32" "', argument " "6"" of type '" "bool""'");
+    } 
+    arg6 = static_cast< bool >(val6);
+  }
+  if (obj3) {
+    ecode7 = SWIG_AsVal_float(obj3, &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "pjs_to_ptyphim_array_float32" "', argument " "7"" of type '" "float""'");
+    } 
+    arg7 = static_cast< float >(val7);
+  }
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjs_to_ptyphim_array< float >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5,arg6,arg7); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pjs_to_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  double **arg1 = (double **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
+  double *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  int res4 = SWIG_OLDOBJ ;
+  int val5 ;
+  int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"pjrep",  NULL 
+  };
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pjs_to_array_float64", kwnames, &obj0, &obj1)) SWIG_fail;
+  {
+    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
+    res4 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjs_to_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjs_to_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  if (obj1) {
+    ecode5 = SWIG_AsVal_int(obj1, &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjs_to_array_float64" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+    } 
+    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
+  }
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjs_to_array< double >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pjs_to_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  float **arg1 = (float **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
+  float *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  int res4 = SWIG_OLDOBJ ;
+  int val5 ;
+  int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"pjrep",  NULL 
+  };
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pjs_to_array_float32", kwnames, &obj0, &obj1)) SWIG_fail;
+  {
+    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
+    res4 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjs_to_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjs_to_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  if (obj1) {
+    ecode5 = SWIG_AsVal_int(obj1, &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjs_to_array_float32" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+    } 
+    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
+  }
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjs_to_array< float >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pjc_to_epxpypz_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  double **arg1 = (double **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  double *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  NULL 
+  };
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:pjc_to_epxpypz_array_float64", kwnames, &obj0)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(obj0, &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjc_to_epxpypz_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjc_to_epxpypz_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjc_to_epxpypz_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pjc_to_epxpypz_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  float **arg1 = (float **) 0 ;
+  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
+  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
+  fastjet::PseudoJetContainer *arg4 = 0 ;
+  float *data_temp1 = NULL ;
+  std::ptrdiff_t dim1_temp1 ;
+  std::ptrdiff_t dim2_temp1 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  NULL 
+  };
+  
+  {
+    arg1 = &data_temp1;
+    arg2 = &dim1_temp1;
+    arg3 = &dim2_temp1;
+  }
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O:pjc_to_epxpypz_array_float32", kwnames, &obj0)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(obj0, &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjc_to_epxpypz_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjc_to_epxpypz_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+  }
+  arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
+  {
+    try {
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjc_to_epxpypz_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    npy_intp dims[2] = {
+      *arg2, *arg3 
+    };
+    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
+    PyArrayObject* array = (PyArrayObject*) obj;
+    
+    if (!array) SWIG_fail;
+    
+#ifdef SWIGPY_USE_CAPSULE
+    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
+#else
+    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
+#endif
+    
+#if NPY_API_VERSION < 0x00000007
+    PyArray_BASE(array) = cap;
+#else
+    PyArray_SetBaseObject(array,cap);
+#endif
+    
+    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pjc_to_ptyphim_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   double **arg1 = (double **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -37447,6 +37778,7 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(PyObject 
   fastjet::PseudoJetContainer *arg4 = 0 ;
   bool arg5 = (bool) true ;
   bool arg6 = (bool) false ;
+  double arg7 = (double) fastjet::pseudojet_invalid_phi ;
   double *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
@@ -37456,38 +37788,54 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(PyObject 
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
+  double val7 ;
+  int ecode7 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"mass",  (char *)"phi_std",  (char *)"phi_ref",  NULL 
+  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
-  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OOO:pjc_to_ptyphim_array_float64", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(obj0, &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
   if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjc_to_ptyphim_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjc_to_ptyphim_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_bool(obj1, &val5);
     if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "5"" of type '" "bool""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjc_to_ptyphim_array_float64" "', argument " "5"" of type '" "bool""'");
     } 
     arg5 = static_cast< bool >(val5);
   }
-  if (swig_obj[2]) {
-    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
+  if (obj2) {
+    ecode6 = SWIG_AsVal_bool(obj2, &val6);
     if (!SWIG_IsOK(ecode6)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float64" "', argument " "6"" of type '" "bool""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pjc_to_ptyphim_array_float64" "', argument " "6"" of type '" "bool""'");
     } 
     arg6 = static_cast< bool >(val6);
   }
+  if (obj3) {
+    ecode7 = SWIG_AsVal_double(obj3, &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "pjc_to_ptyphim_array_float64" "', argument " "7"" of type '" "double""'");
+    } 
+    arg7 = static_cast< double >(val7);
+  }
   {
     try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_ptyphim_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5,arg6); 
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjc_to_ptyphim_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5,arg6,arg7); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -37544,186 +37892,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float64(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[4] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_ptyphim_array_float64", 0, 3, argv))) SWIG_fail;
-  --argc;
-  if ((argc >= 1) && (argc <= 3)) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_bool(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        if (argc <= 2) {
-          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(self, argc, argv);
-        }
-        {
-          int res = SWIG_AsVal_bool(argv[2], NULL);
-          _v = SWIG_CheckState(res);
-        }
-        if (_v) {
-          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_1(self, argc, argv);
-        }
-      }
-    }
-  }
-  if ((argc >= 1) && (argc <= 3)) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_bool(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        if (argc <= 2) {
-          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(self, argc, argv);
-        }
-        {
-          int res = SWIG_AsVal_bool(argv[2], NULL);
-          _v = SWIG_CheckState(res);
-        }
-        if (_v) {
-          return _wrap_pseudojets_to_ptyphim_array_float64__SWIG_0(self, argc, argv);
-        }
-      }
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_ptyphim_array_float64'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::pseudojets_to_ptyphim_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,bool,bool)\n"
-    "    fastjet::pseudojets_to_ptyphim_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,bool,bool)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  float **arg1 = (float **) 0 ;
-  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
-  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
-  bool arg5 = (bool) true ;
-  bool arg6 = (bool) false ;
-  float *data_temp1 = NULL ;
-  std::ptrdiff_t dim1_temp1 ;
-  std::ptrdiff_t dim2_temp1 ;
-  int res4 = SWIG_OLDOBJ ;
-  bool val5 ;
-  int ecode5 = 0 ;
-  bool val6 ;
-  int ecode6 = 0 ;
-  
-  {
-    arg1 = &data_temp1;
-    arg2 = &dim1_temp1;
-    arg3 = &dim2_temp1;
-  }
-  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
-  {
-    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(swig_obj[0], &ptr);
-    if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    arg4 = ptr;
-  }
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
-    if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "5"" of type '" "bool""'");
-    } 
-    arg5 = static_cast< bool >(val5);
-  }
-  if (swig_obj[2]) {
-    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
-    if (!SWIG_IsOK(ecode6)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "6"" of type '" "bool""'");
-    } 
-    arg6 = static_cast< bool >(val6);
-  }
-  {
-    try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_ptyphim_array< float >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5,arg6); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_Py_Void();
-  {
-    npy_intp dims[2] = {
-      *arg2, *arg3 
-    };
-    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
-    PyArrayObject* array = (PyArrayObject*) obj;
-    
-    if (!array) SWIG_fail;
-    
-#ifdef SWIGPY_USE_CAPSULE
-    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
-#else
-    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
-#endif
-    
-#if NPY_API_VERSION < 0x00000007
-    PyArray_BASE(array) = cap;
-#else
-    PyArray_SetBaseObject(array,cap);
-#endif
-    
-    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
-  }
-  if (SWIG_IsNewObj(res4)) delete arg4;
-  return resultobj;
-fail:
-  if (SWIG_IsNewObj(res4)) delete arg4;
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_pjc_to_ptyphim_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   float **arg1 = (float **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
@@ -37731,6 +37900,7 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(PyObject 
   fastjet::PseudoJetContainer *arg4 = 0 ;
   bool arg5 = (bool) true ;
   bool arg6 = (bool) false ;
+  float arg7 = (float) fastjet::pseudojet_invalid_phi ;
   float *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
@@ -37740,38 +37910,54 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(PyObject 
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
+  float val7 ;
+  int ecode7 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"mass",  (char *)"phi_std",  (char *)"phi_ref",  NULL 
+  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if ((nobjs < 1) || (nobjs > 3)) SWIG_fail;
-  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|OOO:pjc_to_ptyphim_array_float32", kwnames, &obj0, &obj1, &obj2, &obj3)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(obj0, &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
   if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjc_to_ptyphim_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjc_to_ptyphim_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_bool(swig_obj[1], &val5);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_bool(obj1, &val5);
     if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "5"" of type '" "bool""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjc_to_ptyphim_array_float32" "', argument " "5"" of type '" "bool""'");
     } 
     arg5 = static_cast< bool >(val5);
   }
-  if (swig_obj[2]) {
-    ecode6 = SWIG_AsVal_bool(swig_obj[2], &val6);
+  if (obj2) {
+    ecode6 = SWIG_AsVal_bool(obj2, &val6);
     if (!SWIG_IsOK(ecode6)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pseudojets_to_ptyphim_array_float32" "', argument " "6"" of type '" "bool""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "pjc_to_ptyphim_array_float32" "', argument " "6"" of type '" "bool""'");
     } 
     arg6 = static_cast< bool >(val6);
   }
+  if (obj3) {
+    ecode7 = SWIG_AsVal_float(obj3, &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "pjc_to_ptyphim_array_float32" "', argument " "7"" of type '" "float""'");
+    } 
+    arg7 = static_cast< float >(val7);
+  }
   {
     try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_ptyphim_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5,arg6); 
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjc_to_ptyphim_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5,arg6,arg7); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -37828,182 +38014,13 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_ptyphim_array_float32(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[4] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_ptyphim_array_float32", 0, 3, argv))) SWIG_fail;
-  --argc;
-  if ((argc >= 1) && (argc <= 3)) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_bool(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        if (argc <= 2) {
-          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(self, argc, argv);
-        }
-        {
-          int res = SWIG_AsVal_bool(argv[2], NULL);
-          _v = SWIG_CheckState(res);
-        }
-        if (_v) {
-          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_1(self, argc, argv);
-        }
-      }
-    }
-  }
-  if ((argc >= 1) && (argc <= 3)) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_bool(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        if (argc <= 2) {
-          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(self, argc, argv);
-        }
-        {
-          int res = SWIG_AsVal_bool(argv[2], NULL);
-          _v = SWIG_CheckState(res);
-        }
-        if (_v) {
-          return _wrap_pseudojets_to_ptyphim_array_float32__SWIG_0(self, argc, argv);
-        }
-      }
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_ptyphim_array_float32'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::pseudojets_to_ptyphim_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,bool,bool)\n"
-    "    fastjet::pseudojets_to_ptyphim_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,bool,bool)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  double **arg1 = (double **) 0 ;
-  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
-  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
-  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
-  double *data_temp1 = NULL ;
-  std::ptrdiff_t dim1_temp1 ;
-  std::ptrdiff_t dim2_temp1 ;
-  int res4 = SWIG_OLDOBJ ;
-  int val5 ;
-  int ecode5 = 0 ;
-  
-  {
-    arg1 = &data_temp1;
-    arg2 = &dim1_temp1;
-    arg3 = &dim2_temp1;
-  }
-  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
-  {
-    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(swig_obj[0], &ptr);
-    if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_array_float64" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    arg4 = ptr;
-  }
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
-    if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float64" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
-    } 
-    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
-  }
-  {
-    try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_array< double >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_Py_Void();
-  {
-    npy_intp dims[2] = {
-      *arg2, *arg3 
-    };
-    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_DOUBLE, (void*)(*arg1));
-    PyArrayObject* array = (PyArrayObject*) obj;
-    
-    if (!array) SWIG_fail;
-    
-#ifdef SWIGPY_USE_CAPSULE
-    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
-#else
-    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
-#endif
-    
-#if NPY_API_VERSION < 0x00000007
-    PyArray_BASE(array) = cap;
-#else
-    PyArray_SetBaseObject(array,cap);
-#endif
-    
-    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
-  }
-  if (SWIG_IsNewObj(res4)) delete arg4;
-  return resultobj;
-fail:
-  if (SWIG_IsNewObj(res4)) delete arg4;
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_pjc_to_array_float64(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   double **arg1 = (double **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   fastjet::PseudoJetContainer *arg4 = 0 ;
-  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
   double *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
@@ -38011,31 +38028,36 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64__SWIG_1(PyObject *SWIGUNU
   int res4 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"pjrep",  NULL 
+  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
-  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pjc_to_array_float64", kwnames, &obj0, &obj1)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(obj0, &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
   if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjc_to_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjc_to_array_float64" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_int(obj1, &val5);
     if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float64" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjc_to_array_float64" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
     } 
     arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
   }
   {
     try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5); 
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjc_to_array< double >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -38092,164 +38114,13 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float64(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[3] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_array_float64", 0, 2, argv))) SWIG_fail;
-  --argc;
-  if ((argc >= 1) && (argc <= 2)) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_array_float64__SWIG_1(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_int(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_pseudojets_to_array_float64__SWIG_1(self, argc, argv);
-      }
-    }
-  }
-  if ((argc >= 1) && (argc <= 2)) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_array_float64__SWIG_0(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_int(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_pseudojets_to_array_float64__SWIG_0(self, argc, argv);
-      }
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_array_float64'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::pseudojets_to_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,fastjet::PseudoJetRepresentation)\n"
-    "    fastjet::pseudojets_to_array< double >(double **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,fastjet::PseudoJetRepresentation)\n");
-  return 0;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
-  PyObject *resultobj = 0;
-  float **arg1 = (float **) 0 ;
-  std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
-  std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
-  std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
-  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
-  float *data_temp1 = NULL ;
-  std::ptrdiff_t dim1_temp1 ;
-  std::ptrdiff_t dim2_temp1 ;
-  int res4 = SWIG_OLDOBJ ;
-  int val5 ;
-  int ecode5 = 0 ;
-  
-  {
-    arg1 = &data_temp1;
-    arg2 = &dim1_temp1;
-    arg3 = &dim2_temp1;
-  }
-  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
-  {
-    std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *ptr = (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *)0;
-    res4 = swig::asptr(swig_obj[0], &ptr);
-    if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_array_float32" "', argument " "4"" of type '" "std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &""'"); 
-    }
-    arg4 = ptr;
-  }
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
-    if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float32" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
-    } 
-    arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
-  }
-  {
-    try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_array< float >(arg1,arg2,arg3,(std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &)*arg4,arg5); 
-    }
-    catch (fastjet::Error & e) {
-      PyErr_SetString(FastJetError_, e.message().c_str());
-      SWIG_fail;
-    }
-    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
-    catch (std::invalid_argument& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::domain_error& e) {
-      SWIG_exception_fail(SWIG_ValueError, e.what() );
-    } catch (std::overflow_error& e) {
-      SWIG_exception_fail(SWIG_OverflowError, e.what() );
-    } catch (std::out_of_range& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::length_error& e) {
-      SWIG_exception_fail(SWIG_IndexError, e.what() );
-    } catch (std::runtime_error& e) {
-      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
-    } catch (std::exception& e) {
-      SWIG_exception_fail(SWIG_SystemError, e.what() );
-    }
-    /*@SWIG@*/
-    catch (...) {
-      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
-    }
-  }
-  resultobj = SWIG_Py_Void();
-  {
-    npy_intp dims[2] = {
-      *arg2, *arg3 
-    };
-    PyObject* obj = PyArray_SimpleNewFromData(2, dims, NPY_FLOAT, (void*)(*arg1));
-    PyArrayObject* array = (PyArrayObject*) obj;
-    
-    if (!array) SWIG_fail;
-    
-#ifdef SWIGPY_USE_CAPSULE
-    PyObject* cap = PyCapsule_New((void*)(*arg1), SWIGPY_CAPSULE_NAME, free_cap);
-#else
-    PyObject* cap = PyCObject_FromVoidPtr((void*)(*arg1), free);
-#endif
-    
-#if NPY_API_VERSION < 0x00000007
-    PyArray_BASE(array) = cap;
-#else
-    PyArray_SetBaseObject(array,cap);
-#endif
-    
-    resultobj = SWIG_Python_AppendOutput(resultobj,obj);
-  }
-  if (SWIG_IsNewObj(res4)) delete arg4;
-  return resultobj;
-fail:
-  if (SWIG_IsNewObj(res4)) delete arg4;
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+SWIGINTERN PyObject *_wrap_pjc_to_array_float32(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   float **arg1 = (float **) 0 ;
   std::ptrdiff_t *arg2 = (std::ptrdiff_t *) 0 ;
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   fastjet::PseudoJetContainer *arg4 = 0 ;
-  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::ptyphim ;
+  fastjet::PseudoJetRepresentation arg5 = (fastjet::PseudoJetRepresentation) fastjet::PseudoJetRepresentation::ptyphim ;
   float *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
   std::ptrdiff_t dim2_temp1 ;
@@ -38257,31 +38128,36 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32__SWIG_1(PyObject *SWIGUNU
   int res4 = 0 ;
   int val5 ;
   int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"pjs",  (char *)"pjrep",  NULL 
+  };
   
   {
     arg1 = &data_temp1;
     arg2 = &dim1_temp1;
     arg3 = &dim2_temp1;
   }
-  if ((nobjs < 1) || (nobjs > 2)) SWIG_fail;
-  res4 = SWIG_ConvertPtr(swig_obj[0], &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O|O:pjc_to_array_float32", kwnames, &obj0, &obj1)) SWIG_fail;
+  res4 = SWIG_ConvertPtr(obj0, &argp4, SWIGTYPE_p_fastjet__PseudoJetContainer,  0  | 0);
   if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pseudojets_to_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "pjc_to_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pseudojets_to_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "pjc_to_array_float32" "', argument " "4"" of type '" "fastjet::PseudoJetContainer const &""'"); 
   }
   arg4 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp4);
-  if (swig_obj[1]) {
-    ecode5 = SWIG_AsVal_int(swig_obj[1], &val5);
+  if (obj1) {
+    ecode5 = SWIG_AsVal_int(obj1, &val5);
     if (!SWIG_IsOK(ecode5)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pseudojets_to_array_float32" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "pjc_to_array_float32" "', argument " "5"" of type '" "fastjet::PseudoJetRepresentation""'");
     } 
     arg5 = static_cast< fastjet::PseudoJetRepresentation >(val5);
   }
   {
     try {
-      fastjet::SWIGTEMPLATEDISAMBIGUATOR pseudojets_to_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5); 
+      fastjet::SWIGTEMPLATEDISAMBIGUATOR pjc_to_array< float >(arg1,arg2,arg3,(fastjet::PseudoJetContainer const &)*arg4,arg5); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -38335,58 +38211,6 @@ SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32__SWIG_1(PyObject *SWIGUNU
   return resultobj;
 fail:
   return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_pseudojets_to_array_float32(PyObject *self, PyObject *args) {
-  Py_ssize_t argc;
-  PyObject *argv[3] = {
-    0
-  };
-  
-  if (!(argc = SWIG_Python_UnpackTuple(args, "pseudojets_to_array_float32", 0, 2, argv))) SWIG_fail;
-  --argc;
-  if ((argc >= 1) && (argc <= 2)) {
-    int _v;
-    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_NO_NULL | 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_array_float32__SWIG_1(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_int(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_pseudojets_to_array_float32__SWIG_1(self, argc, argv);
-      }
-    }
-  }
-  if ((argc >= 1) && (argc <= 2)) {
-    int _v;
-    int res = swig::asptr(argv[0], (std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > >**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      if (argc <= 1) {
-        return _wrap_pseudojets_to_array_float32__SWIG_0(self, argc, argv);
-      }
-      {
-        int res = SWIG_AsVal_int(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_pseudojets_to_array_float32__SWIG_0(self, argc, argv);
-      }
-    }
-  }
-  
-fail:
-  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'pseudojets_to_array_float32'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    fastjet::pseudojets_to_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > const &,fastjet::PseudoJetRepresentation)\n"
-    "    fastjet::pseudojets_to_array< float >(float **,std::ptrdiff_t *,std::ptrdiff_t *,fastjet::PseudoJetContainer const &,fastjet::PseudoJetRepresentation)\n");
-  return 0;
 }
 
 
@@ -38630,7 +38454,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJet___sub__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___sub__, METH_VARARGS|METH_KEYWORDS, "PseudoJet___sub__(PseudoJet self, PseudoJet p) -> PseudoJet"},
 	 { "PseudoJet___mul__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___mul__, METH_VARARGS|METH_KEYWORDS, "PseudoJet___mul__(PseudoJet self, double x) -> PseudoJet"},
 	 { "PseudoJet___rmul__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___rmul__, METH_VARARGS|METH_KEYWORDS, "PseudoJet___rmul__(PseudoJet self, double x) -> PseudoJet"},
-	 { "PseudoJet___div__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___div__, METH_VARARGS|METH_KEYWORDS, "PseudoJet___div__(PseudoJet self, double x) -> PseudoJet"},
+	 { "PseudoJet___truediv__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___truediv__, METH_VARARGS|METH_KEYWORDS, "PseudoJet___truediv__(PseudoJet self, double x) -> PseudoJet"},
 	 { "PseudoJet___eq__", _wrap_PseudoJet___eq__, METH_VARARGS, "\n"
 		"PseudoJet___eq__(PseudoJet self, PseudoJet p) -> bool\n"
 		"PseudoJet___eq__(PseudoJet self, double x) -> bool\n"
@@ -38641,11 +38465,7 @@ static PyMethodDef SwigMethods[] = {
 		""},
 	 { "PseudoJet_swigregister", PseudoJet_swigregister, METH_O, NULL},
 	 { "PseudoJet_swiginit", PseudoJet_swiginit, METH_VARARGS, NULL},
-	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
-		"PseudoJetContainer()\n"
-		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
-		"new_PseudoJetContainer(PseudoJetContainer other) -> PseudoJetContainer\n"
-		""},
+	 { "phi_fix", (PyCFunction)(void(*)(void))_wrap_phi_fix, METH_VARARGS|METH_KEYWORDS, "phi_fix(double phi, double ref_phi) -> double"},
 	 { "PseudoJetContainer_size", _wrap_PseudoJetContainer_size, METH_O, "PseudoJetContainer_size(PseudoJetContainer self) -> std::size_t"},
 	 { "PseudoJetContainer_capacity", _wrap_PseudoJetContainer_capacity, METH_O, "PseudoJetContainer_capacity(PseudoJetContainer self) -> std::size_t"},
 	 { "PseudoJetContainer_resize", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_resize, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_resize(PseudoJetContainer self, std::size_t s)"},
@@ -38653,23 +38473,22 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJetContainer_push_back", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_push_back, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_push_back(PseudoJetContainer self, PseudoJet pj)"},
 	 { "PseudoJetContainer_clear", _wrap_PseudoJetContainer_clear, METH_O, "PseudoJetContainer_clear(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_as_vector", _wrap_PseudoJetContainer_as_vector, METH_O, "PseudoJetContainer_as_vector(PseudoJetContainer self) -> vectorPseudoJet"},
-	 { "PseudoJetContainer___len__", _wrap_PseudoJetContainer___len__, METH_O, "PseudoJetContainer___len__(PseudoJetContainer self) -> std::size_t"},
-	 { "PseudoJetContainer___getitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___getitem__, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer___getitem__(PseudoJetContainer self, std::ptrdiff_t i) -> PseudoJet"},
+	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "PseudoJetContainer_user_indices(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float64", _wrap_PseudoJetContainer_epxpypz_array_float64, METH_O, "PseudoJetContainer_epxpypz_array_float64(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float32", _wrap_PseudoJetContainer_epxpypz_array_float32, METH_O, "PseudoJetContainer_epxpypz_array_float32(PseudoJetContainer self)"},
-	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
-	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
+	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
+	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
 	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
-	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "PseudoJetContainer_user_indices(PseudoJetContainer self)"},
-	 { "PseudoJetContainer___setitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___setitem__, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer___setitem__(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "PseudoJetContainer__setitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__setitem, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer__setitem(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
+		"PseudoJetContainer()\n"
+		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
+		"new_PseudoJetContainer(PseudoJetContainer other) -> PseudoJetContainer\n"
+		""},
 	 { "delete_PseudoJetContainer", _wrap_delete_PseudoJetContainer, METH_O, "delete_PseudoJetContainer(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_swigregister", PseudoJetContainer_swigregister, METH_O, NULL},
 	 { "PseudoJetContainer_swiginit", PseudoJetContainer_swiginit, METH_VARARGS, NULL},
-	 { "user_indices", _wrap_user_indices, METH_VARARGS, "\n"
-		"user_indices(vectorPseudoJet pjs)\n"
-		"user_indices(PseudoJetContainer pjc)\n"
-		""},
 	 { "dot_product", (PyCFunction)(void(*)(void))_wrap_dot_product, METH_VARARGS|METH_KEYWORDS, "dot_product(PseudoJet a, PseudoJet b) -> double"},
 	 { "cos_theta", (PyCFunction)(void(*)(void))_wrap_cos_theta, METH_VARARGS|METH_KEYWORDS, "cos_theta(PseudoJet a, PseudoJet b) -> double"},
 	 { "theta", (PyCFunction)(void(*)(void))_wrap_theta, METH_VARARGS|METH_KEYWORDS, "theta(PseudoJet a, PseudoJet b) -> double"},
@@ -38961,6 +38780,10 @@ static PyMethodDef SwigMethods[] = {
 	 { "ptyphim_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_ptyphim_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
 	 { "epxpypz_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_epxpypz_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "epxpypz_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
 	 { "array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "array_to_pseudojets(double * particles, fastjet::PseudoJetRepresentation pjrep=ptyphim) -> PseudoJetContainer"},
+	 { "user_indices", _wrap_user_indices, METH_VARARGS, "\n"
+		"user_indices(vectorPseudoJet pjs)\n"
+		"user_indices(PseudoJetContainer pjc)\n"
+		""},
 	 { "new_sharedPtrPseudoJetStructureBase", _wrap_new_sharedPtrPseudoJetStructureBase, METH_VARARGS, "\n"
 		"sharedPtrPseudoJetStructureBase()\n"
 		"new_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase share) -> sharedPtrPseudoJetStructureBase\n"
@@ -39003,30 +38826,18 @@ static PyMethodDef SwigMethods[] = {
 	 { "sharedPtrPseudoJetStructureBase_is_pure_ghost", _wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost, METH_O, "sharedPtrPseudoJetStructureBase_is_pure_ghost(sharedPtrPseudoJetStructureBase self) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_swigregister", sharedPtrPseudoJetStructureBase_swigregister, METH_O, NULL},
 	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
-	 { "pseudojets_to_epxpypz_array_float64", _wrap_pseudojets_to_epxpypz_array_float64, METH_VARARGS, "\n"
-		"pseudojets_to_epxpypz_array_float64(vectorPseudoJet pjs)\n"
-		"pseudojets_to_epxpypz_array_float64(PseudoJetContainer pjs)\n"
-		""},
-	 { "pseudojets_to_epxpypz_array_float32", _wrap_pseudojets_to_epxpypz_array_float32, METH_VARARGS, "\n"
-		"pseudojets_to_epxpypz_array_float32(vectorPseudoJet pjs)\n"
-		"pseudojets_to_epxpypz_array_float32(PseudoJetContainer pjs)\n"
-		""},
-	 { "pseudojets_to_ptyphim_array_float64", _wrap_pseudojets_to_ptyphim_array_float64, METH_VARARGS, "\n"
-		"pseudojets_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
-		"pseudojets_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
-		""},
-	 { "pseudojets_to_ptyphim_array_float32", _wrap_pseudojets_to_ptyphim_array_float32, METH_VARARGS, "\n"
-		"pseudojets_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
-		"pseudojets_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
-		""},
-	 { "pseudojets_to_array_float64", _wrap_pseudojets_to_array_float64, METH_VARARGS, "\n"
-		"pseudojets_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		"pseudojets_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		""},
-	 { "pseudojets_to_array_float32", _wrap_pseudojets_to_array_float32, METH_VARARGS, "\n"
-		"pseudojets_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		"pseudojets_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		""},
+	 { "pjs_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float64(vectorPseudoJet pjs)"},
+	 { "pjs_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float32(vectorPseudoJet pjs)"},
+	 { "pjs_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pjs_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pjc_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float64(PseudoJetContainer pjs)"},
+	 { "pjc_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float32(PseudoJetContainer pjs)"},
+	 { "pjc_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pjc_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -39270,7 +39081,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJet___sub__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___sub__, METH_VARARGS|METH_KEYWORDS, "__sub__(PseudoJet self, PseudoJet p) -> PseudoJet"},
 	 { "PseudoJet___mul__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___mul__, METH_VARARGS|METH_KEYWORDS, "__mul__(PseudoJet self, double x) -> PseudoJet"},
 	 { "PseudoJet___rmul__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___rmul__, METH_VARARGS|METH_KEYWORDS, "__rmul__(PseudoJet self, double x) -> PseudoJet"},
-	 { "PseudoJet___div__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___div__, METH_VARARGS|METH_KEYWORDS, "__div__(PseudoJet self, double x) -> PseudoJet"},
+	 { "PseudoJet___truediv__", (PyCFunction)(void(*)(void))_wrap_PseudoJet___truediv__, METH_VARARGS|METH_KEYWORDS, "__truediv__(PseudoJet self, double x) -> PseudoJet"},
 	 { "PseudoJet___eq__", _wrap_PseudoJet___eq__, METH_VARARGS, "\n"
 		"__eq__(PseudoJet self, PseudoJet p) -> bool\n"
 		"__eq__(PseudoJet self, double x) -> bool\n"
@@ -39281,11 +39092,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 		""},
 	 { "PseudoJet_swigregister", PseudoJet_swigregister, METH_O, NULL},
 	 { "PseudoJet_swiginit", PseudoJet_swiginit, METH_VARARGS, NULL},
-	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
-		"PseudoJetContainer()\n"
-		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
-		"new_PseudoJetContainer(PseudoJetContainer other) -> PseudoJetContainer\n"
-		""},
+	 { "phi_fix", (PyCFunction)(void(*)(void))_wrap_phi_fix, METH_VARARGS|METH_KEYWORDS, "phi_fix(double phi, double ref_phi) -> double"},
 	 { "PseudoJetContainer_size", _wrap_PseudoJetContainer_size, METH_O, "size(PseudoJetContainer self) -> std::size_t"},
 	 { "PseudoJetContainer_capacity", _wrap_PseudoJetContainer_capacity, METH_O, "capacity(PseudoJetContainer self) -> std::size_t"},
 	 { "PseudoJetContainer_resize", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_resize, METH_VARARGS|METH_KEYWORDS, "resize(PseudoJetContainer self, std::size_t s)"},
@@ -39293,23 +39100,22 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJetContainer_push_back", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_push_back, METH_VARARGS|METH_KEYWORDS, "push_back(PseudoJetContainer self, PseudoJet pj)"},
 	 { "PseudoJetContainer_clear", _wrap_PseudoJetContainer_clear, METH_O, "clear(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_as_vector", _wrap_PseudoJetContainer_as_vector, METH_O, "as_vector(PseudoJetContainer self) -> vectorPseudoJet"},
-	 { "PseudoJetContainer___len__", _wrap_PseudoJetContainer___len__, METH_O, "__len__(PseudoJetContainer self) -> std::size_t"},
-	 { "PseudoJetContainer___getitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___getitem__, METH_VARARGS|METH_KEYWORDS, "__getitem__(PseudoJetContainer self, std::ptrdiff_t i) -> PseudoJet"},
+	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "user_indices(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float64", _wrap_PseudoJetContainer_epxpypz_array_float64, METH_O, "epxpypz_array_float64(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float32", _wrap_PseudoJetContainer_epxpypz_array_float32, METH_O, "epxpypz_array_float32(PseudoJetContainer self)"},
-	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
-	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False)"},
+	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
+	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
 	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
-	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "user_indices(PseudoJetContainer self)"},
-	 { "PseudoJetContainer___setitem__", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer___setitem__, METH_VARARGS|METH_KEYWORDS, "__setitem__(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "PseudoJetContainer__setitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__setitem, METH_VARARGS|METH_KEYWORDS, "_setitem(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
+		"PseudoJetContainer()\n"
+		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
+		"new_PseudoJetContainer(PseudoJetContainer other) -> PseudoJetContainer\n"
+		""},
 	 { "delete_PseudoJetContainer", _wrap_delete_PseudoJetContainer, METH_O, "delete_PseudoJetContainer(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_swigregister", PseudoJetContainer_swigregister, METH_O, NULL},
 	 { "PseudoJetContainer_swiginit", PseudoJetContainer_swiginit, METH_VARARGS, NULL},
-	 { "user_indices", _wrap_user_indices, METH_VARARGS, "\n"
-		"user_indices(vectorPseudoJet pjs)\n"
-		"user_indices(PseudoJetContainer pjc)\n"
-		""},
 	 { "dot_product", (PyCFunction)(void(*)(void))_wrap_dot_product, METH_VARARGS|METH_KEYWORDS, "dot_product(PseudoJet a, PseudoJet b) -> double"},
 	 { "cos_theta", (PyCFunction)(void(*)(void))_wrap_cos_theta, METH_VARARGS|METH_KEYWORDS, "cos_theta(PseudoJet a, PseudoJet b) -> double"},
 	 { "theta", (PyCFunction)(void(*)(void))_wrap_theta, METH_VARARGS|METH_KEYWORDS, "theta(PseudoJet a, PseudoJet b) -> double"},
@@ -39601,6 +39407,10 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "ptyphim_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_ptyphim_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
 	 { "epxpypz_array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_epxpypz_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "epxpypz_array_to_pseudojets(double * particles) -> PseudoJetContainer"},
 	 { "array_to_pseudojets", (PyCFunction)(void(*)(void))_wrap_array_to_pseudojets, METH_VARARGS|METH_KEYWORDS, "array_to_pseudojets(double * particles, fastjet::PseudoJetRepresentation pjrep=ptyphim) -> PseudoJetContainer"},
+	 { "user_indices", _wrap_user_indices, METH_VARARGS, "\n"
+		"user_indices(vectorPseudoJet pjs)\n"
+		"user_indices(PseudoJetContainer pjc)\n"
+		""},
 	 { "new_sharedPtrPseudoJetStructureBase", _wrap_new_sharedPtrPseudoJetStructureBase, METH_VARARGS, "\n"
 		"sharedPtrPseudoJetStructureBase()\n"
 		"new_sharedPtrPseudoJetStructureBase(sharedPtrPseudoJetStructureBase share) -> sharedPtrPseudoJetStructureBase\n"
@@ -39643,30 +39453,18 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "sharedPtrPseudoJetStructureBase_is_pure_ghost", _wrap_sharedPtrPseudoJetStructureBase_is_pure_ghost, METH_O, "is_pure_ghost(sharedPtrPseudoJetStructureBase self) -> bool"},
 	 { "sharedPtrPseudoJetStructureBase_swigregister", sharedPtrPseudoJetStructureBase_swigregister, METH_O, NULL},
 	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
-	 { "pseudojets_to_epxpypz_array_float64", _wrap_pseudojets_to_epxpypz_array_float64, METH_VARARGS, "\n"
-		"pseudojets_to_epxpypz_array_float64(vectorPseudoJet pjs)\n"
-		"pseudojets_to_epxpypz_array_float64(PseudoJetContainer pjs)\n"
-		""},
-	 { "pseudojets_to_epxpypz_array_float32", _wrap_pseudojets_to_epxpypz_array_float32, METH_VARARGS, "\n"
-		"pseudojets_to_epxpypz_array_float32(vectorPseudoJet pjs)\n"
-		"pseudojets_to_epxpypz_array_float32(PseudoJetContainer pjs)\n"
-		""},
-	 { "pseudojets_to_ptyphim_array_float64", _wrap_pseudojets_to_ptyphim_array_float64, METH_VARARGS, "\n"
-		"pseudojets_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
-		"pseudojets_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
-		""},
-	 { "pseudojets_to_ptyphim_array_float32", _wrap_pseudojets_to_ptyphim_array_float32, METH_VARARGS, "\n"
-		"pseudojets_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False)\n"
-		"pseudojets_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False)\n"
-		""},
-	 { "pseudojets_to_array_float64", _wrap_pseudojets_to_array_float64, METH_VARARGS, "\n"
-		"pseudojets_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		"pseudojets_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		""},
-	 { "pseudojets_to_array_float32", _wrap_pseudojets_to_array_float32, METH_VARARGS, "\n"
-		"pseudojets_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		"pseudojets_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)\n"
-		""},
+	 { "pjs_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float64(vectorPseudoJet pjs)"},
+	 { "pjs_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float32(vectorPseudoJet pjs)"},
+	 { "pjs_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pjs_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pjc_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float64(PseudoJetContainer pjs)"},
+	 { "pjc_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float32(PseudoJetContainer pjs)"},
+	 { "pjc_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
+	 { "pjc_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -40676,9 +40474,9 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "PseudoJet_T",SWIG_From_int(static_cast< int >(fastjet::PseudoJet::T)));
   SWIG_Python_SetConstant(d, "PseudoJet_NUM_COORDINATES",SWIG_From_int(static_cast< int >(fastjet::PseudoJet::NUM_COORDINATES)));
   SWIG_Python_SetConstant(d, "PseudoJet_SIZE",SWIG_From_int(static_cast< int >(fastjet::PseudoJet::SIZE)));
-  SWIG_Python_SetConstant(d, "epxpypz",SWIG_From_int(static_cast< int >(fastjet::epxpypz)));
-  SWIG_Python_SetConstant(d, "ptyphim",SWIG_From_int(static_cast< int >(fastjet::ptyphim)));
-  SWIG_Python_SetConstant(d, "ptyphi",SWIG_From_int(static_cast< int >(fastjet::ptyphi)));
+  SWIG_Python_SetConstant(d, "PseudoJetRepresentation_epxpypz",SWIG_From_int(static_cast< int >(fastjet::PseudoJetRepresentation::epxpypz)));
+  SWIG_Python_SetConstant(d, "PseudoJetRepresentation_ptyphim",SWIG_From_int(static_cast< int >(fastjet::PseudoJetRepresentation::ptyphim)));
+  SWIG_Python_SetConstant(d, "PseudoJetRepresentation_ptyphi",SWIG_From_int(static_cast< int >(fastjet::PseudoJetRepresentation::ptyphi)));
   SWIG_Python_SetConstant(d, "N2MHTLazy9AntiKtSeparateGhosts",SWIG_From_int(static_cast< int >(fastjet::N2MHTLazy9AntiKtSeparateGhosts)));
   SWIG_Python_SetConstant(d, "N2MHTLazy9",SWIG_From_int(static_cast< int >(fastjet::N2MHTLazy9)));
   SWIG_Python_SetConstant(d, "N2MHTLazy25",SWIG_From_int(static_cast< int >(fastjet::N2MHTLazy25)));
