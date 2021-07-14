@@ -30,7 +30,7 @@ with open(os.path.join('pyfjcore', '__init__.py'), 'r') as f:
 
 # run swig to generate pyfjcore.py and pyfjcore.cpp from pyfjcore.i
 if sys.argv[1] == 'swig':
-    command = 'swig -python -c++ -fastproxy -w325,402,509,511 -keyword -py3 -Ipyfjcore -o pyfjcore/pyfjcore.cpp pyfjcore/swig/pyfjcore.i'
+    command = 'swig -python -c++ -fastproxy -w325,402,509,511 -keyword -py3 -o pyfjcore/pyfjcore.cpp pyfjcore/swig/pyfjcore.i'
     print(command)
     subprocess.run(command.split())
 
@@ -44,6 +44,7 @@ else:
     library_dirs = ['.']
     libraries = ['PyFJCore']
 
+
     if platform.system() == 'Windows':
         sources.append(os.path.join('pyfjcore', 'fjcore.cc'))
         macros.append(('SWIG', None))
@@ -51,11 +52,18 @@ else:
         library_dirs = ['.']
         libraries = []
 
+    elif platform.system() == 'Linux':
+        ldflags = ['-Wl,-rpath,$ORIGIN/..']
+
+    elif platform.system() == 'Darwin':
+        ldflags = ['-Wl,-rpath,@loader_path/..']
+
     pyfjcore = Extension('pyfjcore._pyfjcore',
                          sources=sources,
                          define_macros=macros,
-                         include_dirs=[np.get_include(), 'pyfjcore'],
+                         include_dirs=[np.get_include(), '.'],
                          extra_compile_args=cxxflags,
+                         extra_link_args=ldflags,
                          library_dirs=library_dirs,
                          libraries=libraries)
 

@@ -14,11 +14,12 @@ SRCFILES := $(addprefix $(SRCDIR)/, $(SRCS))
 OBJS := $(SRCFILES:.cc=.o)
 
 ifeq "$(shell uname)" "Darwin"
-    dynlibopt=-dynamiclib
-    dynlibext=dylib
+    dynlibopt = -dynamiclib
+    dynlibext = dylib
+    LDFLAGS += -install_name @rpath/lib$(NAME).dylib
 else 
-    dynlibopt=-shared
-    dynlibext=so
+    dynlibopt = -shared
+    dynlibext = so
 endif
 
 .PHONY: all shared clean
@@ -37,7 +38,7 @@ all: shared
 shared: lib$(NAME).$(dynlibext)
 
 lib$(NAME).$(dynlibext): $(OBJS)
-	$(CXX) $(OBJS) $(dynlibopt) $(CXXFLAGS) $(LDFLAGS) -o lib$(NAME).$(dynlibext)
+	$(CXX) $(OBJS) $(dynlibopt) $(LDFLAGS) -g0 -o lib$(NAME).$(dynlibext)
 
 # cleaning the directory
 clean:

@@ -1,7 +1,7 @@
 // -*- C++ -*-
 //
 // PyFJCore - Python wrapper of FJCore functionality
-// Copyright (C) 2020 Patrick T. Komiske III
+// Copyright (C) 2020-2021 Patrick T. Komiske III
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -47,8 +47,8 @@
 #include <cstring>
 
 // PyFJCore headers
-#include "fjcore.hh"
-#include "PyFJCoreExtensions.hh"
+#include "pyfjcore/fjcore.hh"
+#include "pyfjcore/PyFJCoreExtensions.hh"
 
 // using namespaces
 using namespace fastjet;
@@ -201,11 +201,24 @@ namespace PYFJNAMESPACE {
 
   %copyctor PseudoJetContainer;
 
+  template<typename TOut>
+  class FunctionOfPseudoJet{
+  public:
+    FunctionOfPseudoJet(){}
+    virtual ~FunctionOfPseudoJet(){}
+    virtual std::string description() const;
+    virtual TOut result(const PseudoJet &pj) const = 0;
+    TOut operator()(const PseudoJet &pj) const;
+    std::vector<TOut> operator()(const std::vector<PseudoJet> &pjs) const;
+  };
+
+  %template(FunctionOfPseudoJet_PseudoJet) FunctionOfPseudoJet<PYFJNAMESPACE::PseudoJet>;
+
 } // namespace PYFJNAMESPACE
 
 // include EECHist and declare templates
-%include "fjcore.hh"
-%include "PyFJCoreExtensions.hh"
+%include "pyfjcore/fjcore.hh"
+%include "pyfjcore/PyFJCoreExtensions.hh"
 
 namespace PYFJNAMESPACE {
 
