@@ -150,6 +150,22 @@ class vectorPseudoJet(object):
 # Register vectorPseudoJet in _pyfjcore:
 _pyfjcore.vectorPseudoJet_swigregister(vectorPseudoJet)
 
+class FunctionOfPseudoJet_PseudoJet(object):
+    r"""Proxy of C++ fastjet::FunctionOfPseudoJet< fastjet::PseudoJet > class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _pyfjcore.delete_FunctionOfPseudoJet_PseudoJet
+    description = _swig_new_instance_method(_pyfjcore.FunctionOfPseudoJet_PseudoJet_description)
+    result = _swig_new_instance_method(_pyfjcore.FunctionOfPseudoJet_PseudoJet_result)
+    __call__ = _swig_new_instance_method(_pyfjcore.FunctionOfPseudoJet_PseudoJet___call__)
+
+# Register FunctionOfPseudoJet_PseudoJet in _pyfjcore:
+_pyfjcore.FunctionOfPseudoJet_PseudoJet_swigregister(FunctionOfPseudoJet_PseudoJet)
+
 FJCORE_VERSION = _pyfjcore.FJCORE_VERSION
 
 FJCORE_VERSION_MAJOR = _pyfjcore.FJCORE_VERSION_MAJOR
@@ -805,6 +821,35 @@ class ClusterSequence(object):
 
 # Register ClusterSequence in _pyfjcore:
 _pyfjcore.ClusterSequence_swigregister(ClusterSequence)
+
+class Recluster(FunctionOfPseudoJet_PseudoJet):
+    r"""Proxy of C++ fastjet::Recluster class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    keep_only_hardest = _pyfjcore.Recluster_keep_only_hardest
+    
+    keep_all = _pyfjcore.Recluster_keep_all
+    
+    __swig_destroy__ = _pyfjcore.delete_Recluster
+    set_acquire_recombiner = _swig_new_instance_method(_pyfjcore.Recluster_set_acquire_recombiner)
+    acquire_recombiner = _swig_new_instance_method(_pyfjcore.Recluster_acquire_recombiner)
+    set_cambridge_optimisation = _swig_new_instance_method(_pyfjcore.Recluster_set_cambridge_optimisation)
+    set_cambridge_optimization = _swig_new_instance_method(_pyfjcore.Recluster_set_cambridge_optimization)
+    cambridge_optimization = _swig_new_instance_method(_pyfjcore.Recluster_cambridge_optimization)
+    cambridge_optimisation = _swig_new_instance_method(_pyfjcore.Recluster_cambridge_optimisation)
+    set_keep = _swig_new_instance_method(_pyfjcore.Recluster_set_keep)
+    keep = _swig_new_instance_method(_pyfjcore.Recluster_keep)
+    description = _swig_new_instance_method(_pyfjcore.Recluster_description)
+    result = _swig_new_instance_method(_pyfjcore.Recluster_result)
+    get_new_jets_and_def = _swig_new_instance_method(_pyfjcore.Recluster_get_new_jets_and_def)
+    generate_output_jet = _swig_new_instance_method(_pyfjcore.Recluster_generate_output_jet)
+
+# Register Recluster in _pyfjcore:
+_pyfjcore.Recluster_swigregister(Recluster)
 
 JetDefinition0Param = _pyfjcore.JetDefinition0Param
 JetDefinition1Param = _pyfjcore.JetDefinition1Param
