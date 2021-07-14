@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - library
 
 env:
   PYPI: 0
@@ -22,6 +23,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+      - name: Compile fjcore shared library
+        run: make shared
       - name: Build wheels and upload to PyPI
         run: ./scripts/build-wheels-and-upload.sh sdist
 
@@ -33,6 +36,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+      - name: Compile fjcore shared library
+        run: make shared
       - name: Build wheels and upload to PyPI
         run: ./scripts/build-wheels-and-upload.sh
 

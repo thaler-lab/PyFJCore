@@ -38,15 +38,26 @@ if sys.argv[1] == 'swig':
 else:
 
     # compiler flags, libraries, etc
+    sources = [os.path.join('pyfjcore', 'pyfjcore.cpp')]
+    macros = [('SWIG_TYPE_TABLE', 'fjcore')]
     cxxflags = ['-std=c++14', '-g0']
+    library_dirs = ['.']
+    libraries = ['PyFJCore']
+
     if platform.system() == 'Windows':
+        sources.append(os.path.join('pyfjcore', 'fjcore.cc'))
+        macros.append(('SWIG', None))
         cxxflags = ['/std:c++14']
+        library_dirs = ['.']
+        libraries = []
 
     pyfjcore = Extension('pyfjcore._pyfjcore',
-                         sources=[os.path.join('pyfjcore', 'pyfjcore.cpp'), os.path.join('pyfjcore', 'fjcore.cc')],
-                         define_macros=[('SWIG', None), ('SWIG_TYPE_TABLE', 'fjcore')],
+                         sources=sources,
+                         define_macros=macros,
                          include_dirs=[np.get_include(), 'pyfjcore'],
-                         extra_compile_args=cxxflags)
+                         extra_compile_args=cxxflags,
+                         library_dirs=library_dirs,
+                         libraries=libraries)
 
     setup(
         ext_modules=[pyfjcore],
