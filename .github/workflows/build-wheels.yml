@@ -10,6 +10,7 @@ env:
   PYPI: 0
   PYPITEST: 1
   CIBW_SKIP: pp*
+  CIBW_BEFORE_ALL_LINUX: make shared
   TWINE_USERNAME: __token__
   TWINE_PASSWORD_PYPITEST: ${{ secrets.TWINE_PASSWORD_PYPITEST }}
   TWINE_PASSWORD_PYPI: ${{ secrets.TWINE_PASSWORD_PYPI }}
@@ -23,8 +24,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-      - name: Compile fjcore shared library
-        run: make shared
       - name: Build wheels and upload to PyPI
         run: ./scripts/build-wheels-and-upload.sh sdist
 
