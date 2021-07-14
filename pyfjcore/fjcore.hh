@@ -1057,7 +1057,7 @@ void pjs_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* n
 }
 template<typename F>
 void pjs_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                          const std::vector<PseudoJet> & pjs, bool mass = true, bool phi_std = false,
+                          const std::vector<PseudoJet> & pjs, bool mass = true, bool phi_std = true,
                           F phi_ref = pseudojet_invalid_phi) {
   *mult = pjs.size();
   *nfeatures = (mass ? 4 : 3);
@@ -1125,7 +1125,7 @@ struct PseudoJetContainer {
 
   template<typename F>
   void ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
-                     bool mass = true, bool phi_std = false, F phi_ref = pseudojet_invalid_phi) {
+                     bool mass = true, bool phi_std = true, F phi_ref = pseudojet_invalid_phi) {
     pjs_to_ptyphim_array(particles, mult, nfeatures, *this, mass, phi_std, phi_ref);
   }
 
@@ -1159,7 +1159,7 @@ void pjc_to_epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* n
 template<typename F>
 void pjc_to_ptyphim_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures,
                           const PseudoJetContainer & pjs,
-                          bool mass = true, bool phi_std = false, F phi_ref = pseudojet_invalid_phi) {
+                          bool mass = true, bool phi_std = true, F phi_ref = pseudojet_invalid_phi) {
   pjs_to_ptyphim_array(particles, mult, nfeatures, pjs, mass, phi_std, phi_ref);
 }
 

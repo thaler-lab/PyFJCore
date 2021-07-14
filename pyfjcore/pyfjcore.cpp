@@ -4886,14 +4886,14 @@ SWIGINTERN std::string fastjet_PseudoJet___repr__(fastjet::PseudoJet *self){
       char temp[len_max];
       if (PseudoJetRep_ == PseudoJetRepresentation::ptyphim)
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g, index=%i)",
-                 self->pt(), self->rap(), self->phi(),
+                 self->pt(), self->rap(), self->phi_std(),
                  [](double m){return std::fabs(m) < 1e-5 ? 0 : m;}(self->m()), self->user_index());
       else if (PseudoJetRep_ == PseudoJetRepresentation::epxpypz)
         snprintf(temp, len_max, "PseudoJet(e=%.6g, px=%.6g, py=%.6g, pz=%.6g, index=%i)",
                  self->e(), self->px(), self->py(), self->pz(), self->user_index());
       else
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, index=%i)",
-                 self->pt(), self->rap(), self->phi(), self->user_index());
+                 self->pt(), self->rap(), self->phi_std(), self->user_index());
       return std::string(temp);
     }
 SWIGINTERN void fastjet_PseudoJet_set_python_info(fastjet::PseudoJet *self,PyObject *pyobj){
@@ -17916,7 +17916,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float64(PyObject *SW
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
   bool arg5 = (bool) true ;
-  bool arg6 = (bool) false ;
+  bool arg6 = (bool) true ;
   double arg7 = (double) fastjet::pseudojet_invalid_phi ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18035,7 +18035,7 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer_ptyphim_array_float32(PyObject *SW
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   std::ptrdiff_t *arg4 = (std::ptrdiff_t *) 0 ;
   bool arg5 = (bool) true ;
-  bool arg6 = (bool) false ;
+  bool arg6 = (bool) true ;
   float arg7 = (float) fastjet::pseudojet_invalid_phi ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -37139,7 +37139,7 @@ SWIGINTERN PyObject *_wrap_pjs_to_ptyphim_array_float64(PyObject *SWIGUNUSEDPARM
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
   bool arg5 = (bool) true ;
-  bool arg6 = (bool) false ;
+  bool arg6 = (bool) true ;
   double arg7 = (double) fastjet::pseudojet_invalid_phi ;
   double *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
@@ -37265,7 +37265,7 @@ SWIGINTERN PyObject *_wrap_pjs_to_ptyphim_array_float32(PyObject *SWIGUNUSEDPARM
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   std::vector< fastjet::PseudoJet,std::allocator< fastjet::PseudoJet > > *arg4 = 0 ;
   bool arg5 = (bool) true ;
-  bool arg6 = (bool) false ;
+  bool arg6 = (bool) true ;
   float arg7 = (float) fastjet::pseudojet_invalid_phi ;
   float *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
@@ -37777,7 +37777,7 @@ SWIGINTERN PyObject *_wrap_pjc_to_ptyphim_array_float64(PyObject *SWIGUNUSEDPARM
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   fastjet::PseudoJetContainer *arg4 = 0 ;
   bool arg5 = (bool) true ;
-  bool arg6 = (bool) false ;
+  bool arg6 = (bool) true ;
   double arg7 = (double) fastjet::pseudojet_invalid_phi ;
   double *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
@@ -37899,7 +37899,7 @@ SWIGINTERN PyObject *_wrap_pjc_to_ptyphim_array_float32(PyObject *SWIGUNUSEDPARM
   std::ptrdiff_t *arg3 = (std::ptrdiff_t *) 0 ;
   fastjet::PseudoJetContainer *arg4 = 0 ;
   bool arg5 = (bool) true ;
-  bool arg6 = (bool) false ;
+  bool arg6 = (bool) true ;
   float arg7 = (float) fastjet::pseudojet_invalid_phi ;
   float *data_temp1 = NULL ;
   std::ptrdiff_t dim1_temp1 ;
@@ -38476,8 +38476,8 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "PseudoJetContainer_user_indices(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float64", _wrap_PseudoJetContainer_epxpypz_array_float64, METH_O, "PseudoJetContainer_epxpypz_array_float64(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float32", _wrap_PseudoJetContainer_epxpypz_array_float32, METH_O, "PseudoJetContainer_epxpypz_array_float32(PseudoJetContainer self)"},
-	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
-	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=True, double phi_ref=pseudojet_invalid_phi)"},
+	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=True, float phi_ref=pseudojet_invalid_phi)"},
 	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer__setitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__setitem, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer__setitem(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
@@ -38828,14 +38828,14 @@ static PyMethodDef SwigMethods[] = {
 	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
 	 { "pjs_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float64(vectorPseudoJet pjs)"},
 	 { "pjs_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float32(vectorPseudoJet pjs)"},
-	 { "pjs_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
-	 { "pjs_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=True, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=True, float phi_ref=pseudojet_invalid_phi)"},
 	 { "pjs_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "pjs_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "pjc_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float64(PseudoJetContainer pjs)"},
 	 { "pjc_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float32(PseudoJetContainer pjs)"},
-	 { "pjc_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
-	 { "pjc_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=True, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=True, float phi_ref=pseudojet_invalid_phi)"},
 	 { "pjc_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "pjc_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { NULL, NULL, 0, NULL }
@@ -39103,8 +39103,8 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJetContainer_user_indices", _wrap_PseudoJetContainer_user_indices, METH_O, "user_indices(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float64", _wrap_PseudoJetContainer_epxpypz_array_float64, METH_O, "epxpypz_array_float64(PseudoJetContainer self)"},
 	 { "PseudoJetContainer_epxpypz_array_float32", _wrap_PseudoJetContainer_epxpypz_array_float32, METH_O, "epxpypz_array_float32(PseudoJetContainer self)"},
-	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
-	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "PseudoJetContainer_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float64(PseudoJetContainer self, bool mass=True, bool phi_std=True, double phi_ref=pseudojet_invalid_phi)"},
+	 { "PseudoJetContainer_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "ptyphim_array_float32(PseudoJetContainer self, bool mass=True, bool phi_std=True, float phi_ref=pseudojet_invalid_phi)"},
 	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer__setitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__setitem, METH_VARARGS|METH_KEYWORDS, "_setitem(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
@@ -39455,14 +39455,14 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "sharedPtrPseudoJetStructureBase_swiginit", sharedPtrPseudoJetStructureBase_swiginit, METH_VARARGS, NULL},
 	 { "pjs_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float64(vectorPseudoJet pjs)"},
 	 { "pjs_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_epxpypz_array_float32(vectorPseudoJet pjs)"},
-	 { "pjs_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
-	 { "pjs_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float64(vectorPseudoJet pjs, bool mass=True, bool phi_std=True, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjs_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_ptyphim_array_float32(vectorPseudoJet pjs, bool mass=True, bool phi_std=True, float phi_ref=pseudojet_invalid_phi)"},
 	 { "pjs_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float64(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "pjs_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjs_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjs_to_array_float32(vectorPseudoJet pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "pjc_to_epxpypz_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float64(PseudoJetContainer pjs)"},
 	 { "pjc_to_epxpypz_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_epxpypz_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_epxpypz_array_float32(PseudoJetContainer pjs)"},
-	 { "pjc_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, double phi_ref=pseudojet_invalid_phi)"},
-	 { "pjc_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=False, float phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_ptyphim_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float64(PseudoJetContainer pjs, bool mass=True, bool phi_std=True, double phi_ref=pseudojet_invalid_phi)"},
+	 { "pjc_to_ptyphim_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_ptyphim_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_ptyphim_array_float32(PseudoJetContainer pjs, bool mass=True, bool phi_std=True, float phi_ref=pseudojet_invalid_phi)"},
 	 { "pjc_to_array_float64", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float64, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float64(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "pjc_to_array_float32", (PyCFunction)(void(*)(void))_wrap_pjc_to_array_float32, METH_VARARGS|METH_KEYWORDS, "pjc_to_array_float32(PseudoJetContainer pjs, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { NULL, NULL, 0, NULL }

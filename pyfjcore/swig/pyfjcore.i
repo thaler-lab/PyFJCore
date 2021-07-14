@@ -1,7 +1,7 @@
 // -*- C++ -*-
 //
 // PyFJCore - Python wrapper of FJCore functionality
-// Copyright (C) 2020 Patrick T. Komiske III
+// Copyright (C) 2020-2021 Patrick T. Komiske III
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -251,7 +251,7 @@ namespace PYFJNAMESPACE {
       def epxpypz_array(self, float32=False):
           return self.epxpypz_array_float32() if float32 else self.epxpypz_array_float64()
 
-      def ptyphims_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
+      def ptyphims_array(self, mass=True, phi_std=True, phi_ref=None, float32=False):
           return (self.ptyphim_array_float32(mass, phi_std, phi_ref) if float32 else
                   self.ptyphim_array_float64(mass, phi_std, phi_ref))
 
@@ -297,14 +297,14 @@ namespace PYFJNAMESPACE {
       char temp[len_max];
       if (PseudoJetRep_ == PseudoJetRepresentation::ptyphim)
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, m=%.6g, index=%i)",
-                 $self->pt(), $self->rap(), $self->phi(),
+                 $self->pt(), $self->rap(), $self->phi_std(),
                  [](double m){return std::fabs(m) < 1e-5 ? 0 : m;}($self->m()), $self->user_index());
       else if (PseudoJetRep_ == PseudoJetRepresentation::epxpypz)
         snprintf(temp, len_max, "PseudoJet(e=%.6g, px=%.6g, py=%.6g, pz=%.6g, index=%i)",
                  $self->e(), $self->px(), $self->py(), $self->pz(), $self->user_index());
       else
         snprintf(temp, len_max, "PseudoJet(pt=%.6g, y=%.6g, phi=%.6g, index=%i)",
-                 $self->pt(), $self->rap(), $self->phi(), $self->user_index());
+                 $self->pt(), $self->rap(), $self->phi_std(), $self->user_index());
       return std::string(temp);
     }
 
@@ -365,7 +365,7 @@ def pseudojets_to_epxpypz_array(arg, float32=False):
         return pjc_to_epxpypz_array_float32(arg) if is_pjc else pjs_to_epxpypz_array_float32(arg)
     return pjc_to_epxpypz_array_float64(arg) if is_pjc else pjs_to_epxpypz_array_float64(arg)
 
-def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=False, phi_ref=None, float32=False):
+def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=True, phi_ref=None, float32=False):
     phi_ref = phi_ref or pseudojet_invalid_phi
     is_pjc = isinstance(arg, PseudoJetContainer)
     if float32:
