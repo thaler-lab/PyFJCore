@@ -41,9 +41,9 @@ else:
     sources = [os.path.join('pyfjcore', 'pyfjcore.cpp')]
     macros = [('SWIG_TYPE_TABLE', 'fjcore')]
     cxxflags = ['-std=c++14', '-g0']
+    ldflags = []
     library_dirs = ['.']
     libraries = ['PyFJCore']
-
 
     if platform.system() == 'Windows':
         sources.append(os.path.join('pyfjcore', 'fjcore.cc'))
@@ -53,10 +53,10 @@ else:
         libraries = []
 
     elif platform.system() == 'Linux':
-        ldflags = ['-Wl,-rpath,$ORIGIN/..']
+        ldflags.append('-Wl,-rpath,$ORIGIN/..')
 
     elif platform.system() == 'Darwin':
-        ldflags = ['-Wl,-rpath,@loader_path/..']
+        ldflags.append('-Wl,-rpath,@loader_path/..')
 
     pyfjcore = Extension('pyfjcore._pyfjcore',
                          sources=sources,
