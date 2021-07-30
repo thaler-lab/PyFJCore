@@ -971,7 +971,7 @@ def _unpickle_jet_definition(jet_alg, R, extra, recomb, nparams):
 copyreg.pickle(JetDefinition, _pickle_jet_definition)
 
 def _pickle_pseudojet(obj):
-    return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E())
+    return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E(), obj.user_index(), obj.python_info())
 
 def _unpickle_pseudojet(*args):
     return PseudoJet(*args)
