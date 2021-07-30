@@ -416,7 +416,7 @@ class PseudoJetContainer(object):
     def epxpypz_array(self, float32=False):
         return self.epxpypz_array_float32() if float32 else self.epxpypz_array_float64()
 
-    def ptyphims_array(self, mass=True, phi_std=True, phi_ref=None, float32=False):
+    def ptyphims_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
         return (self.ptyphim_array_float32(mass, phi_std, phi_ref) if float32 else
                 self.ptyphim_array_float64(mass, phi_std, phi_ref))
 
@@ -936,7 +936,7 @@ def pseudojets_to_epxpypz_array(arg, float32=False):
         return pjc_to_epxpypz_array_float32(arg) if is_pjc else pjs_to_epxpypz_array_float32(arg)
     return pjc_to_epxpypz_array_float64(arg) if is_pjc else pjs_to_epxpypz_array_float64(arg)
 
-def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=True, phi_ref=None, float32=False):
+def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=False, phi_ref=None, float32=False):
     phi_ref = phi_ref or pseudojet_invalid_phi
     is_pjc = isinstance(arg, PseudoJetContainer)
     if float32:
