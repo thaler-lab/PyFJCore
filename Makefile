@@ -16,7 +16,7 @@ OBJS := $(SRCFILES:.cc=.o)
 ifeq "$(shell uname)" "Darwin"
     dynlibopt = -dynamiclib
     dynlibext = dylib
-    LDFLAGS += -install_name @rpath/lib$(NAME).dylib
+    #LDFLAGS += -install_name @rpath/lib$(NAME).dylib
 else 
     dynlibopt = -shared
     dynlibext = so

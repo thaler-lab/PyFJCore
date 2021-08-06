@@ -24,8 +24,6 @@
 %include <std_string.i>
 %include <std_vector.i>
 
-#define PYFJNAMESPACE fastjet
-
 // this can be used to ensure that swig parses classes correctly
 #define SWIG_PREPROCESSOR
 
@@ -37,9 +35,10 @@
 %fragment("NumPy_Macros");
 
 %{
+
 // include these to avoid needing to define them at compile time 
 #ifndef SWIG
-#define SWIG
+# define SWIG
 #endif
 
 // C++ library headers
@@ -50,8 +49,8 @@
 #include "pyfjcore/fjcore.hh"
 #include "pyfjcore/PyFJCoreExtensions.hh"
 
-// using namespaces
 using namespace fastjet;
+
 %}
 
 // define as macro for use in contrib files
@@ -65,11 +64,10 @@ static PyObject * FastJetError_;
 %init %{
   // setup error class
   fastjet::Error::set_print_errors(false);
-  unsigned int mlen = strlen(`module`);
-  char * msg = (char*) calloc(mlen+15, sizeof(char));
-  strcpy(msg, `module`);
-  strcat(msg, ".FastJetError");
-  FastJetError_ = PyErr_NewException(msg, NULL, NULL);
+  char * msg_pyfjcore = (char*) calloc(strlen(`module`)+15, sizeof(char));
+  strcpy(msg_pyfjcore, `module`);
+  strcat(msg_pyfjcore, ".FastJetError");
+  FastJetError_ = PyErr_NewException(msg_pyfjcore, NULL, NULL);
   Py_INCREF(FastJetError_);
   if (PyModule_AddObject(m, "FastJetError", FastJetError_) < 0) {
     Py_DECREF(m);
@@ -83,14 +81,11 @@ FASTJET_ERRORS_AS_PYTHON_EXCEPTIONS(pyfjcore)
 // this gets placed in the SWIG_init function
 %init %{
 
-  // for numpy
-  import_array();
+// for numpy
+import_array();
 
-  // turn off printing banner
-  fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());
-
-  // default pseudojet printing
-  fastjet::set_pseudojet_format(fastjet::PseudoJetRepresentation::ptyphim);
+// turn off printing banner
+fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());
 %}
 
 %numpy_typemaps(float, NPY_FLOAT, std::ptrdiff_t)
@@ -98,20 +93,32 @@ FASTJET_ERRORS_AS_PYTHON_EXCEPTIONS(pyfjcore)
 %numpy_typemaps(int, NPY_INT, std::ptrdiff_t)
 
 // additional numpy typemaps
-%apply (double* IN_ARRAY2, std::ptrdiff_t DIM1, std::ptrdiff_t DIM2) {(double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures)}
-%apply (int** ARGOUTVIEWM_ARRAY1, std::ptrdiff_t* DIM1) {(int** inds, std::ptrdiff_t* mult)}
-%apply (double** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {(double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)}
-%apply (float** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {(float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)}
-
+%apply (double* IN_ARRAY2, std::ptrdiff_t DIM1, std::ptrdiff_t DIM2) {
+  (double* particles, std::ptrdiff_t mult, std::ptrdiff_t nfeatures)
+}
+%apply (int** ARGOUTVIEWM_ARRAY1, std::ptrdiff_t* DIM1) {
+  (int** inds, std::ptrdiff_t* mult)
+}
+%apply (double** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {
+  (double** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)
+}
+%apply (float** ARGOUTVIEWM_ARRAY2, std::ptrdiff_t* DIM1, std::ptrdiff_t* DIM2) {
+  (float** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures)
+}
 
 %pythoncode %{
-FastJetError = _pyfjcore.FastJetError;
+  FastJetError = _pyfjcore.FastJetError;
+
+  import platform
+  if platform.system() != 'Windows':
+      import ctypes
+      ctypes.CDLL(_pyfjcore.__file__, mode=ctypes.RTLD_GLOBAL)
 %}
 
 // vector templates
 %template(vectorPseudoJet) std::vector<fastjet::PseudoJet>;
 
-// to ensure that we move-construct the heap container from the stack container
+// ensure that we move-construct the heap container from the stack container
 %typemap(out) fastjet::PseudoJetContainer %{
   $result = SWIG_NewPointerObj(new fastjet::PseudoJetContainer(std::move($1)),
                                SWIGTYPE_p_fastjet__PseudoJetContainer, SWIG_POINTER_OWN | 0);
@@ -130,19 +137,11 @@ FastJetError = _pyfjcore.FastJetError;
   }
 }
 
-// a macro to get support for description through __str__ method
-/*%define FASTJET_SWIG_ADD_STR(Class)
-%extend Class {
-  std::string __str__() const {return $self->description();}
-}
-%enddef*/
-
 // makes python class printable from a description method
 %define ADD_REPR_FROM_DESCRIPTION
-%pythoncode %{
-  def __repr__(self):
-      return self.description()
-%}
+  std::string __repr__() const {
+    return $self->description();
+  }
 %enddef
 
 // ignore variables
@@ -168,7 +167,7 @@ FastJetError = _pyfjcore.FastJetError;
 %ignore FJCORE_PACKAGE_VERSION;
 %ignore FJCORE_STDC_HEADERS;
 
-namespace PYFJNAMESPACE {
+namespace fastjet {
 
   // ignore functions that otherwise get wrapped
   %ignore LimitedWarning;
@@ -201,6 +200,7 @@ namespace PYFJNAMESPACE {
 
   %copyctor PseudoJetContainer;
 
+  // needs to be here so that templated version is defined for Recluster wrapper
   template<typename TOut>
   class FunctionOfPseudoJet{
   public:
@@ -212,18 +212,18 @@ namespace PYFJNAMESPACE {
     std::vector<TOut> operator()(const std::vector<PseudoJet> &pjs) const;
   };
 
-  %template(FunctionOfPseudoJet_PseudoJet) FunctionOfPseudoJet<PYFJNAMESPACE::PseudoJet>;
+  %template(FunctionOfPseudoJet_PseudoJet) FunctionOfPseudoJet<fastjet::PseudoJet>;
 
-} // namespace PYFJNAMESPACE
+} // namespace fastjet
 
 // include EECHist and declare templates
 %include "pyfjcore/fjcore.hh"
 %include "pyfjcore/PyFJCoreExtensions.hh"
 
-namespace PYFJNAMESPACE {
+namespace fastjet {
 
   // template SharedPtr
-  %template(sharedPtrPseudoJetStructureBase) SharedPtr<PYFJNAMESPACE::PseudoJetStructureBase>;
+  %template(sharedPtrPseudoJetStructureBase) SharedPtr<fastjet::PseudoJetStructureBase>;
 
   // functions accepting a vector of pseudojets and returning a numpy array
   %template(pjs_to_epxpypz_array_float64) pjs_to_epxpypz_array<double>;
@@ -353,9 +353,6 @@ namespace PYFJNAMESPACE {
   // extend JetDefinition
   %extend JetDefinition {
     ADD_REPR_FROM_DESCRIPTION
-    /*PseudoJetContainer __call__(const std::vector<PseudoJet> & particles) {
-      return (*self)(particles);
-    }*/
   }
 
   %extend Selector {
@@ -368,56 +365,56 @@ namespace PYFJNAMESPACE {
     Selector __invert__()                       { return !(*($self)); }
   }
 
-} // namespace PYFJNAMESPACE
+} // namespace fastjet
 
 %pythoncode %{
 
-def pseudojets_to_epxpypz_array(arg, float32=False):
-    is_pjc = isinstance(arg, PseudoJetContainer)
-    if float32:
-        return pjc_to_epxpypz_array_float32(arg) if is_pjc else pjs_to_epxpypz_array_float32(arg)
-    return pjc_to_epxpypz_array_float64(arg) if is_pjc else pjs_to_epxpypz_array_float64(arg)
+  def pseudojets_to_epxpypz_array(arg, float32=False):
+      is_pjc = isinstance(arg, PseudoJetContainer)
+      if float32:
+          return pjc_to_epxpypz_array_float32(arg) if is_pjc else pjs_to_epxpypz_array_float32(arg)
+      return pjc_to_epxpypz_array_float64(arg) if is_pjc else pjs_to_epxpypz_array_float64(arg)
 
-def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=False, phi_ref=None, float32=False):
-    phi_ref = phi_ref or pseudojet_invalid_phi
-    is_pjc = isinstance(arg, PseudoJetContainer)
-    if float32:
-        return (pjc_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref) if is_pjc else
-                pjs_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref))
-    return (pjc_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref) if is_pjc else
-            pjs_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref))
+  def pseudojets_to_ptyphim_array(arg, mass=True, phi_std=False, phi_ref=None, float32=False):
+      phi_ref = phi_ref or pseudojet_invalid_phi
+      is_pjc = isinstance(arg, PseudoJetContainer)
+      if float32:
+          return (pjc_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref) if is_pjc else
+                  pjs_to_ptyphim_array_float32(arg, mass, phi_std, phi_ref))
+      return (pjc_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref) if is_pjc else
+              pjs_to_ptyphim_array_float64(arg, mass, phi_std, phi_ref))
 
-def pseudojets_to_array(arg, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
-    is_pjc = isinstance(arg, PseudoJetContainer)
-    if float32:
-        return pjc_to_array_float32(arg, pjrep) if is_pjc else pjs_to_array_float32(arg, pjrep)
-    return pjc_to_array_float64(arg, pjrep) if is_pjc else pjs_to_array_float64(arg, pjrep)
+  def pseudojets_to_array(arg, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
+      is_pjc = isinstance(arg, PseudoJetContainer)
+      if float32:
+          return pjc_to_array_float32(arg, pjrep) if is_pjc else pjs_to_array_float32(arg, pjrep)
+      return pjc_to_array_float64(arg, pjrep) if is_pjc else pjs_to_array_float64(arg, pjrep)
 
-import copyreg
+  import copyreg
 
-def _pickle_jet_definition(obj):
-    jet_alg = obj.jet_algorithm()
-    R = obj.R()
-    extra = obj.extra_param()
-    recomb = obj.recombination_scheme()
-    nparams = obj.n_parameters_for_algorithm(jet_alg)
+  def _pickle_jet_definition(obj):
+      jet_alg = obj.jet_algorithm()
+      R = obj.R()
+      extra = obj.extra_param()
+      recomb = obj.recombination_scheme()
+      nparams = obj.n_parameters_for_algorithm(jet_alg)
 
-    return _unpickle_jet_definition, (jet_alg, R, extra, recomb, nparams)
+      return _unpickle_jet_definition, (jet_alg, R, extra, recomb, nparams)
 
-def _unpickle_jet_definition(jet_alg, R, extra, recomb, nparams):
-    if nparams == 1:
-        return JetDefinition(jet_alg, R, recomb)
-    else:
-        return JetDefinition(jet_alg, R, extra, recomb)
+  def _unpickle_jet_definition(jet_alg, R, extra, recomb, nparams):
+      if nparams == 1:
+          return JetDefinition(jet_alg, R, recomb)
+      else:
+          return JetDefinition(jet_alg, R, extra, recomb)
 
-copyreg.pickle(JetDefinition, _pickle_jet_definition)
+  copyreg.pickle(JetDefinition, _pickle_jet_definition)
 
-def _pickle_pseudojet(obj):
-    return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E(), obj.user_index(), obj.python_info())
+  def _pickle_pseudojet(obj):
+      return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E())
 
-def _unpickle_pseudojet(*args):
-    return PseudoJet(*args)
+  def _unpickle_pseudojet(*args):
+      return PseudoJet(*args)
 
-copyreg.pickle(PseudoJet, _pickle_pseudojet)
+  copyreg.pickle(PseudoJet, _pickle_pseudojet)
 
 %}

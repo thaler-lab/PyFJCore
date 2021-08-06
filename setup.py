@@ -55,9 +55,6 @@ else:
     elif platform.system() == 'Linux':
         ldflags.append('-Wl,-rpath,$ORIGIN/..')
 
-    elif platform.system() == 'Darwin':
-        ldflags.append('-Wl,-rpath,@loader_path/..')
-
     pyfjcore = Extension('pyfjcore._pyfjcore',
                          sources=sources,
                          define_macros=macros,

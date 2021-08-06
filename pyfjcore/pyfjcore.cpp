@@ -3405,9 +3405,10 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #define array_is_native(a)     (PyArray_ISNOTSWAPPED((PyArrayObject*)a))
 
 
+
 // include these to avoid needing to define them at compile time 
 #ifndef SWIG
-#define SWIG
+# define SWIG
 #endif
 
 // C++ library headers
@@ -3418,8 +3419,8 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include "pyfjcore/fjcore.hh"
 #include "pyfjcore/PyFJCoreExtensions.hh"
 
-// using namespaces
 using namespace fastjet;
+
 
 
 // Python class for representing errors from FastJet
@@ -5067,6 +5068,9 @@ SWIGINTERNINLINE PyObject*
   return PyInt_FromSize_t((size_t) value);
 }
 
+SWIGINTERN std::string fastjet_Selector___repr__(fastjet::Selector const *self){
+    return self->description();
+  }
 SWIGINTERN fastjet::Selector fastjet_Selector___mul__(fastjet::Selector *self,fastjet::Selector const &other){ return *(self) *  other; }
 SWIGINTERN fastjet::Selector fastjet_Selector___and__(fastjet::Selector *self,fastjet::Selector const &other){ return *(self) && other; }
 SWIGINTERN fastjet::Selector fastjet_Selector___or__(fastjet::Selector *self,fastjet::Selector const &other){ return *(self) || other; }
@@ -5087,6 +5091,9 @@ SWIG_AsVal_unsigned_SS_int (PyObject * obj, unsigned int *val)
   return res;
 }
 
+SWIGINTERN std::string fastjet_JetDefinition___repr__(fastjet::JetDefinition const *self){
+    return self->description();
+  }
 
 SWIGINTERN int
 SWIG_AsCharPtrAndSize(PyObject *obj, char** cptr, size_t* psize, int *alloc)
@@ -22357,6 +22364,57 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Selector___repr__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::string result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__Selector, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Selector___repr__" "', argument " "1"" of type '" "fastjet::Selector const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::Selector * >(argp1);
+  {
+    try {
+      result = fastjet_Selector___repr__((fastjet::Selector const *)arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Selector___mul__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   fastjet::Selector *arg1 = (fastjet::Selector *) 0 ;
@@ -27068,6 +27126,57 @@ SWIGINTERN PyObject *_wrap_JetDefinition_n_parameters_for_algorithm(PyObject *SW
     }
   }
   resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_JetDefinition___repr__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  fastjet::JetDefinition *arg1 = (fastjet::JetDefinition *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::string result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_fastjet__JetDefinition, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "JetDefinition___repr__" "', argument " "1"" of type '" "fastjet::JetDefinition const *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::JetDefinition * >(argp1);
+  {
+    try {
+      result = fastjet_JetDefinition___repr__((fastjet::JetDefinition const *)arg1); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -39674,6 +39783,7 @@ static PyMethodDef SwigMethods[] = {
 		""},
 	 { "Selector___iand__", (PyCFunction)(void(*)(void))_wrap_Selector___iand__, METH_VARARGS|METH_KEYWORDS, "Selector___iand__(Selector self, Selector b) -> Selector"},
 	 { "Selector___ior__", (PyCFunction)(void(*)(void))_wrap_Selector___ior__, METH_VARARGS|METH_KEYWORDS, "Selector___ior__(Selector self, Selector b) -> Selector"},
+	 { "Selector___repr__", _wrap_Selector___repr__, METH_O, "Selector___repr__(Selector self) -> std::string"},
 	 { "Selector___mul__", (PyCFunction)(void(*)(void))_wrap_Selector___mul__, METH_VARARGS|METH_KEYWORDS, "Selector___mul__(Selector self, Selector other) -> Selector"},
 	 { "Selector___and__", (PyCFunction)(void(*)(void))_wrap_Selector___and__, METH_VARARGS|METH_KEYWORDS, "Selector___and__(Selector self, Selector other) -> Selector"},
 	 { "Selector___or__", (PyCFunction)(void(*)(void))_wrap_Selector___or__, METH_VARARGS|METH_KEYWORDS, "Selector___or__(Selector self, Selector other) -> Selector"},
@@ -39756,6 +39866,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "JetDefinition_description_no_recombiner", _wrap_JetDefinition_description_no_recombiner, METH_O, "JetDefinition_description_no_recombiner(JetDefinition self) -> std::string"},
 	 { "JetDefinition_algorithm_description", (PyCFunction)(void(*)(void))_wrap_JetDefinition_algorithm_description, METH_VARARGS|METH_KEYWORDS, "JetDefinition_algorithm_description(fastjet::JetAlgorithm const jet_alg) -> std::string"},
 	 { "JetDefinition_n_parameters_for_algorithm", (PyCFunction)(void(*)(void))_wrap_JetDefinition_n_parameters_for_algorithm, METH_VARARGS|METH_KEYWORDS, "JetDefinition_n_parameters_for_algorithm(fastjet::JetAlgorithm const jet_alg) -> unsigned int"},
+	 { "JetDefinition___repr__", _wrap_JetDefinition___repr__, METH_O, "JetDefinition___repr__(JetDefinition self) -> std::string"},
 	 { "delete_JetDefinition", _wrap_delete_JetDefinition, METH_O, "delete_JetDefinition(JetDefinition self)"},
 	 { "JetDefinition_swigregister", JetDefinition_swigregister, METH_O, NULL},
 	 { "JetDefinition_swiginit", JetDefinition_swiginit, METH_VARARGS, NULL},
@@ -40323,6 +40434,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 		""},
 	 { "Selector___iand__", (PyCFunction)(void(*)(void))_wrap_Selector___iand__, METH_VARARGS|METH_KEYWORDS, "__iand__(Selector self, Selector b) -> Selector"},
 	 { "Selector___ior__", (PyCFunction)(void(*)(void))_wrap_Selector___ior__, METH_VARARGS|METH_KEYWORDS, "__ior__(Selector self, Selector b) -> Selector"},
+	 { "Selector___repr__", _wrap_Selector___repr__, METH_O, "__repr__(Selector self) -> std::string"},
 	 { "Selector___mul__", (PyCFunction)(void(*)(void))_wrap_Selector___mul__, METH_VARARGS|METH_KEYWORDS, "__mul__(Selector self, Selector other) -> Selector"},
 	 { "Selector___and__", (PyCFunction)(void(*)(void))_wrap_Selector___and__, METH_VARARGS|METH_KEYWORDS, "__and__(Selector self, Selector other) -> Selector"},
 	 { "Selector___or__", (PyCFunction)(void(*)(void))_wrap_Selector___or__, METH_VARARGS|METH_KEYWORDS, "__or__(Selector self, Selector other) -> Selector"},
@@ -40405,6 +40517,7 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "JetDefinition_description_no_recombiner", _wrap_JetDefinition_description_no_recombiner, METH_O, "description_no_recombiner(JetDefinition self) -> std::string"},
 	 { "JetDefinition_algorithm_description", (PyCFunction)(void(*)(void))_wrap_JetDefinition_algorithm_description, METH_VARARGS|METH_KEYWORDS, "algorithm_description(fastjet::JetAlgorithm const jet_alg) -> std::string"},
 	 { "JetDefinition_n_parameters_for_algorithm", (PyCFunction)(void(*)(void))_wrap_JetDefinition_n_parameters_for_algorithm, METH_VARARGS|METH_KEYWORDS, "n_parameters_for_algorithm(fastjet::JetAlgorithm const jet_alg) -> unsigned int"},
+	 { "JetDefinition___repr__", _wrap_JetDefinition___repr__, METH_O, "__repr__(JetDefinition self) -> std::string"},
 	 { "delete_JetDefinition", _wrap_delete_JetDefinition, METH_O, "delete_JetDefinition(JetDefinition self)"},
 	 { "JetDefinition_swigregister", JetDefinition_swigregister, METH_O, NULL},
 	 { "JetDefinition_swiginit", JetDefinition_swiginit, METH_VARARGS, NULL},
@@ -41587,11 +41700,10 @@ SWIG_init(void) {
   
   // setup error class
   fastjet::Error::set_print_errors(false);
-  unsigned int mlen = strlen("pyfjcore");
-  char * msg = (char*) calloc(mlen+15, sizeof(char));
-  strcpy(msg, "pyfjcore");
-  strcat(msg, ".FastJetError");
-  FastJetError_ = PyErr_NewException(msg, NULL, NULL);
+  char * msg_pyfjcore = (char*) calloc(strlen("pyfjcore")+15, sizeof(char));
+  strcpy(msg_pyfjcore, "pyfjcore");
+  strcat(msg_pyfjcore, ".FastJetError");
+  FastJetError_ = PyErr_NewException(msg_pyfjcore, NULL, NULL);
   Py_INCREF(FastJetError_);
   if (PyModule_AddObject(m, "FastJetError", FastJetError_) < 0) {
     Py_DECREF(m);
@@ -41605,9 +41717,6 @@ SWIG_init(void) {
   
   // turn off printing banner
   fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());
-  
-  // default pseudojet printing
-  fastjet::set_pseudojet_format(fastjet::PseudoJetRepresentation::ptyphim);
   
   
   // thread safe initialization

@@ -1094,7 +1094,7 @@ void pjs_to_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures
   else throw Error("unknown pseudojet representation");
 }
 
-// PTK: this ensure swig will not automatically convert to python tuple
+// PTK: this ensures swig will not automatically convert to python tuple
 struct PseudoJetContainer {
 
   // constructors

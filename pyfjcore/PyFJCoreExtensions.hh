@@ -76,7 +76,7 @@ JetDefinition JetDefinition2Param(JetAlgorithm jet_algorithm,
   return JetDefinition(jet_algorithm, R_in, xtra_param, recomb_scheme, strategy);
 }
 
-static PseudoJetRepresentation PseudoJetRep_;
+static PseudoJetRepresentation PseudoJetRep_ = PseudoJetRepresentation::ptyphim;
 void set_pseudojet_format(PseudoJetRepresentation rep) {
   if (int(rep) > 2 || int(rep) < 0)
     throw Error("invalid PseudoJetRepresentation");

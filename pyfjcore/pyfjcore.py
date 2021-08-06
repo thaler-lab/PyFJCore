@@ -98,6 +98,11 @@ _pyfjcore.SwigPyIterator_swigregister(SwigPyIterator)
 
 FastJetError = _pyfjcore.FastJetError;
 
+import platform
+if platform.system() != 'Windows':
+    import ctypes
+    ctypes.CDLL(_pyfjcore.__file__, mode=ctypes.RTLD_GLOBAL)
+
 class vectorPseudoJet(object):
     r"""Proxy of C++ std::vector< fastjet::PseudoJet > class."""
 
@@ -480,7 +485,6 @@ class Selector(object):
     r"""Proxy of C++ fastjet::Selector class."""
 
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
-    __repr__ = _swig_repr
 
     def __init__(self, *args):
         r"""
@@ -508,10 +512,7 @@ class Selector(object):
     area = _swig_new_instance_method(_pyfjcore.Selector_area)
     __iand__ = _swig_new_instance_method(_pyfjcore.Selector___iand__)
     __ior__ = _swig_new_instance_method(_pyfjcore.Selector___ior__)
-
-    def __repr__(self):
-        return self.description()
-
+    __repr__ = _swig_new_instance_method(_pyfjcore.Selector___repr__)
     __mul__ = _swig_new_instance_method(_pyfjcore.Selector___mul__)
     __and__ = _swig_new_instance_method(_pyfjcore.Selector___and__)
     __or__ = _swig_new_instance_method(_pyfjcore.Selector___or__)
@@ -636,7 +637,6 @@ class JetDefinition(object):
     r"""Proxy of C++ fastjet::JetDefinition class."""
 
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
-    __repr__ = _swig_repr
 
     def __init__(self, *args):
         r"""
@@ -674,10 +674,7 @@ class JetDefinition(object):
     description_no_recombiner = _swig_new_instance_method(_pyfjcore.JetDefinition_description_no_recombiner)
     algorithm_description = _swig_new_static_method(_pyfjcore.JetDefinition_algorithm_description)
     n_parameters_for_algorithm = _swig_new_static_method(_pyfjcore.JetDefinition_n_parameters_for_algorithm)
-
-    def __repr__(self):
-        return self.description()
-
+    __repr__ = _swig_new_instance_method(_pyfjcore.JetDefinition___repr__)
     __swig_destroy__ = _pyfjcore.delete_JetDefinition
 
 # Register JetDefinition in _pyfjcore:
@@ -971,7 +968,7 @@ def _unpickle_jet_definition(jet_alg, R, extra, recomb, nparams):
 copyreg.pickle(JetDefinition, _pickle_jet_definition)
 
 def _pickle_pseudojet(obj):
-    return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E(), obj.user_index(), obj.python_info())
+    return _unpickle_pseudojet, (obj.px(), obj.py(), obj.pz(), obj.E())
 
 def _unpickle_pseudojet(*args):
     return PseudoJet(*args)
