@@ -214,6 +214,31 @@ namespace fastjet {
 
   %template(FunctionOfPseudoJet_PseudoJet) FunctionOfPseudoJet<fastjet::PseudoJet>;
 
+  // ensure methods that modify container delete _vector
+  %extend PseudoJetContainer {
+
+    %feature("shadow") clear %{
+      def clear(self):
+          if hasattr(self, '_vector'):
+              del self._vector
+          $action(self)
+    %}
+
+    %feature("shadow") push_back %{
+      def push_back(self, val):
+          if hasattr(self, '_vector'):
+              del self._vector
+          $action(self, val)
+    %}
+
+    %feature("shadow") resize %{
+      def resize(self, size):
+          if hasattr(self, '_vector'):
+              del self._vector
+          $action(self, size)
+    %}
+  }
+
 } // namespace fastjet
 
 // include EECHist and declare templates
@@ -241,7 +266,7 @@ namespace fastjet {
   %template(pjc_to_array_float64) pjc_to_array<double>; 
   %template(pjc_to_array_float32) pjc_to_array<float>;
 
-  // member functions of pseudojet container that retu  rn a numpy array
+  // member functions of pseudojet container that return a numpy array
   %template(epxpypz_array_float64) PseudoJetContainer::epxpypz_array<double>;
   %template(epxpypz_array_float32) PseudoJetContainer::epxpypz_array<float>;
   %template(ptyphim_array_float64) PseudoJetContainer::ptyphim_array<double>;
@@ -259,20 +284,40 @@ namespace fastjet {
       (*$self)[key] = val;
     }
 
-    %pythoncode {
+    void _delitem(std::ptrdiff_t key) {
+      if (key < 0) key += $self->size();
+      if (std::size_t(key) >= $self->size())
+        throw std::length_error("index out of bounds");
+
+      $self->as_vector().erase($self->as_vector().begin() + key);
+    }
+
+    void _delitems(std::ptrdiff_t start, std::ptrdiff_t stop) {
+      if (start < 0) start += $self->size();
+      if (stop < 0) stop += $self->size();
+      if (std::size_t(start) >= $self->size())
+        throw std::length_error("start index out of bounds");
+      if (std::size_t(stop) > $self->size())
+        throw std::length_error("stop index out of bounds");
+
+      if (start < stop)
+        $self->as_vector().erase($self->as_vector().begin() + start, $self->as_vector().begin() + stop);
+    }
+
+    %pythoncode %{
 
       def epxpypz_array(self, float32=False):
           return self.epxpypz_array_float32() if float32 else self.epxpypz_array_float64()
 
-      def ptyphims_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
+      def ptyphim_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
           return (self.ptyphim_array_float32(mass, phi_std, phi_ref) if float32 else
                   self.ptyphim_array_float64(mass, phi_std, phi_ref))
 
       def array(self, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
           return self.array_float32(pjrep) if float32 else self.array_float64(pjrep)
 
-      def __len__(self):
-          return self.size()
+      def append(self, val):
+          self.push_back(val)
 
       @property
       def vector(self):
@@ -280,16 +325,40 @@ namespace fastjet {
               self._vector = self.as_vector()
           return self._vector
 
+      def __len__(self):
+          return self.size()
+
       def __iter__(self):
           return self.vector.__iter__();
 
+      # read only
+      def __getitem__(self, key):
+          return self.vector[key]
+
+      # invalidates _vector
       def __setitem__(self, key, val):
           if hasattr(self, '_vector'):
               del self._vector
-          self._setitem(key, val)
 
-      def __getitem__(self, key):
-          return self.vector.__getitem__(key)
+          if isinstance(key, slice):
+              for k,v in zip(range(*key.indices(len(self))), val):
+                  self._setitem(k, v)
+          else:
+              self._setitem(key, val)
+
+      # invalidates _vector
+      def __delitem__(self, key):
+          if hasattr(self, '_vector'):
+              del self._vector
+
+          if isinstance(key, slice):
+              if key.step is None or key.step == 1:
+                  self._delitems(key.start, key.stop)
+              else:
+                  for k in sorted(range(*key.indices(len(self))))[::-1]:
+                      self._delitem(k)
+          else:
+              self._delitem(key)
 
       def __repr__(self):
           s = ['PseudoJetContainer[' + str(len(self)) + '](']
@@ -300,7 +369,7 @@ namespace fastjet {
               s.append('  ' + repr(pj) + ',')
           s.append(')')
           return '\n'.join(s)
-    }
+    %}
   }
 
   %extend PseudoJet {

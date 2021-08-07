@@ -403,10 +403,28 @@ class PseudoJetContainer(object):
     __repr__ = _swig_repr
     size = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_size)
     capacity = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_capacity)
-    resize = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_resize)
+
+    def resize(self, size):
+        if hasattr(self, '_vector'):
+            del self._vector
+        _pyfjcore.PseudoJetContainer_resize(self, size)
+
+
     reserve = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_reserve)
-    push_back = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_push_back)
-    clear = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_clear)
+
+    def push_back(self, val):
+        if hasattr(self, '_vector'):
+            del self._vector
+        _pyfjcore.PseudoJetContainer_push_back(self, val)
+
+
+
+    def clear(self):
+        if hasattr(self, '_vector'):
+            del self._vector
+        _pyfjcore.PseudoJetContainer_clear(self)
+
+
     as_vector = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_as_vector)
     user_indices = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_user_indices)
     epxpypz_array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_epxpypz_array_float64)
@@ -416,20 +434,22 @@ class PseudoJetContainer(object):
     array_float64 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float64)
     array_float32 = _swig_new_instance_method(_pyfjcore.PseudoJetContainer_array_float32)
     _setitem = _swig_new_instance_method(_pyfjcore.PseudoJetContainer__setitem)
+    _delitem = _swig_new_instance_method(_pyfjcore.PseudoJetContainer__delitem)
+    _delitems = _swig_new_instance_method(_pyfjcore.PseudoJetContainer__delitems)
 
 
     def epxpypz_array(self, float32=False):
         return self.epxpypz_array_float32() if float32 else self.epxpypz_array_float64()
 
-    def ptyphims_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
+    def ptyphim_array(self, mass=True, phi_std=False, phi_ref=None, float32=False):
         return (self.ptyphim_array_float32(mass, phi_std, phi_ref) if float32 else
                 self.ptyphim_array_float64(mass, phi_std, phi_ref))
 
     def array(self, pjrep=PseudoJetRepresentation_ptyphim, float32=False):
         return self.array_float32(pjrep) if float32 else self.array_float64(pjrep)
 
-    def __len__(self):
-        return self.size()
+    def append(self, val):
+        self.push_back(val)
 
     @property
     def vector(self):
@@ -437,16 +457,40 @@ class PseudoJetContainer(object):
             self._vector = self.as_vector()
         return self._vector
 
+    def __len__(self):
+        return self.size()
+
     def __iter__(self):
         return self.vector.__iter__();
 
+    # read only
+    def __getitem__(self, key):
+        return self.vector[key]
+
+    # invalidates _vector
     def __setitem__(self, key, val):
         if hasattr(self, '_vector'):
             del self._vector
-        self._setitem(key, val)
 
-    def __getitem__(self, key):
-        return self.vector.__getitem__(key)
+        if isinstance(key, slice):
+            for k,v in zip(range(*key.indices(len(self))), val):
+                self._setitem(k, v)
+        else:
+            self._setitem(key, val)
+
+    # invalidates _vector
+    def __delitem__(self, key):
+        if hasattr(self, '_vector'):
+            del self._vector
+
+        if isinstance(key, slice):
+            if key.step is None or key.step == 1:
+                self._delitems(key.start, key.stop)
+            else:
+                for k in sorted(range(*key.indices(len(self))))[::-1]:
+                    self._delitem(k)
+        else:
+            self._delitem(key)
 
     def __repr__(self):
         s = ['PseudoJetContainer[' + str(len(self)) + '](']

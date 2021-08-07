@@ -1028,8 +1028,8 @@ const float pi_float = pi;
 const float twopi_float = twopi;
 inline float phi_fix(float phi, float ref_phi) {
   float diff(phi - ref_phi);
-  if (diff > pi) phi -= twopi;
-  else if (diff < -pi) phi += twopi;
+  if (diff > pi_float) phi -= twopi_float;
+  else if (diff < -pi_float) phi += twopi_float;
   return phi; 
 }
 #endif
@@ -1105,6 +1105,7 @@ struct PseudoJetContainer {
 #ifndef SWIG_PREPROCESSOR
   const PseudoJet & operator[](std::size_t i) const { return pjvector_[i]; }
   PseudoJet & operator[](std::size_t i) { return pjvector_[i]; }
+  std::vector<PseudoJet> & as_vector() { return *this; }
 #endif
 
   std::size_t size() const { return pjvector_.size(); }
@@ -1114,9 +1115,7 @@ struct PseudoJetContainer {
   void push_back(const PseudoJet & pj) { pjvector_.push_back(pj); }
   void clear() { pjvector_.clear(); }
 
-  const std::vector<PseudoJet> & as_vector() const {
-    return *this;
-  }
+  const std::vector<PseudoJet> & as_vector() const { return *this; }
 
   template<typename F>
   void epxpypz_array(F** particles, std::ptrdiff_t* mult, std::ptrdiff_t* nfeatures) {

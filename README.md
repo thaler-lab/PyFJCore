@@ -1,16 +1,28 @@
 # PyFJCore
 
-Python wrapper of FastJet Core functionality with additional NumPy support. In contrast with the [`pyjet`](https://github.com/scikit-hep/pyjet) package, PyFJCore wraps all the methods/functions in fjcore and works with regular NumPy arrays instead of structured one. In contrast with the Python extension to the main [FastJet library](http://fastjet.fr), this package can be built in a portable manner, including on Windows.
+[![build-wheels](https://github.com/pkomiske/Wasserstein/actions/workflows/build-wheels.yml/badge.svg)](https://github.com/pkomiske/Wasserstein/actions)
+![PyPI version](https://badge.fury.io/py/PyFJCore.svg)](https://pypi.org/project/PyFJCore/)
+[![python versions](https://img.shields.io/pypi/pyversions/PyFJCore)](https://pypi.org/project/PyFJCore/)
+
+Python wrapper of FastJet Core functionality with additional NumPy support. In contrast with the [`pyjet`](https://github.com/scikit-hep/pyjet) package, PyFJCore wraps all the methods/functions in fjcore and works with regular NumPy arrays instead of structured one. In contrast with the Python extension to the main [FastJet library](http://fastjet.fr), this package can be built in a portable manner, including on Windows, and is available on PyPI.
 
 Current version of fjcore: 3.3.4
 
 ## Documentation
 
-The FastJet [documentation](http://fastjet.fr/repo/doxygen-3.3.4/) and [manual](http://fastjet.fr/repo/fastjet-doc-3.3.4.pdf) contain helpful information for the classes and methods in PyFJCore. Not all FastJet classes are wrapped in PyFJCore, primarily just `PseudoJet`, `JetDefinition`, `ClusterSequence`, and `Selector`.
+The FastJet [documentation](http://fastjet.fr/repo/doxygen-3.4.0/) and [manual](http://fastjet.fr/repo/fastjet-doc-3.4.0.pdf) contain helpful information for the classes and methods in PyFJCore. Not all FastJet classes are wrapped in PyFJCore, primarily just `PseudoJet`, `JetDefinition`, `ClusterSequence`, and `Selector`.
 
-### Python User Info
+### `PseudoJet`
 
-A Python object can be attached to a `PseudoJet` using the `.set_python_info()` method. It can be accessed as `.python_info()`.
+Particles are represented in FastJet by `PseudoJet` objects. PseudoJets can be constructed from Cartesian momenta using the constructor, `pyfjcore.PseudoJet(px, py, pz, e)`. They can be constructed from hadronic momenta as `pyfjcore.PtYPhiM(pt, y, phi, [mass])`, where the mass is optional and is taken to be zero if not present.
+
+PseudoJets have a user index which is set to -1 by default. It can be set using the `set_user_index(index)` method and accessed with the `user_index()` method. An arbitrary Python object can also be associated with a PseudoJet using the `set_python_info(pyobj)` method, and accessed as `python_info()`.
+
+### `PseudoJetContainer`
+
+A [`PseudoJetContainer`](https://github.com/pkomiske/PyFJCore/blob/main/pyfjcore/fjcore.hh#L1098-L1151) is useful for efficiently working with a list/vector of PseudoJets. In C++, it is a struct holding a `std::vector<PseudoJet>`, which allows the user to control SWIG's automatic coercion to/from native Python containers. Such coercion can be useful, but can also be inefficient since it requires a lot of copying. This coercion is still possible if desired by explicit tuple/list construction, e.g. `tuple(pjcontainer)` or `list(pjcontainer)`. A `PseudoJetContainer` can be indexed, assigned to, or modified (by deleting elements) as if it were a list of PseudoJets. The wrapper code has been modified so that methods that accept `const std::vector<PseudoJet> &` will accept a `PseudoJetContainer` without any copying. The `vector` property can be used to access the underlying `vectorPseudoJet` (SWIG's wrapper of `std::vector<fastjet::PseudoJet>`) directly.
+
+`PseudoJetContainer`s con be constructed directly from an iterable of PseudoJets, or more commonly from NumPy arrays of particle kinematics (see the functions `ptyphim_array_to_pseudojets`, `epxpypz_array_to_pseudojets`, `array_to_pseudojets` below). Given a `PseudoJetContainer`, a NumPy array of the particle kinematics can be obtained using the methods `ptyphim_array`, `epxpypz_array`, and `array`, which correspond to the functions `pseudojets_to_ptyphim_array`, `pseudojets_to_epxpypz_array`, and `pseudojets_to_array` below. The user indices of the PseudoJets can be obtained as an integer NumPy array using the `user_indices()` method.
 
 ### NumPy conversion functions
 
@@ -33,30 +45,38 @@ pyfjcore.array_to_pseudojets(particles, pjrep=pyfjcore.ptyphim)
 Converts a 2D array of particles to PseudoJets. The format of the particles kinematics is determined by the `pjrep` argument. The `PseudoJetRepresentation` enum can take the values `ptyphim`, `ptyphi`, `epxpypz`. The first two values cause this function to invoke `ptyphim_array_to_pseudojets` and the third invokes `epxpypz_array_to_pseudojets`. Any additional features (columns) of the array are set as the Python user info of the PseudoJets. This also sets the `user_index` of the PseudoJets to their position in the input array.
 
 ```python
-pyfjcore.pseudojets_to_ptyphim_array(pseudojets, mass=True)
+pyfjcore.pseudojets_to_ptyphim_array(pseudojets, mass=True, phi_std=False, phi_ref=None, float32=False)
 ```
 
-Converts a vector of PseudoJets to a 2D NumPy array of `(pt, y, phi, [mass])` values, where the presence of the mass is determine by the keyword argument.
+Converts a collection of PseudoJets (`PseudoJetContainer` or a Python iterable) to a 2D NumPy array of `(pt, y, phi, [mass])` values, where the presence of the mass is determine by the keyword argument. `phi_std` determines if the phi values will be in the range $[-\pi,\pi)$ or $[0,2\pi)$. `phi_ref`, if not `None`, the phi values will lie within $\pi$ of `phi_ref`. The `float32` argument controls if the resulting array will be single-precision (can be useful to avoid extraneous copying, if 32-bit floats will be ultimately used).
 
 ```python
-pyfjcore.pseudojets_to_epxpypz_array(pseudojets)
+pyfjcore.pseudojets_to_epxpypz_array(pseudojets, float32=False)
 ```
 
-Converts a vector of PseudoJets to a 2D NumPy array of `(E, px, py, pz)` values.
+Converts a collection of PseudoJets (`PseudoJetContainer` or a Python iterable) to a 2D NumPy array of `(E, px, py, pz)` values. The `float32` argument controls if the resulting array will be single-precision (can be useful to avoid extraneous copying, if 32-bit floats will be ultimately used).
 
 ```python
-pyfjcore.pseudojets_to_array(pseudojets, pjrep=pyfjcore.ptyphim)
+pyfjcore.pseudojets_to_array(pseudojets, pjrep=pyfjcore.ptyphim, float32=False)
 ```
 
-Converts a vector of PseudoJets to a 2D NumPy array of particles in the representation determined by the `pjrep` keyword argument.
+Converts a collection of PseudoJets (`PseudoJetContainer` or a Python iterable) to a 2D NumPy array of particles in the representation determined by the `pjrep` keyword argument (valid options are `pyfjcore.ptyphim`, `pyfjcore.epxpypz`, `pyfjcore.ptyphi`). The `float32` argument controls if the resulting array will be single-precision (can be useful to avoid extraneous copying, if 32-bit floats will be ultimately used).
 
 ```python
 pyfjcore.user_indices(pseudojets)
 ```
 
-Extracts the user indices from a vector of PseudoJets and returns them as a NumPy array of integers.
+Extracts the user indices from a collection of PseudoJets (`PseudoJetContainer` or a Python iterable) and returns them as a NumPy array of integers.
 
 ## Version History
+
+### 1.0.x
+
+**1.0.0**
+
+- Restored `PseudoJetContainer` by explicitly overloading methods where `const std::vector<PseudoJet> &` is accepted as an argument. Methods that previously returned `std::vector<PseudoJet>` now return `PseudoJetContainer`.
+- [`EventGeometry`](https://github.com/pkomiske/EventGeometry) and [`Piranha`](https://github.com/pkomiske/Piranha) packages are now built using pyfjcore to provide basic FastJet classes.
+- fjcore.cc is compiled into a shared library that is linked into the Python extension.
 
 ### 0.4.x
 
@@ -106,11 +126,12 @@ PyFJCore relies critically on the fjcore [header](https://github.com/pkomiske/Py
     - Added back virtual methods to `PseudoJet`, `PseudoJetStructureBase`, `CompositeJetStructure`, and `ClusterSequenceStructure` that were removed in fjcore due to lack of area support. This is critical for ensuring compatibility with the FastJet Python extension.
     - Wrapped some code in `IsBaseAndDerived` that SWIG cannot parse with `#ifndef SWIG_PREPROCESSOR` and `#endif`. Since SWIG doesn't need this code for anything, it parses the file correctly without affecting the actual compilation.
     - Changed templated `ClusterSequence` constructor to an untemplated version using `PseudoJet` as the former template type.
+    - Added methods that accept `PseudoJetContainer` anywhere that `const std::vector<PseudoJet> &` is an argument.
 
 ## fjcore README
 
 ```text
-// fjcore -- extracted from FastJet v3.3.4 (http://fastjet.fr)
+// fjcore -- extracted from FastJet v3.4.0 (http://fastjet.fr)
 //
 // fjcore constitutes a digest of the main FastJet functionality.
 // The files fjcore.hh and fjcore.cc are meant to provide easy access to these 
@@ -166,7 +187,7 @@ PyFJCore relies critically on the fjcore [header](https://github.com/pkomiske/Py
 //FJSTARTHEADER
 // $Id$
 //
-// Copyright (c) 2005-2020, Matteo Cacciari, Gavin P. Salam and Gregory Soyez
+// Copyright (c) 2005-2021, Matteo Cacciari, Gavin P. Salam and Gregory Soyez
 //
 //----------------------------------------------------------------------
 // This file is part of FastJet (fjcore).

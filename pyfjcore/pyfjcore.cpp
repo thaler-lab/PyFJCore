@@ -5061,6 +5061,24 @@ SWIGINTERN void fastjet_PseudoJetContainer__setitem(fastjet::PseudoJetContainer 
 
       (*self)[key] = val;
     }
+SWIGINTERN void fastjet_PseudoJetContainer__delitem(fastjet::PseudoJetContainer *self,std::ptrdiff_t key){
+      if (key < 0) key += self->size();
+      if (std::size_t(key) >= self->size())
+        throw std::length_error("index out of bounds");
+
+      self->as_vector().erase(self->as_vector().begin() + key);
+    }
+SWIGINTERN void fastjet_PseudoJetContainer__delitems(fastjet::PseudoJetContainer *self,std::ptrdiff_t start,std::ptrdiff_t stop){
+      if (start < 0) start += self->size();
+      if (stop < 0) stop += self->size();
+      if (std::size_t(start) >= self->size())
+        throw std::length_error("start index out of bounds");
+      if (std::size_t(stop) > self->size())
+        throw std::length_error("stop index out of bounds");
+
+      if (start < stop)
+        self->as_vector().erase(self->as_vector().begin() + start, self->as_vector().begin() + stop);
+    }
 
 SWIGINTERNINLINE PyObject*
   SWIG_From_unsigned_SS_int  (unsigned int value)
@@ -18728,6 +18746,137 @@ SWIGINTERN PyObject *_wrap_PseudoJetContainer__setitem(PyObject *SWIGUNUSEDPARM(
   {
     try {
       fastjet_PseudoJetContainer__setitem(arg1,arg2,(fastjet::PseudoJet const &)*arg3); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer__delitem(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  std::ptrdiff_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"key",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:PseudoJetContainer__delitem", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer__delitem" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer__delitem" "', argument " "2"" of type '" "std::ptrdiff_t""'");
+  } 
+  arg2 = static_cast< std::ptrdiff_t >(val2);
+  {
+    try {
+      fastjet_PseudoJetContainer__delitem(arg1,arg2); 
+    }
+    catch (fastjet::Error & e) {
+      PyErr_SetString(FastJetError_, e.message().c_str());
+      SWIG_fail;
+    }
+    /*@SWIG:/usr/local/Cellar/swig/4.0.2/share/swig/4.0.2/typemaps/exception.swg,58,SWIG_CATCH_STDEXCEPT@*/  /* catching std::exception  */
+    catch (std::invalid_argument& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::domain_error& e) {
+      SWIG_exception_fail(SWIG_ValueError, e.what() );
+    } catch (std::overflow_error& e) {
+      SWIG_exception_fail(SWIG_OverflowError, e.what() );
+    } catch (std::out_of_range& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::length_error& e) {
+      SWIG_exception_fail(SWIG_IndexError, e.what() );
+    } catch (std::runtime_error& e) {
+      SWIG_exception_fail(SWIG_RuntimeError, e.what() );
+    } catch (std::exception& e) {
+      SWIG_exception_fail(SWIG_SystemError, e.what() );
+    }
+    /*@SWIG@*/
+    catch (...) {
+      SWIG_exception_fail(SWIG_UnknownError, "unknown exception");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PseudoJetContainer__delitems(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  fastjet::PseudoJetContainer *arg1 = (fastjet::PseudoJetContainer *) 0 ;
+  std::ptrdiff_t arg2 ;
+  std::ptrdiff_t arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"start",  (char *)"stop",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OOO:PseudoJetContainer__delitems", kwnames, &obj0, &obj1, &obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_fastjet__PseudoJetContainer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PseudoJetContainer__delitems" "', argument " "1"" of type '" "fastjet::PseudoJetContainer *""'"); 
+  }
+  arg1 = reinterpret_cast< fastjet::PseudoJetContainer * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PseudoJetContainer__delitems" "', argument " "2"" of type '" "std::ptrdiff_t""'");
+  } 
+  arg2 = static_cast< std::ptrdiff_t >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "PseudoJetContainer__delitems" "', argument " "3"" of type '" "std::ptrdiff_t""'");
+  } 
+  arg3 = static_cast< std::ptrdiff_t >(val3);
+  {
+    try {
+      fastjet_PseudoJetContainer__delitems(arg1,arg2,arg3); 
     }
     catch (fastjet::Error & e) {
       PyErr_SetString(FastJetError_, e.message().c_str());
@@ -39710,6 +39859,8 @@ static PyMethodDef SwigMethods[] = {
 	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer_array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer__setitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__setitem, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer__setitem(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "PseudoJetContainer__delitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__delitem, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer__delitem(PseudoJetContainer self, std::ptrdiff_t key)"},
+	 { "PseudoJetContainer__delitems", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__delitems, METH_VARARGS|METH_KEYWORDS, "PseudoJetContainer__delitems(PseudoJetContainer self, std::ptrdiff_t start, std::ptrdiff_t stop)"},
 	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
 		"PseudoJetContainer()\n"
 		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
@@ -40361,6 +40512,8 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 	 { "PseudoJetContainer_array_float64", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float64, METH_VARARGS|METH_KEYWORDS, "array_float64(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer_array_float32", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer_array_float32, METH_VARARGS|METH_KEYWORDS, "array_float32(PseudoJetContainer self, fastjet::PseudoJetRepresentation pjrep=ptyphim)"},
 	 { "PseudoJetContainer__setitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__setitem, METH_VARARGS|METH_KEYWORDS, "_setitem(PseudoJetContainer self, std::ptrdiff_t key, PseudoJet val)"},
+	 { "PseudoJetContainer__delitem", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__delitem, METH_VARARGS|METH_KEYWORDS, "_delitem(PseudoJetContainer self, std::ptrdiff_t key)"},
+	 { "PseudoJetContainer__delitems", (PyCFunction)(void(*)(void))_wrap_PseudoJetContainer__delitems, METH_VARARGS|METH_KEYWORDS, "_delitems(PseudoJetContainer self, std::ptrdiff_t start, std::ptrdiff_t stop)"},
 	 { "new_PseudoJetContainer", _wrap_new_PseudoJetContainer, METH_VARARGS, "\n"
 		"PseudoJetContainer()\n"
 		"PseudoJetContainer(vectorPseudoJet pjvector)\n"
