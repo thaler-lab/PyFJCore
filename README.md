@@ -1,12 +1,12 @@
 # PyFJCore
 
 [![build-wheels](https://github.com/pkomiske/Wasserstein/actions/workflows/build-wheels.yml/badge.svg)](https://github.com/pkomiske/Wasserstein/actions)
-![PyPI version](https://badge.fury.io/py/PyFJCore.svg)](https://pypi.org/project/PyFJCore/)
+[![PyPI version](https://badge.fury.io/py/PyFJCore.svg)](https://pypi.org/project/PyFJCore/)
 [![python versions](https://img.shields.io/pypi/pyversions/PyFJCore)](https://pypi.org/project/PyFJCore/)
 
-Python wrapper of FastJet Core functionality with additional NumPy support. In contrast with the [`pyjet`](https://github.com/scikit-hep/pyjet) package, PyFJCore wraps all the methods/functions in fjcore and works with regular NumPy arrays instead of structured one. In contrast with the Python extension to the main [FastJet library](http://fastjet.fr), this package can be built in a portable manner, including on Windows, and is available on PyPI.
+PyFJCore is a Python wrapper of FastJet Core functionality with additional NumPy support. In contrast with the [`pyjet`](https://github.com/scikit-hep/pyjet) package, PyFJCore wraps all the methods/functions in fjcore and works with regular NumPy arrays instead of structured one. In contrast with the Python extension to the main [FastJet library](http://fastjet.fr), this package can be built in a portable manner, including on Windows, and is available on PyPI.
 
-Current version of fjcore: 3.3.4
+Current version of fjcore: 3.4.0
 
 ## Documentation
 

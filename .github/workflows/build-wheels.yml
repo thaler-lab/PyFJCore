@@ -7,7 +7,7 @@ on:
       - library
 
 env:
-  PYPI: 0
+  PYPI: 1
   PYPITEST: 1
   CIBW_SKIP: pp*
   CIBW_BEFORE_ALL_LINUX: make shared
