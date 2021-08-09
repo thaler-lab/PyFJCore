@@ -1,6 +1,6 @@
 # PyFJCore
 
-[![build-wheels](https://github.com/pkomiske/Wasserstein/actions/workflows/build-wheels.yml/badge.svg)](https://github.com/pkomiske/Wasserstein/actions)
+[![build-wheels](https://github.com/pkomiske/PyFJCore/actions/workflows/build-wheels.yml/badge.svg)](https://github.com/pkomiske/PyFJCore/actions)
 [![PyPI version](https://badge.fury.io/py/PyFJCore.svg)](https://pypi.org/project/PyFJCore/)
 [![python versions](https://img.shields.io/pypi/pyversions/PyFJCore)](https://pypi.org/project/PyFJCore/)
 
