@@ -8,8 +8,8 @@ on:
 
 env:
   PYPI: 0
-  PYPITEST: 0
-  CIBW_SKIP: pp*
+  PYPITEST: 1
+  CIBW_SKIP: pp* *musllinux*
   CIBW_BEFORE_ALL_LINUX: make shared
   CIBW_ENVIRONMENT_LINUX: "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)"
   TWINE_USERNAME: __token__
