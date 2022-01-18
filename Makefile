@@ -38,7 +38,7 @@ all: shared
 shared: lib$(NAME).$(dynlibext)
 
 lib$(NAME).$(dynlibext): $(OBJS)
-	$(CXX) $(OBJS) $(dynlibopt) $(LDFLAGS) -g0 -o lib$(NAME).$(dynlibext)
+	$(CXX) $(OBJS) $(dynlibopt) $(CXXFLAGS) $(LDFLAGS) -g0 -o lib$(NAME).$(dynlibext)
 
 # cleaning the directory
 clean:

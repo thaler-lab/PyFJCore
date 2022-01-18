@@ -49,7 +49,7 @@ else:
         sources.append(os.path.join('pyfjcore', 'fjcore.cc'))
         macros.append(('SWIG', None))
         cxxflags = ['/std:c++14']
-        library_dirs = ['.']
+        library_dirs = []
         libraries = []
 
     elif platform.system() == 'Linux':
