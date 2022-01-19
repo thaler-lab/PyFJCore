@@ -107,12 +107,13 @@ fastjet::ClusterSequence::set_fastjet_banner_stream(new std::ostringstream());
 }
 
 %pythoncode %{
-  FastJetError = _pyfjcore.FastJetError;
+  from ._pyfjcore import FastJetError
 
   import platform
   if platform.system() != 'Windows':
       import ctypes
       ctypes.CDLL(_pyfjcore.__file__, mode=ctypes.RTLD_GLOBAL)
+  del platform
 %}
 
 // vector templates

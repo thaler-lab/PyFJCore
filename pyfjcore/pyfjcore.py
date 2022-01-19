@@ -96,12 +96,13 @@ class SwigPyIterator(object):
 _pyfjcore.SwigPyIterator_swigregister(SwigPyIterator)
 
 
-FastJetError = _pyfjcore.FastJetError;
+from ._pyfjcore import FastJetError
 
 import platform
 if platform.system() != 'Windows':
     import ctypes
     ctypes.CDLL(_pyfjcore.__file__, mode=ctypes.RTLD_GLOBAL)
+del platform
 
 class vectorPseudoJet(object):
     r"""Proxy of C++ std::vector< fastjet::PseudoJet > class."""

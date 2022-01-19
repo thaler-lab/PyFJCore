@@ -33,6 +33,6 @@ from . import pyfjcore
 from .pyfjcore import *
 
 __author__ = 'Patrick T. Komiske III'
-__email__ = 'pkomiske@mit.edu'
+__email__ = 'pkomiske@gmail.com'
 __license__ = 'GPLv3'
-__version__ = '1.0.1b0'
+__version__ = '1.0.1'
