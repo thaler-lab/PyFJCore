@@ -72,6 +72,10 @@ Extracts the user indices from a collection of PseudoJets (`PseudoJetContainer` 
 
 ### 1.0.x
 
+**1.0.1**
+
+- Wheels available on PyPI for Python 3.10.
+
 **1.0.0**
 
 - Restored `PseudoJetContainer` by explicitly overloading methods where `const std::vector<PseudoJet> &` is accepted as an argument. Methods that previously returned `std::vector<PseudoJet>` now return `PseudoJetContainer`.

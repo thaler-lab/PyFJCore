@@ -7,8 +7,8 @@ on:
       - library
 
 env:
-  PYPI: 1
-  PYPITEST: 1
+  PYPI: 0
+  PYPITEST: 0
   CIBW_SKIP: pp* *musllinux*
   CIBW_BEFORE_ALL_LINUX: make shared
   CIBW_ENVIRONMENT_LINUX: "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)"
